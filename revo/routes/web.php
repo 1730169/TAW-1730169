@@ -17,4 +17,5 @@ $router->get('/', function () use ($router) {
     return $router->app->make('view')->make('home');
 });
 
+$router->get('gamers/', 'GamersController@index');
 

@@ -25,7 +25,7 @@
 |
 */
 
-use IlluminateHttpRequest;
+//use IlluminateHttpRequest;
 //use IlluminateDatabaseEloquentModel;
 //use Illuminate\Database\Eloquent\Model as Eloquent;
 //use Eloquent;
