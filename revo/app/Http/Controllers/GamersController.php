@@ -21,4 +21,13 @@ class GamersController extends Controller
 
         return view('gamers.index', ['gamers' => $gamers]);
     }
+
+    public function nuevo()
+    {
+        //$gamers = DB::table('gamers')->get();
+
+        //echo $gamers;
+
+        return view('gamers.form');
+    }
 }

@@ -21,7 +21,7 @@
         <tbody>
 
             <?php
-            
+            // Llenar las filas de la tabla
             foreach ($gamers as $gamer) {
                 echo "
                 <tr>

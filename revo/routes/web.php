@@ -17,5 +17,8 @@ $router->get('/', function () use ($router) {
     return $router->app->make('view')->make('home');
 });
 
+
+/* MODULO GAMERS */
 $router->get('gamers/', 'GamersController@index');
+$router->get('gamers/nuevo', 'GamersController@nuevo');
 
