@@ -29,9 +29,38 @@ class JuegoController extends Controller
         return view('juegos.create');
     }
 
-    public function store(JuegoRequest $request)
+    public function store(JuegoRequest $request) //public function store(JuegoRequest $request)
     {
-        Juego::create($request->all());
+        $request->validate([
+
+            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            //'imagen' => 'required'
+
+        ]);
+
+        if($request->hasFile('imagen')){
+
+            $file = $request->imagen;
+            $extension = $file->getClientOriginalExtension();
+            // Renombrar imagen para evitar duplicados
+            $imgNombre = time().'.'.$extension;
+            //$imgNombre = time().'.'.$request->imagen->extension();
+            
+            $request->imagen->move(public_path('images'), $imgNombre);
+
+            $request->imagen = $imgNombre;
+            
+        }
+        
+        //Juego::create($request->all());
+        Juego::create(
+            array(
+                'titulo' => $request->titulo, 
+                'plataformas' => $request->plataformas,
+                'imagen' => $request->imagen,
+            )
+        );
+        
 
         return $request->input('submit') == 'reload'
             ? redirect()->route('juegos.create')
@@ -50,7 +79,35 @@ class JuegoController extends Controller
 
     public function update(JuegoRequest $request, Juego $juego)
     {
-        $juego->update($request->all());
+        $request->validate([
+
+            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            //'imagen' => 'required'
+
+        ]);
+
+        if($request->hasFile('imagen')){
+
+            $file = $request->imagen;
+            $extension = $file->getClientOriginalExtension();
+            // Renombrar imagen para evitar duplicados
+            $imgNombre = time().'.'.$extension;
+            //$imgNombre = time().'.'.$request->imagen->extension();
+            
+            $request->imagen->move(public_path('images'), $imgNombre);
+
+            $request->imagen = $imgNombre;
+            
+        }
+        
+        //Juego::create($request->all());
+
+        //$juego->update($request->all());
+        $juego->update(array(
+            'titulo' => $request->titulo, 
+            'plataformas' => $request->plataformas,
+            'imagen' => $request->imagen,
+        ));
 
         return $request->input('submit') == 'reload'
             ? redirect()->route('juegos.edit', $juego->id)

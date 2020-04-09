@@ -24,7 +24,11 @@
                                 @if(is_array($value))
                                     <pre class="mb-0">{{ json_encode($value, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) }}</pre>
                                 @else
-                                    {{ $value ?? __('N/A') }}
+                                    @if($attribute == 'imagen')
+                                        <img src="{{ asset('images/').'/'.$value ?? __('N/A') }}" alt="">
+                                    @else
+                                        {{ $value ?? __('N/A') }}
+                                    @endif
                                 @endif
                             </div>
                         </div>

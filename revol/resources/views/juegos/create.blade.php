@@ -5,7 +5,7 @@
     <div class="container">
         <h1>@yield('title')</h1>
 
-        <form method="post" action="{{ route('juegos.store') }}">
+        <form method="post" action="{{ route('juegos.store') }}" enctype="multipart/form-data">
             @csrf
 
             <div class="card">

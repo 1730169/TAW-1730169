@@ -13,6 +13,8 @@ class JuegoDatatable extends Datatable
             //Column::make('id'),
             Column::make('titulo'),
             Column::make('plataformas'),
+            //Column::make('imagen'),
+            
 
             Column::make('created_at'),
             //Column::make('updated_at'),

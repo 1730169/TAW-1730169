@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <form method="post" action="{{ route('juegos.update', $juego->id) }}">
+        <form method="post" action="{{ route('juegos.update', $juego->id) }}" enctype="multipart/form-data">
             @csrf
             @method('patch')
 

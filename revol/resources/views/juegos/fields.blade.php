@@ -3,5 +3,7 @@
     <x-crudify-input name="plataformas" :value="old('plataformas', $juego->plataformas ?? '')" />
 
     <x-crudify-file name="imagen" />
+    <!--<input type="file" name="imagen">-->
+
 
 </div>

@@ -12,7 +12,8 @@ class JuegoRequest extends FormRequest
         return [
             //'name' => ['required', Rule::unique('juegos')->ignore($this->route('juego'))],
             'titulo' => ['required'],
-            'plataformas' => ['required']
+            'plataformas' => ['required']//,
+            //'imagen' => ['required']
         ];
     }
 }
