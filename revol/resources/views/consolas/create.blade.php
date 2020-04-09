@@ -9,6 +9,7 @@
             @csrf
 
             <div class="card">
+
                 @include('consolas.fields')
 
                 <div class="card-footer text-md-right border-top-0">

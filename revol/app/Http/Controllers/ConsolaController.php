@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Consola;
+use App\Plataforma;
+use DB;
+
 use App\Http\Datatables\ConsolaDatatable;
 use App\Http\Requests\ConsolaRequest;
 use Illuminate\Http\Request;
@@ -16,7 +19,14 @@ class ConsolaController extends Controller
 
     public function index(Request $request)
     {
-        $query = Consola::query();
+        //$query = Consola::query();
+
+        $query = DB::table('consolas')
+            ->join('plataformas', 'plataformas.id', '=', 'consolas.plataforma_id')
+            ->select('consolas.*', 'plataformas.nombre AS plataforma')
+            ->get();
+
+        //$datatables = ConsolaDatatable::make($query);
         $datatables = ConsolaDatatable::make($query);
 
         return $request->ajax()
@@ -26,7 +36,10 @@ class ConsolaController extends Controller
 
     public function create()
     {
-        return view('consolas.create');
+        // Obtener todas las plataformas de la DB
+        $plataformas = Plataforma::all();
+        
+        return view('consolas.create', compact('plataformas'));
     }
 
     public function store(ConsolaRequest $request)
@@ -45,7 +58,10 @@ class ConsolaController extends Controller
 
     public function edit(Consola $consola)
     {
-        return view('consolas.edit', compact('consola'));
+        // Obtener todas las plataformas de la DB
+        $plataformas = Plataforma::all();
+        
+        return view('consolas.edit', compact('consola','plataformas'));
     }
 
     public function update(ConsolaRequest $request, Consola $consola)

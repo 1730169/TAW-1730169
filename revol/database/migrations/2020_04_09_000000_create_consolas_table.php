@@ -11,7 +11,7 @@ class CreateConsolasTable extends Migration
         Schema::create('consolas', function (Blueprint $table) {
             $table->id();
             $table->string('numero');
-            $table->integer('plataforma');
+            $table->foreignId('plataforma_id');
             $table->string('serial')->nullable(); //opcional
 
             $table->boolean('disponible')->default(1);
