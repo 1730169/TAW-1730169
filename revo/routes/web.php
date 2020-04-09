@@ -22,3 +22,6 @@ $router->get('/', function () use ($router) {
 $router->get('gamers/', 'GamersController@index');
 $router->get('gamers/nuevo', 'GamersController@nuevo');
 
+$router->get('gamers/editar/{id}', 'GamersController@editar');
+
+

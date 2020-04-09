@@ -24,10 +24,48 @@ class GamersController extends Controller
 
     public function nuevo()
     {
-        //$gamers = DB::table('gamers')->get();
-
-        //echo $gamers;
-
+        //Cargar la vista del formulario
         return view('gamers.form');
     }
+
+    public function guardar(Request $request)
+    {
+        // Captar el envio de los campos del formulario
+        $nombre = $request->input('nombre');
+        $apellidos = $request->input('apellidos');
+        
+
+        return view('gamers.index');
+    }
+
+    public function editar($id)
+    {
+        // Buscar objeto de la fila 
+        $gamer = DB::table('gamers')->find($id);
+
+        //Cargar la vista del formulario
+        return view('gamers.form', ['gamer' => $gamer]);
+    }
+
+    public function actualizar(Request $request)
+    {
+        // Captar el envio de los campos del formulario
+        $nombre = $request->input('nombre');
+        $apellidos = $request->input('apellidos');
+        
+
+
+        return view('gamers.index');
+    }
+
+    public function eliminar($id)
+    {
+
+        //$user = DB::table('users')->where('name', 'John')->first();
+
+        //Cargar la vista del formulario
+        return view('gamers.index');
+    }
+
+    
 }
