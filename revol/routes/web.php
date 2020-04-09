@@ -22,3 +22,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('gamers', 'GamerController');
+
+Route::resource('ejemplos', 'EjemploController');
+
+Route::resource('consolas', 'ConsolaController');
+
+Route::resource('juegos', 'JuegoController');
