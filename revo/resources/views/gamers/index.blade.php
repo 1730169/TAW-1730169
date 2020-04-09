@@ -8,7 +8,7 @@
   <div class="card-body">
     <ul class="list-unstyled list-inline">
       <li>
-        <a href="#" class="btn btn-primary">Nuevo</a>
+        <a href="/gamers/nuevo" class="btn btn-primary">Nuevo</a>
       </li>
     </ul>
     <div class="table-responsive">
@@ -27,7 +27,7 @@
                 <tr>
                     <td>". $gamer->nombre ."</td>
                     <td>". $gamer->apellidos ."</td>
-                    <td> <a class='btn btn-warning'>Editar<a/> </td>
+                    <td> <a href='/gamers/editar/".$gamer->id."' class='btn btn-warning'>Editar<a/> </td>
                 </tr>";
             }
             

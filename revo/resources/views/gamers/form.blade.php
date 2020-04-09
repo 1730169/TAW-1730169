@@ -1,7 +1,7 @@
 @extends('default')
 @section('content')
 <br>
-<form>
+<form action="<?php echo $action; ?>" type="POST">
 <div class="card shadow mb-4">
     
     <div class="card-header py-3">
@@ -15,17 +15,17 @@
             
               <div class="form-group">
                 <label>Nombre</label>
-                <input type="text" class="form-control" name="nombre" value="<?php echo $gamer->nombre; ?>" required>
+                <input type="text" class="form-control" name="nombre" value="<?php echo isset($gamer->nombre)? $gamer->nombre : ''; ?>" required>
               </div>
 
               <div class="form-group">
                 <label>Apellidos</label>
-                <input type="text" class="form-control" name="apellidos" value="<?php echo $gamer->apellidos; ?>" required>
+                <input type="text" class="form-control" name="apellidos" value="<?php echo isset($gamer->apellidos)? $gamer->apellidos : ''; ?>" required>
               </div>
 
               <div class="form-group">
                 <label>Fecha de nacimiento</label>
-                <input type="date" class="form-control" name="fecha_nac" value="<?php echo $gamer->fecha_nac; ?>" required>
+                <input type="date" class="form-control" name="fecha_nac" value="<?php echo isset($gamer->fecha_nac)? $gamer->fecha_nac : ''; ?>" required>
               </div>
 
               <div class="form-group">
@@ -38,7 +38,7 @@
 
               <div class="form-group">
                 <label>Teléfono</label>
-                <input type="text" class="form-control" name="telefono" value="<?php echo $gamer->telefono; ?>">
+                <input type="text" class="form-control" name="telefono" value="<?php echo isset($gamer->telefono)? $gamer->telefono : ''; ?>">
               </div>
   
             </div>
@@ -47,22 +47,22 @@
               
               <div class="form-group">
                 <label for="exampleInputEmail1">Correo electrónico</label>
-                <input type="email" class="form-control" name="email" aria-describedby="emailHelp" value="<?php echo $gamer->email; ?>">
+                <input type="email" class="form-control" name="email" aria-describedby="emailHelp" value="<?php echo isset($gamer->email)? $gamer->email : ''; ?>">
               </div>
 
               <div class="form-group">
                 <label>GamerTag</label>
-                <input type="text" class="form-control" name="gamertag" value="<?php echo $gamer->gamertag; ?>" required>
+                <input type="text" class="form-control" name="gamertag" value="<?php echo isset($gamer->gamertag)? $gamer->gamertag : ''; ?>" required>
               </div>
               
               <div class="form-group">
                 <label for="exampleInputPassword1">Contraseña</label>
-                <input type="password" class="form-control" name="password" value="<?php echo $gamer->contrasena; ?>" required>
+                <input type="password" class="form-control" name="password" value="<?php echo isset($gamer->contrasena)? $gamer->contrasena : ''; ?>" required>
               </div>
 
               <div class="form-group">
                 <label>Redes Sociales</label>
-                <textarea class="form-control" name="redes_sociales" ><?php echo $gamer->redes_sociales; ?></textarea>
+                <textarea class="form-control" name="redes_sociales" ><?php echo isset($gamer->contrasena)? $gamer->contrasena : ''; ?></textarea>
               </div>
 
 
@@ -73,6 +73,7 @@
     </div>
 </div>
 
-</form>
 <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
 @endsection

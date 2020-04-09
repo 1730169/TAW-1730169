@@ -21,7 +21,7 @@ $router->get('/', function () use ($router) {
 /* MODULO GAMERS */
 $router->get('gamers/', 'GamersController@index');
 $router->get('gamers/nuevo', 'GamersController@nuevo');
-
+$router->post('gamers/guardar', 'GamersController@guardar');
 $router->get('gamers/editar/{id}', 'GamersController@editar');
 
 

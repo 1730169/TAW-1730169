@@ -38,8 +38,11 @@
       </div>
     </nav>
 
+
     <!-- Begin page content -->
     <div class="container">
+      
+
       @yield('content')
     </div>
 
