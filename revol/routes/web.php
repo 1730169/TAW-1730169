@@ -28,3 +28,5 @@ Route::resource('ejemplos', 'EjemploController');
 Route::resource('consolas', 'ConsolaController');
 
 Route::resource('juegos', 'JuegoController');
+
+Route::resource('plataformas', 'PlataformaController');
