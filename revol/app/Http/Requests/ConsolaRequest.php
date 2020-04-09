@@ -11,7 +11,8 @@ class ConsolaRequest extends FormRequest
     {
         return [
             'numero' => ['required', Rule::unique('consolas')->ignore($this->route('consola'))],
-            'plataforma' => ['required']
+            'plataforma' => ['required'],
+            'disponible' => ['required']
         ];
     }
 }

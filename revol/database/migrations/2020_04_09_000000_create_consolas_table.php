@@ -14,6 +14,8 @@ class CreateConsolasTable extends Migration
             $table->integer('plataforma');
             $table->string('serial')->nullable(); //opcional
 
+            $table->boolean('disponible')->default(1);
+
             $table->timestamps();
         });
     }
