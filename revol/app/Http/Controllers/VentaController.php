@@ -25,7 +25,7 @@ class VentaController extends Controller
         $query = DB::table('ventas')
             ->join('gamers', 'gamers.id', '=', 'ventas.gamer_id')
             ->join('dulcerias', 'dulcerias.id', '=', 'ventas.articulo_id')
-            ->select('ventas.*', 'gamers.gamertag AS gamer_id', 'dulcerias.nombre_articulo AS articulo_id')
+            ->select('ventas.*', DB::raw('CONCAT(gamers.nombre, " ", gamers.apellidos, " (", gamers.gamertag,")") AS gamer'), 'dulcerias.nombre_articulo AS articulo')
             ->get();
 
         $datatables = VentaDatatable::make($query);            
@@ -45,6 +45,20 @@ class VentaController extends Controller
     public function store(VentaRequest $request)
     {
         Venta::create($request->all());
+
+        $total = $request->input('monto_total');
+        $gamer = $request->input('gamer_id');
+
+        $promo = DB::table('promocions')
+            ->select('promocions.monedas_dulceria')
+            ->where('promocions.monto_dulceria', '<=', $total)
+            ->orderBy('promocions.monto_dulceria', 'desc')->first();
+
+        if ($promo) {
+            $incrementar = DB::table('gamers')
+                        ->where('gamers.id', $gamer);
+            $incrementar->increment('monedas', $promo->monedas_dulceria);
+        }
 
         return $request->input('submit') == 'reload'
             ? redirect()->route('ventas.create')
