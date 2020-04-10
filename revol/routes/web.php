@@ -42,3 +42,5 @@ Route::resource('promocions', 'PromocionController');
 Route::resource('dulcerias', 'DulceriaController');
 
 Route::resource('ventas', 'VentaController');
+
+Route::post('/getTotalVenta', 'VentaController@getTotalVenta');

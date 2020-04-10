@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Venta;
 use App\Dulceria;
 use App\Gamer;
+use DB;
 use App\Http\Datatables\VentaDatatable;
 use App\Http\Requests\VentaRequest;
 use Illuminate\Http\Request;
@@ -18,8 +19,16 @@ class VentaController extends Controller
 
     public function index(Request $request)
     {
-        $query = Venta::query();
-        $datatables = VentaDatatable::make($query);
+        //$query = Venta::query();
+        //$datatables = VentaDatatable::make($query);
+
+        $query = DB::table('ventas')
+            ->join('gamers', 'gamers.id', '=', 'ventas.gamer_id')
+            ->join('dulcerias', 'dulcerias.id', '=', 'ventas.articulo_id')
+            ->select('ventas.*', 'gamers.gamertag AS gamer_id', 'dulcerias.nombre_articulo AS articulo_id')
+            ->get();
+
+        $datatables = VentaDatatable::make($query);            
 
         return $request->ajax()
             ? $datatables->json()
@@ -49,7 +58,11 @@ class VentaController extends Controller
 
     public function edit(Venta $venta)
     {
-        return view('ventas.edit', compact('venta'));
+
+        $articulos = Dulceria::all();
+        $gamers = Gamer::all();
+
+        return view('ventas.edit', compact('venta', 'articulos', 'gamers'));
     }
 
     public function update(VentaRequest $request, Venta $venta)
@@ -67,6 +80,27 @@ class VentaController extends Controller
         $venta->delete();
 
         return redirect()->route('ventas.index');
+    }
+
+    public function getTotalVenta(Request $request) 
+    {
+        $articulo_id = $request->input('articulo_id');
+        $cantidad = $request->input('cantidad');
+
+
+        $query = DB::table('dulcerias')
+            ->select('dulcerias.costo')
+            ->where('dulcerias.id', $articulo_id)->first();
+        
+        $costo = $query->costo;
+        $total =  $costo * $cantidad;
+
+        return response()->json(
+            [
+                'total'=>$total
+            ]
+        );
+
     }
 
 }

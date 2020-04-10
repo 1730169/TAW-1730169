@@ -12,8 +12,9 @@ class VentaRequest extends FormRequest
         return [
             //'name' => ['required', Rule::unique('ventas')->ignore($this->route('venta'))],
             'gamer_id' => ['required'],
-            'nombre_articulo' => ['required'],
+            'articulo_id' => ['required'],
             'cantidad' => ['required'],
+            'monto_total' => ['required'],
         ];
     }
 }

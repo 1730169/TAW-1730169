@@ -11,7 +11,10 @@ class VentaDatatable extends Datatable
     {
         return [
             Column::make('id'),
-            Column::make('name'),
+            Column::make('gamer_id'),
+            Column::make('articulo_id'),
+            Column::make('cantidad'),
+            Column::make('monto_total'),
             Column::make('created_at'),
             Column::make('updated_at'),
         ];
