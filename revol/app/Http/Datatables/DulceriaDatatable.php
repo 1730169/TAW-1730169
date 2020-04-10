@@ -5,14 +5,14 @@ namespace App\Http\Datatables;
 use Kejojedi\Crudify\Http\Datatable;
 use Yajra\DataTables\Html\Column;
 
-class PromocionDatatable extends Datatable
+class DulceriaDatatable extends Datatable
 {
     protected function columns()
     {
         return [
             //Column::make('id'),
-            Column::make('monto_dulceria'),
-            Column::make('monedas'),
+            Column::make('nombre_articulo'),
+            Column::make('costo'),
             //Column::make('created_at'),
             //Column::make('updated_at'),
         ];
@@ -20,11 +20,11 @@ class PromocionDatatable extends Datatable
 
     protected function orderBy()
     {
-        return ['monedas', 'asc'];
+        return ['nombre_articulo', 'asc'];
     }
 
-    protected function actions($promocion)
+    protected function actions($dulceria)
     {
-        return view('promocions.actions', compact('promocion'));
+        return view('dulcerias.actions', compact('dulceria'));
     }
 }

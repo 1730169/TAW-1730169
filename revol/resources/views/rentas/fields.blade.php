@@ -39,7 +39,6 @@ function getTotal(){
             "consola_id": consola_id
         },
     }).done(function( respuesta ) {
-        //console.log(respuesta);
         if(respuesta){
             $("#subtotal").val(respuesta.subtotal);
             $("#iva").val(respuesta.iva);

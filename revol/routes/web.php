@@ -38,3 +38,7 @@ Route::resource('rentas', 'RentaController');
 Route::post('/getTotalRenta', 'RentaController@getTotalRenta');
 
 Route::resource('promocions', 'PromocionController');
+
+Route::resource('dulcerias', 'DulceriaController');
+
+Route::resource('ventas', 'VentaController');
