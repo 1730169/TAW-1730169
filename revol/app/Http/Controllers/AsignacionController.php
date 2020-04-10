@@ -43,8 +43,8 @@ class AsignacionController extends Controller
     {
         //$consolas = Consola::all();
         $consolas = DB::table('consolas')
-                    ->join('plataformas', 'consolas.plataforma_id', '=', 'consolas.id')
-                    ->select('consolas.id', DB::raw('CONCAT(consolas.numero, " ", plataformas.nombre) AS numero'))
+                    ->join('plataformas', 'consolas.plataforma_id', '=', 'plataformas.id')
+                    ->select('consolas.id', DB::raw('CONCAT(consolas.numero, " - ", plataformas.nombre) AS numero'))
                     ->get();
         $juegos = Juego::all();
 

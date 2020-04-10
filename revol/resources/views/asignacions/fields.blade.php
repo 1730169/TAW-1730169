@@ -13,7 +13,7 @@ foreach ($juegos as $j) {
 ?>
 
 <div class="list-group list-group-flush">
-    <x-crudify-select name="consola_id" :options="$opcionesC" :empty="false" :value="old('consola_id', $asignacion->consola_id ?? '')" />
-    <x-crudify-select name="juego_id" :options="$opcionesJ" :empty="false" :value="old('juego_id', $asignacion->juego_id ?? '')" />
+    <x-crudify-select name="consola_id" :options="$opcionesC ?? []" :empty="false" :value="old('consola_id', $asignacion->consola_id ?? '')" />
+    <x-crudify-select name="juego_id" :options="$opcionesJ ?? []" :empty="false" :value="old('juego_id', $asignacion->juego_id ?? '')" />
 
 </div>
