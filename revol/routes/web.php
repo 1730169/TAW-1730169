@@ -30,3 +30,5 @@ Route::resource('consolas', 'ConsolaController');
 Route::resource('juegos', 'JuegoController');
 
 Route::resource('plataformas', 'PlataformaController');
+
+Route::resource('asignacions', 'AsignacionController');
