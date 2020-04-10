@@ -36,3 +36,5 @@ Route::resource('asignacions', 'AsignacionController');
 Route::resource('rentas', 'RentaController');
 
 Route::post('/getTotalRenta', 'RentaController@getTotalRenta');
+
+Route::resource('promocions', 'PromocionController');
