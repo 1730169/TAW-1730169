@@ -10,7 +10,7 @@ class GamerDatatable extends Datatable
     protected function columns()
     {
         return [
-            Column::make('id'),
+            //Column::make('id'),
             Column::make('nombre'),
             Column::make('apellidos'),
             Column::make('gamertag'),

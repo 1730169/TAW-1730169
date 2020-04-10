@@ -10,7 +10,7 @@ class ConsolaDatatable extends Datatable
     protected function columns()
     {
         return [
-            Column::make('id'),
+            //Column::make('id'),
             Column::make('numero'),
             Column::make('plataforma'),
 

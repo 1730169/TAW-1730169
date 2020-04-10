@@ -10,7 +10,7 @@ class RentaDatatable extends Datatable
     protected function columns()
     {
         return [
-            Column::make('id'),
+            //Column::make('id'),
             Column::make('consola'),
             Column::make('nhoras'),
             Column::make('gamer'),
