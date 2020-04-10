@@ -52,10 +52,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('gamers.index') }}">{{ __('Gamers') }}</a>
                             </li>
-
+                            <!--
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('ejemplos.index') }}">{{ __('Ejemplos') }}</a>
-                            </li>
+                            </li>-->
 
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('consolas.index') }}">{{ __('Consolas') }}</a>
@@ -67,6 +67,10 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('plataformas.index') }}">{{ __('Plataformas') }}</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('rentas.index') }}">{{ __('Rentas') }}</a>
                             </li>
 
                             <li class="nav-item dropdown">
