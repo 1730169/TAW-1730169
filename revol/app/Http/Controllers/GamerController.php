@@ -3,6 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Gamer;
+
+use DB;
+
+use App\User;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
 use App\Http\Datatables\GamerDatatable;
 use App\Http\Requests\GamerRequest;
 use Illuminate\Http\Request;
@@ -33,6 +41,16 @@ class GamerController extends Controller
     {
         Gamer::create($request->all());
 
+        // Asignarle un usuario
+        $user = User::create([
+            'name' => $request->nombre." ".$request->apellidos,
+            'email' => $request->email,
+            'password' => Hash::make($request->contrasena),
+        ]);
+
+        // Asignación del rol
+        $user->assignRole('gamer');
+
         return $request->input('submit') == 'reload'
             ? redirect()->route('gamers.create')
             : redirect()->route('gamers.index');
@@ -50,6 +68,20 @@ class GamerController extends Controller
 
     public function update(GamerRequest $request, Gamer $gamer)
     {
+        // Actualizar la cuenta de usuario
+        $usuario = DB::table('users')
+            ->select('id')
+            ->where('email', $gamer->email )->first();
+
+        $affected = DB::table('users')
+              ->where('id', $usuario->id)
+              ->update([
+                  'name' => $request->nombre." ".$request->apellidos,
+                  'email' => $request->email,
+                  'password' => Hash::make($request->contrasena),
+                ]);
+        
+        // Actualizar datos de gamer
         $gamer->update($request->all());
 
         return $request->input('submit') == 'reload'

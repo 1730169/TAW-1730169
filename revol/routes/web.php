@@ -44,3 +44,5 @@ Route::resource('dulcerias', 'DulceriaController');
 Route::resource('ventas', 'VentaController');
 
 Route::post('/getTotalVenta', 'VentaController@getTotalVenta');
+
+Route::resource('historials', 'HistorialController');
