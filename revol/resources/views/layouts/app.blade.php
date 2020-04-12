@@ -57,7 +57,7 @@
                             </li>
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('asignacions.index') }}">{{ __('Asignacion') }}</a>
+                                <a class="nav-link" href="{{ route('asignacions.index') }}">{{ __('Asignación') }}</a>
                             </li>
 
                             <li class="nav-item">
@@ -77,11 +77,11 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('promocions.index') }}">{{ __('Promocions') }}</a>
+                                <a class="nav-link" href="{{ route('promocions.index') }}">{{ __('Promociones') }}</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('dulcerias.index') }}">{{ __('Dulcerias') }}</a>
+                                <a class="nav-link" href="{{ route('dulcerias.index') }}">{{ __('Dulcería') }}</a>
                             </li>
 
                             <li class="nav-item">
@@ -93,7 +93,7 @@
 
                             @role('gamer')
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('historials.index') }}">{{ __('Historials') }}</a>
+                                    <a class="nav-link" href="{{ route('historials.index') }}">{{ __('Historial') }}</a>
                                 </li>
                             @else
 

@@ -8,7 +8,7 @@
                 <h1>@yield('title')</h1>
             </div>
             <div class="col-md-auto mb-3 mb-md-0">
-                <a href="{{ route('ventas.create') }}" class="btn btn-primary">{{ __('Create Venta') }}</a>
+                <a href="{{ route('ventas.create') }}" class="btn btn-primary">{{ __('Registrar Venta') }}</a>
             </div>
         </div>
 
