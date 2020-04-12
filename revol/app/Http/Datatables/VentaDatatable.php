@@ -22,7 +22,7 @@ class VentaDatatable extends Datatable
 
     protected function orderBy()
     {
-        return ['name', 'asc'];
+        return ['id', 'desc'];
     }
 
     protected function actions($venta)

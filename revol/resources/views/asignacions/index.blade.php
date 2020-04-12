@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Asignacions'))
+@section('title', __('Asignaciones'))
 @section('content')
     <div class="container">
         <div class="row">
@@ -8,7 +8,7 @@
                 <h1>@yield('title')</h1>
             </div>
             <div class="col-md-auto mb-3 mb-md-0">
-                <a href="{{ route('asignacions.create') }}" class="btn btn-primary">{{ __('Create Asignacion') }}</a>
+                <a href="{{ route('asignacions.create') }}" class="btn btn-primary">{{ __('Crear Asignación') }}</a>
             </div>
         </div>
 
