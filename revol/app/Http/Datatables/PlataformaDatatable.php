@@ -13,6 +13,8 @@ class PlataformaDatatable extends Datatable
             //Column::make('id'),
             Column::make('nombre'),
             Column::make('costo'),
+            Column::make('costo_monedas'),
+            Column::make("monedas_hora"),
             //Column::make('created_at'),
             //Column::make('updated_at'),
         ];

@@ -12,6 +12,8 @@ class CreatePlataformasTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->decimal('costo', 4, 2);
+            $table->decimal('costo_monedas');
+            $table->decimal('monedas_hora');
 
 
             $table->timestamps();

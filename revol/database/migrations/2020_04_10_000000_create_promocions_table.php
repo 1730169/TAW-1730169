@@ -10,8 +10,7 @@ class CreatePromocionsTable extends Migration
     {
         Schema::create('promocions', function (Blueprint $table) {
             $table->id();
-            $table->decimal('monto_dulceria')->default(0);
-            $table->decimal('monedas_dulceria')->default(0);
+            $table->decimal("porcentaje_ventas")->default(0);
 
             $table->decimal('cantidad_invitacion')->default(0);
             $table->decimal('monedas_invitacion')->default(0);

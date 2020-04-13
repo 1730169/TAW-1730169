@@ -10,8 +10,7 @@
     </div>
     
     <!--<hr>-->
-    <x-crudify-input name="monto_dulceria" type="number" :value="old('monto_dulceria', $promocion->monto_dulceria ?? 0)" />
-    <x-crudify-input name="monedas_dulceria" type="number" :value="old('monedas_dulceria', $promocion->monedas_dulceria ?? 0)" />
+    <x-crudify-input name="porcentaje_ventas" type="number" :value="old('monto_dulceria', $promocion->monto_dulceria ?? 0)" />
     
     <div class="sep">
         <h3>Invitaciones</h3>

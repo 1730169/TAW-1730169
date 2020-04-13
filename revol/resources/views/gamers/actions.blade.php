@@ -8,7 +8,7 @@
     </a>
 
     <a href="{{ route('gamers.destroy', $gamer->id) }}" class="btn {{ !request()->ajax() ? 'btn-primary' : 'btn-link text-secondary p-1' }}" title="{{ __('Delete') }}"
-       onclick="event.preventDefault(); if (confirm('{{ __('Delete This Gamer?') }}')) $('#delete_gamer_{{ $gamer->id }}_form').submit();">
+       onclick="event.preventDefault(); if (confirm('{{ __('Eliminar Gamer?') }}')) $('#delete_gamer_{{ $gamer->id }}_form').submit();">
         <i class="far fa-trash-alt {{ !request()->ajax() ? 'fa-fw' : '' }}"></i>
     </a>
 

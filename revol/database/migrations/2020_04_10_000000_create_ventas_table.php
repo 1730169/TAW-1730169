@@ -12,7 +12,7 @@ class CreateVentasTable extends Migration
             $table->id();
             $table->foreignId('gamer_id');
             $table->foreignId('articulo_id');
-            $table->integer('cantidad');
+            $table->decimal('cantidad');
             $table->decimal('monto_total');
             $table->timestamps();
         });

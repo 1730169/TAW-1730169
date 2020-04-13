@@ -8,7 +8,7 @@
     </a>
 
     <a href="{{ route('consolas.destroy', $consola->id) }}" class="btn {{ !request()->ajax() ? 'btn-primary' : 'btn-link text-secondary p-1' }}" title="{{ __('Delete') }}"
-       onclick="event.preventDefault(); if (confirm('{{ __('Delete This Consola?') }}')) $('#delete_consola_{{ $consola->id }}_form').submit();">
+       onclick="event.preventDefault(); if (confirm('{{ __('Eliminar consola?') }}')) $('#delete_consola_{{ $consola->id }}_form').submit();">
         <i class="far fa-trash-alt {{ !request()->ajax() ? 'fa-fw' : '' }}"></i>
     </a>
 

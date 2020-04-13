@@ -13,6 +13,8 @@ class PlataformaRequest extends FormRequest
             //'nombre' => ['required', Rule::unique('plataformas')->ignore($this->route('plataforma'))],
             'nombre' => ['required'],
             'costo' => ['required'],
+            'costo_monedas' => ['required'],
+            'monedas_hora' => ['required'],
         ];
     }
 }

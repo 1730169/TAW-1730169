@@ -50,14 +50,14 @@ class VentaController extends Controller
         $gamer = $request->input('gamer_id');
 
         $promo = DB::table('promocions')
-            ->select('promocions.monedas_dulceria')
-            ->where('promocions.monto_dulceria', '<=', $total)
-            ->orderBy('promocions.monto_dulceria', 'desc')->first();
+            ->select('promocions.porcentaje_ventas')->first();
 
         if ($promo) {
+            $monedas = $promo->porcentaje_ventas/100 * $total;
+            $monedas = intval($monedas);
             $incrementar = DB::table('gamers')
                         ->where('gamers.id', $gamer);
-            $incrementar->increment('monedas', $promo->monedas_dulceria);
+            $incrementar->increment('monedas', $monedas);
         }
 
         return $request->input('submit') == 'reload'

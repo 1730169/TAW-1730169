@@ -8,7 +8,7 @@
     </a>
 
     <a href="{{ route('plataformas.destroy', $plataforma->id) }}" class="btn {{ !request()->ajax() ? 'btn-primary' : 'btn-link text-secondary p-1' }}" title="{{ __('Delete') }}"
-       onclick="event.preventDefault(); if (confirm('{{ __('Delete This Plataforma?') }}')) $('#delete_plataforma_{{ $plataforma->id }}_form').submit();">
+       onclick="event.preventDefault(); if (confirm('{{ __('Eliminar Plataforma?') }}')) $('#delete_plataforma_{{ $plataforma->id }}_form').submit();">
         <i class="far fa-trash-alt {{ !request()->ajax() ? 'fa-fw' : '' }}"></i>
     </a>
 

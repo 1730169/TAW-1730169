@@ -11,8 +11,7 @@ class PromocionRequest extends FormRequest
     {
         return [
             //'name' => ['required', Rule::unique('promocions')->ignore($this->route('promocion'))],
-            'monto_dulceria' => ['required'],
-            'monedas_dulceria' => ['required'],
+            'porcentaje_ventas' => ['required'],
             'cantidad_invitacion' => ['required'],
             'monedas_invitacion' => ['required'],
         ];

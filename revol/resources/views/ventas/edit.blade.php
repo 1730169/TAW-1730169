@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Edit Venta'))
+@section('title', __('Editar Venta'))
 @section('content')
     <div class="container">
         <div class="row">
@@ -20,8 +20,8 @@
                 @include('ventas.fields')
 
                 <div class="card-footer text-md-right border-top-0">
-                    <button type="submit" name="submit" value="reload" class="btn btn-primary">{{ __('Update & Continue Edit') }}</button>
-                    <button type="submit" name="submit" value="redirect" class="btn btn-primary">{{ __('Update') }}</button>
+                    <button type="submit" name="submit" value="reload" class="btn btn-primary">{{ __('Actualizar y continuar editando') }}</button>
+                    <button type="submit" name="submit" value="redirect" class="btn btn-primary">{{ __('Actualizar') }}</button>
                 </div>
             </div>
         </form>

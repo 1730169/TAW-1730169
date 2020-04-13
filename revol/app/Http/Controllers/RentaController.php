@@ -37,14 +37,11 @@ class RentaController extends Controller
 
     public function create()
     {
-        // Obtener todos los gamers de la DB
         $gamersQuery = Gamer::all();
 
-        // Obtener todas las consolas de la DB
-        //$consolasQuery = Consola::all();
         $consolasQuery = DB::table('consolas')
             ->join('plataformas', 'plataformas.id', '=', 'consolas.plataforma_id')
-            ->select('consolas.*', 'plataformas.nombre AS plataforma')
+            ->select('consolas.*', 'plataformas.nombre AS plataforma', 'plataformas.costo_monedas AS monedas_plat')
             ->get();
 
         return view('rentas.create', compact('gamersQuery','consolasQuery'));
@@ -53,6 +50,12 @@ class RentaController extends Controller
     public function store(RentaRequest $request)
     {
         Renta::create($request->all());
+
+        $gamer = $request->input('gamer_id');
+        $monedas_gamer = $request->input('monedas_gamer');
+        $monedas = DB::table('gamers')
+                    ->where('gamers.id', $gamer)
+                    ->update(['monedas' => $monedas_gamer]);
 
         return $request->input('submit') == 'reload'
             ? redirect()->route('rentas.create')
@@ -66,14 +69,11 @@ class RentaController extends Controller
 
     public function edit(Renta $renta)
     {
-        // Obtener todos los gamers de la DB
         $gamersQuery = Gamer::all();
 
-        // Obtener todas las consolas de la DB
-        //$consolasQuery = Consola::all();
         $consolasQuery = DB::table('consolas')
             ->join('plataformas', 'plataformas.id', '=', 'consolas.plataforma_id')
-            ->select('consolas.*', 'plataformas.nombre AS plataforma')
+            ->select('consolas.*', 'plataformas.nombre AS plataforma', 'plataformas.costo_monedas AS monedas_plat')
             ->get();
         
         return view('rentas.edit', compact('renta','gamersQuery','consolasQuery'));
@@ -81,6 +81,12 @@ class RentaController extends Controller
 
     public function update(RentaRequest $request, Renta $renta)
     {
+        $gamer = $request->input('gamer_id');
+        $monedas_gamer = $request->input('monedas_gamer');
+        $monedas = DB::table('gamers')
+                    ->where('gamers.id', $gamer)
+                    ->update(['monedas' => $monedas_gamer]);
+
         $renta->update($request->all());
 
         return $request->input('submit') == 'reload'
@@ -110,19 +116,74 @@ class RentaController extends Controller
             ->where('consolas.id', $consola_id)->first();
         
         $costo = $query->costo;
-        $subtotal =  $costo * $nhoras;
-        $iva =  $subtotal * 0.16;
-        $total = $subtotal * 1.16;
-
+        $total =  $costo * $nhoras;
         //error_log($costo);
 
         return response()->json(
             [
-                'subtotal'=>$subtotal,
-                'iva'=>$iva,
                 'total'=>$total
             ]
         );
 
+    }
+
+    public function getMonedas (Request $request)
+    {
+        $gamer = $request->input('gamer_id');
+
+        $query = DB::table('gamers')
+                ->select('gamers.monedas')
+                ->where('gamers.id', $gamer)->first();
+        $monedas = $query->monedas;
+
+        return response()->json(
+            [
+                'monedas'=>$monedas
+            ]
+        );
+    }
+
+    public function getPlatMonedas(Request $request)
+    {
+        $plataforma = $request->input('consola_id');
+        $horas = $request->input('horas_monedas');
+        $gamer = $request->input('gamer_id');
+        $horas_renta = $request->input('nhoras');
+
+        $monedas = DB::table('gamers')
+                ->select('gamers.monedas')
+                ->where('gamers.id', $gamer)->first();
+                
+        $monedas_gamer = $monedas->monedas;
+        $monedas_gastadas = 0;
+
+        $query = DB::table('plataformas')
+                ->join('consolas', 'consolas.plataforma_id', 'plataformas.id')
+                ->select('plataformas.costo_monedas', 'plataformas.costo')
+                ->where('consolas.id', $plataforma)->first();
+
+        if ($horas > $horas_renta) {
+            $horas = $horas_renta;
+        }
+        $costo = $query->costo * ($horas_renta - $horas);
+        if ($monedas_gamer - $monedas_gastadas < 0 ) {
+            error_log('AAAAAAAAAAA');
+            $horas_totales = intval($monedas_gamer/$query->costo_monedas);
+            $monedas_gastadas = $horas_totales * $query->costo_monedas;
+            $monedas_gamer = $monedas_gamer - $monedas_gastadas;
+        } else {
+            $monedas_gastadas = $query->costo_monedas * $horas;
+            $monedas_gamer = $monedas_gamer - $monedas_gastadas;
+            $horas_totales = $horas;
+        }
+
+        return response()->json(
+            [
+                'monedas_gastadas'=>$monedas_gastadas,
+                'monedas_gamer'=>$monedas_gamer,
+                'horas_totales'=>$horas_totales,
+                'costo'=>$costo
+            ]
+        );
     }
 }

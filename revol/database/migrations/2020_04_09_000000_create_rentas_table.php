@@ -13,9 +13,8 @@ class CreateRentasTable extends Migration
             $table->foreignId('gamer_id');
             $table->foreignId('consola_id');
             $table->decimal('nhoras');
+            $table->decimal('monedas_gastadas');
 
-            $table->decimal('subtotal');
-            $table->decimal('iva');
             $table->decimal('total');
 
             $table->timestamps();

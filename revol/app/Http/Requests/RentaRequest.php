@@ -14,8 +14,7 @@ class RentaRequest extends FormRequest
             'gamer_id' => ['required'],
             'consola_id' => ['required'],
             'nhoras' => ['required'],
-            'subtotal' => ['required'],
-            'iva' => ['required'],
+            'monedas_gastadas'=>['required'],
             'total' => ['required']
         ];
     }

@@ -37,6 +37,10 @@ Route::resource('rentas', 'RentaController');
 
 Route::post('/getTotalRenta', 'RentaController@getTotalRenta');
 
+Route::post('/getMonedas', 'RentaController@getMonedas');
+
+Route::post('/getPlatMonedas', 'RentaController@getPlatMonedas');
+
 Route::resource('promocions', 'PromocionController');
 
 Route::resource('dulcerias', 'DulceriaController');

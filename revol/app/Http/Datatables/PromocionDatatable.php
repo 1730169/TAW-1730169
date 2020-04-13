@@ -11,8 +11,7 @@ class PromocionDatatable extends Datatable
     {
         return [
             //Column::make('id'),
-            Column::make('monto_dulceria'),
-            Column::make('monedas_dulceria'),
+            Column::make('porcentaje_ventas'),
             
             Column::make('cantidad_invitacion'),
             Column::make('monedas_invitacion'),
