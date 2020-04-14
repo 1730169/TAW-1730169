@@ -8,7 +8,7 @@
     </a>
 
     <a href="{{ route('torneos.destroy', $torneo->id) }}" class="btn {{ !request()->ajax() ? 'btn-primary' : 'btn-link text-secondary p-1' }}" title="{{ __('Delete') }}"
-       onclick="event.preventDefault(); if (confirm('{{ __('Delete This Torneo?') }}')) $('#delete_torneo_{{ $torneo->id }}_form').submit();">
+       onclick="event.preventDefault(); if (confirm('{{ __('Eliminar Torneo?') }}')) $('#delete_torneo_{{ $torneo->id }}_form').submit();">
         <i class="far fa-trash-alt {{ !request()->ajax() ? 'fa-fw' : '' }}"></i>
     </a>
 

@@ -8,7 +8,7 @@
     </a>
 
     <a href="{{ route('registro_torneos.destroy', $registro_torneo->id) }}" class="btn {{ !request()->ajax() ? 'btn-primary' : 'btn-link text-secondary p-1' }}" title="{{ __('Delete') }}"
-       onclick="event.preventDefault(); if (confirm('{{ __('Delete This registro_torneo?') }}')) $('#delete_registro_torneo_{{ $registro_torneo->id }}_form').submit();">
+       onclick="event.preventDefault(); if (confirm('{{ __('Eliminar gamer del torneo?') }}')) $('#delete_registro_torneo_{{ $registro_torneo->id }}_form').submit();">
         <i class="far fa-trash-alt {{ !request()->ajax() ? 'fa-fw' : '' }}"></i>
     </a>
 

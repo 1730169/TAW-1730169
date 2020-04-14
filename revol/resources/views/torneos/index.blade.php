@@ -8,7 +8,7 @@
                 <h1>@yield('title')</h1>
             </div>
             <div class="col-md-auto mb-3 mb-md-0">
-                <a href="{{ route('torneos.create') }}" class="btn btn-primary">{{ __('Create Torneo') }}</a>
+                <a href="{{ route('torneos.create') }}" class="btn btn-primary">{{ __('Crear Torneo') }}</a>
             </div>
         </div>
 

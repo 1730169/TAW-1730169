@@ -8,7 +8,7 @@
     </a>
 
     <a href="{{ route('premios.destroy', $premio->id) }}" class="btn {{ !request()->ajax() ? 'btn-primary' : 'btn-link text-secondary p-1' }}" title="{{ __('Delete') }}"
-       onclick="event.preventDefault(); if (confirm('{{ __('Delete This Premio?') }}')) $('#delete_premio_{{ $premio->id }}_form').submit();">
+       onclick="event.preventDefault(); if (confirm('{{ __('Eliminar Premio?') }}')) $('#delete_premio_{{ $premio->id }}_form').submit();">
         <i class="far fa-trash-alt {{ !request()->ajax() ? 'fa-fw' : '' }}"></i>
     </a>
 

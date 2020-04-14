@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('registro_torneo'))
+@section('title', __('Gamers en torneo'))
 @section('content')
     <div class="container">
         <div class="row">

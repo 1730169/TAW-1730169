@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Create registro_torneo'))
+@section('title', __('Añadir gamer a torneo'))
 @section('content')
     <div class="container">
         <h1>@yield('title')</h1>
@@ -12,8 +12,8 @@
                 @include('registro_torneos.fields')
 
                 <div class="card-footer text-md-right border-top-0">
-                    <button type="submit" name="submit" value="reload" class="btn btn-primary">{{ __('Create & Add Another') }}</button>
-                    <button type="submit" name="submit" value="redirect" class="btn btn-primary">{{ __('Create') }}</button>
+                    <button type="submit" name="submit" value="reload" class="btn btn-primary">{{ __('Añadir y continuar registrando') }}</button>
+                    <button type="submit" name="submit" value="redirect" class="btn btn-primary">{{ __('Añadir') }}</button>
                 </div>
             </div>
         </form>

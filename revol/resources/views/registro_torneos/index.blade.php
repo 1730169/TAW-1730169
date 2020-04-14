@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('registro_torneos'))
+@section('title', __('Participantes de torneo'))
 @section('content')
     <div class="container">
         <div class="row">
@@ -8,7 +8,7 @@
                 <h1>@yield('title')</h1>
             </div>
             <div class="col-md-auto mb-3 mb-md-0">
-                <a href="{{ route('registro_torneos.create') }}" class="btn btn-primary">{{ __('Create registro_torneo') }}</a>
+                <a href="{{ route('registro_torneos.create') }}" class="btn btn-primary">{{ __('Añadir gamer a torneo') }}</a>
             </div>
         </div>
 
