@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/tagsinput.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/tagsinput.js') }}" defer></script>
 </head>
 <body>
     <div id="app">
