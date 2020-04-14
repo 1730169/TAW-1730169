@@ -50,3 +50,9 @@ Route::resource('ventas', 'VentaController');
 Route::post('/getTotalVenta', 'VentaController@getTotalVenta');
 
 Route::resource('historials', 'HistorialController');
+
+Route::resource('premios', 'PremioController');
+
+Route::resource('torneos', 'TorneoController');
+
+Route::resource('registro_torneos', 'registro_torneoController');

@@ -87,6 +87,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('ventas.index') }}">{{ __('Ventas') }}</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('premios.index') }}">{{ __('Premios') }}</a>
+                            </li>
                             @else
                             
                             @endrole
@@ -99,6 +103,14 @@
 
                             @endrole
                             
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('torneos.index') }}">{{ __('Torneos') }}</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('registro_torneos.index') }}">{{ __('registro_torneos') }}</a>
+                            </li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
