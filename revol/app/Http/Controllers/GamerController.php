@@ -19,11 +19,14 @@ class GamerController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
+        $this->middleware('auth', ['except' => 'create']);
     }
 
     public function index(Request $request)
     {
+        //$this->middleware('auth');
+
         $query = Gamer::query();
         $datatables = GamerDatatable::make($query);
 
