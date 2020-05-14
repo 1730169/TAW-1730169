@@ -69,6 +69,53 @@ class MvcController{
 				</tr>';
 		}
 	}
+	
+	public function editarUsuarioController(){
+		$datosController = &_GET["id"];
+		$respuesta = Datos::editarUsuarioController($datosController,  "usuarios");
+
+		//Diseñar la estructura del formulario para que se muestren los datos de la consulta generada en el Modelo
+
+		echo '<input type="hidden" value="  '.$respuesta["id"].  '" name="idEditar" required>
+			<input type="text" value="' .$respuesta["usuario"]. '" name="usuarioEditar" required>
+			<input type="text" value="' .$respuesta["password"]. '" name="passwordEditar" required>
+			<input type="text" value="' .$respuesta["email"]. '" name="emailEditar" required>
+
+		' ;
+	}
+
+	//Actualizar usuario
+
+
+	public function actualizarUsuarioController(){
+		if (isset($_POST["usuarioEditar"])) {
+			$datosController = array("id" => $_POST["idEditar"],
+									"usuario"=>$_POST["usuarioEditar"],
+									"password"=>$_POST["passwordEditar"],
+									"email"=>$_POST["emailEditar"]);
+
+			$respuesta = Datos::actualizarUsuarioModel($datosController, "usuarios");
+
+			if ($respuesta == "success") {
+				header("Location:index.php?action=cambio")
+			} else {
+				echo "error";
+			}
+		}
+	}
+
+	//Borrar usuario
+
+	public function borrarUsuarioController() {
+		if (isset($_GET["idBorrar"])) {
+			$datosController = $_GET["idBorrar"];
+			$respuesta = Datos::borrarUsuarioModel($datosController,"usuarios");
+
+			if ($respuesta == "success") {
+				header("Location: index.php?action=usuario");
+			}
+		}
+	}
 
 }
 
