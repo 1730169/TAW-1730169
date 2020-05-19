@@ -69,6 +69,7 @@ class ProductoController{
 					<td>'.$item["precio_venta"].'</td>
 					<td>'.$item["precio_compra"].'</td>
 					<td>'.$item["inventario"].'</td>
+					<td>'.$item["categoria"].'</td>
 					<td><a href="index.php?action=editarProducto&id='.$item["id"].'"<button>Editar</button></a></td>
 					<td><a href="index.php?action=productos&idBorrar='.$item["id"].'"<button>Borrar</button></a></td>
 					</tr>';

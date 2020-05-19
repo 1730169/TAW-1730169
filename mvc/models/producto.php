@@ -38,7 +38,7 @@ class Producto extends Conexion{
 
 	#MODELO VISTA CATEGORIA
 	public function vistaProductoModel($tabla){
-		$stmt=Conexion::conectar()->prepare("SELECT id,nombre,precio_venta,precio_compra,inventario FROM $tabla");
+		$stmt=Conexion::conectar()->prepare("SELECT p.id,p.nombre,p.precio_venta,p.precio_compra,p.inventario,c.nombre AS categoria FROM $tabla AS p INNER JOIN categorias AS c ON c.id=p.categoria_id");
 		$stmt->execute();
 
 		#fetchAll(): Obtiene todas las filas de un conjunto de resultados asociados al objeto PDO statment ($stmt)

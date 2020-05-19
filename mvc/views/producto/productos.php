@@ -19,7 +19,8 @@
 				<th>Nombre</th>
 				<th>Precio venta</th>
 				<th>Precio compra</th>
-				<th>Inventario</th>				
+				<th>Inventario</th>
+				<th>Categoria</th>				
 				<th>¿Editar?</th>
 				<th>¿Eliminar?</th>
 
