@@ -18,24 +18,30 @@ class ProductoController{
 		$respuesta = Paginas::enlacesPaginasModel($enlaces);
 		include $respuesta;
 	}
+	
+	#REGISTRO DE PRODUCTOS
+	public function registroProductoController(){
 
-	#REGISTRO DE USUARIOS
-	public function registroCategoriaController(){
-
-		if(isset($_POST["categoriaRegistro"])){
+		if(isset($_POST["nombreProductoRegistro"])){
 			#Recibe a traves del método post el name(html) de usuario,contraseña y email, se almacenan los datos en una propiedad de tipo array asociativo con sus respectivas propiedades (usuario,contraseña, email).
 
-			$datosController = array("nombre"=>$_POST["categoriaRegistro"]);
+			$datosController = array(
+				"nombre"=>$_POST["nombreProductoRegistro"],
+				"descripcion"=>$_POST["descripcionRegistro"],
+				"precio_venta"=>$_POST["precio_ventaRegistro"],
+				"precio_compra"=>$_POST["precio_compraRegistro"],
+				"inventario"=>$_POST["inventarioRegistro"]
+			);
 
 
-			#Se le dice al modelo models/crud.php (Categoria::regostroUsuarioModel),que en modelo Datos el metodo registroUsuariosModel reciba en sus parametros los valores $datosController y el nombre de la tabla a la cual debe conectarse(usuarios)
+			#Se le dice al modelo models/crud.php (Producto::regostroUsuarioModel),que en modelo Datos el metodo registroUsuariosModel reciba en sus parametros los valores $datosController y el nombre de la tabla a la cual debe conectarse(usuarios)
 
-			$respuesta = Categoria::registroCategoriaModel($datosController,"categorias");
+			$respuesta = Producto::registroProductoModel($datosController,"productos");
 
 			#Se imprime la respuesta en la vista
 
 			if($respuesta== "success"){
-				header("location:index.php?action=okCategoria");
+				header("location:index.php?action=okProducto");
 			} else{
 				header("location:index.php");
 
@@ -44,75 +50,70 @@ class ProductoController{
 		}
 	}
 
-	public function ingresoUsuarioController(){
-		if(isset($_POST["usuarioIngreso"])){
+	//VISTA DE PRODUCTOS
+	public function vistaProductoController(){
 
-			$datosController=array("usuario"=>$_POST["usuarioIngreso"],"password"=>$_POST["passwordIngreso"]);
-
-			$respuesta = Categoria::ingresoUsuarioModel($datosController,"usuarios");
-
-			//Validar la respuesta del modelo para ver si es  un usuario correcto
-			if($respuesta["usuario"]==$_POST["usuarioIngreso"]&& $respuesta["password"]== $_POST["passwordIngreso"]){
-				session_start();
-				$_SESSION["validar"]=true;
-				header("location:index.php?action=usuarios");
-			}else{
-				header("location:index.php?action=fallo");
-			}
-
-
-		}
-	}
-
-	//VISTA DE USUARIOS
-	public function vistaCategoriaController(){
-
-		$respuesta=Categoria::vistaCategoriaModel("categorias");
+		$respuesta=Producto::vistaProductoModel("productos");
 		//Utilizar un foreach para poder iterar un array e imprimir la consulta del modelo
 
 		foreach ($respuesta as $row => $item) {
 			echo '<tr>
 					<td>'.$item["nombre"].'</td>
-					<td><a href="index.php?action=editarCategoria&id='.$item["id"].'"<button>Editar</button></a></td>
-					<td><a href="index.php?action=categorias&idBorrar='.$item["id"].'"<button>Borrar</button></a></td>
+					<td>'.$item["precio_venta"].'</td>
+					<td>'.$item["precio_compra"].'</td>
+					<td>'.$item["inventario"].'</td>
+					<td><a href="index.php?action=editarProducto&id='.$item["id"].'"<button>Editar</button></a></td>
+					<td><a href="index.php?action=productos&idBorrar='.$item["id"].'"<button>Borrar</button></a></td>
 					</tr>';
-			} 
+		} 
 
 
 	}
-		#EDITAR USUARIO
-	public function editarCateogoriaController(){
+	
+	#EDITAR PRODUCTO
+	public function editarProductoController(){
 		$datosController = $_GET["id"];
 		//echo $datosController;
 
-		$respuesta= Categoria::editarCategoriaModel($datosController,"categorias");
+		$respuesta= Producto::editarProductoModel($datosController,"productos");
 
 		#Diseñar la estructura de un formulario para que se muestren los datos de la consulta generada en el modelo
 
-		echo ' <input type="hidden"  value="'.$respuesta["id"].'" name="idEditar">
-
-				<input type="text" value="'.$respuesta["nombre"].'" name="categoriaEditar" required >
-
-				<input type="submit" value="Guardar">
+		echo '
+			<input type="hidden"  value="'.$respuesta["id"].'" name="idEditar">
+			
+			<input type="text" placeholder="Nombre" name="nombreProductoEditar" value="'.$respuesta["nombre"].'" required>
+			<textarea name="descripcionEditar" cols="30" rows="10" placeholder="Descripción...">'.$respuesta["descripcion"].'</textarea>
+			<input type="text" type="number" placeholder="Precio venta" name="precio_ventaEditar" value="'.$respuesta["precio_venta"].'" required>
+			<input type="text" type="number" placeholder="Precio compra" name="precio_compraEditar" value="'.$respuesta["precio_compra"].'" required>
+			<input type="text" type="number" placeholder="Inventario" name="inventarioEditar" value="'.$respuesta["inventario"].'" required>
+			
+			<input type="submit" value="Guardar">
 
 		';
 
 
 	}
 
-		#ACTUALIZAR USUARIO
-		public function actualizarCategoriaController(){
+		#ACTUALIZAR PRODUCTO
+		public function actualizarProductoController(){
 			
 			if(isset($_POST["idEditar"])){
 
-				$datosController = array("id"=>$_POST["idEditar"],
-											"nombre"=>$_POST["categoriaEditar"]
-										);
-				$respuesta=Categoria::actualizarCategoriaModel($datosController,"categorias");
+				$datosController = array(
+					"id"=>$_POST["idEditar"],
+					"nombre"=>$_POST["nombreProductoEditar"],
+					"descripcion"=>$_POST["descripcionEditar"],
+					"precio_venta"=>$_POST["precio_ventaEditar"],
+					"precio_compra"=>$_POST["precio_compraEditar"],
+					"inventario"=>$_POST["inventarioEditar"]
+				);
+				
+				$respuesta=Producto::actualizarProductoModel($datosController,"productos");
 
 			if($respuesta=="success"){
 				//header("location:index.php?action=cambioCategoria");
-				header("location:index.php?action=categorias");
+				header("location:index.php?action=productos");
 			}else{
 				echo("error");
 			
@@ -123,13 +124,13 @@ class ProductoController{
 
 	}
 
-	#BORRAR USUARIO 
-	public function borrarCategoriaController(){
+	#BORRAR PRODUCTO 
+	public function borrarProductoController(){
 		if(isset($_GET["idBorrar"])){
 			$datosController=$_GET["idBorrar"];
-			$respuesta=Categoria::borrarCategoriaModel($datosController,"categorias");
+			$respuesta=Producto::borrarProductoModel($datosController,"productos");
 			if($respuesta == "success"){
-				header("location:index.php?action=categorias");
+				header("location:index.php?action=productos");
 			}
 		}
 	}

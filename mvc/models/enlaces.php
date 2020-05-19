@@ -3,6 +3,20 @@
 	#Modelo de enlaces web
 	class Paginas{
 		public function enlacesPaginasModel($enlaces){
+
+			// ENLACES PARA EL MODULO PRODUCTOS
+			if(
+				$enlaces=="productos"||
+				$enlaces=="registrarProducto"||
+				$enlaces=="editarProducto"
+			){
+				$module = "views/producto/".$enlaces.".php";
+				return $module;
+			}else if($enlaces=="okProducto"){
+				$module="views/producto/registrarProducto.php";
+				return $module;
+			}
+
 			// ENLACES PARA EL MODULO CATEGORIA
 			if(
 				$enlaces=="categorias"||

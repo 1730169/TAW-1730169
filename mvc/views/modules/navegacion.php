@@ -4,6 +4,7 @@
 		<!-- Para navegar al url podemos hacerlo mediante la propiedad GET, la cual la toma del url, se representa por el simbolo "?" -->
 		<li><a href="index.php?action=ingresar">Ingreso</a></li>
 		<li><a href="index.php?action=usuarios">Usuario</a></li>
+		<li><a href="index.php?action=productos">Productos</a></li>
 		<li><a href="index.php?action=categorias">Categorías</a></li>
 		<li><a href="index.php?action=salir">Salir</a></li>
 	</ul>

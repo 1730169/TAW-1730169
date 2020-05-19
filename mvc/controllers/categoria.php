@@ -19,7 +19,7 @@ class CategoriaController{
 		include $respuesta;
 	}
 
-	#REGISTRO DE USUARIOS
+	#REGISTRO DE CATEGORIAS
 	public function registroCategoriaController(){
 
 		if(isset($_POST["categoriaRegistro"])){
@@ -44,27 +44,8 @@ class CategoriaController{
 		}
 	}
 
-	public function ingresoUsuarioController(){
-		if(isset($_POST["usuarioIngreso"])){
 
-			$datosController=array("usuario"=>$_POST["usuarioIngreso"],"password"=>$_POST["passwordIngreso"]);
-
-			$respuesta = Categoria::ingresoUsuarioModel($datosController,"usuarios");
-
-			//Validar la respuesta del modelo para ver si es  un usuario correcto
-			if($respuesta["usuario"]==$_POST["usuarioIngreso"]&& $respuesta["password"]== $_POST["passwordIngreso"]){
-				session_start();
-				$_SESSION["validar"]=true;
-				header("location:index.php?action=usuarios");
-			}else{
-				header("location:index.php?action=fallo");
-			}
-
-
-		}
-	}
-
-	//VISTA DE USUARIOS
+	//VISTA DE CATEGORIAS
 	public function vistaCategoriaController(){
 
 		$respuesta=Categoria::vistaCategoriaModel("categorias");
@@ -80,7 +61,7 @@ class CategoriaController{
 
 
 	}
-		#EDITAR USUARIO
+		#EDITAR CATEGORIA
 	public function editarCateogoriaController(){
 		$datosController = $_GET["id"];
 		//echo $datosController;
@@ -100,7 +81,7 @@ class CategoriaController{
 
 	}
 
-		#ACTUALIZAR USUARIO
+		#ACTUALIZAR CATEGORIA
 		public function actualizarCategoriaController(){
 			
 			if(isset($_POST["idEditar"])){
@@ -123,7 +104,7 @@ class CategoriaController{
 
 	}
 
-	#BORRAR USUARIO 
+	#BORRAR CATEGORIA 
 	public function borrarCategoriaController(){
 		if(isset($_GET["idBorrar"])){
 			$datosController=$_GET["idBorrar"];
