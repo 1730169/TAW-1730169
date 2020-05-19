@@ -1,6 +1,6 @@
 <?php
 
-class CategoriaController{
+class ProductoController{
 	#Llamada a la Plantilla
 	public function pagina(){
 		include "views/template.php";
