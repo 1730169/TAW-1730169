@@ -30,7 +30,8 @@ class ProductoController{
 				"descripcion"=>$_POST["descripcionRegistro"],
 				"precio_venta"=>$_POST["precio_ventaRegistro"],
 				"precio_compra"=>$_POST["precio_compraRegistro"],
-				"inventario"=>$_POST["inventarioRegistro"]
+				"inventario"=>$_POST["inventarioRegistro"],
+				"categoria_id"=>$_POST["categoria_id"]
 			);
 
 
@@ -48,6 +49,12 @@ class ProductoController{
 			}
 
 		}
+	}
+
+	public function obtenerSelectCategorias(){
+		$respuesta = Categoria::vistaCategoriaModel("categorias");
+		
+		return $respuesta;
 	}
 
 	//VISTA DE PRODUCTOS
@@ -76,9 +83,22 @@ class ProductoController{
 		//echo $datosController;
 
 		$respuesta= Producto::editarProductoModel($datosController,"productos");
+		$categorias = Categoria::vistaCategoriaModel("categorias");
+		$select_categoria = "";
+
+		// Recorrer todas la lista de categorias
+		foreach ($categorias as $row => $item) {
+			// Preseleccionar en el campo la categoria almacenada
+			if($item["id"] == $respuesta["categoria_id"]){
+				$select_categoria = $select_categoria.'<option value="'.$item["id"].'" selected>'.$item["nombre"].'</option>';	
+			}else{
+				$select_categoria = $select_categoria.'<option value="'.$item["id"].'">'.$item["nombre"].'</option>';
+			}
+			
+		}
 
 		#Diseñar la estructura de un formulario para que se muestren los datos de la consulta generada en el modelo
-
+		
 		echo '
 			<input type="hidden"  value="'.$respuesta["id"].'" name="idEditar">
 			
@@ -87,7 +107,11 @@ class ProductoController{
 			<input type="text" type="number" placeholder="Precio venta" name="precio_ventaEditar" value="'.$respuesta["precio_venta"].'" required>
 			<input type="text" type="number" placeholder="Precio compra" name="precio_compraEditar" value="'.$respuesta["precio_compra"].'" required>
 			<input type="text" type="number" placeholder="Inventario" name="inventarioEditar" value="'.$respuesta["inventario"].'" required>
-			
+			<label>Categoria</label>
+			<select name="categoria_id" id="">
+			'.$select_categoria.'
+			</select>
+
 			<input type="submit" value="Guardar">
 
 		';
@@ -106,7 +130,8 @@ class ProductoController{
 					"descripcion"=>$_POST["descripcionEditar"],
 					"precio_venta"=>$_POST["precio_ventaEditar"],
 					"precio_compra"=>$_POST["precio_compraEditar"],
-					"inventario"=>$_POST["inventarioEditar"]
+					"inventario"=>$_POST["inventarioEditar"],
+					"categoria_id"=>$_POST["categoria_id"],
 				);
 				
 				$respuesta=Producto::actualizarProductoModel($datosController,"productos");
