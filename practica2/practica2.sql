@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-05-2020 a las 02:27:30
+-- Tiempo de generación: 25-05-2020 a las 16:12:37
 -- Versión del servidor: 10.4.12-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -90,6 +90,27 @@ INSERT INTO `universidad` (`id`, `nombre`, `direccion`, `telefono`, `fecha_reg`)
 (1, 'UNIVERSIDAD POLITÉCNICA DE VICTORIA', 'PARQUE TECNOTAM', '834000', '2020-05-24 19:07:35'),
 (2, 'UNIVERSIDAD AUTONOMA DE TAM', 'EFDEWFEWF', '3434', '2020-05-24 19:45:08');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fecha_reg` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `usuario`, `password`, `email`, `fecha_reg`) VALUES
+(2, 'jtrevino', 'admin', 'jtrevinog72@gmail.com', '2020-05-25 09:06:54');
+
 --
 -- Índices para tablas volcadas
 --
@@ -113,6 +134,12 @@ ALTER TABLE `universidad`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -132,6 +159,12 @@ ALTER TABLE `estudiante`
 -- AUTO_INCREMENT de la tabla `universidad`
 --
 ALTER TABLE `universidad`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 

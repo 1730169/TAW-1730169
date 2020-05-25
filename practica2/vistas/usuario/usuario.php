@@ -1,50 +1,39 @@
-<?php
-
-	session_start();
-
-	if(!$_SESSION["validar"]){
-		header("location:index.php?usuario=login");
-		exit();
-	}
-	
-?>
-
 <div class="container">
     <div class="jumbotron">
-        <h2>Formulario registro de Universidad</h2>
+        <h2>Formulario registro de Usuario</h2>
 
     </div>
     <div class="col-md-6 col-md-offset-3">
         <div class="form-horizontal" style="">
             <?php if($data['id']==""){ ?>
-            <form action="index.php?universidad=get_datos" method="post">
+            <form action="index.php?usuario=get_datos" method="post">
             <?php } ?>
             <?php if($data['id']!=""){ ?>
-            <form action="index.php?universidad=get_datos&id=<?php echo $data['id'];?>" method="post">
+            <form action="index.php?usuario=get_datos&id=<?php echo $data['id'];?>" method="post">
             <?php } ?>
-                <!-- Formulario para el registro de los estudiantes -->
-                <!-- Campo nombre -->
+                <!-- Formulario para el registro de usuario -->
+                <!-- Campo usuario -->
                 <div class="form-group">
-                    <label class=" col-sm-2 control-label" for="txt_nombre">NOMBRE:</label>
+                    <label class=" col-sm-2 control-label" for="txt_usuario">USUARIO:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="txt_nombre" value="<?php echo $data['nombre']; ?>">
+                        <input type="text" class="form-control" name="txt_usuario" value="<?php echo $data['usuario']; ?>">
                     </div>
                     
                 </div>
-                <!-- Campo direccion -->
+                <!-- Campo password -->
                 <div class="form-group">
-                    <label class=" col-sm-2 control-label" for="txt_direccion">DIRECCIÓN:</label>
+                    <label class=" col-sm-2 control-label" for="txt_password">CONTRASEÑA:</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" name="txt_direccion" id="" cols="30" rows="10"><?php echo $data['direccion']; ?></textarea>
+                        <input type="password" class="form-control" name="txt_password" value="<?php echo $data['password']; ?>">
                     </div>
                     
                 </div>
 
-                <!-- Campo telefono -->
+                <!-- Campo email -->
                 <div class="form-group">
-                    <label class=" col-sm-2 control-label" for="txt_telefono">TELEFONO:</label>
+                    <label class=" col-sm-2 control-label" for="txt_email">EMAIL:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="txt_telefono" value="<?php echo $data['telefono']; ?>">
+                        <input type="email" class="form-control" name="txt_email" value="<?php echo $data['email']; ?>">
                     </div>
                     
                 </div>

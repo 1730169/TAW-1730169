@@ -69,7 +69,7 @@
             header("Location:index.php?m=index");
 
         }
-        
+         
         function confirmarDelete(){
 
             $_REQUEST['modulo'] = "m";

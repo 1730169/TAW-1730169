@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +27,21 @@
               <li><a href="index.php?m=index">Alumnos</a></li>
               <li><a href="index.php?universidad=index">Universidades</a></li>
               <li><a href="index.php?carrera=index">Carreras</a></li>
+              <li><a href="index.php?usuario=index">Usuarios</a></li>
             </ul>
+            <ul class="nav navbar-nav flex-row pull-right">
+                <?php
+                  if(!$_SESSION["validar"]){
+                    echo '<li><a class="nav-item" href="index.php?usuario=login">Iniciar Sesión</a></li>';
+                    echo '<li><a class="nav-item" href="index.php?usuario=usuario">Registrar Usuario</a></li>';
+                  }else{
+                    echo '<li><a class="nav-item" href="#">'.$_SESSION["usuario"].'</a></li>';
+                    echo '<li><a class="nav-item" href="index.php?usuario=logout">Cerrar Sesión</a></li>';
+                  }
+                ?>
+                
+            </ul>
+            
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>

@@ -1,3 +1,14 @@
+<?php
+
+	session_start();
+
+	if(!$_SESSION["validar"]){
+		header("location:index.php?usuario=login");
+		exit();
+	}
+	
+?>
+
 <div class="container" style="margin-top: 80px">
     <div class="jumbotron">
         <h2>Registro de Universidades</h2>

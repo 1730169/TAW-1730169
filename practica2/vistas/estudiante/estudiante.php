@@ -1,3 +1,14 @@
+<?php
+
+	session_start();
+
+	if(!$_SESSION["validar"]){
+		header("location:index.php?usuario=login");
+		exit();
+	}
+	
+?>
+
 <div class="container">
     <div class="jumbotron">
         <h2>Formulario registro</h2>
