@@ -9,6 +9,9 @@
     $controllerUniversidad = new universidad_controller();
     $controllerCarrera = new carrera_controller();
     $controllerUsuario = new usuario_controller();
+
+    // Variable para controlar redireccion
+    $entra = false;
     
     if(!empty($_REQUEST['universidad'])){
         $metodo=$_REQUEST['universidad'];
@@ -17,6 +20,8 @@
         }else{
             $controllerUniversidad->index();
         }
+
+        $entra = true;
     }
 
     if(!empty($_REQUEST['carrera'])){
@@ -26,6 +31,8 @@
         }else{
             $controllerCarrera->index();
         }
+        
+        $entra = true;
     }
 
     if(!empty($_REQUEST['usuario'])){
@@ -36,6 +43,8 @@
         }/*else{
             $controllerUsuario->index();
         }*/
+
+        $entra = true;
     }
 
     
@@ -46,10 +55,16 @@
         }else{
             $controller->index();
         }
+
+        $entra = true;
     }/*else{
         $controller->index();
     }*/
 
+    if(!$entra){
+        header("location:index.php?usuario=index");
+        die();
+    }
 
 
 
