@@ -1,69 +1,112 @@
-<?php
-    include_once "controllers/controller.php";
-    $registro = new MvcController();
-    $registro -> registroUsuarioController();
-?>
-  <div class="container">
-    <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-        <div class="row">
-          <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-          <div class="col-lg-7">
-            <div class="p-5">
-              <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Registrar</h1>
-              </div>
-              <form class="user">
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                     <input class="form-control form-control-user" type="text" placeholder="Usuario" name="usuarioRegistro" required>
-                  </div>
-                  <div class="col-sm-6">
-                    <input class="form-control form-control-user" type="password" placeholder="password" name="passwordRegistro" required>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input class="form-control form-control-user" type="email" placeholder="email" name="emailRegistro" required>
-                </div>
-                </div>
-                <input class="btn btn-primary btn-user btn-block" id="sendMessageButton" type="submit" value="Registrar">
-                <hr>
-                <a href="index.html" class="btn btn-google btn-user btn-block">
-                  <i class="fab fa-google fa-fw"></i> Register with Google
-                </a>
-                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                  <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                </a>
-              </form>
-              <hr>
-              <div class="text-center">
-                <a class="small" href="forgot-password.html">Olvidaste la contraseña?</a>
-              </div>
-              <div class="text-center">
-                <a class="small" href="index.php?action=ingresar">¿Ya tienes una cuenta? Ingresa!</a>
-              </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Registration Page</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+  <div class="register-logo">
+    <a href="../../index2.html"><b>Admin</b>LTE</a>
+  </div>
+
+  <div class="card">
+    <div class="card-body register-card-body">
+      <p class="login-box-msg">Registrar a un nuevo usuario</p>
+
+      <form action="index.php?action=index" method="post">
+        <div class="input-group mb-3">
+          <input name="nusuariotxt" type="text" class="form-control" placeholder="Nombre">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
-    </div>
-</div>
-<!--<h1> REGISTRO </h1>
+        <div class="input-group mb-3">
+          <input name="ausuariotxt" type="text" class="form-control" placeholder="Apellido">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input name="usuariotxt" type="text" class="form-control" placeholder="Nombre de usuario">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input name="contratxt" type="password" class="form-control" placeholder="Contraseña">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input name="emailtxt" type="email" class="form-control" placeholder="Correo">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
 
-    <form method="POST">
-        <input type="text" placeholder="Usuario" name="usuarioRegistro" required>
-        <input type="password" placeholder="password" name="passwordRegistro" required>
-        <input type="email" placeholder="email" name="emailRegistro" required>
-        <input type="submit" value="Enviar">
-    </form>
--->
+      <a href="index.php?action=login" class="text-center">I already have a membership</a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+</body>
+</html>
+
+
 <?php
-    if (isset($_GET["action"])) {
+
+    //enviar los parametros del registro al controlador
+    $registro = new MvcController();
+    $registro -> registroUsuarioController();
+
+    if(isset($_GET["action"])){
+
         if($_GET["action"] == "ok"){
             echo "Registro exitoso";
-        }else{
-            echo "Error en el registro";
         }
+
     }
 
 ?>

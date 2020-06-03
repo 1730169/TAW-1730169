@@ -79,6 +79,13 @@
 
 		}
 
+		public function contarFilasModel($tabla) { 
+			$stmt = Conexion::conectar()->prepare("SELECT COUNT(*) AS 'filas' FROM $tabla"); 
+			$stmt->execute(); 
+			return $stmt->fetch(); 
+			$stmt->close(); 
+		}
+
 	}
 
 ?>

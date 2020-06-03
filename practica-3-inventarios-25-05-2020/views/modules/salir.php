@@ -1,5 +1,4 @@
 <?php 
-	session_start();
 	session_destroy();
+	ob_end_flush();
 ?>
-<h1>!Haz salido de la aplicacion¡</h1>
