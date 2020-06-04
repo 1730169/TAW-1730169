@@ -1,35 +1,19 @@
-<?php
-	session_start();
+<?php 
+//Se verifica que exista una sesion, en caso de que no sea asi, se muestra el login 
+if(!isset($_SESSION['validar'])){
+	header("location:index.php?action=ingresar");
+	exit();
+}
+//Llamada a los controladores para insertar/modifica/
+$categorias=new MvcController();
+$categorias->insertarCategoryController();
+$categorias->actualizarCategoryController();
+$categorias->eliminarCategoryController();
 
-	if (!$_SESSION["validar"]) {
-		header("location: index.php?action=ingresar");
-		exit();
+//se verifica que el usuario haya pulsado sobre el boton 
+	if(isset($_GET['registrar'])){
+		$categorias->registrarCategoryController();
+	}else if(isset($_GET['idCategoryEditar'])){
+		$categorias->editarCategoryController();
 	}
-
-?>
-<?php include_once "modules/navegacion.php" ?>
-<H1>CATEGORIAS</H1>
-
-<TABLE>
-	<thead>
-		<tr>
-			<th>Nombre</th>
-			<th>¿Editar?</th>
-			<th>¿Eliminar?</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php
-			$vistaUsuario = new MvcController();
-			$vistaUsuario -> vistaCategoriasController();
-			$vistaUsuario -> borrarCategoriaController();
-		?>
-	</tbody>
-</TABLE>
-<?php
-	if (isset($_GET["action"])) {
-		if ($_GET["action"] == "cambio") {
-			echo "cambio exitoso";
-		}
-	}
-?>
+	
