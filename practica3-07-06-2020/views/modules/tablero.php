@@ -2,6 +2,7 @@
 	session_start();
 	
 	$controlador = new MvcController();
+	$ventaController = new VentaController();
 	
 	/**
 	 * LLENAR LOS CONTADORES DE LOS ELEMENTOS PARA EL TABLERO
@@ -9,6 +10,8 @@
 	$cont_usuarios = $controlador -> contarTablero("usuarios");
 	$cont_productos = $controlador -> contarTablero("productos");
 	$cont_categorias = $controlador -> contarTablero("categorias");
+	$cont_ventas = $controlador -> contarTablero("ventas");
+	$cont_ingresos = $ventaController -> contarIngresos("ventas");
 
 ?>
 
@@ -16,6 +19,21 @@
 <br>
 <!-- Small boxes (Stat box) -->
 <div class="row">
+	<div class="col-lg-3 col-6">
+	<!-- small box -->
+	<div class="small-box bg-success">
+		<div class="inner">
+		<h3><?php echo $cont_ventas; ?></h3>
+
+		<p>Ventas registradas</p>
+		</div>
+		<div class="icon">
+		<i class="fa fa-shopping-cart"></i>
+		</div>
+		<a href="index.php?action=ventas" class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></a>
+	</div>
+	</div>
+	<!-- ./col -->
 	<div class="col-lg-3 col-6">
 	<!-- small box -->
 	<div class="small-box bg-info">
@@ -62,7 +80,7 @@
 	</div>
 	<!-- ./col -->
 
-<!-- 	
+	<!-- 	
 	<div class="col-lg-3 col-6">
 	
 	<div class="small-box bg-danger">
@@ -77,5 +95,24 @@
 		<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 	</div>
 	</div> -->
+	<!-- ./col -->
+</div>
+
+<div class="row">
+	<!-- ./col -->
+	<div class="col-lg-3 col-6">
+	<!-- small box -->
+	<div class="small-box bg-info">
+		<div class="inner">
+		<h3>$<?php echo $cont_ingresos; ?></h3>
+
+		<p>Total de ingresos por ventas</p>
+		</div>
+		<div class="icon">
+			<i class="fa fa-money"></i>
+		</div>
+		<a href="index.php?action=ventas" class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></a>
+	</div>
+	</div>
 	<!-- ./col -->
 </div>

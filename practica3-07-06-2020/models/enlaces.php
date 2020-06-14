@@ -10,6 +10,19 @@
 				return $module;
 			}
 
+			// ENLACES PARA EL MODULO VENTAS
+			if(
+				$enlaces=="ventas"||
+				$enlaces=="registrarVenta"||
+				$enlaces=="editarVenta"
+			){
+				$module = "views/venta/".$enlaces.".php";
+				return $module;
+			}else if($enlaces=="okVenta"){
+				$module="views/venta/ventas.php";
+				return $module;
+			}
+
 			// ENLACES PARA EL MODULO PRODUCTOS
 			if(
 				$enlaces=="productos"||

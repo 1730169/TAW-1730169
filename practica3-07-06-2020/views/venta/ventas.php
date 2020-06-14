@@ -12,13 +12,13 @@
 			echo "cambio exitoso";
 		}
 		
-		if($_GET["action"] == "okProducto"){
+		if($_GET["action"] == "okVenta"){
             echo '
                 <div class="alert alert-success">
                   <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
                     <i class="tim-icons icon-simple-remove"></i>
                   </button>
-                  <span>PRODUCTO REGISTRADO CON ÉXITO !</span>
+                  <span>VENTA REGISTRADA CON ÉXITO !</span>
                 </div>
             ';
         }
@@ -26,34 +26,33 @@
 	
 ?>
 
-<h1> PRODUCTOS </h1>
+<h1> VENTAS </h1>
 
 <div class="card ">
 	<div class="card-header">
 		<h4 class="card-title">
-			<a href="index.php?action=registrarProducto" class="btn btn-fill btn-primary">Nuevo Producto</a>
+			<a href="index.php?action=registrarVenta" class="btn btn-fill btn-primary">Nueva Venta</a>
 		</h4>
 	</div>
 	<div class="card-body">
 		<div class="table-responsive">
-			<table class="table tablesorter " id="">
+			<table class="table tablesorter " id="dataTable">
 				<thead class="text-primary">
 					<tr>
-					  <th>Código</th>
-					  <th>Nombre</th>
-					  <th>Precio venta</th>
-					  <th>Precio compra</th>
-					  <th>Inventario</th>
-					  <th>Categoria</th>				
-					  <th>¿Editar?</th>
+					  <th>Fecha</th>
+					  <th>SUBTOTAL</th>
+					  <th>DESCUENTO</th>
+					  <th>TOTAL</th>
+					  				
+					  <th>¿Ver?</th>
 					  <th>¿Eliminar?</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-						$vistaProducto = new ProductoController();
-						$vistaProducto -> vistaProductoController();
-						$vistaProducto -> borrarProductoController();
+						$vistaVenta = new VentaController();
+						$vistaVenta -> vistaVentaController();
+						$vistaVenta -> borrarVentaController();
 					?>
 				</tbody>
 			</table>

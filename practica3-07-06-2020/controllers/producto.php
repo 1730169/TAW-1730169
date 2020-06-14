@@ -26,6 +26,7 @@ class ProductoController{
 			#Recibe a traves del método post el name(html) de usuario,contraseña y email, se almacenan los datos en una propiedad de tipo array asociativo con sus respectivas propiedades (usuario,contraseña, email).
 
 			$datosController = array(
+				"codigo"=>$_POST["codigoProductoRegistro"],
 				"nombre"=>$_POST["nombreProductoRegistro"],
 				"descripcion"=>$_POST["descripcionRegistro"],
 				"precio_venta"=>$_POST["precio_ventaRegistro"],
@@ -65,6 +66,7 @@ class ProductoController{
 
 		foreach ($respuesta as $row => $item) {
 			echo '<tr>
+					<td>'.$item["codigo"].'</td>
 					<td>'.$item["nombre"].'</td>
 					<td>'.$item["precio_venta"].'</td>
 					<td>'.$item["precio_compra"].'</td>
@@ -73,6 +75,25 @@ class ProductoController{
 					<td><a href="index.php?action=editarProducto&id='.$item["id"].'" class="btn btn-secondary btn-sm" >Editar</a></td>
 					<td><a href="index.php?action=productos&idBorrar='.$item["id"].'" class="btn btn-danger btn-sm">Borrar</a></td>
 					</tr>';
+		} 
+
+
+	}
+
+	//VISTA DE PRODUCTOS
+	public function listaProductosVenta(){
+
+		$respuesta=Producto::vistaProductoModel("productos");
+		//Utilizar un foreach para poder iterar un array e imprimir la consulta del modelo
+
+		foreach ($respuesta as $row => $item) {
+			echo '<tr>
+				<td><label>Cantidad: </label><input type="number" id="input_cantidad_'.$item["id"].'" min="1" max="'.$item["inventario"].'" value="1" class="form-control-sm" nombre="'.$item["nombre"].'" precio="'.$item["precio_venta"].'" /> <a href="#" onclick="agregar_a_orden('.$item["id"].');" class="btn btn-primary btn-sm" >Añadir</a></td>
+				<td>'.$item["codigo"].'</td>
+				<td>'.$item["nombre"].'</td>
+				<td>'.$item["precio_venta"].'</td>
+				<td>'.$item["categoria"].'</td>
+				</tr>';
 		} 
 
 
@@ -102,6 +123,8 @@ class ProductoController{
 		
 		echo '
 			<input type="hidden"  value="'.$respuesta["id"].'" name="idEditar">
+			<label>Código</label>
+			<input type="text" class="form-control" placeholder="Código" name="codigoProductoEditar" value="'.$respuesta["codigo"].'" >
 			<label>Nombre</label>
 			<input type="text" class="form-control" placeholder="Nombre" name="nombreProductoEditar" value="'.$respuesta["nombre"].'" required>
 			<label>Descripción</label>
@@ -130,6 +153,7 @@ class ProductoController{
 
 				$datosController = array(
 					"id"=>$_POST["idEditar"],
+					"codigo"=>$_POST["codigoProductoEditar"],
 					"nombre"=>$_POST["nombreProductoEditar"],
 					"descripcion"=>$_POST["descripcionEditar"],
 					"precio_venta"=>$_POST["precio_ventaEditar"],

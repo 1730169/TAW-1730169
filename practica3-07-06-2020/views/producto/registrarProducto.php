@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if(!$_SESSION["validar"]){
+    header("location:index.php?action=ingresar");
+    exit();
+}
 
     $registro = new ProductoController();
     
@@ -33,6 +39,8 @@
             </div>
             
             <div class="card-body">
+            <label for="">Código</label>
+                <input type="text" class="form-control" placeholder="Código" name="codigoProductoRegistro" >
                 <label for="">Nombre</label>
                 <input type="text" class="form-control" placeholder="Nombre" name="nombreProductoRegistro" required>
                 <label for="">Descripción</label>

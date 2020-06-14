@@ -4,7 +4,14 @@
 
 	if(isset($_GET["action"])){
 		if($_GET["action"]=="fallo"){
-			echo "Fallo al ingresar";
+			echo '
+                <div class="alert alert-danger">
+                  <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                    <i class="tim-icons icon-simple-remove"></i>
+                  </button>
+                  <span>Datos de acceso incorrectos.</span>
+                </div>
+            ';
 		}
 	}
 

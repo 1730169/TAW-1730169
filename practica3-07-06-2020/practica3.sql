@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-06-2020 a las 00:02:26
+-- Tiempo de generación: 14-06-2020 a las 21:51:19
 -- Versión del servidor: 10.4.12-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -49,6 +49,7 @@ INSERT INTO `categorias` (`id`, `nombre`) VALUES
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
+  `codigo` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `nombre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `descripcion` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `precio_venta` decimal(10,0) NOT NULL,
@@ -61,9 +62,9 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio_venta`, `precio_compra`, `inventario`, `categoria_id`) VALUES
-(1, 'AUTO BORA', 'Osas', '300', '200', 40, 3),
-(2, 'MUSTANG', 'IEOFJOI', '500', '450', 1, 3);
+INSERT INTO `productos` (`id`, `codigo`, `nombre`, `descripcion`, `precio_venta`, `precio_compra`, `inventario`, `categoria_id`) VALUES
+(1, '001', 'AUTO BORA', 'Osas', '300', '200', 20, 3),
+(2, '002', 'MUSTANG', 'IEOFJOI', '500', '450', 6, 3);
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,32 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `email`) VALUES
-(1, 'jtrevino', 'admin', 'jtrevinog72@gmail.com');
+(1, 'jtrevino', 'admin', 'jtrevinog72@gmail.com'),
+(11, 'admin', 'admin', 'admin@ejemplo.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ventas`
+--
+
+CREATE TABLE `ventas` (
+  `id` int(11) NOT NULL,
+  `orden_json` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subtotal` decimal(10,2) NOT NULL,
+  `descuento` decimal(10,2) NOT NULL,
+  `total` decimal(10,2) NOT NULL,
+  `fecha` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `ventas`
+--
+
+INSERT INTO `ventas` (`id`, `orden_json`, `subtotal`, `descuento`, `total`, `fecha`) VALUES
+(1, '[{\"id\":1,\"nombre\":\"AUTO BORA\",\"cantidad\":\"3\",\"precio\":\"300\",\"subtotal\":900},{\"id\":2,\"nombre\":\"MUSTANG\",\"cantidad\":\"2\",\"precio\":\"500\",\"subtotal\":1000}]', '1900.00', '0.00', '1900.00', '2020-06-14 16:35:43'),
+(2, '[{\"id\":1,\"nombre\":\"AUTO BORA\",\"cantidad\":\"2\",\"precio\":\"300\",\"subtotal\":600}]', '600.00', '60.00', '540.00', '2020-06-14 16:36:26'),
+(3, '[{\"id\":1,\"nombre\":\"AUTO BORA\",\"cantidad\":\"5\",\"precio\":\"300\",\"subtotal\":1500},{\"id\":2,\"nombre\":\"MUSTANG\",\"cantidad\":\"2\",\"precio\":\"500\",\"subtotal\":1000}]', '2500.00', '0.00', '2500.00', '2020-06-14 16:37:11');
 
 --
 -- Índices para tablas volcadas
@@ -108,6 +134,12 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -127,7 +159,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -71,27 +71,12 @@
                 </p>
             </a>
           </li>
+          
           <li class="nav-item">
-            <a href="index.php?action=registro" class="nav-link">
-                <i class="nav-icon fas fa-user-plus"></i>
+            <a href="index.php?action=ventas" class="nav-link">
+                <i class="nav-icon fa fa-shopping-cart"></i>
                 <p>
-                Registro
-                </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="index.php?action=ingresar" class="nav-link">
-                <i class="nav-icon fas fa-sign-in-alt"></i>
-                <p>
-                Ingresar
-                </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="index.php?action=usuarios" class="nav-link">
-                <i class="nav-icon fas fa-users"></i>
-                <p>
-                Usuarios
+                Ventas
                 </p>
             </a>
           </li>
@@ -111,6 +96,32 @@
                 </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="index.php?action=usuarios" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>
+                Usuarios
+                </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.php?action=registro" class="nav-link">
+                <i class="nav-icon fas fa-user-plus"></i>
+                <p>
+                Registro
+                </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.php?action=ingresar" class="nav-link">
+                <i class="nav-icon fas fa-sign-in-alt"></i>
+                <p>
+                Ingresar
+                </p>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a href="index.php?action=salir" class="nav-link">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
@@ -213,5 +224,34 @@
 <script src="assets/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="assets/js/demo.js"></script>
+
+
+<!-- DataTables -->
+<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+<script>
+  $(function () {
+    $("#dataTable").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+<script src="assets/js/modulos/venta.js"></script>
+
 </body>
 </html>
