@@ -9,8 +9,10 @@
         <meta name="csrf-token" value="{{ csrf_token() }}" />
     </head>
     <body>
+      <!-- DECLARACION DEL COMPONENTE PRINCIPAL DE LA APLICACION VUEJS -->
       <div id="app">
       </div>
+      
       <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
     </body>
 </html>
