@@ -17,6 +17,7 @@ class CreateCortecajaTable extends Migration
             $table->id();
             $table->decimal('monto_corte', 10, 2);
             $table->dateTime('fecha_corte', 0);
+            $table->foreignId('usuario_id');
 
             $table->timestamps();
         });
