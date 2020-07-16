@@ -13,7 +13,7 @@ class CreateCompartirTable extends Migration
      */
     public function up()
     {
-        Schema::create('compartir', function (Blueprint $table) {
+        Schema::create('compartirs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('paciente_id');
             $table->foreignId('doctor_afiliado_id');
@@ -30,6 +30,6 @@ class CreateCompartirTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compartir');
+        Schema::dropIfExists('compartirs');
     }
 }

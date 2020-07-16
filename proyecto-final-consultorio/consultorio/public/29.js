@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[29],{
 
-/***/ "../coreui/src/views/base/Paginations.vue":
-/*!************************************************!*\
-  !*** ../coreui/src/views/base/Paginations.vue ***!
-  \************************************************/
+/***/ "../coreui/src/views/base/ListGroups.vue":
+/*!***********************************************!*\
+  !*** ../coreui/src/views/base/ListGroups.vue ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Paginations.vue?vue&type=template&id=3c225bc5& */ "../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5&");
-/* harmony import */ var _Paginations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Paginations.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ListGroups_vue_vue_type_template_id_504b84d4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListGroups.vue?vue&type=template&id=504b84d4& */ "../coreui/src/views/base/ListGroups.vue?vue&type=template&id=504b84d4&");
+/* harmony import */ var _ListGroups_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListGroups.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/ListGroups.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Paginations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _ListGroups_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ListGroups_vue_vue_type_template_id_504b84d4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ListGroups_vue_vue_type_template_id_504b84d4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,52 +32,248 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/base/Paginations.vue"
+component.options.__file = "coreui/src/views/base/ListGroups.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js&":
-/*!*************************************************************************!*\
-  !*** ../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************/
+/***/ "../coreui/src/views/base/ListGroups.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ../coreui/src/views/base/ListGroups.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Paginations.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ListGroups_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./ListGroups.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/ListGroups.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ListGroups_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5&":
-/*!*******************************************************************************!*\
-  !*** ../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5& ***!
-  \*******************************************************************************/
+/***/ "../coreui/src/views/base/ListGroups.vue?vue&type=template&id=504b84d4&":
+/*!******************************************************************************!*\
+  !*** ../coreui/src/views/base/ListGroups.vue?vue&type=template&id=504b84d4& ***!
+  \******************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Paginations.vue?vue&type=template&id=3c225bc5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ListGroups_vue_vue_type_template_id_504b84d4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./ListGroups.vue?vue&type=template&id=504b84d4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/ListGroups.vue?vue&type=template&id=504b84d4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ListGroups_vue_vue_type_template_id_504b84d4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ListGroups_vue_vue_type_template_id_504b84d4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/ListGroups.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/ListGroups.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -163,20 +359,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Paginations',
-  data: function data() {
-    return {
-      currentPage: 3
-    };
-  }
+  name: 'ListGroups'
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5& ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/ListGroups.vue?vue&type=template&id=504b84d4&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/ListGroups.vue?vue&type=template&id=504b84d4& ***!
+  \************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -192,107 +383,122 @@ var render = function() {
     "div",
     [
       _c(
-        "CCard",
+        "CRow",
         [
           _c(
-            "CCardHeader",
+            "CCol",
+            { attrs: { md: "6" } },
             [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Pagination ")]),
-              _vm._v(" "),
-              _c("small", [_vm._v("size")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-header-actions" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "card-header-action",
-                    attrs: {
-                      href: "https://coreui.io/vue/docs/components/pagination",
-                      rel: "noreferrer noopener",
-                      target: "_blank"
-                    }
-                  },
-                  [_c("small", { staticClass: "text-muted" }, [_vm._v("docs")])]
-                )
-              ])
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Bootstrap list group ")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-header-actions" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "card-header-action",
+                            attrs: {
+                              href:
+                                "https://coreui.io/vue/docs/components/list-group",
+                              rel: "noreferrer noopener",
+                              target: "_blank"
+                            }
+                          },
+                          [
+                            _c("small", { staticClass: "text-muted" }, [
+                              _vm._v("docs")
+                            ])
+                          ]
+                        )
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c("CListGroupItem", [_vm._v("Cras justo odio")]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [
+                            _vm._v("Dapibus ac facilisis in")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [_vm._v("Morbi leo risus")]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [
+                            _vm._v("Porta ac consectetur ac")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [_vm._v("Vestibulum at eros")])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           ),
           _vm._v(" "),
           _c(
-            "CCardBody",
+            "CCol",
+            { attrs: { md: "6" } },
             [
-              _c("h6", [_vm._v("Default")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: {
-                  "active-page": _vm.currentPage,
-                  pages: 10,
-                  responsive: ""
-                },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Small")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: {
-                  size: "sm",
-                  "active-page": _vm.currentPage,
-                  pages: 10
-                },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
               _c(
-                "div",
-                { staticClass: "d-md-down-none" },
+                "CCard",
                 [
-                  _c("h6", [_vm._v("Large")]),
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _c("small", [_vm._v("active items")])
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
-                  _c("CPagination", {
-                    attrs: {
-                      size: "lg",
-                      "active-page": _vm.currentPage,
-                      pages: 10,
-                      responsive: ""
-                    },
-                    on: {
-                      "update:activePage": function($event) {
-                        _vm.currentPage = $event
-                      },
-                      "update:active-page": function($event) {
-                        _vm.currentPage = $event
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("br")
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c("CListGroupItem", [_vm._v("Cras justo odio")]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { active: "" } }, [
+                            _vm._v("Dapibus ac facilisis in")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [_vm._v("Morbi leo risus")]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [
+                            _vm._v("Porta ac consectetur ac")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [_vm._v("Vestibulum at eros")])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _c("div", [_vm._v("currentPage: " + _vm._s(_vm.currentPage))])
+              )
             ],
             1
           )
@@ -301,80 +507,725 @@ var render = function() {
       ),
       _vm._v(" "),
       _c(
-        "CCard",
+        "CRow",
         [
           _c(
-            "CCardHeader",
+            "CCol",
+            { attrs: { md: "6" } },
             [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Pagination ")]),
-              _vm._v(" "),
-              _c("small", [_vm._v("alignment")])
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("disabled items")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c("CListGroupItem", { attrs: { disabled: "" } }, [
+                            _vm._v("Cras justo odio")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [
+                            _vm._v("Dapibus ac facilisis in")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [_vm._v("Morbi leo risus")]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { disabled: "" } }, [
+                            _vm._v("Porta ac consectetur ac")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", [_vm._v("Vestibulum at eros")])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           ),
           _vm._v(" "),
           _c(
-            "CCardBody",
+            "CCol",
+            { attrs: { md: "6" } },
             [
-              _c("h6", [_vm._v("Left alignment (default)")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: { "active-page": _vm.currentPage, pages: 10 },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Center alignment")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: {
-                  align: "center",
-                  pages: 10,
-                  "active-page": _vm.currentPage
-                },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Right (end) alignment")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: {
-                  align: "end",
-                  "active-page": _vm.currentPage,
-                  pages: 10
-                },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("div", [_vm._v("currentPage: " + _vm._s(_vm.currentPage))])
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("actionable items")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#some-link" } },
+                            [_vm._v("Awesome link")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", active: "" } },
+                            [_vm._v("Link with active state")]
+                          ),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { href: "#" } }, [
+                            _vm._v("Action links are easy")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#foobar", disabled: "" } },
+                            [_vm._v("Disabled link")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("buttons")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c("CListGroupItem", { attrs: { tag: "button" } }, [
+                            _vm._v("Button item")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { tag: "button" } }, [
+                            _vm._v("I am a button")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { tag: "button", disabled: "" } },
+                            [_vm._v("Disabled button")]
+                          ),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { tag: "button" } }, [
+                            _vm._v("This is a button too")
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("with badges")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c(
+                            "CListGroupItem",
+                            {
+                              staticClass:
+                                "d-flex justify-content-between align-items-center"
+                            },
+                            [
+                              _vm._v(
+                                "\n              Cras justo odio\n              "
+                              ),
+                              _c(
+                                "CBadge",
+                                { attrs: { color: "primary", shape: "pill" } },
+                                [_vm._v("14")]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            {
+                              staticClass:
+                                "d-flex justify-content-between align-items-center"
+                            },
+                            [
+                              _vm._v(
+                                "\n              Dapibus ac facilisis in\n              "
+                              ),
+                              _c(
+                                "CBadge",
+                                { attrs: { color: "primary", shape: "pill" } },
+                                [_vm._v("2")]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            {
+                              staticClass:
+                                "d-flex justify-content-between align-items-center"
+                            },
+                            [
+                              _vm._v(
+                                "\n              Morbi leo risus\n              "
+                              ),
+                              _c(
+                                "CBadge",
+                                { attrs: { color: "primary", shape: "pill" } },
+                                [_vm._v("1")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("colors")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c("CListGroupItem", [
+                            _vm._v("This is a default list group item")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { color: "primary" } },
+                            [_vm._v("This is a primary list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { color: "secondary" } },
+                            [_vm._v("This is a secondary list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { color: "success" } },
+                            [_vm._v("This is a success list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { color: "danger" } }, [
+                            _vm._v("This is a danger list group item")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { color: "warning" } },
+                            [_vm._v("This is a warning list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { color: "info" } }, [
+                            _vm._v("This is a info list group item")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { color: "light" } }, [
+                            _vm._v("This is a light list group item")
+                          ]),
+                          _vm._v(" "),
+                          _c("CListGroupItem", { attrs: { color: "dark" } }, [
+                            _vm._v("This is a dark list group item")
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("colors active")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c("CListGroupItem", { attrs: { href: "#" } }, [
+                            _vm._v("This is a default list group item")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", color: "primary" } },
+                            [_vm._v("This is a primary list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", color: "secondary" } },
+                            [_vm._v("This is a secondary list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", color: "success" } },
+                            [_vm._v("This is a success list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", color: "danger" } },
+                            [_vm._v("This is a danger list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", color: "warning" } },
+                            [_vm._v("This is a warning list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", color: "info" } },
+                            [_vm._v("This is a info list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", color: "light" } },
+                            [_vm._v("This is a light list group item")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            { attrs: { href: "#", color: "dark" } },
+                            [_vm._v("This is a dark list group item")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { col: "12" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("inside cards")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CCardGroup",
+                        { attrs: { deck: "" } },
+                        [
+                          _c(
+                            "CCard",
+                            [
+                              _c("CCardHeader", [
+                                _c("b", [_vm._v("Card with list group")])
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "CCardBody",
+                                [
+                                  _c(
+                                    "CListGroup",
+                                    [
+                                      _c(
+                                        "CListGroupItem",
+                                        { attrs: { href: "#" } },
+                                        [_vm._v("Cras justo odio")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "CListGroupItem",
+                                        { attrs: { href: "#" } },
+                                        [_vm._v("Dapibus ac facilisis in")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "CListGroupItem",
+                                        { attrs: { href: "#" } },
+                                        [_vm._v("Vestibulum at eros")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("CCardText", { staticClass: "mt-2" }, [
+                                    _vm._v(
+                                      "\n                  Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex\n                  nulla tempor. Laborum consequat non elit enim exercitation cillum aliqua\n                  consequat id aliqua. Esse ex consectetur mollit voluptate est in duis laboris\n                  ad sit ipsum anim Lorem.\n                "
+                                    )
+                                  ])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CCard",
+                            [
+                              _c("CCardHeader", [
+                                _c("b", [_vm._v("Card with flush list group")])
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "CListGroup",
+                                { attrs: { flush: "" } },
+                                [
+                                  _c(
+                                    "CListGroupItem",
+                                    { attrs: { href: "#" } },
+                                    [_vm._v("Cras justo odio")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "CListGroupItem",
+                                    { attrs: { href: "#" } },
+                                    [_vm._v("Dapibus ac facilisis in")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "CListGroupItem",
+                                    { attrs: { href: "#" } },
+                                    [_vm._v("Vestibulum at eros")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("CCardBody", [
+                                _vm._v(
+                                  "\n                Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex\n                nulla tempor. Laborum consequat non elit enim exercitation cillum aliqua\n                consequat id aliqua. Esse ex consectetur mollit voluptate est in duis laboris\n                ad sit ipsum anim Lorem.\n              "
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _c("strong", [_vm._v(" List group ")]),
+                      _c("small", [_vm._v("custom content")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CListGroup",
+                        [
+                          _c(
+                            "CListGroupItem",
+                            {
+                              staticClass: "flex-column align-items-start",
+                              attrs: { href: "#", active: "" }
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "d-flex w-100 justify-content-between"
+                                },
+                                [
+                                  _c("h5", { staticClass: "mb-1" }, [
+                                    _vm._v("List group item heading")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("small", [_vm._v("3 days ago")])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "mb-1" }, [
+                                _vm._v(
+                                  "\n                Donec id elit non mi porta gravida at eget metus. Maecenas\n                sed diam eget risus varius blandit.\n              "
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("small", [
+                                _vm._v("Donec id elit non mi porta.")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            {
+                              staticClass: "flex-column align-items-start",
+                              attrs: { href: "#" }
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "d-flex w-100 justify-content-between"
+                                },
+                                [
+                                  _c("h5", { staticClass: "mb-1" }, [
+                                    _vm._v("List group item heading")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("small", { staticClass: "text-muted" }, [
+                                    _vm._v("3 days ago")
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "mb-1" }, [
+                                _vm._v(
+                                  "\n                Donec id elit non mi porta gravida at eget metus. Maecenas\n                sed diam eget risus varius blandit.\n              "
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("small", { staticClass: "text-muted" }, [
+                                _vm._v("Donec id elit non mi porta.")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CListGroupItem",
+                            {
+                              staticClass: "flex-column align-items-start",
+                              attrs: { href: "#", disabled: "" }
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "d-flex w-100 justify-content-between"
+                                },
+                                [
+                                  _c("h5", { staticClass: "mb-1" }, [
+                                    _vm._v("Disabled List group item")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("small", { staticClass: "text-muted" }, [
+                                    _vm._v("3 days ago")
+                                  ])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "mb-1" }, [
+                                _vm._v(
+                                  "\n                Donec id elit non mi porta gravida at eget metus. Maecenas\n                sed diam eget risus varius blandit.\n              "
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("small", { staticClass: "text-muted" }, [
+                                _vm._v("Donec id elit non mi porta.")
+                              ])
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           )

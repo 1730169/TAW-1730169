@@ -13,7 +13,7 @@ class CreateCitaTable extends Migration
      */
     public function up()
     {
-        Schema::create('cita', function (Blueprint $table) {
+        Schema::create('citas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('paciente_id');
             $table->foreignId('doctor_id');
@@ -30,6 +30,6 @@ class CreateCitaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cita');
+        Schema::dropIfExists('citas');
     }
 }

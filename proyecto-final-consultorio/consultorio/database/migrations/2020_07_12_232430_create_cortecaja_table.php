@@ -13,7 +13,7 @@ class CreateCortecajaTable extends Migration
      */
     public function up()
     {
-        Schema::create('cortecaja', function (Blueprint $table) {
+        Schema::create('cortecajas', function (Blueprint $table) {
             $table->id();
             $table->decimal('monto_corte', 10, 2);
             $table->dateTime('fecha_corte', 0);
@@ -30,6 +30,6 @@ class CreateCortecajaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cortecaja');
+        Schema::dropIfExists('cortecajas');
     }
 }

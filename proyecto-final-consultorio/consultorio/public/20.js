@@ -1,17 +1,17 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[20],{
 
-/***/ "../coreui/src/views/roles/Roles.vue":
-/*!*******************************************!*\
-  !*** ../coreui/src/views/roles/Roles.vue ***!
-  \*******************************************/
+/***/ "../coreui/src/views/pacientes/Pacientes.vue":
+/*!***************************************************!*\
+  !*** ../coreui/src/views/pacientes/Pacientes.vue ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Roles_vue_vue_type_template_id_647b649e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Roles.vue?vue&type=template&id=647b649e&scoped=true& */ "../coreui/src/views/roles/Roles.vue?vue&type=template&id=647b649e&scoped=true&");
-/* harmony import */ var _Roles_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Roles.vue?vue&type=script&lang=js& */ "../coreui/src/views/roles/Roles.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _Roles_vue_vue_type_style_index_0_id_647b649e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css& */ "../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css&");
+/* harmony import */ var _Pacientes_vue_vue_type_template_id_59099b8a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pacientes.vue?vue&type=template&id=59099b8a&scoped=true& */ "../coreui/src/views/pacientes/Pacientes.vue?vue&type=template&id=59099b8a&scoped=true&");
+/* harmony import */ var _Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pacientes.vue?vue&type=script&lang=js& */ "../coreui/src/views/pacientes/Pacientes.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Pacientes_vue_vue_type_style_index_0_id_59099b8a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css& */ "../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css&");
 /* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -22,75 +22,75 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _Roles_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Roles_vue_vue_type_template_id_647b649e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Roles_vue_vue_type_template_id_647b649e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Pacientes_vue_vue_type_template_id_59099b8a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Pacientes_vue_vue_type_template_id_59099b8a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "647b649e",
+  "59099b8a",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/roles/Roles.vue"
+component.options.__file = "coreui/src/views/pacientes/Pacientes.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/roles/Roles.vue?vue&type=script&lang=js&":
-/*!********************************************************************!*\
-  !*** ../coreui/src/views/roles/Roles.vue?vue&type=script&lang=js& ***!
-  \********************************************************************/
+/***/ "../coreui/src/views/pacientes/Pacientes.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ../coreui/src/views/pacientes/Pacientes.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Roles.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/roles/Roles.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Pacientes.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/Pacientes.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css&":
-/*!****************************************************************************************************!*\
-  !*** ../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css& ***!
-  \****************************************************************************************************/
+/***/ "../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css&":
+/*!************************************************************************************************************!*\
+  !*** ../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css& ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_style_index_0_id_647b649e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/style-loader!../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css&");
-/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_style_index_0_id_647b649e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_style_index_0_id_647b649e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_style_index_0_id_647b649e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_style_index_0_id_647b649e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_style_index_0_id_647b649e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_id_59099b8a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/style-loader!../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css&");
+/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_id_59099b8a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_id_59099b8a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_id_59099b8a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_id_59099b8a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_style_index_0_id_59099b8a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/roles/Roles.vue?vue&type=template&id=647b649e&scoped=true&":
-/*!**************************************************************************************!*\
-  !*** ../coreui/src/views/roles/Roles.vue?vue&type=template&id=647b649e&scoped=true& ***!
-  \**************************************************************************************/
+/***/ "../coreui/src/views/pacientes/Pacientes.vue?vue&type=template&id=59099b8a&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ../coreui/src/views/pacientes/Pacientes.vue?vue&type=template&id=59099b8a&scoped=true& ***!
+  \**********************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_template_id_647b649e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Roles.vue?vue&type=template&id=647b649e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/roles/Roles.vue?vue&type=template&id=647b649e&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_template_id_647b649e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_template_id_59099b8a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Pacientes.vue?vue&type=template&id=59099b8a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/Pacientes.vue?vue&type=template&id=59099b8a&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_template_id_59099b8a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Roles_vue_vue_type_template_id_647b649e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Pacientes_vue_vue_type_template_id_59099b8a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/roles/Roles.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/roles/Roles.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/Pacientes.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/pacientes/Pacientes.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -156,29 +156,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Roles',
+  name: 'Pacientes',
   data: function data() {
     return {
       items: [],
-      fields: ['name', 'hierarchy', 'move-up', 'move-down', 'show', 'edit', 'delete'],
+
+      /*
+      fields: [
+        {key: 'author'},
+        {key: 'title'},
+        {key: 'content'},
+        {key: 'applies_to_date'},
+        {key: 'status'},
+        {key: 'paciente_type'},
+        {key: 'ver'},
+        {key: 'edit'},
+        {key: 'delete'}
+      ],
+      */
+      fields: ['nombre', 'apellidos', 'telefono', 'sexo', 'editar', 'eliminar'],
       currentPage: 1,
       perPage: 5,
       totalRows: 0,
       you: null,
       message: '',
-      showMessage: false,
+      verMessage: false,
       dismissSecs: 7,
       dismissCountDown: 0,
-      showDismissibleAlert: false
+      verDismissibleAlert: false
     };
   },
   computed: {},
@@ -186,105 +193,68 @@ __webpack_require__.r(__webpack_exports__);
     getRowCount: function getRowCount(items) {
       return items.length;
     },
-    roleLink: function roleLink(id) {
-      return "roles/".concat(id.toString());
+    pacienteLink: function pacienteLink(id) {
+      return "pacientes/".concat(id.toString());
     },
     editLink: function editLink(id) {
-      return "roles/".concat(id.toString(), "/edit");
+      return "pacientes/".concat(id.toString(), "/editar");
     },
-    showRole: function showRole(id) {
-      var roleLink = this.roleLink(id);
+    verPaciente: function verPaciente(id) {
+      var pacienteLink = this.pacienteLink(id);
       this.$router.push({
-        path: roleLink
+        path: pacienteLink
       });
     },
-    editRole: function editRole(id) {
+    editarPaciente: function editarPaciente(id) {
       var editLink = this.editLink(id);
       this.$router.push({
         path: editLink
       });
     },
-    deleteRole: function deleteRole(id) {
+    eliminarPaciente: function eliminarPaciente(id) {
       var self = this;
-      var noteId = id;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/roles/' + id + '?token=' + localStorage.getItem("api_token"), {
+      var pacienteId = id;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/pacientes/' + id, {
         _method: 'DELETE'
       }).then(function (response) {
-        if (response.data.status === 'success') {
-          self.message = 'Successfully deleted role.';
-          self.showAlert();
-          self.getRoles();
-        } else if (response.data.status === 'rejected') {
-          self.message = "Can't delete. Role has assigned one or more menu elements.";
-          self.showAlert();
-        }
+        self.message = 'Paciente eliminado con éxito.';
+        self.verAlert();
+        self.getPacientes();
       })["catch"](function (error) {
-        console.log(error);
-        self.$router.push({
-          path: '/login'
-        });
+        console.log(error); //self.$router.push({ path: '/login' });
       });
     },
-    moveUp: function moveUp(id) {
-      var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/roles/move/move-up?id=' + id + '&token=' + localStorage.getItem("api_token")).then(function (response) {
-        self.message = 'Successfully move role.';
-        self.showAlert();
-        self.getRoles();
-      })["catch"](function (error) {
-        console.log(error);
-        self.$router.push({
-          path: '/login'
-        });
-      });
-    },
-    moveDown: function moveDown(id) {
-      var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/roles/move/move-down?id=' + id + '&token=' + localStorage.getItem("api_token")).then(function (response) {
-        self.message = 'Successfully move role.';
-        self.showAlert();
-        self.getRoles();
-      })["catch"](function (error) {
-        console.log(error);
-        self.$router.push({
-          path: '/login'
-        });
-      });
-    },
-    createRole: function createRole() {
+    registrarPaciente: function registrarPaciente() {
       this.$router.push({
-        path: 'roles/create'
+        path: '/pacientes/registrar'
       });
     },
     countDownChanged: function countDownChanged(dismissCountDown) {
       this.dismissCountDown = dismissCountDown;
     },
-    showAlert: function showAlert() {
+    verAlert: function verAlert() {
       this.dismissCountDown = this.dismissSecs;
     },
-    getRoles: function getRoles() {
+    getPacientes: function getPacientes() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/roles?token=' + localStorage.getItem("api_token")).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/pacientes').then(function (response) {
         self.items = response.data;
       })["catch"](function (error) {
-        console.log(error);
-        self.$router.push({
-          path: '/login'
-        });
+        console.log(error); //self.$router.push({ path: '/login' });
       });
     }
   },
   mounted: function mounted() {
-    this.getRoles();
+    this.getPacientes();
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css&":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -293,22 +263,22 @@ exports = module.exports = __webpack_require__(/*! ../../../../consultorio/node_
 
 
 // module
-exports.push([module.i, "\n.card-body[data-v-647b649e] table > tbody > tr > td {\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.card-body[data-v-59099b8a] table > tbody > tr > td {\n  cursor: pointer;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css&":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/roles/Roles.vue?vue&type=style&index=0&id=647b649e&scoped=true&lang=css&");
+var content = __webpack_require__(/*! !../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/Pacientes.vue?vue&type=style&index=0&id=59099b8a&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -330,10 +300,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/roles/Roles.vue?vue&type=template&id=647b649e&scoped=true&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/roles/Roles.vue?vue&type=template&id=647b649e&scoped=true& ***!
-  \********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/Pacientes.vue?vue&type=template&id=59099b8a&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/pacientes/Pacientes.vue?vue&type=template&id=59099b8a&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -362,45 +332,20 @@ var render = function() {
                   _c(
                     "CCardBody",
                     [
-                      _c("h4", [_vm._v("Roles")]),
-                      _vm._v(" "),
                       _c(
                         "CButton",
                         {
                           attrs: { color: "primary" },
                           on: {
                             click: function($event) {
-                              return _vm.createRole()
+                              return _vm.registrarPaciente()
                             }
                           }
                         },
-                        [_vm._v("Create Role")]
+                        [_vm._v("Registrar Paciente")]
                       ),
                       _vm._v(" "),
-                      _c(
-                        "CAlert",
-                        {
-                          attrs: {
-                            show: _vm.dismissCountDown,
-                            color: "primary",
-                            fade: ""
-                          },
-                          on: {
-                            "update:show": function($event) {
-                              _vm.dismissCountDown = $event
-                            }
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n            (" +
-                              _vm._s(_vm.dismissCountDown) +
-                              ") " +
-                              _vm._s(_vm.message) +
-                              "\n          "
-                          )
-                        ]
-                      ),
+                      _c("br"),
                       _vm._v(" "),
                       _c("CDataTable", {
                         attrs: {
@@ -412,29 +357,59 @@ var render = function() {
                         },
                         scopedSlots: _vm._u([
                           {
-                            key: "name",
+                            key: "nombre",
                             fn: function(ref) {
                               var item = ref.item
                               return [
                                 _c("td", [
-                                  _c("strong", [_vm._v(_vm._s(item.name))])
+                                  _c("strong", [_vm._v(_vm._s(item.nombre))])
                                 ])
                               ]
                             }
                           },
                           {
-                            key: "hierarchy",
+                            key: "apellidos",
                             fn: function(ref) {
                               var item = ref.item
                               return [
                                 _c("td", [
-                                  _c("strong", [_vm._v(_vm._s(item.hierarchy))])
+                                  _c("strong", [_vm._v(_vm._s(item.apellidos))])
                                 ])
                               ]
                             }
                           },
                           {
-                            key: "move-up",
+                            key: "telefono",
+                            fn: function(ref) {
+                              var item = ref.item
+                              return [
+                                _c("td", [
+                                  _vm._v(
+                                    "\n                " +
+                                      _vm._s(item.telefono) +
+                                      "\n              "
+                                  )
+                                ])
+                              ]
+                            }
+                          },
+                          {
+                            key: "sexo",
+                            fn: function(ref) {
+                              var item = ref.item
+                              return [
+                                _c("td", [
+                                  _vm._v(
+                                    "\n                " +
+                                      _vm._s(item.sexo) +
+                                      "\n              "
+                                  )
+                                ])
+                              ]
+                            }
+                          },
+                          {
+                            key: "editar",
                             fn: function(ref) {
                               var item = ref.item
                               return [
@@ -447,11 +422,11 @@ var render = function() {
                                         attrs: { color: "primary" },
                                         on: {
                                           click: function($event) {
-                                            return _vm.moveUp(item.id)
+                                            return _vm.editarPaciente(item.id)
                                           }
                                         }
                                       },
-                                      [_vm._v("Move Up")]
+                                      [_vm._v("Editar")]
                                     )
                                   ],
                                   1
@@ -460,85 +435,7 @@ var render = function() {
                             }
                           },
                           {
-                            key: "move-down",
-                            fn: function(ref) {
-                              var item = ref.item
-                              return [
-                                _c(
-                                  "td",
-                                  [
-                                    _c(
-                                      "CButton",
-                                      {
-                                        attrs: { color: "primary" },
-                                        on: {
-                                          click: function($event) {
-                                            return _vm.moveDown(item.id)
-                                          }
-                                        }
-                                      },
-                                      [_vm._v("Move Down")]
-                                    )
-                                  ],
-                                  1
-                                )
-                              ]
-                            }
-                          },
-                          {
-                            key: "show",
-                            fn: function(ref) {
-                              var item = ref.item
-                              return [
-                                _c(
-                                  "td",
-                                  [
-                                    _c(
-                                      "CButton",
-                                      {
-                                        attrs: { color: "primary" },
-                                        on: {
-                                          click: function($event) {
-                                            return _vm.showRole(item.id)
-                                          }
-                                        }
-                                      },
-                                      [_vm._v("Show")]
-                                    )
-                                  ],
-                                  1
-                                )
-                              ]
-                            }
-                          },
-                          {
-                            key: "edit",
-                            fn: function(ref) {
-                              var item = ref.item
-                              return [
-                                _c(
-                                  "td",
-                                  [
-                                    _c(
-                                      "CButton",
-                                      {
-                                        attrs: { color: "primary" },
-                                        on: {
-                                          click: function($event) {
-                                            return _vm.editRole(item.id)
-                                          }
-                                        }
-                                      },
-                                      [_vm._v("Edit")]
-                                    )
-                                  ],
-                                  1
-                                )
-                              ]
-                            }
-                          },
-                          {
-                            key: "delete",
+                            key: "eliminar",
                             fn: function(ref) {
                               var item = ref.item
                               return [
@@ -551,11 +448,11 @@ var render = function() {
                                         attrs: { color: "danger" },
                                         on: {
                                           click: function($event) {
-                                            return _vm.deleteRole(item.id)
+                                            return _vm.eliminarPaciente(item.id)
                                           }
                                         }
                                       },
-                                      [_vm._v("Delete")]
+                                      [_vm._v("Eliminar")]
                                     )
                                   ],
                                   1

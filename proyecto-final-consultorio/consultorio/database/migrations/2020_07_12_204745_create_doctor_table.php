@@ -13,7 +13,7 @@ class CreateDoctorTable extends Migration
      */
     public function up()
     {
-        Schema::create('doctor', function (Blueprint $table) {
+        Schema::create('doctores', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('apellidos');
@@ -36,6 +36,6 @@ class CreateDoctorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doctor');
+        Schema::dropIfExists('doctores');
     }
 }

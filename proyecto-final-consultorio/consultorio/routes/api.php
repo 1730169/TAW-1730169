@@ -80,3 +80,26 @@ Route::group(['middleware' => 'api'], function ($router) {
     });
 });
 
+/**
+ * RUTAS PARA EL MODULO DE PACIENTES
+ */
+Route::get('pacientes', 'PacientesController@list');
+Route::get('pacientes/{id}', 'PacientesController@get');
+Route::post('pacientes', 'PacientesController@create');
+Route::put('pacientes/{id}', 'PacientesController@update');
+Route::delete('pacientes/{id}', 'PacientesController@delete');
+
+/**
+ * RUTAS PARA EL MODULO DE DOCTORES
+ */
+Route::get('doctores', 'DoctoresController@list');
+Route::get('doctores/{id}', 'DoctoresController@get');
+Route::post('doctores', 'DoctoresController@create');
+Route::put('doctores/{id}', 'DoctoresController@update');
+Route::delete('doctores/{id}', 'DoctoresController@delete');
+
+Route::get('citas', 'CitasController@list');
+Route::get('citas/{id}', 'CitasController@get');
+Route::post('citas', 'CitasController@create');
+Route::put('citas/{id}', 'CitasController@update');
+Route::delete('citas/{id}', 'CitasController@delete');

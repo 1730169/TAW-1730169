@@ -20,10 +20,14 @@
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.20.1",
         "sass-loader": "7.*",
+        "less-loader": "~6.2.0",
+        "vform": "~1.0.1",
         "vue-template-compiler": "~2.6.11"
     },
     "dependencies": {
         "@coreui/vue": "~3.0.0",
+        "less-loader": "^6.2.0",
+        "vform": "^1.0.1",
         "vuex": "~3.1.2"
     }
 }

@@ -1,17 +1,19 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[21],{
 
-/***/ "../coreui/src/views/base/Cards.vue":
-/*!******************************************!*\
-  !*** ../coreui/src/views/base/Cards.vue ***!
-  \******************************************/
+/***/ "../coreui/src/views/resources/Resource.vue":
+/*!**************************************************!*\
+  !*** ../coreui/src/views/resources/Resource.vue ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cards.vue?vue&type=template&id=43e8910f& */ "../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f&");
-/* harmony import */ var _Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cards.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Cards.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Resource_vue_vue_type_template_id_605fdfe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Resource.vue?vue&type=template&id=605fdfe2&scoped=true& */ "../coreui/src/views/resources/Resource.vue?vue&type=template&id=605fdfe2&scoped=true&");
+/* harmony import */ var _Resource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Resource.vue?vue&type=script&lang=js& */ "../coreui/src/views/resources/Resource.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Resource_vue_vue_type_style_index_0_id_605fdfe2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css& */ "../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css&");
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -19,65 +21,83 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Resource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Resource_vue_vue_type_template_id_605fdfe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Resource_vue_vue_type_template_id_605fdfe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "605fdfe2",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/base/Cards.vue"
+component.options.__file = "coreui/src/views/resources/Resource.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Cards.vue?vue&type=script&lang=js&":
-/*!*******************************************************************!*\
-  !*** ../coreui/src/views/base/Cards.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************/
+/***/ "../coreui/src/views/resources/Resource.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ../coreui/src/views/resources/Resource.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Cards.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Cards.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Resource.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/Resource.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f&":
-/*!*************************************************************************!*\
-  !*** ../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f& ***!
-  \*************************************************************************/
+/***/ "../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css&":
+/*!***********************************************************************************************************!*\
+  !*** ../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css& ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_style_index_0_id_605fdfe2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/style-loader!../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css&");
+/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_style_index_0_id_605fdfe2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_style_index_0_id_605fdfe2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_style_index_0_id_605fdfe2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_style_index_0_id_605fdfe2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_style_index_0_id_605fdfe2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "../coreui/src/views/resources/Resource.vue?vue&type=template&id=605fdfe2&scoped=true&":
+/*!*********************************************************************************************!*\
+  !*** ../coreui/src/views/resources/Resource.vue?vue&type=template&id=605fdfe2&scoped=true& ***!
+  \*********************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Cards.vue?vue&type=template&id=43e8910f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_template_id_605fdfe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Resource.vue?vue&type=template&id=605fdfe2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/Resource.vue?vue&type=template&id=605fdfe2&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_template_id_605fdfe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Resource_vue_vue_type_template_id_605fdfe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Cards.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Cards.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/Resource.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/resources/Resource.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "../coreui/node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -108,269 +128,100 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Cards',
+  name: 'ResourceDetails',
   data: function data() {
     return {
-      show: true,
-      isCollapsed: true,
-      loremIpsum: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+      form: {},
+      columns: []
     };
+  },
+  watch: {},
+  computed: {},
+  methods: {
+    goBack: function goBack() {
+      this.$router.go(-1);
+    },
+    countDownChanged: function countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown;
+    },
+    showAlert: function showAlert() {
+      this.dismissCountDown = this.dismissSecs;
+    },
+    getResource: function getResource() {
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/resource/' + self.$route.params.bread + '/resource/' + self.$route.params.id + '?token=' + localStorage.getItem("api_token")).then(function (response) {
+        self.form = response.data.form;
+        self.columns = response.data.columns;
+      })["catch"](function (error) {
+        console.log(error);
+        self.$router.push({
+          path: '/login'
+        });
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getResource();
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f&":
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f& ***!
-  \*******************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../consultorio/node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.img-mini[data-v-605fdfe2]{\n  max-width:200px;\n  max-height:200px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/Resource.vue?vue&type=style&index=0&id=605fdfe2&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../consultorio/node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/Resource.vue?vue&type=template&id=605fdfe2&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/resources/Resource.vue?vue&type=template&id=605fdfe2&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -383,843 +234,78 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "CRow",
     [
       _c(
-        "CRow",
+        "CCol",
+        { attrs: { col: "12", xl: "12" } },
         [
           _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
+            "transition",
+            { attrs: { name: "slide" } },
             [
               _c(
                 "CCard",
                 [
-                  _c("CCardHeader", [
-                    _vm._v("\n          Card title\n          "),
-                    _c("div", { staticClass: "card-header-actions" }, [
+                  _c(
+                    "CCardBody",
+                    [
+                      _c("h4", [_vm._v("Show " + _vm._s(_vm.form.name))]),
+                      _vm._v(" "),
                       _c(
-                        "a",
+                        "CButton",
                         {
-                          staticClass: "card-header-action",
-                          attrs: {
-                            href:
-                              "https://coreui.io/vue/docs/components/card-components",
-                            rel: "noreferrer noopener",
-                            target: "_blank"
-                          }
+                          attrs: { color: "primary" },
+                          on: { click: _vm.goBack }
                         },
-                        [
-                          _c("small", { staticClass: "text-muted" }, [
-                            _vm._v("docs")
-                          ])
-                        ]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("CCardBody", [
-                    _vm._v(
-                      "\n          " + _vm._s(_vm.loremIpsum) + "\n        "
-                    )
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                [
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))]),
-                  _vm._v(" "),
-                  _c("CCardFooter", [_vm._v("Card Footer")])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                [
-                  _c(
-                    "CCardHeader",
-                    [
-                      _c("CIcon", { attrs: { name: "cil-check" } }),
-                      _vm._v(" Card with icon")
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                [
-                  _c(
-                    "CCardHeader",
-                    [
-                      _vm._v("\n          Card with switch\n          "),
-                      _c("CSwitch", {
-                        staticClass: "float-right",
-                        attrs: {
-                          size: "sm",
-                          shape: "pill",
-                          color: "info",
-                          "data-on": "On",
-                          "data-off": "Off",
-                          checked: true
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("CCardBody", [
-                    _vm._v(
-                      "\n          " + _vm._s(_vm.loremIpsum) + "\n        "
-                    )
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                [
-                  _c(
-                    "CCardHeader",
-                    [
-                      _vm._v("\n          Card with label\n          "),
-                      _c(
-                        "CBadge",
-                        {
-                          staticClass: "float-right",
-                          attrs: { color: "success" }
-                        },
-                        [_vm._v("Success")]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("CCardBody", [
-                    _vm._v(
-                      "\n          " + _vm._s(_vm.loremIpsum) + "\n        "
-                    )
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                [
-                  _c(
-                    "CCardHeader",
-                    [
-                      _vm._v("\n          Card with label\n          "),
-                      _c(
-                        "CBadge",
-                        {
-                          staticClass: "float-right",
-                          attrs: { shape: "pill", color: "danger" }
-                        },
-                        [_vm._v("42")]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("CCardBody", [
-                    _vm._v(
-                      "\n          " + _vm._s(_vm.loremIpsum) + "\n        "
-                    )
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CRow",
-        [
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "border-color": "primary" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card outline primary")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "border-color": "secondary" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card outline secondary")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "border-color": "success" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card outline success")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "border-color": "info" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card outline info")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "border-color": "warning" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card outline warning")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "border-color": "danger" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card outline danger")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CRow",
-        [
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "accent-color": "primary" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card with primary accent")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "accent-color": "secondary" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card with secondary accent")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "accent-color": "success" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card with success accent")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "accent-color": "info" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card with info accent")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "accent-color": "info" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card with info accent")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                { attrs: { "accent-color": "danger" } },
-                [
-                  _c("CCardHeader", [_vm._v("Card with danger accent")]),
-                  _vm._v(" "),
-                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CRow",
-        [
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  staticClass: "text-center",
-                  attrs: {
-                    color: "primary",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [
-                  _c("blockquote", { staticClass: "card-blockquote" }, [
-                    _c("p", [
-                      _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("footer", [
-                      _vm._v("Someone famous in\n            "),
-                      _c("cite", { attrs: { title: "Source Title" } }, [
-                        _vm._v("Source Title")
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  staticClass: "text-center",
-                  attrs: {
-                    color: "success",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [
-                  _c("blockquote", { staticClass: "card-blockquote" }, [
-                    _c("p", [
-                      _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("footer", [
-                      _vm._v("Someone famous in\n            "),
-                      _c("cite", { attrs: { title: "Source Title" } }, [
-                        _vm._v("Source Title")
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  staticClass: "text-center",
-                  attrs: {
-                    color: "info",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [
-                  _c("blockquote", { staticClass: "card-blockquote" }, [
-                    _c("p", [
-                      _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("footer", [
-                      _vm._v("Someone famous in\n            "),
-                      _c("cite", { attrs: { title: "Source Title" } }, [
-                        _vm._v("Source Title")
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  staticClass: "text-center",
-                  attrs: {
-                    color: "warning",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [
-                  _c("blockquote", { staticClass: "card-blockquote" }, [
-                    _c("p", [
-                      _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("footer", [
-                      _vm._v("Someone famous in\n            "),
-                      _c("cite", { attrs: { title: "Source Title" } }, [
-                        _vm._v("Source Title")
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  staticClass: "text-center",
-                  attrs: {
-                    color: "danger",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [
-                  _c("blockquote", { staticClass: "card-blockquote" }, [
-                    _c("p", [
-                      _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("footer", [
-                      _vm._v("Someone famous in\n            "),
-                      _c("cite", { attrs: { title: "Source Title" } }, [
-                        _vm._v("Source Title")
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  staticClass: "text-center",
-                  attrs: { color: "secondary", "body-wrapper": "" }
-                },
-                [
-                  _c("blockquote", { staticClass: "card-blockquote" }, [
-                    _c("p", [
-                      _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("footer", [
-                      _vm._v("Someone famous in\n            "),
-                      _c("cite", { attrs: { title: "Source Title" } }, [
-                        _vm._v("Source Title")
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CRow",
-        [
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  attrs: {
-                    color: "primary",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  attrs: {
-                    color: "success",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  attrs: {
-                    color: "info",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  attrs: {
-                    color: "warning",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "CCard",
-                {
-                  attrs: {
-                    color: "danger",
-                    "body-wrapper": "",
-                    "text-color": "white"
-                  }
-                },
-                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            { attrs: { sm: "6", md: "4" } },
-            [
-              _c(
-                "transition",
-                { attrs: { name: "fade" } },
-                [
-                  _vm.show
-                    ? _c(
-                        "CCard",
-                        { attrs: { color: "secondary" } },
-                        [
-                          _c("CCardHeader", [
-                            _vm._v(
-                              "\n            Card with header actions\n            "
-                            ),
-                            _c(
-                              "div",
-                              { staticClass: "card-header-actions" },
-                              [
-                                _c(
-                                  "CLink",
-                                  {
-                                    staticClass:
-                                      "card-header-action btn-setting",
-                                    attrs: { href: "#" }
-                                  },
-                                  [
-                                    _c("CIcon", {
-                                      attrs: { name: "cil-settings" }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "CLink",
-                                  {
-                                    staticClass:
-                                      "card-header-action btn-minimize",
-                                    on: {
-                                      click: function($event) {
-                                        _vm.isCollapsed = !_vm.isCollapsed
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _c("CIcon", {
-                                      attrs: {
-                                        name:
-                                          "cil-chevron-" +
-                                          (_vm.isCollapsed ? "bottom" : "top")
-                                      }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "CLink",
-                                  {
-                                    staticClass: "card-header-action btn-close",
-                                    attrs: { href: "#" },
-                                    on: {
-                                      click: function($event) {
-                                        _vm.show = false
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _c("CIcon", {
-                                      attrs: { name: "cil-x-circle" }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "CCollapse",
-                            { attrs: { show: _vm.isCollapsed, duration: 400 } },
-                            [
-                              _c("CCardBody", [
+                        [_vm._v("Back")]
+                      ),
+                      _vm._v(" "),
+                      _vm._l(_vm.columns, function(column) {
+                        return _c("div", { key: column.id }, [
+                          column.type == "default"
+                            ? _c("div", [
                                 _vm._v(
                                   "\n              " +
-                                    _vm._s(_vm.loremIpsum) +
-                                    "\n            "
+                                    _vm._s(column.name) +
+                                    ": "
+                                ),
+                                _c("strong", [_vm._v(_vm._s(column.value))])
+                              ])
+                            : column.type == "file"
+                            ? _c("div", [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btn btn-primary",
+                                    attrs: {
+                                      href: column.value,
+                                      target: "_blank"
+                                    }
+                                  },
+                                  [_vm._v("Open file")]
                                 )
                               ])
-                            ],
-                            1
-                          )
-                        ],
-                        1
+                            : _c("div", [
+                                _c("img", {
+                                  staticClass: "img-mini",
+                                  attrs: { src: column.value }
+                                })
+                              ])
+                        ])
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "CButton",
+                        {
+                          attrs: { color: "primary" },
+                          on: { click: _vm.goBack }
+                        },
+                        [_vm._v("Back")]
                       )
-                    : _vm._e()
+                    ],
+                    2
+                  )
                 ],
                 1
               )

@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[25],{
 
-/***/ "../coreui/src/views/base/Jumbotrons.vue":
-/*!***********************************************!*\
-  !*** ../coreui/src/views/base/Jumbotrons.vue ***!
-  \***********************************************/
+/***/ "../coreui/src/views/base/Carousels.vue":
+/*!**********************************************!*\
+  !*** ../coreui/src/views/base/Carousels.vue ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Jumbotrons.vue?vue&type=template&id=3248f96a& */ "../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&");
-/* harmony import */ var _Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Jumbotrons.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Carousels_vue_vue_type_template_id_21a3b2bf___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Carousels.vue?vue&type=template&id=21a3b2bf& */ "../coreui/src/views/base/Carousels.vue?vue&type=template&id=21a3b2bf&");
+/* harmony import */ var _Carousels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Carousels.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Carousels.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Carousels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Carousels_vue_vue_type_template_id_21a3b2bf___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Carousels_vue_vue_type_template_id_21a3b2bf___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,92 +32,52 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/base/Jumbotrons.vue"
+component.options.__file = "coreui/src/views/base/Carousels.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&":
-/*!************************************************************************!*\
-  !*** ../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js& ***!
-  \************************************************************************/
+/***/ "../coreui/src/views/base/Carousels.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ../coreui/src/views/base/Carousels.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Jumbotrons.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Carousels.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Carousels.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&":
-/*!******************************************************************************!*\
-  !*** ../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a& ***!
-  \******************************************************************************/
+/***/ "../coreui/src/views/base/Carousels.vue?vue&type=template&id=21a3b2bf&":
+/*!*****************************************************************************!*\
+  !*** ../coreui/src/views/base/Carousels.vue?vue&type=template&id=21a3b2bf& ***!
+  \*****************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Jumbotrons.vue?vue&type=template&id=3248f96a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousels_vue_vue_type_template_id_21a3b2bf___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Carousels.vue?vue&type=template&id=21a3b2bf& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Carousels.vue?vue&type=template&id=21a3b2bf&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousels_vue_vue_type_template_id_21a3b2bf___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousels_vue_vue_type_template_id_21a3b2bf___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Carousels.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Carousels.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -164,15 +124,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Jumbotrons'
+  name: 'Carousels'
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a& ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Carousels.vue?vue&type=template&id=21a3b2bf&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Carousels.vue?vue&type=template&id=21a3b2bf& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -185,206 +145,82 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "CRow",
     [
       _c(
-        "CRow",
+        "CCol",
+        { attrs: { md: "12", lg: "7" } },
         [
           _c(
-            "CCol",
+            "CCard",
             [
               _c(
-                "CCard",
+                "CCardHeader",
                 [
-                  _c(
-                    "CCardHeader",
-                    [
-                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-                      _vm._v(" "),
-                      _c("strong", [_vm._v(" Bootstrap Jumbotron ")]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-header-actions" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "card-header-action",
-                            attrs: {
-                              href:
-                                "https://coreui.io/vue/docs/components/jumbotron",
-                              rel: "noreferrer noopener",
-                              target: "_blank"
-                            }
-                          },
-                          [
-                            _c("small", { staticClass: "text-muted" }, [
-                              _vm._v("docs")
-                            ])
-                          ]
-                        )
-                      ])
-                    ],
-                    1
-                  ),
+                  _c("CIcon", { attrs: { name: "cil-justify-center" } }),
                   _vm._v(" "),
-                  _c(
-                    "CCardBody",
-                    [
-                      _c(
-                        "CJumbotron",
-                        [
-                          _c("h1", { staticClass: "display-3" }, [
-                            _vm._v("Bootstrap 4")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "lead" }, [
-                            _vm._v("Bootstrap 4 Components for Vue.js 2.6+")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm._v("For more information visit website")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "CButton",
-                            { attrs: { color: "primary", href: "#" } },
-                            [_vm._v("More Info")]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
+                  _c("strong", [_vm._v(" Bootstrap Carousel")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-header-actions" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "card-header-action",
+                        attrs: {
+                          href:
+                            "https://coreui.io/vue/docs/components/carousel",
+                          rel: "noreferrer noopener",
+                          target: "_blank"
+                        }
+                      },
+                      [
+                        _c("small", { staticClass: "text-muted" }, [
+                          _vm._v("docs")
+                        ])
+                      ]
+                    )
+                  ])
                 ],
                 1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCol",
-            [
+              ),
+              _vm._v(" "),
               _c(
-                "CCard",
+                "CCardBody",
                 [
                   _c(
-                    "CCardHeader",
+                    "CCarousel",
+                    {
+                      attrs: {
+                        arrows: "",
+                        indicators: "",
+                        animate: "",
+                        height: "400px"
+                      }
+                    },
                     [
-                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _c("CCarouselItem", {
+                        attrs: {
+                          captionHeader: "First Slide",
+                          image: "https://picsum.photos/1024/480/?image=52",
+                          captionText:
+                            "Nulla vitae elit libero, a pharetra augue mollis interdum."
+                        }
+                      }),
                       _vm._v(" "),
-                      _c("strong", [_vm._v(" Jumbotron ")]),
+                      _c("CCarouselItem", {
+                        attrs: {
+                          captionHeader: "Blank page",
+                          image: { placeholderColor: "grey" },
+                          captionText:
+                            "Nulla vitae elit libero, a pharetra augue mollis interdum."
+                        }
+                      }),
                       _vm._v(" "),
-                      _c("small", [_vm._v("with slots")])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "CCardBody",
-                    [
-                      _c(
-                        "CJumbotron",
-                        { attrs: { header: "Bootstrap 4", lead: "" } },
-                        [
-                          _c("h1", { staticClass: "display-3" }, [
-                            _vm._v("Bootstrap 4")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "lead" }, [
-                            _vm._v(
-                              "\n              This is a simple hero unit, a simple jumbotron-style component for\n              calling extra attention to featured content or information.\n            "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("hr", { staticClass: "my-4" }),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm._v(
-                              "\n              It uses utility classes for typography and spacing to space content\n              out within the larger container.\n            "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "CButton",
-                            { attrs: { color: "primary", href: "#" } },
-                            [_vm._v("Do Something")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "CButton",
-                            { attrs: { color: "success", href: "#" } },
-                            [_vm._v("Do Something Else")]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CRow",
-        [
-          _c(
-            "CCol",
-            [
-              _c(
-                "CCard",
-                [
-                  _c(
-                    "CCardHeader",
-                    [
-                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-                      _vm._v(" "),
-                      _c("strong", [_vm._v(" Jumbotron ")]),
-                      _vm._v(" "),
-                      _c("small", [_vm._v("colors")])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "CCardBody",
-                    [
-                      _c(
-                        "CJumbotron",
-                        {
-                          attrs: {
-                            color: "info",
-                            "text-color": "white",
-                            "border-color": "dark"
-                          }
-                        },
-                        [
-                          _c("h1", { staticClass: "display-3" }, [
-                            _vm._v("Bootstrap 4")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "lead" }, [
-                            _vm._v(
-                              "\n              This is a simple hero unit, a simple jumbotron-style component for\n              calling extra attention to featured content or information.\n            "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("hr", { staticClass: "my-4" }),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm._v(
-                              "\n              It uses utility classes for typography and spacing to space content\n              out within the larger container.\n            "
-                            )
-                          ])
-                        ]
-                      )
+                      _c("CCarouselItem", {
+                        attrs: {
+                          image: "https://picsum.photos/1024/480/?image=54"
+                        }
+                      })
                     ],
                     1
                   )
