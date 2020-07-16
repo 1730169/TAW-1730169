@@ -6,10 +6,10 @@
           <CCard class="mx-4 mb-0">
             <CCardBody class="p-4">
               <CForm @submit.prevent="register" method="POST">
-                <h1>Register</h1>
-                <p class="text-muted">Create your account</p>
+                <h1>Registrar Usuario</h1>
+                <p class="text-muted">Crear una cuenta</p>
                 <CInput
-                  placeholder="Username"
+                  placeholder="Usuario"
                   prependHtml="<i class='cui-user'></i>"
                   autocomplete="username"
                   v-model="name"
@@ -23,7 +23,7 @@
                   v-model="email"
                 />
                 <CInput
-                  placeholder="Password"
+                  placeholder="Contraseña"
                   type="password"
                   prependHtml="<i class='cui-lock-locked'></i>"
                   autocomplete="new-password"
@@ -32,7 +32,7 @@
                   <template #prepend-content><CIcon name="cil-lock-locked"/></template>
                 </CInput>
                 <CInput
-                  placeholder="Repeat password"
+                  placeholder="Repetir Contraseña"
                   type="password"
                   prependHtml="<i class='cui-lock-locked'></i>"
                   autocomplete="new-password"
@@ -41,20 +41,16 @@
                 >
                   <template #prepend-content><CIcon name="cil-lock-locked"/></template>
                 </CInput>
-                <CButton type="submit" color="success" block>Create Account</CButton>
+                <CButton type="submit" color="success" block>Crear Cuenta</CButton>
               </CForm>
             </CCardBody>
             <CCardFooter class="p-4">
               <CRow>
                 <CCol col="6">
-                  <CButton block color="facebook">
-                    Facebook
-                  </CButton>
+                  
                 </CCol>
                 <CCol col="6">
-                  <CButton block color="twitter">
-                    Twitter
-                  </CButton>
+                  
                 </CCol>
               </CRow>
             </CCardFooter>

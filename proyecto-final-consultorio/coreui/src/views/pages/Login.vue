@@ -6,12 +6,12 @@
           <CCard class="p-4">
             <CCardBody>
               <CForm @submit.prevent="login" method="POST">
-                <h1>Login</h1>
-                <p class="text-muted">Sign In to your account</p>
+                <h1>Iniciar sesión</h1>
+                <p class="text-muted">Inicia sesión en tu cuenta</p>
                 <CInput
                   v-model="email"
                   prependHtml="<i class='cui-user'></i>"
-                  placeholder="Username"
+                  placeholder="Email"
                   autocomplete="username email"
                 >
                   <template #prepend-content><CIcon name="cil-user"/></template>
@@ -19,7 +19,7 @@
                 <CInput
                   v-model="password"
                   prependHtml="<i class='cui-lock-locked'></i>"
-                  placeholder="Password"
+                  placeholder="Contraseña"
                   type="password"
                   autocomplete="curent-password"
                 >
@@ -27,31 +27,31 @@
                 </CInput>
                 <CRow>
                   <CCol col="6">
-                    <CButton type="submit" color="primary" class="px-4">Login</CButton>
+                    <CButton type="submit" color="primary" class="px-4">Iniciar Sesión</CButton>
                   </CCol>
                   <CCol col="6" class="text-right">
-                    <CButton color="link" class="px-0">Forgot password?</CButton>
+                    <CButton color="link" class="px-0">Olvidó su contraseña?</CButton>
                   </CCol>
                 </CRow>
               </CForm>
             </CCardBody>
           </CCard>
-          <CCard
+          <!--<CCard
             color="primary"
             text-color="white"
             class="text-center py-5 d-md-down-none"
             body-wrapper
           >
-            <h2>Sign up</h2>
+            <h2>Registrarse</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <CButton
               color="primary"
               class="active mt-3"
               @click="goRegister()"
             >
-              Register Now!
+              Registrarse ahora!
             </CButton>
-          </CCard>
+          </CCard> -->
         </CCardGroup>
       </CCol>
     </CRow>
@@ -85,10 +85,10 @@ import axios from "axios";
             self.email = '';
             self.password = '';
             localStorage.setItem("api_token", response.data.access_token);
-            self.$router.push({ path: 'notes' });
+            self.$router.push({ path: 'dashboard' });
           })
           .catch(function (error) {
-            self.message = 'Incorrect E-mail or password';
+            self.message = 'Datos de acceso incorrectos';
             self.showMessage = true;
             console.log(error);
           });

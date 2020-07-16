@@ -104,6 +104,32 @@ const DeleteMenuElement = () => import('@/views/menuElements/DeleteMenuElement')
 
 const Media = () => import('@/views/media/Media')
 
+/**
+ * CONFIGURACION DE COMPONENTES DEL SISTEMA
+ */
+
+// PACIENTES
+const Pacientes = () => import('@/views/pacientes/Pacientes')
+const Paciente = () => import('@/views/pacientes/Paciente')
+const EditarPaciente = () => import('@/views/pacientes/EditarPaciente')
+const CrearPaciente = () => import('@/views/pacientes/CrearPaciente')
+
+// PACIENTES
+const Doctores = () => import('@/views/doctores/Doctores')
+//const Paciente = () => import('@/views/doctores/Paciente')
+const EditarDoctor = () => import('@/views/doctores/EditarDoctor')
+const CrearDoctor = () => import('@/views/doctores/CrearDoctor')
+
+// CITAS
+const Citas = () => import('@/views/citas/Citas')
+//const Paciente = () => import('@/views/citas/Cita')
+const EditarCita = () => import('@/views/citas/EditarCita')
+const CrearCita = () => import('@/views/citas/CrearCita')
+
+
+
+
+
 
 Vue.use(Router)
 
@@ -587,9 +613,154 @@ function configRoutes () {
               component: Modals
             }
           ]
+        },
+
+
+        /**
+         * DECLARACION DE ENRUTAMIENTO DE LOS
+         * COMPONENTES DEL SISTEMA
+        */
+       
+        {
+          path: '/pacientes',
+          meta: { label: 'Pacientes'},
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: '',
+              component: Pacientes
+            },
+            {
+              path: 'registrar',
+              meta: { label: 'Registrar Paciente' },
+              name: 'Registrar Paciente',
+              component: CrearPaciente
+            },/*
+            {
+              path: ':id',
+              meta: { label: 'Detalles del Paciente'},
+              name: 'Paciente',
+              component: Paciente,
+            },*/
+            {
+              path: ':id/editar',
+              meta: { label: 'Editar Paciente' },
+              name: 'Editar Paciente',
+              component: EditarPaciente
+            }
+          ]
+        },
+        {
+          path: '/doctores',
+          meta: { label: 'Doctores'},
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: '',
+              component: Doctores
+            },
+            {
+              path: 'registrar',
+              meta: { label: 'Registrar Doctor' },
+              name: 'Registrar Doctor',
+              component: CrearDoctor
+            },
+            {
+              path: ':id/editar',
+              meta: { label: 'Editar Doctor' },
+              name: 'Editar Doctor',
+              component: EditarDoctor
+            }
+          ]
+        },
+
+        {
+          path: '/citas',
+          meta: { label: 'Citas'},
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: '',
+              component: Citas
+            },
+            {
+              path: 'registrar',
+              meta: { label: 'Registrar Cita' },
+              name: 'Registrar Cita',
+              component: CrearCita
+            },
+            {
+              path: ':id/editar',
+              meta: { label: 'Editar Cita' },
+              name: 'Editar Cita',
+              component: EditarCita
+            }
+          ]
         }
+
+
       ]
     },
+    /*
+    {
+      path: '/pacientes',
+      meta: { label: 'Pacientes'},
+      component: {
+        render (c) { return c('router-view') }
+      },
+      children: [
+        {
+          path: '',
+          component: Pacientes,
+        },
+        {
+          path: 'registrar',
+          meta: { label: 'Registrar Paciente' },
+          name: 'Registrar Paciente',
+          component: CrearPaciente
+        },
+        {
+          path: ':id',
+          meta: { label: 'Detalles del Paciente'},
+          name: 'Paciente',
+          component: Paciente,
+        },
+        {
+          path: ':id/edit',
+          meta: { label: 'Edit Note' },
+          name: 'Edit Note',
+          component: EditarPaciente
+        },
+      ]
+    },
+    */
+    /*{
+      path: '/pacientes',
+      meta: { label: 'Pacientes'},
+      component: {
+        render (c) { return c('router-view') }
+      },
+      children: [
+        {
+          path: '',
+          component: CrearPaciente
+        },
+        {
+          path: ':id',
+          meta: { label: 'Detalles Paciente'},
+          name: 'Paciente',
+          component: Paciente
+        },
+        
+      ]
+    }*/
+    ,
     {
       path: '/pages',
       redirect: '/pages/404',
