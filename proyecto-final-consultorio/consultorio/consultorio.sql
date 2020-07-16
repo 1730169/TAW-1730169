@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-07-2020 a las 04:51:21
--- Versión del servidor: 10.4.12-MariaDB
--- Versión de PHP: 7.4.4
+-- Tiempo de generación: 16-07-2020 a las 07:21:32
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,106 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `consultorio`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `citas`
+--
+
+CREATE TABLE `citas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `paciente_id` bigint(20) UNSIGNED NOT NULL,
+  `doctor_id` bigint(20) UNSIGNED NOT NULL,
+  `fecha_cita` datetime NOT NULL,
+  `motivo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `citas`
+--
+
+INSERT INTO `citas` (`id`, `paciente_id`, `doctor_id`, `fecha_cita`, `motivo`, `created_at`, `updated_at`) VALUES
+(1, 3, 1, '2020-07-18 19:00:00', 'REVISIÓN DE ESTUDIOS', '2020-07-16 10:59:36', '2020-07-16 11:43:36');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `compartirs`
+--
+
+CREATE TABLE `compartirs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `paciente_id` bigint(20) UNSIGNED NOT NULL,
+  `doctor_afiliado_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `consultas`
+--
+
+CREATE TABLE `consultas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `paciente_id` bigint(20) UNSIGNED NOT NULL,
+  `doctor_id` bigint(20) UNSIGNED NOT NULL,
+  `resumen` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diagnostico` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prescripcion` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pagada` tinyint(1) NOT NULL DEFAULT 0,
+  `terminada` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cortecajas`
+--
+
+CREATE TABLE `cortecajas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `monto_corte` decimal(10,2) NOT NULL,
+  `fecha_corte` datetime NOT NULL,
+  `usuario_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `doctores`
+--
+
+CREATE TABLE `doctores` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `apellidos` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `direccion` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telefono` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fecha_nacimiento` date NOT NULL,
+  `titulo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `especialidad` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cedula` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `consultorio` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `doctores`
+--
+
+INSERT INTO `doctores` (`id`, `nombre`, `apellidos`, `direccion`, `telefono`, `fecha_nacimiento`, `titulo`, `especialidad`, `cedula`, `consultorio`, `created_at`, `updated_at`) VALUES
+(1, 'Dr. Asin', 'Cardiel', 'desconocida', '897987', '2020-07-15', 'CARDIOLOGÍA', 'CARDIOLOGÍA', '00000000000000', 'A-1', '2020-07-16 08:31:13', '2020-07-16 09:31:39'),
+(2, 'Dr. Rául', 'Villacorta', 'desconocida', '8312343', '1971-09-11', 'CIRUGÍA GENERAL', 'CIRUGÍA GENERAL', '0000000000000', 'A2', '2020-07-16 09:35:08', '2020-07-16 09:35:08');
 
 -- --------------------------------------------------------
 
@@ -63,31 +163,31 @@ CREATE TABLE `example` (
 --
 
 INSERT INTO `example` (`id`, `created_at`, `updated_at`, `name`, `description`, `status_id`) VALUES
-(1, NULL, NULL, 'Hic est reprehenderit delectus minus quis.', 'Quas eaque ratione et saepe expedita. Sequi optio quia ea omnis id distinctio ut. Totam sapiente vel exercitationem voluptatem qui et aut. Quas quo quibusdam corrupti maiores aspernatur sunt molestias.', 3),
-(2, NULL, NULL, 'Voluptas doloremque dolorem quidem.', 'Quo fuga placeat quas blanditiis molestias. Corrupti dolorem incidunt hic dignissimos. Beatae odio eum rerum dolorem ut eos. Necessitatibus vitae autem occaecati corporis.', 2),
-(3, NULL, NULL, 'Velit iste reprehenderit libero.', 'Minus ut qui error esse quo. Doloribus iusto voluptas laborum non dolor. Est a nulla aut odit quidem ea. Est minima aspernatur sed nihil.', 4),
-(4, NULL, NULL, 'Deleniti assumenda quidem sapiente consequatur.', 'Est ut consequatur minus officia. Veritatis et atque similique et. Est nesciunt et repudiandae neque voluptate.', 3),
-(5, NULL, NULL, 'Modi laboriosam dolorum.', 'Et deleniti labore inventore illo. Et voluptates odio quia. Autem et dolore dolorem laboriosam non praesentium aliquid.', 3),
-(6, NULL, NULL, 'Eligendi est nisi culpa.', 'Ex tempore libero aut voluptatem nostrum corrupti. Perspiciatis quis ipsum odit quam. Quaerat non accusantium dolores ea. Qui nulla sint nihil aut.', 3),
-(7, NULL, NULL, 'Totam quia autem officia.', 'Dignissimos pariatur sit adipisci iste incidunt reprehenderit eos. Et et voluptatem tenetur earum quidem aut. Cum maxime consectetur culpa iste nihil. Ut consequatur non natus qui beatae. Aspernatur architecto necessitatibus odio ea nemo officiis sit.', 2),
-(8, NULL, NULL, 'Ea hic expedita dicta quae.', 'Consequuntur quis dolores ut. Tempore fugit officiis ratione ad. Iure quisquam omnis harum iusto explicabo. Voluptatem aut eos aut corporis.', 3),
-(9, NULL, NULL, 'Reprehenderit aperiam et soluta autem corporis.', 'Numquam omnis et voluptatibus sequi in. Atque nihil provident soluta. Facilis incidunt non voluptatibus. Corrupti consequuntur sed sunt eum ipsam voluptas.', 3),
-(10, NULL, NULL, 'Error molestias ut voluptates ut quisquam.', 'Quia dolorem deleniti qui modi maiores repudiandae. Eos dolorem ea ducimus ea consequatur expedita atque laborum. Et ad autem et perspiciatis consequatur incidunt nemo magni. Inventore ratione dolore temporibus odio hic impedit natus.', 3),
-(11, NULL, NULL, 'Quis quod et commodi.', 'Est ut ipsum minima voluptas. Tempore qui officia debitis laudantium architecto aliquam. Consectetur voluptatem aut quos consequatur consequatur vitae vel. Qui quaerat sequi eos assumenda omnis unde officia.', 2),
-(12, NULL, NULL, 'Hic ut quam quia.', 'Nesciunt et suscipit deleniti dolorum sit animi placeat. Cupiditate unde aspernatur ex nihil id dignissimos perspiciatis. Assumenda eum non modi voluptate ea.', 1),
-(13, NULL, NULL, 'Repellendus deserunt aperiam.', 'Enim minus autem libero quia consequatur itaque. Rerum sit non excepturi qui corporis quisquam odit.', 4),
-(14, NULL, NULL, 'Magnam asperiores aut.', 'Delectus qui qui inventore id. Eos consequatur praesentium eos optio unde. Aut vitae quibusdam porro suscipit cumque aut qui.', 1),
-(15, NULL, NULL, 'Est quis magni id nobis.', 'Est quas est quia hic quisquam. In pariatur saepe dolores quis consectetur natus. Rerum a sit quia ducimus et velit doloribus. Quaerat et voluptatem qui facere. Vel et dolore est quaerat praesentium non.', 3),
-(16, NULL, NULL, 'Perspiciatis tenetur ipsum consectetur.', 'Quidem quod ut voluptate aut sed amet. Facere qui et veritatis adipisci ut. Eos sapiente at est accusamus. Dolorem voluptatum vel possimus voluptatem.', 4),
-(17, NULL, NULL, 'Voluptate cumque expedita et ut.', 'Magni reprehenderit natus sapiente quia fuga voluptatibus facere. Qui quisquam ut aut facere voluptatem.', 2),
-(18, NULL, NULL, 'Est autem corrupti.', 'Eum dolores quis sed officiis. Ipsum voluptas sit amet reprehenderit quibusdam sed. Possimus architecto cum sed cupiditate sit voluptatibus voluptate adipisci.', 3),
-(19, NULL, NULL, 'Omnis omnis consequatur similique rem.', 'Et est quod adipisci voluptate saepe et. Aut dolorum dolores hic et. Ex sed deleniti recusandae unde omnis eveniet consequatur. Exercitationem non est debitis et eum.', 2),
-(20, NULL, NULL, 'Nostrum iste cumque est laudantium minus.', 'Nihil assumenda minima dolore sequi sed. Omnis quibusdam quo nostrum. Ullam non quod eum tenetur reiciendis tempore.', 3),
-(21, NULL, NULL, 'Dolores et suscipit id.', 'Ea quod minus fugiat et beatae. Est est eos tenetur exercitationem. Eum qui fugit est voluptatem ipsa delectus provident unde.', 1),
-(22, NULL, NULL, 'Et nihil voluptatem hic asperiores sint.', 'Inventore rerum quis debitis consequatur quisquam cum aut. Et repellat nesciunt cum iusto nulla blanditiis temporibus. Libero ad sint illum.', 4),
-(23, NULL, NULL, 'Perferendis voluptatem quo architecto deleniti.', 'Optio consequatur consectetur atque libero atque. Commodi magni voluptatibus mollitia vitae.', 3),
-(24, NULL, NULL, 'Repudiandae et fugit consequatur.', 'Et enim culpa quia sed quia. Velit ex sed ex quae. Voluptas id voluptates optio amet voluptatem. Quis facere expedita aut aut.', 4),
-(25, NULL, NULL, 'Deleniti hic eligendi sapiente.', 'Laudantium et dolor est delectus tempora quia iusto. Expedita ex voluptatem nemo dolor ut. Ut ea error explicabo dolore quisquam excepturi. Sit quam quis alias vitae a facere vel.', 4);
+(1, NULL, NULL, 'Magni occaecati nulla sit vero.', 'Provident in corrupti est reprehenderit natus quis aut. Sapiente nulla vitae eos vel occaecati assumenda.', 3),
+(2, NULL, NULL, 'Voluptas quisquam vel qui ex tenetur.', 'Eos possimus ipsa deserunt aperiam est quia. Aut enim sit voluptatem id vel quidem. Dolor quibusdam vitae esse laudantium nisi illo explicabo.', 3),
+(3, NULL, NULL, 'Earum minus ipsa.', 'Nemo distinctio tempora debitis fugit. Dolores dolorum natus dolorum assumenda esse non ipsum.', 2),
+(4, NULL, NULL, 'Dolores consequatur qui vitae.', 'Dolor magnam facilis dolorem magni animi porro dolore. Explicabo corporis quia consectetur necessitatibus ut magnam. Minima explicabo beatae corrupti.', 3),
+(5, NULL, NULL, 'Distinctio minima aut debitis voluptas iusto.', 'Molestiae dolore aut non rem. Consequatur architecto repellat enim reiciendis qui ut. Qui vitae commodi aliquid.', 2),
+(6, NULL, NULL, 'Suscipit necessitatibus aut magni quia.', 'Saepe vel laboriosam aut et. Qui dolores praesentium quas voluptas.', 3),
+(7, NULL, NULL, 'Libero similique temporibus veritatis voluptas ut.', 'Ducimus recusandae iure quidem et reprehenderit nesciunt. Et est sunt porro eaque itaque assumenda repellendus.', 2),
+(8, NULL, NULL, 'Odio tempora nobis perspiciatis.', 'Reprehenderit aliquam explicabo et laborum soluta. Placeat soluta unde provident nulla sint omnis corrupti. Sint saepe et ipsa id accusamus totam. Est quo dolor dolore.', 4),
+(9, NULL, NULL, 'In debitis debitis.', 'Non laborum corporis at. Autem doloremque voluptatibus recusandae et ipsum sed reprehenderit. Autem facilis repellendus ex qui consectetur. Hic labore explicabo ea velit animi.', 1),
+(10, NULL, NULL, 'Similique deserunt eos fugiat est.', 'Expedita et repellat esse expedita minus amet est. Doloremque fugit eius dolores repudiandae fuga omnis itaque. Qui sequi culpa ipsum ea sapiente cupiditate. Neque rerum officia ipsam consectetur consequatur.', 3),
+(11, NULL, NULL, 'Voluptatem consectetur minus sint officiis rerum.', 'Ipsam hic veritatis sit excepturi. Esse quam deleniti et sit non.', 2),
+(12, NULL, NULL, 'Vel corporis repellat.', 'Est et commodi neque quia. Doloribus velit quis distinctio totam rem assumenda. Ut totam officia placeat earum sed deserunt aut.', 4),
+(13, NULL, NULL, 'Sint deleniti id delectus vel.', 'Ut ut sequi pariatur. Quasi qui facilis corrupti eos error dignissimos vel. Vel non assumenda quibusdam est velit. Distinctio blanditiis ratione est iusto aspernatur placeat.', 4),
+(14, NULL, NULL, 'Sed aperiam perspiciatis iste sed.', 'Atque at a veniam magni recusandae. Quam quis provident harum provident iste quae enim. Molestiae fuga accusamus dolores earum quae dolor et.', 3),
+(15, NULL, NULL, 'Tenetur voluptatem odit.', 'Aut est aut et voluptas autem fuga. Sapiente animi odit voluptatem rerum autem qui eligendi quidem. Explicabo blanditiis repellendus consequatur sapiente labore esse.', 1),
+(16, NULL, NULL, 'Nihil doloribus ut vel.', 'Architecto harum nihil tempora vel modi beatae. Cum ipsam omnis magni ut. Aut reprehenderit eum non est corporis deserunt.', 4),
+(17, NULL, NULL, 'Ex eaque dolore tenetur.', 'Modi quia consequatur vel quaerat et. Aut officiis molestiae in minus et. Dolor ipsam aut accusamus quia et quibusdam alias.', 1),
+(18, NULL, NULL, 'Error et et ut rerum aut.', 'Voluptatem sed dolor non eos eum illum. Nesciunt aut sint qui facilis delectus. Rem laudantium quia consequatur.', 2),
+(19, NULL, NULL, 'Omnis alias aperiam.', 'Libero alias ea quod sit voluptatem odio. Earum quia dolorum voluptatibus et doloribus consequatur. Earum temporibus molestiae sit sit atque nisi.', 4),
+(20, NULL, NULL, 'Animi autem et maiores.', 'Commodi dolorum suscipit aperiam in consequatur rerum eos. Nobis aut reprehenderit facilis dolor. In laborum minus architecto ab. Quam ipsam voluptates ut eos.', 1),
+(21, NULL, NULL, 'Sit iste deserunt.', 'Et veritatis aut ipsum tenetur dolorum hic ut. Asperiores recusandae explicabo aut velit consequuntur quibusdam facere iusto. Suscipit voluptas dolores est quidem cupiditate sed magni. Eum impedit eius voluptatum libero repellendus nam officia.', 2),
+(22, NULL, NULL, 'Aspernatur adipisci rerum velit aut temporibus.', 'Nam asperiores nemo recusandae natus qui. Ea nemo temporibus omnis veniam quae aperiam quibusdam culpa. Dolore totam expedita cum. Odit dolor consectetur quibusdam aut sed qui.', 3),
+(23, NULL, NULL, 'Blanditiis nemo eum commodi minus eum.', 'Fuga suscipit officiis non eligendi odit voluptatum eos quia. Minus cum et voluptatem minus sit. Nam voluptatem enim unde placeat. Ea commodi architecto dolores modi cupiditate iure asperiores.', 4),
+(24, NULL, NULL, 'Sit omnis officiis earum.', 'Veritatis voluptatem est voluptates fuga. Temporibus qui et sapiente ratione et.', 3),
+(25, NULL, NULL, 'In aspernatur suscipit sit iure.', 'Iure vitae adipisci qui sequi. Architecto porro sunt blanditiis sint. Totam impedit recusandae error ipsam repudiandae.', 1);
 
 -- --------------------------------------------------------
 
@@ -254,56 +354,33 @@ CREATE TABLE `menus` (
 INSERT INTO `menus` (`id`, `name`, `href`, `icon`, `slug`, `parent_id`, `menu_id`, `sequence`) VALUES
 (1, 'Dashboard', '/', 'cil-speedometer', 'link', NULL, 1, 1),
 (2, 'Login', '/login', 'cil-account-logout', 'link', NULL, 1, 2),
-(3, 'Register', '/register', 'cil-account-logout', 'link', NULL, 1, 3),
-(4, 'Settings', '/', 'cil-puzzle', 'dropdown', NULL, 1, 4),
-(5, 'Media', '/media', NULL, 'link', 4, 1, 5),
-(6, 'Users', '/users', NULL, 'link', 4, 1, 6),
-(7, 'Menu', '/menu', NULL, 'link', 4, 1, 7),
-(8, 'BREAD', '/bread', NULL, 'link', 4, 1, 8),
-(9, 'Email', '/email', NULL, 'link', 4, 1, 9),
-(10, 'Theme', NULL, NULL, 'title', NULL, 1, 10),
-(11, 'Colors', '/colors', 'cil-drop', 'link', NULL, 1, 11),
-(12, 'Typography', '/typography', 'cil-pencil', 'link', NULL, 1, 12),
-(13, 'Components', NULL, NULL, 'title', NULL, 1, 13),
-(14, 'Base', '/base', 'cil-puzzle', 'dropdown', NULL, 1, 14),
-(15, 'Breadcrumb', '/base/breadcrumb', NULL, 'link', 14, 1, 15),
-(16, 'Cards', '/base/cards', NULL, 'link', 14, 1, 16),
-(17, 'Carousel', '/base/carousel', NULL, 'link', 14, 1, 17),
-(18, 'Collapse', '/base/collapse', NULL, 'link', 14, 1, 18),
-(19, 'Forms', '/base/forms', NULL, 'link', 14, 1, 19),
-(20, 'Jumbotron', '/base/jumbotron', NULL, 'link', 14, 1, 20),
-(21, 'List group', '/base/list-group', NULL, 'link', 14, 1, 21),
-(22, 'Navs', '/base/navs', NULL, 'link', 14, 1, 22),
-(23, 'Pagination', '/base/pagination', NULL, 'link', 14, 1, 23),
-(24, 'Popovers', '/base/popovers', NULL, 'link', 14, 1, 24),
-(25, 'Progress', '/base/progress', NULL, 'link', 14, 1, 25),
-(26, 'Switches', '/base/switches', NULL, 'link', 14, 1, 26),
-(27, 'Tables', '/base/tables', NULL, 'link', 14, 1, 27),
-(28, 'Tabs', '/base/tabs', NULL, 'link', 14, 1, 28),
-(29, 'Tooltips', '/base/tooltips', NULL, 'link', 14, 1, 29),
-(30, 'Buttons', '/buttons', 'cil-cursor', 'dropdown', NULL, 1, 30),
+(3, 'Registrar', '/register', 'cil-account-logout', 'link', 6, 1, 6),
+(6, 'Usuarios', '/users', NULL, 'dropdown', NULL, 1, 29),
+(15, 'Breadcrumb', '/base/breadcrumb', NULL, 'link', 14, 1, 3),
+(16, 'Cards', '/base/cards', NULL, 'link', 14, 1, 15),
+(17, 'Carousel', '/base/carousel', NULL, 'link', 14, 1, 16),
+(18, 'Collapse', '/base/collapse', NULL, 'link', 14, 1, 17),
+(19, 'Forms', '/base/forms', NULL, 'link', 14, 1, 18),
+(20, 'Jumbotron', '/base/jumbotron', NULL, 'link', 14, 1, 19),
+(21, 'List group', '/base/list-group', NULL, 'link', 14, 1, 20),
+(22, 'Navs', '/base/navs', NULL, 'link', 14, 1, 21),
+(23, 'Pagination', '/base/pagination', NULL, 'link', 14, 1, 22),
+(24, 'Popovers', '/base/popovers', NULL, 'link', 14, 1, 23),
+(25, 'Progress', '/base/progress', NULL, 'link', 14, 1, 24),
+(26, 'Switches', '/base/switches', NULL, 'link', 14, 1, 25),
+(27, 'Tables', '/base/tables', NULL, 'link', 14, 1, 26),
+(28, 'Tabs', '/base/tabs', NULL, 'link', 14, 1, 27),
+(29, 'Tooltips', '/base/tooltips', NULL, 'link', 14, 1, 28),
 (31, 'Buttons', '/buttons/buttons', NULL, 'link', 30, 1, 31),
 (32, 'Buttons Group', '/buttons/button-group', NULL, 'link', 30, 1, 32),
 (33, 'Dropdowns', '/buttons/dropdowns', NULL, 'link', 30, 1, 33),
 (34, 'Brand Buttons', '/buttons/brand-buttons', NULL, 'link', 30, 1, 34),
-(35, 'Charts', '/charts', 'cil-chart-pie', 'link', NULL, 1, 35),
-(36, 'Icons', '/icon', 'cil-star', 'dropdown', NULL, 1, 36),
 (37, 'CoreUI Icons', '/icon/coreui-icons', NULL, 'link', 36, 1, 37),
 (38, 'Flags', '/icon/flags', NULL, 'link', 36, 1, 38),
 (39, 'Brands', '/icon/brands', NULL, 'link', 36, 1, 39),
-(40, 'Notifications', '/notifications', 'cil-bell', 'dropdown', NULL, 1, 40),
 (41, 'Alerts', '/notifications/alerts', NULL, 'link', 40, 1, 41),
 (42, 'Badge', '/notifications/badge', NULL, 'link', 40, 1, 42),
 (43, 'Modals', '/notifications/modals', NULL, 'link', 40, 1, 43),
-(44, 'Widgets', '/widgets', 'cil-calculator', 'link', NULL, 1, 44),
-(45, 'Extras', NULL, NULL, 'title', NULL, 1, 45),
-(46, 'Pages', '/pages', 'cil-star', 'dropdown', NULL, 1, 46),
-(47, 'Login', '/login', NULL, 'link', 46, 1, 47),
-(48, 'Register', '/register', NULL, 'link', 46, 1, 48),
-(49, 'Error 404', '/404', NULL, 'link', 46, 1, 49),
-(50, 'Error 500', '/500', NULL, 'link', 46, 1, 50),
-(51, 'Download CoreUI', 'https://coreui.io', 'cil-cloud-download', 'link', NULL, 1, 51),
-(52, 'Try CoreUI PRO', 'https://coreui.io/pro/', 'cil-layers', 'link', NULL, 1, 52),
 (53, 'Pages', '', '', 'dropdown', NULL, 2, 53),
 (54, 'Dashboard', '/', NULL, 'link', 53, 2, 54),
 (55, 'Notes', '/notes', NULL, 'link', 53, 2, 55),
@@ -313,7 +390,21 @@ INSERT INTO `menus` (`id`, `name`, `href`, `icon`, `slug`, `parent_id`, `menu_id
 (59, 'Edit roles', '/roles', NULL, 'link', 57, 2, 59),
 (60, 'Media', '/media', NULL, 'link', 57, 2, 60),
 (61, 'BREAD', '/bread', NULL, 'link', 57, 2, 61),
-(62, 'E-mail', '/email', NULL, 'link', 57, 2, 62);
+(62, 'E-mail', '/email', NULL, 'link', 57, 2, 62),
+(63, 'Pacientes', '/pacientes', NULL, 'link', 0, 1, 45),
+(64, 'Pacientes', '/pacientes', 'cil-contact', 'link', 0, 1, 46),
+(65, 'Pacientes', '/pacientes', 'cil-contact', 'link', 0, 1, 47),
+(66, 'Pacientes', '/pacientes', 'cil-contact', 'link', 0, 2, 63),
+(67, 'Pacientes', NULL, NULL, 'dropdown', 0, 1, 44),
+(74, 'Consultar', '/pacientes', NULL, 'link', 67, 1, 49),
+(75, 'Registrar', '/pacientes/registrar', NULL, 'link', 67, 1, 48),
+(76, 'Doctores', NULL, NULL, 'dropdown', 0, 1, 50),
+(77, 'Registrar', '/doctores/registrar', NULL, 'link', 76, 1, 51),
+(78, 'Consultar', '/doctores', NULL, 'link', 76, 1, 52),
+(79, 'Citas', NULL, NULL, 'dropdown', 0, 1, 53),
+(80, 'Registrar', '/citas/registrar', NULL, 'link', 79, 1, 54),
+(81, 'Consultar', '/citas', NULL, 'link', 79, 1, 55),
+(82, 'Consultar', '/users', NULL, 'link', 6, 1, 56);
 
 -- --------------------------------------------------------
 
@@ -336,23 +427,6 @@ INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
 (2, 'user', 1),
 (3, 'admin', 1),
 (4, 'guest', 2),
-(5, 'guest', 3),
-(6, 'admin', 4),
-(7, 'admin', 5),
-(8, 'admin', 6),
-(9, 'admin', 7),
-(10, 'admin', 8),
-(11, 'admin', 9),
-(12, 'user', 10),
-(13, 'admin', 10),
-(14, 'user', 11),
-(15, 'admin', 11),
-(16, 'user', 12),
-(17, 'admin', 12),
-(18, 'user', 13),
-(19, 'admin', 13),
-(20, 'user', 14),
-(21, 'admin', 14),
 (22, 'user', 15),
 (23, 'admin', 15),
 (24, 'user', 16),
@@ -383,8 +457,6 @@ INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
 (49, 'admin', 28),
 (50, 'user', 29),
 (51, 'admin', 29),
-(52, 'user', 30),
-(53, 'admin', 30),
 (54, 'user', 31),
 (55, 'admin', 31),
 (56, 'user', 32),
@@ -393,44 +465,18 @@ INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
 (59, 'admin', 33),
 (60, 'user', 34),
 (61, 'admin', 34),
-(62, 'user', 35),
-(63, 'admin', 35),
-(64, 'user', 36),
-(65, 'admin', 36),
 (66, 'user', 37),
 (67, 'admin', 37),
 (68, 'user', 38),
 (69, 'admin', 38),
 (70, 'user', 39),
 (71, 'admin', 39),
-(72, 'user', 40),
-(73, 'admin', 40),
 (74, 'user', 41),
 (75, 'admin', 41),
 (76, 'user', 42),
 (77, 'admin', 42),
 (78, 'user', 43),
 (79, 'admin', 43),
-(80, 'user', 44),
-(81, 'admin', 44),
-(82, 'user', 45),
-(83, 'admin', 45),
-(84, 'user', 46),
-(85, 'admin', 46),
-(86, 'user', 47),
-(87, 'admin', 47),
-(88, 'user', 48),
-(89, 'admin', 48),
-(90, 'user', 49),
-(91, 'admin', 49),
-(92, 'user', 50),
-(93, 'admin', 50),
-(94, 'guest', 51),
-(95, 'user', 51),
-(96, 'admin', 51),
-(97, 'guest', 52),
-(98, 'user', 52),
-(99, 'admin', 52),
 (100, 'guest', 53),
 (101, 'user', 53),
 (102, 'admin', 53),
@@ -445,7 +491,37 @@ INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
 (111, 'admin', 59),
 (112, 'admin', 60),
 (113, 'admin', 61),
-(114, 'admin', 62);
+(114, 'admin', 62),
+(115, 'admin', 63),
+(116, 'admin', 64),
+(117, 'admin', 65),
+(118, 'admin', 66),
+(119, 'user', 66),
+(134, 'admin', 74),
+(135, 'user', 74),
+(138, 'user', 76),
+(139, 'admin', 76),
+(140, 'user', 77),
+(141, 'admin', 77),
+(142, 'user', 78),
+(143, 'admin', 78),
+(144, 'admin', 75),
+(145, 'user', 75),
+(146, 'admin', 67),
+(147, 'user', 67),
+(148, 'admin', 79),
+(149, 'user', 79),
+(150, 'admin', 80),
+(151, 'user', 80),
+(152, 'admin', 81),
+(153, 'user', 81),
+(157, 'admin', 6),
+(158, 'user', 6),
+(163, 'admin', 3),
+(164, 'user', 3),
+(165, 'guest', 3),
+(166, 'admin', 82),
+(167, 'user', 82);
 
 -- --------------------------------------------------------
 
@@ -464,22 +540,31 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(17, '2014_10_12_000000_create_users_table', 1),
-(18, '2014_10_12_100000_create_password_resets_table', 1),
-(19, '2019_08_19_000000_create_failed_jobs_table', 1),
-(20, '2019_10_11_085455_create_notes_table', 1),
-(21, '2019_10_12_115248_create_status_table', 1),
-(22, '2019_11_08_102827_create_menus_table', 1),
-(23, '2019_11_13_092213_create_menurole_table', 1),
-(24, '2019_12_11_091036_create_menulist_table', 1),
-(25, '2019_12_18_092518_create_role_hierarchy_table', 1),
-(26, '2020_01_07_093259_create_folder_table', 1),
-(27, '2020_01_21_150250_create_media_table', 1),
-(28, '2020_01_21_161241_create_form_field_table', 1),
-(29, '2020_01_21_161242_create_form_table', 1),
-(30, '2020_01_21_161243_create_example_table', 1),
-(31, '2020_02_12_104545_create_permission_tables', 1),
-(32, '2020_03_12_111400_create_email_template_table', 1);
+(1, '2014_10_12_000000_create_users_table', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 1),
+(3, '2019_08_19_000000_create_failed_jobs_table', 1),
+(4, '2019_10_11_085455_create_notes_table', 1),
+(5, '2019_10_12_115248_create_status_table', 1),
+(6, '2019_11_08_102827_create_menus_table', 1),
+(7, '2019_11_13_092213_create_menurole_table', 1),
+(8, '2019_12_11_091036_create_menulist_table', 1),
+(9, '2019_12_18_092518_create_role_hierarchy_table', 1),
+(10, '2020_01_07_093259_create_folder_table', 1),
+(11, '2020_01_21_150250_create_media_table', 1),
+(12, '2020_01_21_161241_create_form_field_table', 1),
+(13, '2020_01_21_161242_create_form_table', 1),
+(14, '2020_01_21_161243_create_example_table', 1),
+(15, '2020_02_12_104545_create_permission_tables', 1),
+(16, '2020_03_12_111400_create_email_template_table', 1),
+(17, '2020_07_12_204421_create_paciente_table', 2),
+(18, '2020_07_12_204623_create_cita_table', 2),
+(19, '2020_07_12_204745_create_doctor_table', 2),
+(20, '2020_07_12_215708_create_consulta_table', 2),
+(21, '2020_07_12_223120_create_servicio_table', 2),
+(22, '2020_07_12_223508_create_servicio_consulta_table', 2),
+(23, '2020_07_12_231316_create_pagos_table', 2),
+(24, '2020_07_12_231343_create_compartir_table', 2),
+(25, '2020_07_12_232430_create_cortecaja_table', 2);
 
 -- --------------------------------------------------------
 
@@ -546,106 +631,148 @@ CREATE TABLE `notes` (
 --
 
 INSERT INTO `notes` (`id`, `title`, `content`, `note_type`, `applies_to_date`, `users_id`, `status_id`, `created_at`, `updated_at`) VALUES
-(1, 'Aspernatur doloremque rerum delectus.', 'Itaque error minus vel voluptatem animi rem. Alias qui nesciunt veritatis. Alias velit maxime voluptas possimus cum est. Praesentium in est dignissimos quidem. Nobis omnis fugiat ea.', 'minima aliquam', '1999-08-30', 10, 4, NULL, NULL),
-(2, 'Molestiae sint blanditiis nobis.', 'Consequatur sint labore unde voluptatem maiores ea. Minus eius repudiandae occaecati reiciendis. Quia rem voluptatum dicta nisi suscipit consequuntur dolores. Possimus provident ea quam impedit necessitatibus quia minus.', 'ut', '2000-08-29', 4, 4, NULL, NULL),
-(3, 'Eaque aut occaecati veniam nisi.', 'Aspernatur architecto id ipsam non et voluptas quis sint. Est et magni expedita magni aut amet. Culpa error doloribus fuga sunt autem voluptates eum.', 'debitis autem', '2006-01-30', 4, 3, NULL, NULL),
-(4, 'Nisi est nulla quia quia.', 'Sed repudiandae et eius iusto. Eaque quibusdam commodi sint facere beatae eius est. Dolor magnam cum cum perspiciatis quis.', 'ratione', '1971-02-28', 11, 4, NULL, NULL),
-(5, 'Dolorem non inventore.', 'Natus voluptatem quos quis eos tempora exercitationem quia. Velit accusantium voluptatum culpa ut aperiam occaecati. Inventore est eius rem perspiciatis nihil corporis incidunt. Voluptate ut aut cum est est. Pariatur at delectus ducimus ex consequatur itaque ut fuga.', 'commodi et', '2001-03-03', 3, 2, NULL, NULL),
-(6, 'Vel quis rerum voluptatem et.', 'Molestiae iusto inventore doloremque sit est a praesentium. Ut et recusandae aut dolor ducimus dolore aut aliquid. Sint maxime illo iste inventore perspiciatis.', 'aspernatur alias', '2000-05-09', 10, 3, NULL, NULL),
-(7, 'Eveniet recusandae quia.', 'Sit beatae ducimus voluptates sed asperiores provident. Impedit animi voluptas cum dignissimos. Voluptatem quod corrupti sint molestiae ea. Nihil eius non voluptatem quae suscipit et.', 'ea', '1981-04-13', 6, 1, NULL, NULL),
-(8, 'A vel ducimus ex autem consequatur.', 'Ea accusamus velit ratione itaque ut velit soluta. Quia nobis suscipit odio debitis voluptate accusamus. Magnam nostrum enim delectus ipsa. Atque quis voluptate tempora non amet qui.', 'minus', '1992-04-22', 8, 3, NULL, NULL),
-(9, 'Cupiditate quo assumenda et nemo.', 'Nam provident aliquam consequatur. Similique eos eaque facere ducimus id hic. Voluptate fugiat commodi ullam culpa enim iusto nihil. Dolorem iure ea reiciendis praesentium ipsa quaerat.', 'et recusandae', '2000-06-30', 11, 3, NULL, NULL),
-(10, 'Hic explicabo vero aut et ut.', 'Blanditiis in nisi excepturi soluta eius perspiciatis animi. Sit sint voluptatem dolor. Nostrum dolores voluptates molestiae aliquam sit cupiditate quas temporibus. Quia et saepe repellat ab illo.', 'nihil', '1993-05-21', 8, 3, NULL, NULL),
-(11, 'Mollitia qui illum nobis est.', 'Qui voluptas qui doloremque doloribus harum harum. Earum sed odit laudantium rerum assumenda. Officiis magni ipsum minima aliquid et et.', 'asperiores', '1983-08-14', 4, 3, NULL, NULL),
-(12, 'Nemo molestiae cum excepturi nisi.', 'Possimus asperiores consequatur dolore ad. Et blanditiis nostrum at. Laborum qui facilis optio qui laboriosam quo voluptatem ut. Et possimus recusandae porro distinctio iste odio.', 'enim', '1979-10-24', 11, 2, NULL, NULL),
-(13, 'Quia quisquam sit quia voluptatibus.', 'Corporis similique aut veritatis nemo magnam provident. Dolorem omnis dolor voluptatem iure deleniti inventore modi rem.', 'occaecati architecto', '2013-11-20', 5, 3, NULL, NULL),
-(14, 'Repudiandae sit est voluptate ut sapiente.', 'Et eaque facilis deleniti quasi corporis sed vel. Voluptas aut ipsam molestiae. Accusamus distinctio nihil deserunt et quaerat. Hic distinctio nobis molestiae et ipsa placeat eum. Quia dolore numquam sunt omnis sunt voluptatem.', 'et', '1980-02-03', 11, 2, NULL, NULL),
-(15, 'Dolores quia ut.', 'Asperiores at dolor labore cumque iusto sed. Animi nostrum et ea provident beatae dicta in. Et magni et magni temporibus.', 'sit illum', '1975-08-20', 7, 2, NULL, NULL),
-(16, 'Sit explicabo ut porro.', 'Eligendi vitae dolorem magnam inventore quam quis repellendus. Dignissimos dolor vel provident. Quia animi officia non incidunt. Est aut omnis asperiores autem. Facere ducimus repellat omnis ut at.', 'excepturi et', '2020-01-05', 11, 1, NULL, NULL),
-(17, 'Sunt est accusantium qui aut.', 'Reiciendis quam deleniti voluptatem autem optio sed necessitatibus. Qui suscipit et et ratione repellendus eum qui facilis. Est incidunt expedita veniam nihil non et.', 'non soluta', '2012-05-18', 4, 1, NULL, NULL),
-(18, 'Id veritatis atque.', 'Earum facilis sequi pariatur eum voluptatem et. Ex voluptatem tenetur quibusdam aut molestiae.', 'sapiente', '1984-12-24', 5, 1, NULL, NULL),
-(19, 'Suscipit laborum quo doloribus totam magni.', 'Iusto ratione eos non aut iure deleniti est quod. Omnis nam veritatis rem et dolorum earum neque cumque. Reprehenderit sunt vel veritatis. Unde incidunt esse voluptatem.', 'voluptatem dolorum', '2007-11-19', 3, 4, NULL, NULL),
-(20, 'Qui illum iusto.', 'Veritatis voluptatem iste architecto. Quisquam non voluptatem aliquid rerum consequuntur culpa. Et dolorem vel quia consequuntur adipisci odio eos. Fugit est ipsum minus ea eos illo amet iusto.', 'explicabo reprehenderit', '1995-11-05', 3, 3, NULL, NULL),
-(21, 'Cupiditate dolores iure.', 'Architecto eaque aliquam rerum qui aut repellendus. Nulla est provident aut exercitationem. Et possimus eos voluptas ad error in quasi. Perferendis natus odit reprehenderit eveniet consequatur.', 'eius et', '1989-09-21', 10, 4, NULL, NULL),
-(22, 'Possimus sint velit beatae vel.', 'Enim explicabo id voluptatum quam beatae. Perspiciatis corrupti est reiciendis reiciendis. Cupiditate minima aut voluptatem vel officiis laboriosam.', 'minima enim', '2002-10-18', 9, 2, NULL, NULL),
-(23, 'Voluptas eligendi tenetur eaque corrupti.', 'Nisi ipsa laboriosam tempore optio fuga deserunt. Officiis maiores quaerat perferendis velit. Fuga nesciunt eveniet rem.', 'sit deleniti', '2011-03-20', 5, 3, NULL, NULL),
-(24, 'Molestiae odit est qui impedit.', 'Nam numquam consequatur eius delectus quae officiis ea. Quas quidem repudiandae a aut facilis illo.', 'magni', '2016-04-26', 6, 1, NULL, NULL),
-(25, 'Iure exercitationem necessitatibus repellendus praesentium.', 'Laboriosam iusto distinctio asperiores officia nostrum. Modi exercitationem dolor nulla. Qui eaque qui in cumque. Sint quo in voluptatem sunt dolorum voluptas.', 'a', '2002-10-03', 8, 1, NULL, NULL),
-(26, 'Ut nostrum ipsum minus aut.', 'Qui laboriosam sunt id inventore fuga delectus. Consequatur architecto quaerat repellat quibusdam non eos. Magnam quaerat cupiditate neque et perspiciatis est fugit.', 'dolor et', '1980-01-24', 10, 3, NULL, NULL),
-(27, 'Veniam maiores facere sint doloremque.', 'Est labore libero aut sint laudantium aut velit. Minima quisquam sunt tempora accusamus ex blanditiis. In aut ut assumenda. Aliquam cumque sint minima recusandae animi.', 'incidunt libero', '1996-03-01', 7, 4, NULL, NULL),
-(28, 'Molestias consequatur hic.', 'Sed inventore sit fugiat voluptas commodi quis fuga. Suscipit debitis ut earum. Architecto et non aut. Ipsa asperiores molestiae sit placeat.', 'sed', '1999-08-14', 4, 1, NULL, NULL),
-(29, 'Qui nesciunt nesciunt est.', 'Neque quo accusantium non enim dolorem ratione. In odio officia eligendi harum eos. Sapiente corporis et voluptatem voluptatem non sed dolor debitis. Hic neque facilis non tempore quis ipsa.', 'dolor', '2010-01-07', 9, 2, NULL, NULL),
-(30, 'Debitis est labore rerum.', 'Veritatis deserunt qui architecto qui impedit dolore harum ipsum. Nobis eos et dicta aspernatur omnis doloremque. Consequatur enim ut rerum explicabo qui voluptates. Et doloribus perferendis unde voluptatem perspiciatis expedita dolorem.', 'cupiditate', '2014-12-10', 7, 3, NULL, NULL),
-(31, 'Nostrum dolore neque debitis quaerat.', 'Doloremque sunt fugiat ipsa eius et. Voluptatem non impedit voluptas accusantium non voluptatibus. Placeat ut in nihil laborum facilis natus sit eos. Dolorem cupiditate corporis omnis et reiciendis.', 'omnis fugit', '1981-08-07', 3, 2, NULL, NULL),
-(32, 'Dolores labore nihil quaerat quia.', 'Dolores est id quasi eveniet dolor corporis reiciendis odio. Ut quod dolores tenetur. Sunt esse consequatur maiores laborum quia.', 'quia', '1996-01-13', 3, 3, NULL, NULL),
-(33, 'Aliquam quia a.', 'Laudantium non dicta odit. Aliquam rerum ullam et iusto. Recusandae tempore quaerat fugit esse illum voluptatum laboriosam nemo. Omnis corrupti est quae dolores.', 'veritatis', '1988-01-22', 10, 2, NULL, NULL),
-(34, 'Accusamus voluptatibus beatae et.', 'Ad sit non eum repudiandae. Omnis labore voluptatem neque. Quas blanditiis nobis quisquam. Eos qui culpa aut accusamus aut sit.', 'est', '1992-11-27', 3, 1, NULL, NULL),
-(35, 'Ut esse necessitatibus maiores quia rerum.', 'Voluptas consequatur sunt est quis. Autem iure dolores quo ipsa. Et laborum culpa veritatis unde quo. Praesentium sint iusto iusto velit ipsa saepe aut.', 'iusto iste', '1970-10-03', 3, 1, NULL, NULL),
-(36, 'Voluptatem suscipit ullam odio amet.', 'Autem et saepe eius corporis unde et vel. Esse incidunt ea in aut provident. Facilis esse explicabo deserunt minima aliquid reprehenderit. Et et occaecati accusamus.', 'repellat illum', '2011-02-05', 10, 2, NULL, NULL),
-(37, 'Qui enim cum qui asperiores.', 'Ratione ea numquam laborum sit eaque atque autem. Voluptatibus id sapiente omnis et. Impedit non non pariatur laudantium quis qui. Adipisci sed repellat debitis iusto itaque culpa qui doloribus.', 'molestiae', '1988-06-09', 5, 4, NULL, NULL),
-(38, 'Dolorem eos deserunt.', 'Optio ea fugit sit praesentium sunt culpa. Deleniti aut vero ab vel earum qui quis. Dicta dolorum asperiores velit.', 'culpa dolores', '2005-07-05', 6, 2, NULL, NULL),
-(39, 'Recusandae quas itaque quidem.', 'Nesciunt ipsam et dolore occaecati beatae. Voluptas quia aspernatur quis similique. Ab expedita neque illo necessitatibus consequatur inventore.', 'explicabo similique', '1974-06-02', 6, 4, NULL, NULL),
-(40, 'Omnis at laudantium quia possimus asperiores.', 'Porro ratione quia quos veritatis nisi sint dignissimos non. Nesciunt laborum delectus animi dolor temporibus repudiandae enim. Doloribus a voluptates cum amet.', 'dolor', '1998-01-10', 7, 2, NULL, NULL),
-(41, 'Vel quia harum facere.', 'Ea atque pariatur repudiandae fugit dolorem occaecati. Culpa voluptate aut sint quia. Enim aut aut molestiae tenetur aut est.', 'voluptatem voluptas', '1986-08-24', 7, 2, NULL, NULL),
-(42, 'Necessitatibus at et asperiores.', 'Et quas adipisci quis sunt ut. Quia autem quia officia beatae corporis ex.', 'nihil et', '1993-08-12', 7, 3, NULL, NULL),
-(43, 'Incidunt at ad dicta pariatur.', 'Dolor aut praesentium praesentium aperiam praesentium velit qui. Maiores veniam minus sit et. Nobis quia aspernatur doloremque omnis et velit quia.', 'doloribus', '1993-01-12', 3, 4, NULL, NULL),
-(44, 'Modi quia nobis autem non voluptatum.', 'Magnam odit ratione culpa amet repellendus. Rerum ex eum ad voluptatibus quo dolorem neque. Ut suscipit officia eum facilis. Dolorum quod et ut ipsum odit tempora.', 'nihil blanditiis', '1980-01-15', 2, 1, NULL, NULL),
-(45, 'Nam delectus nulla eum et.', 'Debitis dolor omnis sed nam. Voluptas ut perspiciatis sed ut est deserunt. Error atque expedita fugiat soluta et impedit. Sunt adipisci tenetur ad blanditiis consequatur.', 'enim iste', '2018-07-27', 2, 3, NULL, NULL),
-(46, 'Quia earum doloremque similique omnis.', 'In reprehenderit enim minima et minima. Laboriosam vel unde necessitatibus aliquid quis eligendi. Et sint rem eius pariatur consequatur cumque occaecati.', 'maxime', '1971-03-18', 9, 3, NULL, NULL),
-(47, 'Autem exercitationem et similique enim.', 'Iure aut et veniam. Ut eius et doloremque excepturi provident. Ratione nesciunt omnis doloribus quod sed.', 'atque amet', '1992-09-16', 9, 3, NULL, NULL),
-(48, 'Minus blanditiis commodi repudiandae quia.', 'Alias quidem quae consectetur odio velit magni autem. Maiores qui perferendis eveniet rem consequatur possimus. Facilis rerum iste eos dolore. Tempore iusto iste maiores nihil est.', 'quia', '1972-06-25', 11, 3, NULL, NULL),
-(49, 'Nihil molestias culpa.', 'Dicta illo culpa nisi dolores. Aperiam voluptatem quos sint facilis laboriosam totam. Ut ducimus sed nihil consequatur.', 'sit ullam', '1973-01-19', 7, 4, NULL, NULL),
-(50, 'Facilis nobis laudantium sunt tempora.', 'Ut aut aperiam autem est. Quis a molestias id nesciunt vel. Rerum qui in et rerum et. Ex in ut et eius. Voluptas rem et aut quidem.', 'ut ipsum', '2007-08-06', 10, 3, NULL, NULL),
-(51, 'Laudantium qui est dolore.', 'Ut similique eum praesentium. Id est reiciendis vero ducimus dolor. Ut asperiores excepturi ut consequatur aperiam.', 'ad aliquam', '2003-09-21', 2, 3, NULL, NULL),
-(52, 'Alias at enim adipisci officia ratione.', 'Aut sed explicabo id atque. Voluptatem et est unde est voluptatem. Ut odio velit nihil a asperiores reiciendis inventore rerum. Provident et explicabo expedita. Ut facilis illo et repudiandae nostrum dolorem quis.', 'voluptatem', '2003-12-05', 9, 4, NULL, NULL),
-(53, 'Quas molestias dolorem tempore debitis.', 'Ut perferendis est non dolor quo magni. Placeat atque id et consequatur voluptas dicta. Soluta repellat cumque vel et explicabo ullam doloribus. Atque ad animi aut quia pariatur molestiae.', 'facere unde', '1989-02-15', 10, 2, NULL, NULL),
-(54, 'Maxime qui excepturi quibusdam.', 'Nam sed iure voluptatem et. Quis non repudiandae et sunt. Voluptatem aut sint architecto sed.', 'earum cumque', '1996-01-16', 8, 1, NULL, NULL),
-(55, 'Nesciunt ducimus nihil deserunt minima.', 'Sit et ut doloribus. Ut et velit eos at quos dolore nihil. Ipsa rerum est sint possimus commodi ipsa amet.', 'adipisci corrupti', '2010-08-27', 9, 1, NULL, NULL),
-(56, 'Nisi et impedit et sequi vel.', 'Asperiores quam nihil sed aperiam magni illo. Autem officia fugiat occaecati aspernatur. Dolorem vitae eos eos rerum rerum.', 'ex', '1979-04-06', 6, 4, NULL, NULL),
-(57, 'Totam ut rem beatae autem.', 'Veniam occaecati earum iusto soluta non. Cumque ratione debitis asperiores excepturi et nemo error quibusdam. Ut sit maiores ut id ipsam dolores. Sed qui quia vel sunt dolorum est.', 'dolores', '2008-07-13', 3, 1, NULL, NULL),
-(58, 'Itaque esse est natus.', 'Consequatur ut eum est voluptatum nostrum possimus. Labore optio illum deleniti deleniti consequuntur. Repellat at voluptas optio nesciunt. Cum illo laborum debitis fugiat sed eaque.', 'iste', '1970-06-22', 4, 2, NULL, NULL),
-(59, 'Dignissimos ea molestias maiores ipsam.', 'Dolore rerum suscipit delectus corrupti quaerat et. Dolor fugit rem corporis beatae ut ratione. Qui unde omnis quasi sed dolorem sapiente assumenda. Ratione dolore quaerat totam libero autem.', 'autem', '2013-10-12', 9, 2, NULL, NULL),
-(60, 'Eum qui accusamus voluptas.', 'Qui quis accusantium temporibus eius aut possimus esse. Provident reiciendis reiciendis quibusdam deleniti laudantium. Molestias fuga officia repellendus.', 'id', '1972-06-17', 7, 4, NULL, NULL),
-(61, 'Fugiat est explicabo modi cupiditate.', 'Molestias dicta iure omnis facere ratione repellendus. Omnis magnam iusto beatae officiis quia. Dolor et consectetur modi molestiae voluptates id error voluptate. Omnis eum iste deserunt eum.', 'corrupti aspernatur', '2018-02-20', 4, 1, NULL, NULL),
-(62, 'Voluptatem ex consequuntur doloribus sapiente.', 'Sunt illum a provident. Quis modi aperiam eos ex.', 'eveniet', '1971-08-14', 3, 3, NULL, NULL),
-(63, 'Aut itaque expedita libero.', 'Ratione et voluptate nihil eligendi sed doloremque eum. Autem sunt in numquam a praesentium. Consequatur est voluptatem officia illum.', 'ut', '1983-12-30', 8, 3, NULL, NULL),
-(64, 'Eum et magni aut delectus corrupti.', 'Deleniti fugiat quam et laborum ullam ipsum voluptas. Eum esse asperiores sed repellat. Corrupti non et eum ea eos. Delectus voluptas non repellat excepturi recusandae in. Temporibus necessitatibus nihil itaque odit suscipit.', 'asperiores officia', '1971-05-14', 9, 1, NULL, NULL),
-(65, 'Saepe optio eum facilis.', 'Dicta quis eos et quia pariatur incidunt. Alias maiores et dolores consequatur consequatur id sint. Expedita possimus aspernatur nam et voluptas et. Rerum odio minima numquam libero rem tempora. Rem ut ipsum repellendus nesciunt aut est et.', 'quod nemo', '1973-05-12', 6, 2, NULL, NULL),
-(66, 'Recusandae doloribus ratione vitae.', 'Non ad vel numquam eos a et eos molestias. Excepturi dolores dolore natus voluptatem. Praesentium iste corrupti quo. Dolor consectetur provident molestiae consequuntur soluta neque consequatur.', 'natus', '1989-02-26', 7, 4, NULL, NULL),
-(67, 'Necessitatibus incidunt sit possimus qui saepe.', 'Deserunt assumenda qui rerum et odit et. Iste ipsum minus est aut omnis qui. Dignissimos omnis reprehenderit nisi. Natus excepturi repellendus fugit ipsum ut qui.', 'sint hic', '2019-12-04', 8, 2, NULL, NULL),
-(68, 'Non soluta ipsum id animi iste.', 'Ratione ea sit omnis molestiae et. Aut nisi culpa consequatur accusantium. Culpa dicta sit magnam voluptas laudantium aperiam animi. Et omnis quia est.', 'velit', '2020-04-08', 8, 3, NULL, NULL),
-(69, 'Architecto harum provident voluptate.', 'Sit velit nisi dolores perferendis nemo quo nesciunt molestias. Odit vel totam deleniti ut quo tempore mollitia. Harum qui voluptatem mollitia consequatur necessitatibus numquam eos rerum. Cum facere et voluptatibus similique.', 'velit', '1983-10-21', 5, 2, NULL, NULL),
-(70, 'Accusantium et nam et et.', 'Magni aliquid voluptatem error error. Accusantium repudiandae facere facere necessitatibus dolorem dolores. At placeat rerum mollitia omnis esse qui alias. Labore velit atque possimus.', 'nulla excepturi', '1989-10-20', 9, 3, NULL, NULL),
-(71, 'Quas harum accusantium et excepturi omnis.', 'Ut consequatur quidem facilis quidem consequatur quas. Repudiandae laboriosam nostrum alias labore ipsum.', 'placeat', '2006-05-07', 7, 4, NULL, NULL),
-(72, 'Sed ea minima qui consequatur.', 'Debitis nulla nostrum placeat iusto. Et reiciendis velit illo voluptatem et dolor. Et ut praesentium dolore dolorem mollitia quos unde.', 'rerum', '2005-11-30', 11, 3, NULL, NULL),
-(73, 'Nemo est commodi.', 'Voluptatem consequatur et velit totam. Ut eveniet in quis nesciunt qui. Eaque ea est minima tempore in.', 'asperiores sint', '1984-02-16', 5, 4, NULL, NULL),
-(74, 'Nemo corporis sunt.', 'Illo commodi nostrum quis temporibus. Et velit optio nihil unde sequi voluptatem. Excepturi rerum soluta architecto exercitationem quis repudiandae exercitationem.', 'ut sapiente', '1984-04-04', 10, 4, NULL, NULL),
-(75, 'Rerum odio in quidem quia temporibus.', 'Nobis repudiandae doloremque deserunt optio sint architecto. Id ut voluptatem ab. Saepe est earum soluta necessitatibus facilis voluptas adipisci. Laudantium sint dolorem est repudiandae enim quia.', 'natus distinctio', '2001-01-14', 10, 1, NULL, NULL),
-(76, 'Veniam hic itaque ab porro vero.', 'Voluptatibus nulla est autem debitis. Tempore est sint eius sapiente. Ad quia nostrum laborum magni accusantium.', 'sed tempora', '1971-11-29', 8, 2, NULL, NULL),
-(77, 'Laudantium reiciendis magnam rerum.', 'Dolorum aut qui voluptas quam sunt. Aliquam consectetur reiciendis omnis facere. Vero fugiat sed aut fugit.', 'ab', '1990-07-16', 9, 3, NULL, NULL),
-(78, 'Sequi dolorem consectetur et a.', 'Voluptas at quibusdam doloribus earum. Et ipsam et sit impedit sunt dolore unde ex. Qui repellendus autem ipsum possimus et incidunt inventore.', 'neque', '2014-12-10', 7, 3, NULL, NULL),
-(79, 'Non nulla qui necessitatibus.', 'Exercitationem ab magnam possimus et possimus hic. Culpa quibusdam est iste cum labore. Totam culpa dolor nam dolorem. Id qui numquam voluptatibus eligendi.', 'rem', '1986-07-18', 7, 2, NULL, NULL),
-(80, 'Facere eligendi exercitationem voluptatem.', 'Quis commodi natus omnis. Quibusdam et laborum nam hic laborum unde magnam. Maxime praesentium placeat ipsa totam numquam voluptates et.', 'voluptatem', '2020-03-14', 4, 3, NULL, NULL),
-(81, 'Impedit occaecati quisquam.', 'Nihil ullam ut dolores est voluptates. Iusto et sunt dolorem praesentium vel. Temporibus quis quis excepturi quidem recusandae.', 'nihil sequi', '2009-02-07', 9, 1, NULL, NULL),
-(82, 'Aperiam beatae voluptatum.', 'Voluptas impedit et sunt omnis dolor reprehenderit consectetur. Pariatur sint aliquid maiores laboriosam. Aut enim soluta ea ducimus doloribus. Incidunt sequi earum voluptatem qui ipsa mollitia perspiciatis.', 'qui qui', '2019-05-01', 10, 2, NULL, NULL),
-(83, 'Est magni voluptas.', 'Natus consequatur nesciunt qui nemo voluptas quis et et. Est aut fugit nemo ab. Et et enim expedita est amet. Animi nostrum voluptates tempore enim asperiores nihil beatae. Expedita labore similique nemo sapiente illo quam laboriosam.', 'rerum repudiandae', '2000-09-28', 6, 2, NULL, NULL),
-(84, 'Animi perferendis aliquid voluptas voluptatum.', 'Pariatur qui eos beatae consequuntur quia. Temporibus ut quia est qui perspiciatis perspiciatis consequatur. Excepturi nam sunt dignissimos velit recusandae facilis optio vel. Nostrum consequatur corporis iure corporis aliquam saepe. Rerum dicta quia voluptatem consequuntur ipsam similique.', 'repellat modi', '1990-09-14', 4, 4, NULL, NULL),
-(85, 'Neque voluptatem aperiam et.', 'Natus rerum sequi dolorum cum consequatur mollitia. Reiciendis dicta dicta amet laborum doloribus quia. Eligendi magni a nihil natus.', 'aut', '1999-02-20', 5, 2, NULL, NULL),
-(86, 'Occaecati aspernatur quod voluptatem rerum.', 'Assumenda ab quia autem inventore quia. Eligendi dolor consectetur est voluptatem eum quibusdam. Dolorem aut est corporis qui. Nihil minus nihil nihil.', 'sint sed', '2018-10-06', 4, 2, NULL, NULL),
-(87, 'Nulla quam perspiciatis culpa.', 'Nostrum cupiditate aliquam dolorem. Omnis ut amet et accusamus. Nostrum quidem doloremque fuga assumenda.', 'harum', '2018-08-15', 9, 3, NULL, NULL),
-(88, 'Et rerum recusandae omnis.', 'Sit corrupti ex maiores rerum ratione deserunt natus impedit. Ut facilis perferendis vel aut et animi quo. Sed sit id qui.', 'et sit', '1976-09-08', 5, 1, NULL, NULL),
-(89, 'Dignissimos amet autem et perspiciatis fuga.', 'Delectus sint repellat recusandae alias. Saepe perferendis doloremque deserunt dolores. Et sint earum assumenda. Atque voluptas est voluptas ut aperiam voluptas.', 'quos', '1974-09-19', 4, 4, NULL, NULL),
-(90, 'Facere omnis unde omnis nesciunt voluptas.', 'Laudantium voluptas necessitatibus quidem voluptas sequi nemo ipsa. Quia eos temporibus reiciendis deleniti accusamus autem. Asperiores iure ratione non minus ab perspiciatis.', 'delectus ratione', '2014-03-15', 9, 4, NULL, NULL),
-(91, 'Cumque quas et fugit.', 'Consequuntur cumque neque cupiditate et beatae qui omnis expedita. Veritatis laborum laudantium ipsam et eveniet esse veritatis. Adipisci illo omnis eaque provident doloremque et.', 'odit similique', '2011-02-27', 6, 3, NULL, NULL),
-(92, 'Cupiditate maxime sit veniam consequatur.', 'Beatae voluptate et quam dolor. Nihil quia consequatur laborum et eos. Nemo quas natus sed autem totam est.', 'doloribus', '2011-05-12', 3, 1, NULL, NULL),
-(93, 'Quia rerum maxime.', 'Voluptatem ex facilis ullam sequi natus et nobis blanditiis. Ut qui doloremque ut suscipit consequatur dolor quo. Dignissimos non est rerum aut sit culpa molestiae.', 'veritatis', '2008-08-03', 2, 4, NULL, NULL),
-(94, 'Et tempora rem harum dolorem natus.', 'Ut harum impedit delectus. Aut magni corporis eum voluptas quam suscipit eum. Quam in consequatur qui.', 'voluptas hic', '2008-08-08', 9, 1, NULL, NULL),
-(95, 'Maxime sit repellendus sed inventore.', 'Molestias laborum eaque vitae rerum qui voluptatem laudantium. Quis est quis accusamus deserunt vel consequatur. Est vel animi et voluptate eveniet.', 'quia provident', '1972-07-31', 9, 3, NULL, NULL),
-(96, 'Eum nihil harum exercitationem.', 'Magnam nihil deserunt a dicta et et consequatur. Placeat et quo velit labore. Voluptatibus eum ullam et. Sit ex qui et molestiae sit.', 'voluptas quod', '1993-02-11', 8, 4, NULL, NULL),
-(97, 'Delectus aut eius incidunt et ex.', 'Temporibus corrupti sed voluptatem similique. Voluptas rerum enim ut placeat harum.', 'cupiditate', '1976-07-17', 2, 1, NULL, NULL),
-(98, 'Libero molestiae non qui hic.', 'Nemo et ratione architecto quo. Est saepe ullam veniam ex dolorem et veritatis. Sint numquam ex laboriosam non neque nulla. Minima est tempora architecto doloribus illum sequi.', 'eum temporibus', '1976-03-16', 3, 2, NULL, NULL),
-(99, 'Laboriosam et aut consectetur.', 'Cum eum voluptas nemo odit laboriosam expedita porro. Voluptatem amet id quia quis.', 'rem inventore', '2002-06-17', 5, 1, NULL, NULL),
-(100, 'Blanditiis quaerat sint voluptatem voluptas voluptatem.', 'Similique et iure architecto aut dicta sunt enim. Culpa error est praesentium est velit eligendi.', 'qui', '1987-05-03', 5, 1, NULL, NULL);
+(1, 'Voluptatem vel nostrum.', 'Deleniti deserunt minima consequuntur. Aliquid a sed eligendi qui aperiam. Rem aut ipsam dignissimos soluta rerum consequatur dolorem. Quibusdam nemo praesentium velit et.', 'et', '2002-12-31', 9, 4, NULL, NULL),
+(2, 'Accusantium est provident exercitationem.', 'Ipsum delectus voluptatem dolor omnis quaerat. Impedit et ut in.', 'quasi rerum', '2006-12-25', 10, 1, NULL, NULL),
+(3, 'Laudantium sit hic nihil voluptatem.', 'Dolorem ut occaecati cumque provident. Ab facere repellendus incidunt enim magnam est dolores. Id quia dolore rerum ut nostrum nam. Rerum quam numquam numquam enim laboriosam minus delectus esse.', 'qui aliquam', '2004-07-31', 3, 2, NULL, NULL),
+(4, 'Distinctio hic rerum modi.', 'Neque atque eius voluptas amet perspiciatis iusto. Aut accusantium voluptatem dolor expedita quis non. Aspernatur voluptatem quia illum et labore maiores. Sed provident dolorum et.', 'natus amet', '1978-10-12', 4, 4, NULL, NULL),
+(5, 'Vero et ut nisi aut.', 'Dolorum quis magni dicta ad in sapiente nesciunt. Quam explicabo excepturi magnam. Culpa aut reprehenderit quidem id corrupti dolores sed.', 'et nobis', '2013-12-03', 8, 3, NULL, NULL),
+(6, 'Esse aut ea harum.', 'Ut fugiat aperiam numquam eum. Sint voluptatibus quos ea esse sunt rerum magni. Velit blanditiis ex modi quibusdam quod sit. Nemo quibusdam quam in quia.', 'quos', '1976-08-17', 11, 3, NULL, NULL),
+(7, 'Ut velit temporibus tempora vel.', 'Laborum reiciendis delectus necessitatibus molestiae dolorem. Nesciunt qui sed natus omnis dolor rerum sequi. Et eos hic rerum. Molestias earum tempora molestiae et.', 'iure', '2013-02-10', 3, 3, NULL, NULL),
+(8, 'Ex velit a doloremque libero.', 'Rem vel veritatis a quas. Commodi totam aut eligendi adipisci enim ut. Asperiores qui quo illum occaecati et adipisci.', 'impedit voluptatibus', '1970-08-06', 10, 2, NULL, NULL),
+(9, 'Sed ullam cumque animi.', 'Provident dolores magni consequatur minus voluptatum facere ut. Sunt dolores sequi impedit vero id dolorem. Molestiae voluptatem dignissimos aut laborum.', 'minus', '1988-07-12', 3, 1, NULL, NULL),
+(10, 'Dolore quia placeat consequuntur.', 'Eaque cum incidunt aut est ratione dignissimos consequatur. Dolores quis id ab a ullam at ut animi. Necessitatibus eum consequatur nostrum sit nam.', 'officia quod', '1976-02-28', 2, 3, NULL, NULL),
+(11, 'Et quaerat magni.', 'Et et explicabo accusamus porro quia excepturi id. Enim ex est aspernatur labore. Culpa labore eaque officia officiis.', 'optio molestiae', '2019-08-23', 9, 2, NULL, NULL),
+(12, 'Ducimus voluptatem tempora et ex est.', 'Eos delectus laborum quis molestiae. Autem mollitia recusandae dignissimos quos. Nobis est ut ullam voluptas debitis necessitatibus voluptas. Maiores culpa error sed qui vel magnam.', 'omnis', '1971-05-06', 7, 1, NULL, NULL),
+(13, 'Qui quod animi.', 'Est numquam ex rerum sapiente. Ducimus et sed explicabo ducimus debitis magni est exercitationem. Dolorem molestiae commodi qui labore sit quos inventore vitae.', 'molestiae', '1998-02-24', 2, 3, NULL, NULL),
+(14, 'Nostrum nihil consequatur fuga.', 'Corporis tenetur molestiae dolorem voluptas. Ab totam iusto modi et magni. At non doloremque accusantium est voluptas.', 'voluptatum et', '2011-11-14', 10, 2, NULL, NULL),
+(15, 'Totam et architecto in fugiat et.', 'Dolores aut vel enim ut. Reiciendis fuga optio sunt. Repellendus asperiores id aperiam eligendi corporis illum sit. Sunt hic omnis minima totam.', 'nobis earum', '1985-10-29', 7, 4, NULL, NULL),
+(16, 'Officiis doloribus nihil officiis sint ab.', 'Nisi vero excepturi iste ipsam vitae ut aperiam. Ea cum eius quia occaecati sunt rerum. Dignissimos qui eveniet facilis optio sed. Dolorem facilis eum explicabo sit aspernatur modi quia consequatur. Sit officiis dolorem quod quis.', 'sapiente dolorem', '1978-08-26', 2, 4, NULL, NULL),
+(17, 'Provident nulla provident.', 'Doloremque velit est sit suscipit vitae officia. Id sint inventore fugit et sint. Deleniti dolorem eveniet iure cupiditate officiis a.', 'modi temporibus', '1977-08-14', 8, 1, NULL, NULL),
+(18, 'Quam porro ipsum architecto.', 'Excepturi maiores dolor veritatis. Quo dicta vel odit corporis. Quaerat et tempore rerum in soluta ipsam.', 'voluptas iste', '1982-10-21', 6, 1, NULL, NULL),
+(19, 'Sed cupiditate non.', 'Iusto repudiandae rerum pariatur tenetur delectus. Quia quia asperiores laudantium qui ea quia autem. Dolorem in recusandae eligendi eveniet sapiente atque quaerat.', 'et et', '1997-03-17', 6, 3, NULL, NULL),
+(20, 'Possimus et omnis.', 'Veritatis aliquid tempora pariatur odio iure et quis sunt. Quia quaerat magni quia inventore ullam et harum. Quos placeat laborum molestiae doloribus quaerat et. Quisquam voluptas unde maxime odit.', 'excepturi', '2014-11-02', 2, 4, NULL, NULL),
+(21, 'At officiis aspernatur voluptatem praesentium recusandae.', 'Quia quo deserunt aut sint nisi earum. Consequatur aut iusto voluptas sit eveniet rerum. Pariatur non cupiditate repellendus.', 'eos', '1996-01-30', 2, 4, NULL, NULL),
+(22, 'Dolores excepturi in doloremque id sapiente.', 'Voluptates minima officia consequatur voluptas et. Nemo optio eos et dolore. Recusandae ex doloribus sunt quibusdam ut velit fugit.', 'mollitia', '2006-09-04', 7, 2, NULL, NULL),
+(23, 'Occaecati sed praesentium cum officiis.', 'Aspernatur mollitia soluta beatae beatae sequi autem laborum. Dolores animi dolore est rerum qui doloribus porro. Explicabo corrupti reiciendis beatae quos necessitatibus.', 'labore ullam', '2010-10-08', 5, 3, NULL, NULL),
+(24, 'Quia doloremque veritatis sunt dolorum omnis.', 'Ducimus rerum et consequatur et blanditiis voluptatum deleniti. Qui sint sint non quo aliquid ipsum. Quia qui qui assumenda optio et quae.', 'dolor sit', '1986-08-07', 8, 1, NULL, NULL),
+(25, 'Odio quas aliquam omnis.', 'Non distinctio hic quod cumque et ipsum dolore ullam. Est mollitia voluptate vero omnis. Quod id debitis reiciendis voluptatem sit aut impedit quam. Magni suscipit repellat veritatis optio ut delectus enim.', 'officiis repellendus', '1986-01-07', 10, 2, NULL, NULL),
+(26, 'Quis culpa unde ipsum quia.', 'Deserunt corrupti deserunt dignissimos qui nihil. Qui iusto deleniti aliquam nihil et aut corporis. Voluptate quo enim id.', 'aut', '1975-07-18', 7, 3, NULL, NULL),
+(27, 'Enim et ipsum excepturi perferendis.', 'Laboriosam rerum aut qui eos magnam. Voluptatibus voluptatum suscipit et aut. Ut est voluptatem eligendi eius facere repudiandae minima. Facere alias itaque atque iure quae ducimus ea.', 'qui voluptatibus', '1989-06-19', 10, 3, NULL, NULL),
+(28, 'Sint et est quia blanditiis reprehenderit.', 'Quia occaecati non est odio. Tenetur et officiis ut ducimus nihil inventore. Ad et totam minus mollitia.', 'aut sint', '1995-11-16', 11, 3, NULL, NULL),
+(29, 'Totam vitae quibusdam adipisci impedit.', 'Vero sit suscipit nisi provident possimus cum assumenda facere. Exercitationem aliquid excepturi et nihil beatae.', 'et temporibus', '1995-01-30', 6, 1, NULL, NULL),
+(30, 'Repellat velit enim commodi enim.', 'Eius repellendus omnis voluptates neque aut. Voluptas distinctio suscipit cumque et eos. Maxime delectus et quisquam excepturi sed ratione atque. Harum ut quia et minima dolorum ut quisquam.', 'quibusdam enim', '2014-05-14', 3, 2, NULL, NULL),
+(31, 'Labore repudiandae hic.', 'Enim voluptates perspiciatis culpa amet voluptatem dolorum quia reprehenderit. Nobis culpa in id odio esse atque. Quod dolor eum sunt pariatur. Qui corporis ducimus cum eaque maxime odit eum.', 'quas et', '2019-10-23', 11, 4, NULL, NULL),
+(32, 'Libero veniam sint officiis totam.', 'Repellat alias tenetur voluptatem eius est harum reprehenderit. Aut tempora nihil laudantium autem voluptatem eum voluptate.', 'deleniti recusandae', '1983-07-29', 6, 3, NULL, NULL),
+(33, 'Aut recusandae deserunt qui magnam.', 'Aut cumque error quo nam fuga. Maiores cupiditate ut labore totam.', 'qui aut', '1995-01-20', 10, 4, NULL, NULL),
+(34, 'Sit ut harum est ut.', 'Enim perspiciatis neque quia cupiditate. Aut et saepe sit qui atque. Recusandae facere dignissimos rem et officia. Quo et eos eligendi molestiae quis.', 'quis', '1983-03-17', 5, 1, NULL, NULL),
+(35, 'Esse voluptates excepturi placeat.', 'Minus tenetur harum doloremque. Est quia repellat inventore. Et quas corporis qui sit quasi molestias velit totam.', 'et ea', '2020-03-21', 4, 2, NULL, NULL),
+(36, 'Nihil vel eum et rerum.', 'Culpa ab qui consequatur voluptatem. Et reiciendis ut quam non.', 'accusamus voluptatem', '1976-05-18', 6, 2, NULL, NULL),
+(37, 'Consequatur doloribus dicta doloribus alias.', 'Quos harum sequi ut recusandae nobis. Autem sunt aperiam tempora recusandae officiis. Exercitationem voluptatum non earum ut nemo et. Omnis quos consequatur ad voluptates id. Saepe quia amet sapiente.', 'cumque voluptate', '1998-12-27', 11, 3, NULL, NULL),
+(38, 'Non id unde earum.', 'Molestias cupiditate voluptas id voluptates facere eum et. Suscipit sint commodi atque consequatur. Qui eum reiciendis cum.', 'natus', '1980-07-03', 6, 4, NULL, NULL),
+(39, 'Non voluptatum atque.', 'Accusamus officia eligendi deserunt sed vero. Impedit velit unde labore voluptatem ut autem nobis. Corporis omnis eos et sint quo eos aspernatur. Consequatur doloremque non et voluptas quia dolor autem.', 'soluta', '1996-01-07', 4, 4, NULL, NULL),
+(40, 'Quo a dignissimos.', 'Voluptatem nisi quasi tempora et quisquam. Non porro minima quia sint enim in at placeat. Id eaque sit doloremque aut eius.', 'perspiciatis', '1983-07-04', 2, 4, NULL, NULL),
+(41, 'Magnam aut quia quasi illum vel.', 'Ipsa consequatur inventore qui eius dolore quibusdam. Et sed ab et asperiores expedita. Perferendis blanditiis ratione enim molestiae est sunt aut. Sit quo rerum incidunt.', 'ut explicabo', '1994-03-18', 11, 3, NULL, NULL),
+(42, 'Iusto sunt id distinctio et nihil.', 'A dicta deserunt inventore. Facere nobis sed cum sapiente voluptas qui. Id est accusamus minima aut sint assumenda.', 'qui', '1979-12-25', 8, 3, NULL, NULL),
+(43, 'Perferendis in et et.', 'Dolorem nihil porro enim hic nostrum est et veniam. Ipsam quas ullam aut numquam. Rerum earum sequi sed eum doloribus aut.', 'quam et', '2004-01-17', 7, 2, NULL, NULL),
+(44, 'Est veniam eveniet sequi.', 'Aut ducimus culpa consequuntur et. Blanditiis quo ut molestiae ut iure. Deleniti numquam enim voluptatum harum nihil. Et molestias fugit minima.', 'dolore', '1995-09-18', 6, 4, NULL, NULL),
+(45, 'Harum illo sint ab nesciunt.', 'Odio omnis doloribus beatae nihil ex et et. Debitis aut non eos adipisci magni ad officia. Corrupti tempora exercitationem et incidunt et nostrum autem. Aspernatur alias suscipit ab ut.', 'omnis', '2012-02-07', 8, 3, NULL, NULL),
+(46, 'Ut aut est quasi ab.', 'Facere voluptatem magni ullam qui assumenda. Mollitia eum suscipit voluptatem ipsum est. Animi voluptas quia repellendus assumenda quis mollitia omnis laborum. Omnis voluptatem odio a inventore debitis consequatur asperiores reprehenderit.', 'qui', '1982-09-27', 9, 1, NULL, NULL),
+(47, 'Molestiae cupiditate nihil aut ullam.', 'Dolorem accusantium provident provident ipsam quidem voluptatem perferendis. Rerum est eum delectus provident qui totam aut. Porro voluptatem est ipsum non facilis omnis sint. Quod iste perferendis ad tenetur minus veniam distinctio excepturi.', 'suscipit', '2005-11-27', 5, 3, NULL, NULL),
+(48, 'Fuga ea eos sed quidem minima.', 'Omnis aperiam aut odio voluptates ea. Perferendis expedita eos minima. Accusantium atque quia est ut optio reiciendis est atque. Assumenda qui non optio.', 'mollitia ea', '2001-12-17', 10, 3, NULL, NULL),
+(49, 'Et perferendis adipisci ut alias.', 'Deleniti eos porro qui et voluptatem. Voluptatem dolore praesentium deleniti veritatis eos nisi dolores. Accusantium id vel sequi tempore modi expedita quibusdam quaerat.', 'id', '2016-11-22', 5, 4, NULL, NULL),
+(50, 'Minus nam vitae consequatur id.', 'Autem dolorum qui id qui hic veritatis voluptates. Et dolorem ducimus voluptatibus qui deserunt. Voluptatum aliquam ut maxime assumenda ex aut.', 'nemo', '2015-10-14', 5, 1, NULL, NULL),
+(51, 'Sunt iusto voluptas quia tenetur temporibus.', 'Vel autem accusantium necessitatibus fugiat quo. Totam ad illo quasi. Rerum voluptatem error ut fugiat odio dolores tenetur. Eos et neque quam laborum perferendis ea voluptas.', 'facilis laboriosam', '1981-10-12', 11, 1, NULL, NULL),
+(52, 'Necessitatibus est ut error doloremque.', 'Deserunt provident quasi sequi mollitia. Et ut quas ducimus veniam culpa sed ipsum. Voluptas unde consectetur dolorem doloribus ab omnis. Magnam rerum eveniet eos cum nam eaque. Libero illum soluta sint rerum et et ut.', 'ducimus nihil', '1986-11-04', 4, 3, NULL, NULL),
+(53, 'Quae ad ea doloremque beatae.', 'Recusandae quod maiores fuga omnis. Impedit quo sint aut deleniti.', 'voluptas voluptas', '2001-01-28', 7, 3, NULL, NULL),
+(54, 'Assumenda illo facilis suscipit.', 'Quisquam possimus iste debitis molestias accusamus nihil aperiam. Dolorum illum quos quod aperiam quis. Corrupti doloribus est eum officia libero maxime. Assumenda rerum molestiae enim consectetur tenetur sint assumenda.', 'voluptatem aut', '2020-04-07', 7, 3, NULL, NULL),
+(55, 'Delectus optio sint consequuntur.', 'Ea accusamus exercitationem magnam rerum blanditiis hic accusantium. A id ut odio omnis debitis dolorum earum. Eum voluptate consequuntur voluptates qui et eos.', 'iste deleniti', '2011-11-16', 6, 1, NULL, NULL),
+(56, 'Aut provident autem sed.', 'Voluptate sequi iste iste saepe. Beatae qui voluptatem nulla quia nihil. Qui est veritatis voluptatum eos et optio.', 'asperiores esse', '1992-09-01', 9, 2, NULL, NULL),
+(57, 'Ducimus odit voluptatem unde nemo consequatur.', 'Amet vitae delectus aperiam nesciunt omnis facere eaque modi. Voluptatibus in aliquam non. Ea et id eius. Nam nihil autem excepturi sequi odio quia omnis.', 'fugiat aut', '1982-10-07', 3, 1, NULL, NULL),
+(58, 'Fugiat et qui.', 'Ea molestias et assumenda laboriosam fugit reiciendis ad. Aperiam facilis expedita hic id consequatur odit. Nulla at impedit rem assumenda eaque expedita vel. Omnis porro eligendi ut magni voluptatem temporibus.', 'et repellat', '1970-06-07', 9, 4, NULL, NULL),
+(59, 'Iste deserunt similique aspernatur.', 'Distinctio quos aut laudantium. Ex quia voluptas nihil quos aperiam in esse. Sapiente illum animi numquam et. Nihil omnis vitae saepe sit ut.', 'error', '1982-10-08', 8, 1, NULL, NULL),
+(60, 'Quia ut qui dolorem ducimus nisi.', 'Neque amet repellendus inventore placeat tempora aut iusto quisquam. Quis autem laudantium dolores sunt. Placeat enim et at sapiente. Veniam magnam animi impedit quo.', 'consequuntur', '1976-06-27', 10, 4, NULL, NULL),
+(61, 'Ut autem deserunt quo provident.', 'Exercitationem aut qui deserunt nesciunt qui provident tempora. Dolorem et quo quam aliquid autem qui earum. Et laborum sint quo asperiores non.', 'quia sequi', '1981-12-05', 7, 3, NULL, NULL),
+(62, 'Deserunt quis alias ea.', 'Magnam doloribus et soluta in nostrum velit fugiat sapiente. Quia quis dolorem ut libero ad. Animi et dolores maxime sint dolor at.', 'non', '1995-09-29', 9, 1, NULL, NULL),
+(63, 'Voluptas perferendis sed quo.', 'Quos ducimus minus sunt rem accusantium fugiat. Dolor aliquam nobis quis id illo vero aliquid. Dolores iure ducimus ratione laboriosam.', 'qui doloremque', '2006-11-28', 5, 2, NULL, NULL),
+(64, 'Atque iste temporibus.', 'Ut culpa dolorem fugit optio veniam. Eum itaque consequatur dignissimos voluptate repudiandae et. Dolores sapiente animi sapiente non autem explicabo quod nesciunt.', 'in', '2010-07-30', 4, 2, NULL, NULL),
+(65, 'Consequuntur eos omnis cupiditate provident mollitia.', 'Porro quae qui doloribus earum voluptas officia. Eveniet laborum excepturi aut voluptates. Vel esse et quo omnis. Ea quibusdam ut porro eos odit voluptatum aut explicabo. Est ut aliquam in voluptatibus enim neque tempora dolorum.', 'et', '1985-11-05', 4, 4, NULL, NULL),
+(66, 'Quam ut repellendus id.', 'Eos ipsa aperiam voluptatum illum. Iste distinctio minima provident quo. Ut aliquid vero labore qui.', 'aut sint', '1980-12-16', 11, 4, NULL, NULL),
+(67, 'Unde voluptas dolore.', 'Et natus delectus earum nihil. Suscipit nesciunt tenetur animi ea asperiores. Voluptas et adipisci dolore.', 'doloremque quo', '2001-05-29', 10, 4, NULL, NULL),
+(68, 'Accusamus asperiores dolor tempora vel.', 'Dolorem voluptas dolorum dolor ex eum et. Adipisci nam sapiente consequatur excepturi. Voluptatum vero odio tenetur quia tempora iusto deleniti. Nemo consequatur reiciendis nihil sapiente molestiae libero.', 'natus odit', '1977-11-04', 7, 4, NULL, NULL),
+(69, 'Dolorem delectus est placeat.', 'Temporibus ab nisi in veritatis architecto. Officiis adipisci aut culpa quae aut ut. Eos eius aliquam voluptas fugit accusamus pariatur.', 'facilis', '2009-02-21', 3, 2, NULL, NULL),
+(70, 'Ut maiores id est numquam quae.', 'Voluptas nihil eaque ad est provident. Sint molestias temporibus totam sit consectetur occaecati. Occaecati facere maxime quia consequuntur beatae rerum nam dignissimos.', 'voluptates', '2010-09-11', 8, 2, NULL, NULL),
+(71, 'Et omnis cupiditate voluptas nihil.', 'Rem ut in ab. Dolorem eos eos earum magni voluptatum. Aut quo libero cupiditate et. Doloremque quo cupiditate et quis suscipit.', 'rerum', '2014-10-30', 7, 1, NULL, NULL),
+(72, 'Est itaque nihil sequi voluptatem excepturi.', 'Iusto magni incidunt possimus eos consequatur. Ut reiciendis doloremque sunt velit porro qui similique. Sunt rerum cum at modi quidem.', 'officia ea', '2018-07-11', 6, 2, NULL, NULL),
+(73, 'Corporis qui adipisci similique laboriosam vel.', 'Omnis odio incidunt laboriosam alias eligendi in ullam. Suscipit vitae dolorum facilis reiciendis voluptate rem reiciendis. Voluptatem iure rem animi molestiae consequuntur ex commodi. Harum aperiam tempora quo delectus nam et ducimus.', 'nulla omnis', '1992-12-29', 2, 2, NULL, NULL),
+(74, 'Sint aperiam libero veritatis corrupti.', 'Unde odio voluptatem ducimus tempore minus. Labore ea perspiciatis sed et consectetur. Expedita at dolorem quas ipsum quia. Sapiente illo voluptatem saepe eum minima sed distinctio. Quia voluptatem iste voluptas ipsam.', 'tenetur porro', '1983-05-30', 3, 2, NULL, NULL),
+(75, 'Aut quos quasi fuga.', 'Magni ut sit dolorem eveniet. Molestiae quis perferendis nisi repudiandae cumque et esse odio. Quos repellendus qui esse iste eum.', 'accusantium', '2003-03-03', 5, 3, NULL, NULL),
+(76, 'Veniam consequatur qui.', 'Ut distinctio quis vel soluta laborum est. Aliquam magni eveniet aut possimus dolores eligendi sit et. Dolor animi illo eligendi illo incidunt repellat quis officia. Voluptatem aut inventore architecto quas aut tempore eos.', 'inventore', '2010-06-11', 3, 3, NULL, NULL),
+(77, 'Id rerum qui reprehenderit.', 'Praesentium inventore possimus ut aut ut mollitia voluptas. Cumque id vel at officiis. Commodi et rerum voluptatem dignissimos explicabo assumenda voluptatem. In vel itaque saepe cum molestiae fuga.', 'quis quia', '1996-02-19', 9, 3, NULL, NULL),
+(78, 'Autem omnis tenetur molestias perspiciatis.', 'Quo et autem modi. Sunt eos quis itaque perferendis esse. Consequatur et eum tempore temporibus hic possimus velit. Debitis voluptas ipsum hic numquam architecto qui.', 'illo', '1993-10-11', 5, 3, NULL, NULL),
+(79, 'Vel harum perspiciatis.', 'Et a ipsam consequatur consequatur. Exercitationem libero qui labore qui debitis quia delectus. Occaecati corporis nihil sunt reiciendis.', 'ducimus reiciendis', '1985-08-04', 6, 2, NULL, NULL),
+(80, 'Fugiat dolorem fuga sunt.', 'Ea eaque autem facere ipsa. Reiciendis doloremque sit architecto laborum praesentium delectus sequi. Omnis doloribus voluptatem voluptas expedita voluptas laborum laudantium. Dolorem quas veritatis et consequatur.', 'repudiandae perspiciatis', '1983-08-20', 7, 1, NULL, NULL),
+(81, 'Esse ipsa sint vel.', 'Porro quia harum enim enim. Voluptatem eos consequatur harum eos. Voluptatem autem quia sit consequatur iste quia eos.', 'repudiandae cum', '2010-02-07', 7, 1, NULL, NULL),
+(82, 'Eos debitis ratione quidem earum.', 'Molestiae velit error qui nihil a accusamus iusto eos. Et ea dicta a accusamus. Quia magni ut amet expedita necessitatibus maxime nisi. Placeat velit autem incidunt sed.', 'nihil', '2002-03-14', 5, 3, NULL, NULL),
+(83, 'Rerum non unde id.', 'Veniam voluptas voluptas amet voluptatem ad soluta expedita. Iure ut est voluptatem nobis rerum. Id iste impedit quia necessitatibus unde dicta sint est.', 'in', '1993-10-24', 10, 3, NULL, NULL),
+(84, 'Ut voluptas placeat inventore hic impedit.', 'Quam ad quos dolores ut nulla corrupti. Quos veritatis nesciunt vel esse maxime consectetur possimus. Consectetur eum quia neque.', 'voluptatem', '2014-09-17', 4, 1, NULL, NULL),
+(85, 'Non est dolores minima omnis suscipit.', 'Excepturi repellat vitae optio distinctio incidunt. Architecto accusantium harum laboriosam neque voluptatum perspiciatis occaecati. Ea a ut temporibus modi. Omnis vitae fuga maxime adipisci quasi harum. Quo ratione voluptas voluptate.', 'nulla eos', '2015-09-19', 4, 3, NULL, NULL),
+(86, 'Quae sint numquam.', 'Facere blanditiis quae est error repudiandae. Sapiente voluptatem quia illum a dolor. Qui quam eos voluptatem occaecati. Consequuntur quia quos amet sit.', 'corrupti earum', '1988-06-25', 4, 1, NULL, NULL),
+(87, 'Et vel ducimus nostrum.', 'Quod quo animi magni eum. Ad delectus qui et quia vitae rem consequatur. Omnis aut ex ut autem culpa ut expedita.', 'aut et', '1991-02-27', 2, 1, NULL, NULL),
+(88, 'Eos illo minima quod.', 'Omnis qui numquam ratione accusamus. Cum unde ratione ex illum laborum. Illo similique et expedita sunt velit ad.', 'perferendis deserunt', '2002-12-07', 5, 2, NULL, NULL),
+(89, 'Eius voluptatum quod repudiandae.', 'Id quos vero autem repudiandae aspernatur. Quis distinctio necessitatibus repellat sit. Minima veniam et quos neque ut numquam.', 'totam', '1996-07-30', 3, 3, NULL, NULL),
+(90, 'Quis dignissimos non.', 'Ut dolore modi et. Est quo voluptatem quidem maxime. Vel itaque voluptatem voluptates ea. Aperiam nam ut qui atque nihil iure sit.', 'et', '2002-09-07', 7, 4, NULL, NULL),
+(91, 'Id enim facilis consectetur.', 'Tempore ea et eaque quibusdam nostrum enim. Dolorum labore nostrum earum molestiae vitae provident iure. Nesciunt eius reiciendis quod harum aut.', 'ipsam et', '2019-04-11', 11, 2, NULL, NULL),
+(92, 'Vel voluptatem maxime ex ducimus.', 'Qui saepe magnam nam sint. Minima explicabo doloribus sunt at veniam. Reprehenderit necessitatibus blanditiis laborum. Et deleniti excepturi laborum debitis qui.', 'amet ut', '1980-08-22', 9, 1, NULL, NULL),
+(93, 'Adipisci aut quod esse sequi.', 'Tempora odio et nulla dolor minima quod. Ipsam aut cum repellat ut laboriosam. Quo eius quisquam perspiciatis deserunt et.', 'ut', '1991-08-22', 9, 4, NULL, NULL),
+(94, 'Placeat provident asperiores.', 'Aliquid in veniam quam maiores. Commodi et tempore sequi nisi rerum vero corrupti. Cum iure sed dolore accusamus dolore ratione magnam. Iusto repellendus necessitatibus cumque placeat dolor.', 'amet', '2016-07-04', 11, 2, NULL, NULL),
+(95, 'Ducimus et dolor et.', 'Veniam sed reiciendis totam qui eaque. Ab et omnis expedita dolor optio molestias. Repudiandae reiciendis vitae quis velit. Deleniti enim ab eum quaerat animi.', 'autem', '2004-10-01', 3, 4, NULL, NULL),
+(96, 'Odit aut sint magni corporis sed.', 'In sit repudiandae sit dolorem voluptatem dolor excepturi. Consequatur adipisci odio delectus eum repellendus ea.', 'ipsam distinctio', '1978-04-17', 9, 2, NULL, NULL),
+(97, 'Cupiditate aliquid et.', 'Quo ut molestiae vel quia in. Qui totam nemo quo. Et dolor tempore sequi deleniti enim placeat est. Doloribus quam unde laboriosam. Provident consectetur et sed repellendus et omnis et.', 'perferendis', '1980-12-06', 3, 3, NULL, NULL),
+(98, 'Molestiae iure sed aliquid ut.', 'Vel modi pariatur minima nemo possimus. Repudiandae accusamus quia id numquam quod quam. Et autem debitis fuga doloribus sunt quis velit eaque.', 'iure', '2004-09-04', 10, 3, NULL, NULL),
+(99, 'Placeat velit consequuntur ipsam.', 'Inventore rerum optio sit. Quae reprehenderit atque eius ut illo sed. Laudantium non sunt ut delectus sint placeat voluptatem. Veniam deserunt a asperiores tenetur sed aut.', 'neque', '2006-07-19', 3, 3, NULL, NULL),
+(100, 'Laboriosam debitis sunt quidem quidem soluta.', 'Aut odio illo dolores dolore. Quis rerum possimus et excepturi in. Asperiores reiciendis et qui quaerat commodi nulla. Aut sed incidunt modi accusamus. Quas blanditiis voluptas quas dolorem explicabo commodi voluptatem.', 'voluptatibus', '2007-03-03', 4, 1, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pacientes`
+--
+
+CREATE TABLE `pacientes` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `apellidos` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `direccion` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telefono` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sexo` char(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fecha_nacimiento` date NOT NULL,
+  `alergias` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `enfermedades_cronicas` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `pacientes`
+--
+
+INSERT INTO `pacientes` (`id`, `nombre`, `apellidos`, `direccion`, `telefono`, `sexo`, `fecha_nacimiento`, `alergias`, `enfermedades_cronicas`, `created_at`, `updated_at`) VALUES
+(2, 'Roman de Jesún', 'Vazquez Almazan', 'ifeoiefwoifeonfeow', '83412343234', 'M', '1999-08-04', 'no', 'no', '2020-07-16 04:59:03', '2020-07-16 12:04:06'),
+(3, 'Edwin', 'Hernandez Martinez', '25 y 26 refinería', '83412345', 'M', '1998-08-04', 'No', 'Asma', '2020-07-16 07:39:30', '2020-07-16 12:04:17');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pagos`
+--
+
+CREATE TABLE `pagos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `consulta_id` bigint(20) UNSIGNED NOT NULL,
+  `monto` decimal(10,2) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -678,11 +805,11 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'browse bread 1', 'api', '2020-07-10 08:29:13', '2020-07-10 08:29:13'),
-(2, 'read bread 1', 'api', '2020-07-10 08:29:14', '2020-07-10 08:29:14'),
-(3, 'edit bread 1', 'api', '2020-07-10 08:29:14', '2020-07-10 08:29:14'),
-(4, 'add bread 1', 'api', '2020-07-10 08:29:14', '2020-07-10 08:29:14'),
-(5, 'delete bread 1', 'api', '2020-07-10 08:29:14', '2020-07-10 08:29:14');
+(1, 'browse bread 1', 'api', '2020-07-12 21:13:19', '2020-07-12 21:13:19'),
+(2, 'read bread 1', 'api', '2020-07-12 21:13:19', '2020-07-12 21:13:19'),
+(3, 'edit bread 1', 'api', '2020-07-12 21:13:19', '2020-07-12 21:13:19'),
+(4, 'add bread 1', 'api', '2020-07-12 21:13:19', '2020-07-12 21:13:19'),
+(5, 'delete bread 1', 'api', '2020-07-12 21:13:20', '2020-07-12 21:13:20');
 
 -- --------------------------------------------------------
 
@@ -703,9 +830,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'api', '2020-07-10 08:28:49', '2020-07-10 08:28:49'),
-(2, 'user', 'api', '2020-07-10 08:28:49', '2020-07-10 08:28:49'),
-(3, 'guest', 'api', '2020-07-10 08:28:49', '2020-07-10 08:28:49');
+(1, 'admin', 'api', '2020-07-12 21:13:03', '2020-07-12 21:13:03'),
+(2, 'user', 'api', '2020-07-12 21:13:04', '2020-07-12 21:13:04'),
+(3, 'guest', 'api', '2020-07-12 21:13:04', '2020-07-12 21:13:04');
 
 -- --------------------------------------------------------
 
@@ -749,6 +876,37 @@ INSERT INTO `role_hierarchy` (`id`, `role_id`, `hierarchy`) VALUES
 (1, 1, 1),
 (2, 2, 2),
 (3, 3, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `servicios`
+--
+
+CREATE TABLE `servicios` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `doctor_id` bigint(20) UNSIGNED NOT NULL,
+  `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `descripcion` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `costo` decimal(10,2) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `servicio_consultas`
+--
+
+CREATE TABLE `servicio_consultas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `consulta_id` bigint(20) UNSIGNED NOT NULL,
+  `servicio_id` bigint(20) UNSIGNED NOT NULL,
+  `cantidad` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -798,22 +956,51 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `api_token`, `menuroles`, `status`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'admin', 'admin@admin.com', '2020-07-10 08:28:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user,admin', 'Active', 'ZRJepkvgTC', '2020-07-10 08:28:50', '2020-07-10 08:28:50', NULL),
-(2, 'Iliana Vandervort', 'eleanora59@example.com', '2020-07-10 08:28:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Active', 'Od9DrwCVr0', '2020-07-10 08:28:50', '2020-07-10 08:28:50', NULL),
-(3, 'Myrna Bergnaum', 'ngoyette@example.org', '2020-07-10 08:28:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'ectLNXlfqH', '2020-07-10 08:28:50', '2020-07-10 08:28:50', NULL),
-(4, 'Mr. Domenick Bergnaum', 'rutherford.raheem@example.net', '2020-07-10 08:28:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'Sa9pruqsA6', '2020-07-10 08:28:50', '2020-07-10 08:28:50', NULL),
-(5, 'Therese Wiza', 'hackett.serena@example.com', '2020-07-10 08:28:51', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', 'vTffFuQKkP', '2020-07-10 08:28:51', '2020-07-10 08:28:51', NULL),
-(6, 'Carmel Stark', 'douglas.agustina@example.com', '2020-07-10 08:28:51', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'bQkTDWTtLe', '2020-07-10 08:28:51', '2020-07-10 08:28:51', NULL),
-(7, 'Bernadine Daniel', 'gulgowski.brant@example.net', '2020-07-10 08:28:51', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', '2nFUwi2k0Q', '2020-07-10 08:28:51', '2020-07-10 08:28:51', NULL),
-(8, 'Rasheed Johns', 'glover.aaliyah@example.com', '2020-07-10 08:28:51', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'tdVv0gL7Xp', '2020-07-10 08:28:51', '2020-07-10 08:28:51', NULL),
-(9, 'Dr. Loraine Jacobi PhD', 'fdach@example.net', '2020-07-10 08:28:51', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'hYai4NP88A', '2020-07-10 08:28:51', '2020-07-10 08:28:51', NULL),
-(10, 'Kirsten Miller', 'hagenes.urban@example.com', '2020-07-10 08:28:51', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', 'p8VNHKmpDz', '2020-07-10 08:28:51', '2020-07-10 08:28:51', NULL),
-(11, 'Brayan Schamberger', 'macie.schuppe@example.net', '2020-07-10 08:28:52', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'lIAUTpSciU', '2020-07-10 08:28:52', '2020-07-10 08:28:52', NULL),
-(12, 'jtrevino', 'jtrevinog72@gmail.com', NULL, '$2y$10$Sv0LaL62tiLrT.EETw.U8.AZ58ARQ4K2ZDE/6WlSWqtXgFDIOlWay', NULL, 'admin', 'Active', NULL, '2020-07-10 08:31:19', '2020-07-10 08:31:19', NULL);
+(1, 'admin', 'admin@admin.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user,admin', 'Active', 'VajmfgZr8U', '2020-07-12 21:13:04', '2020-07-12 21:13:04', NULL),
+(2, 'Melyssa Howell', 'felicia31@example.org', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'gvGnY0NbLn', '2020-07-12 21:13:04', '2020-07-12 21:13:04', NULL),
+(3, 'Miss Bethel Davis Jr.', 'yschoen@example.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'fG0c6f2QgW', '2020-07-12 21:13:04', '2020-07-12 21:13:04', NULL),
+(4, 'Talia Muller PhD', 'hilbert54@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', '6SPpLXHPUJ', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
+(5, 'Nigel Frami Sr.', 'filomena45@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Active', '7Mo8v0P7gX', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
+(6, 'Niko Vandervort', 'klocko.ima@example.net', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'UozRCiVJLB', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
+(7, 'Kara Bode II', 'sheila.howe@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'fWo04wtae4', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
+(8, 'Jerry Koelpin', 'steuber.isabel@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Active', '0ZDFn4EDee', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
+(9, 'Maybell Legros', 'cielo11@example.org', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'bFU30rUV4y', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
+(10, 'Arlene Nienow', 'pstark@example.net', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', 'GGrInGkLNF', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
+(11, 'Prof. Adrien Parisian I', 'zoie61@example.org', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', 'S3lI2zX7p1', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL);
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `citas`
+--
+ALTER TABLE `citas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `compartirs`
+--
+ALTER TABLE `compartirs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `consultas`
+--
+ALTER TABLE `consultas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `cortecajas`
+--
+ALTER TABLE `cortecajas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `doctores`
+--
+ALTER TABLE `doctores`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `email_template`
@@ -903,6 +1090,18 @@ ALTER TABLE `notes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `pacientes`
+--
+ALTER TABLE `pacientes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `pagos`
+--
+ALTER TABLE `pagos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -934,6 +1133,18 @@ ALTER TABLE `role_hierarchy`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `servicio_consultas`
+--
+ALTER TABLE `servicio_consultas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `status`
 --
 ALTER TABLE `status`
@@ -950,6 +1161,36 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `citas`
+--
+ALTER TABLE `citas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `compartirs`
+--
+ALTER TABLE `compartirs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `consultas`
+--
+ALTER TABLE `consultas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `cortecajas`
+--
+ALTER TABLE `cortecajas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `doctores`
+--
+ALTER TABLE `doctores`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `email_template`
@@ -1003,25 +1244,37 @@ ALTER TABLE `menulist`
 -- AUTO_INCREMENT de la tabla `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT de la tabla `menu_role`
 --
 ALTER TABLE `menu_role`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `notes`
 --
 ALTER TABLE `notes`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+
+--
+-- AUTO_INCREMENT de la tabla `pacientes`
+--
+ALTER TABLE `pacientes`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `pagos`
+--
+ALTER TABLE `pagos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
@@ -1042,6 +1295,18 @@ ALTER TABLE `role_hierarchy`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `servicio_consultas`
+--
+ALTER TABLE `servicio_consultas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `status`
 --
 ALTER TABLE `status`
@@ -1051,7 +1316,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
