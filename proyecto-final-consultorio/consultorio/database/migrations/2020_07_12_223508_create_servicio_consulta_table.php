@@ -13,11 +13,11 @@ class CreateServicioConsultaTable extends Migration
      */
     public function up()
     {
-        Schema::create('servicio_consultas', function (Blueprint $table) {
+        Schema::create('servicioconsultas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('consulta_id');
             $table->foreignId('servicio_id');
-            $table->unsignedInteger('cantidad');	
+            $table->unsignedInteger('cantidad');
 
             $table->timestamps();
         });

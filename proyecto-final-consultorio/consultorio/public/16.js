@@ -155,6 +155,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Citaes',
@@ -352,6 +354,8 @@ var render = function() {
                           items: _vm.items,
                           fields: _vm.fields,
                           "items-per-page": 10,
+                          "column-filter": "",
+                          "table-filter": "",
                           pagination: ""
                         },
                         scopedSlots: _vm._u([

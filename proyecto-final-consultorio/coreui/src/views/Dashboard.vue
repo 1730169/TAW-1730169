@@ -1,6 +1,7 @@
 <template>
   <div>
     <WidgetsDropdown/>
+    <!--
     <CCard>
       <CCardBody>
         <CRow>
@@ -82,6 +83,8 @@
         </CRow>
       </CCardFooter>
     </CCard>
+    -->
+    <!--
     <WidgetsBrand/>
     <CRow>
       <CCol md="12">
@@ -450,6 +453,7 @@
         </CCard>
       </CCol>
     </CRow>
+  -->
   </div>
 </template>
 

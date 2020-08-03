@@ -11,6 +11,8 @@
               :items="items"
               :fields="fields"
               :items-per-page="10"
+              column-filter
+              table-filter
               pagination
             >
               <template #fecha_cita="{item}">

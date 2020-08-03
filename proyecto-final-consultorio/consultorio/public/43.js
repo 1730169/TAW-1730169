@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[43],{
 
-/***/ "../coreui/src/views/citas/CrearCita.vue":
-/*!***********************************************!*\
-  !*** ../coreui/src/views/citas/CrearCita.vue ***!
-  \***********************************************/
+/***/ "../coreui/src/views/buttons/Dropdowns.vue":
+/*!*************************************************!*\
+  !*** ../coreui/src/views/buttons/Dropdowns.vue ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CrearCita_vue_vue_type_template_id_33e01e71___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CrearCita.vue?vue&type=template&id=33e01e71& */ "../coreui/src/views/citas/CrearCita.vue?vue&type=template&id=33e01e71&");
-/* harmony import */ var _CrearCita_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CrearCita.vue?vue&type=script&lang=js& */ "../coreui/src/views/citas/CrearCita.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Dropdowns_vue_vue_type_template_id_2095533a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dropdowns.vue?vue&type=template&id=2095533a& */ "../coreui/src/views/buttons/Dropdowns.vue?vue&type=template&id=2095533a&");
+/* harmony import */ var _Dropdowns_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dropdowns.vue?vue&type=script&lang=js& */ "../coreui/src/views/buttons/Dropdowns.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CrearCita_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CrearCita_vue_vue_type_template_id_33e01e71___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CrearCita_vue_vue_type_template_id_33e01e71___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Dropdowns_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Dropdowns_vue_vue_type_template_id_2095533a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Dropdowns_vue_vue_type_template_id_2095533a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,54 +32,52 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/citas/CrearCita.vue"
+component.options.__file = "coreui/src/views/buttons/Dropdowns.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/citas/CrearCita.vue?vue&type=script&lang=js&":
-/*!************************************************************************!*\
-  !*** ../coreui/src/views/citas/CrearCita.vue?vue&type=script&lang=js& ***!
-  \************************************************************************/
+/***/ "../coreui/src/views/buttons/Dropdowns.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ../coreui/src/views/buttons/Dropdowns.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearCita_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CrearCita.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/citas/CrearCita.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearCita_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Dropdowns_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Dropdowns.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/buttons/Dropdowns.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Dropdowns_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/citas/CrearCita.vue?vue&type=template&id=33e01e71&":
-/*!******************************************************************************!*\
-  !*** ../coreui/src/views/citas/CrearCita.vue?vue&type=template&id=33e01e71& ***!
-  \******************************************************************************/
+/***/ "../coreui/src/views/buttons/Dropdowns.vue?vue&type=template&id=2095533a&":
+/*!********************************************************************************!*\
+  !*** ../coreui/src/views/buttons/Dropdowns.vue?vue&type=template&id=2095533a& ***!
+  \********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearCita_vue_vue_type_template_id_33e01e71___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CrearCita.vue?vue&type=template&id=33e01e71& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/citas/CrearCita.vue?vue&type=template&id=33e01e71&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearCita_vue_vue_type_template_id_33e01e71___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Dropdowns_vue_vue_type_template_id_2095533a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Dropdowns.vue?vue&type=template&id=2095533a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/buttons/Dropdowns.vue?vue&type=template&id=2095533a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Dropdowns_vue_vue_type_template_id_2095533a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearCita_vue_vue_type_template_id_33e01e71___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Dropdowns_vue_vue_type_template_id_2095533a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/citas/CrearCita.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/citas/CrearCita.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/buttons/Dropdowns.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/buttons/Dropdowns.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "../coreui/node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -127,140 +125,327 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'EditUser',
-  props: {
-    caption: {
-      type: String,
-      "default": 'User id'
-    }
-  },
-  data: function data() {
-    return {
-      cita: {
-        paciente_id: '',
-        doctor_id: '',
-        fecha_cita: '',
-        motivo: ''
-      },
-      opciones_paciente: [],
-      opciones_doctor: [],
-      message: '',
-      dismissSecs: 7,
-      dismissCountDown: 0,
-      showDismissibleAlert: false
-    };
-  },
-  methods: {
-    irAtras: function irAtras() {
-      this.$router.go(-1); // this.$router.replace({path: '/users'})
-    },
-    guardar: function guardar() {
-      var self = this; // TOMAR LAS LLAVES DESDE LOS CAMPOS SELECT
-
-      self.cita.paciente_id = document.getElementById("paciente_id").value;
-      self.cita.doctor_id = document.getElementById("doctor_id").value;
-      console.log(self.cita);
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/citas', self.cita).then(function (response) {
-        self.cita = {
-          paciente_id: '',
-          doctor_id: '',
-          fecha_cita: '',
-          motivo: ''
-        };
-        self.message = 'Cita registrada con éxito.';
-        self.showAlert();
-      })["catch"](function (error) {
-        if (error.response.data.message == 'Datos inválidos.') {
-          self.message = '';
-
-          for (var key in error.response.data.errors) {
-            if (error.response.data.errors.hasOwnProperty(key)) {
-              self.message += error.response.data.errors[key][0] + '  ';
-            }
-          }
-
-          self.showAlert();
-        } else {
-          console.log(error); //self.$router.push({ path: 'login' }); 
-        }
-      });
-    },
-    countDownChanged: function countDownChanged(dismissCountDown) {
-      this.dismissCountDown = dismissCountDown;
-    },
-    showAlert: function showAlert() {
-      this.dismissCountDown = this.dismissSecs;
-    }
-  },
-  mounted: function mounted() {
-    var self = this;
-    /*
-    OBTENER OPCIONES PARA POBLAR SELECT opciones_paciente
-    */
-
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/pacientes/').then(function (response) {
-      self.opciones_paciente = [];
-      var tempPacientes = [];
-      var paciente;
-      tempPacientes.push({
-        value: 0,
-        label: "Seleccione"
-      }); // Recorrer la lista de pacientes
-
-      for (var i = 0; i < response.data.length; i++) {
-        // tomar paciente
-        paciente = response.data[i]; // agregar opcion en formato
-
-        tempPacientes.push({
-          value: paciente.id,
-          label: paciente.nombre + " " + paciente.apellidos
-        });
-      } // Actualizar lista para el select
-
-
-      self.opciones_paciente = tempPacientes;
-    })["catch"](function (error) {
-      console.log(error); //self.$router.push({ path: 'login' });
-    });
-    /*
-    OBTENER OPCIONES PARA POBLAR SELECT opciones_doctor
-    */
-
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/doctores/').then(function (response) {
-      self.opciones_doctor = [];
-      var tempDoctores = [];
-      var doctor;
-      tempDoctores.push({
-        value: 0,
-        label: "Seleccione"
-      }); // Recorrer la lista de doctores
-
-      for (var i = 0; i < response.data.length; i++) {
-        // tomar doctor
-        doctor = response.data[i]; // agregar opcion en formato
-
-        tempDoctores.push({
-          value: doctor.id,
-          label: doctor.nombre + " " + doctor.apellidos + " [" + doctor.especialidad + "]"
-        });
-      } // Actualizar lista para el select
-
-
-      self.opciones_doctor = tempDoctores;
-    })["catch"](function (error) {
-      console.log(error); //self.$router.push({ path: 'login' });
-    });
-  }
+  name: 'Dropdowns'
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/citas/CrearCita.vue?vue&type=template&id=33e01e71&":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/citas/CrearCita.vue?vue&type=template&id=33e01e71& ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/buttons/Dropdowns.vue?vue&type=template&id=2095533a&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/buttons/Dropdowns.vue?vue&type=template&id=2095533a& ***!
+  \**************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -273,136 +458,778 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "CRow",
+    "div",
     [
       _c(
-        "CCol",
-        { attrs: { col: "12", lg: "6" } },
+        "CRow",
         [
           _c(
-            "CCard",
-            { attrs: { "no-header": "" } },
+            "CCol",
+            { attrs: { col: "12", md: "6" } },
             [
               _c(
-                "CCardBody",
+                "CCard",
                 [
-                  _c("h3", [_vm._v("\n          Registrar Cita\n        ")]),
-                  _vm._v(" "),
                   _c(
-                    "CAlert",
-                    {
-                      attrs: {
-                        show: _vm.dismissCountDown,
-                        color: "primary",
-                        fade: ""
-                      },
-                      on: {
-                        "update:show": function($event) {
-                          _vm.dismissCountDown = $event
-                        }
-                      }
-                    },
+                    "CCardHeader",
                     [
-                      _vm._v(
-                        "\n          (" +
-                          _vm._s(_vm.dismissCountDown) +
-                          ") " +
-                          _vm._s(_vm.message) +
-                          "\n        "
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Bootstrap Dropdown")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-header-actions" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "card-header-action",
+                            attrs: {
+                              href:
+                                "https://coreui.io/vue/docs/components/dropdown",
+                              rel: "noreferrer noopener",
+                              target: "_blank"
+                            }
+                          },
+                          [
+                            _c("small", { staticClass: "text-muted" }, [
+                              _vm._v("docs")
+                            ])
+                          ]
+                        )
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              "toggler-text": "Dropdown Button",
+                              color: "secondary"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("First Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Second Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Third Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownDivider"),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [
+                              _vm._v("Something else here...")
+                            ]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", { attrs: { disabled: "" } }, [
+                              _vm._v("Disabled action")
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              "toggler-text": "Dropdown with divider",
+                              color: "secondary"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("First item")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Second item")]),
+                            _vm._v(" "),
+                            _c("CDropdownDivider"),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Separated Item")])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              "toggler-text": "Dropdown with header",
+                              color: "secondary"
+                            }
+                          },
+                          [
+                            _c("CDropdownHeader", [_vm._v("Dropdown header")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("First item")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Second Item")])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { col: "12", md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Dropdown ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("positioning")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2 d-inline-block",
+                            attrs: {
+                              "toggler-text": "Left align",
+                              color: "primary"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Something else here")])
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2 d-inline-block",
+                            attrs: {
+                              placement: "bottom-end",
+                              "toggler-text": "Right align",
+                              color: "primary"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Something else here")])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              "toggler-text": "Drop-Up",
+                              color: "info",
+                              placement: "top-start"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Something else here")])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              color: "secondary",
+                              offset: [10, 5],
+                              "toggler-text": "Offset Dropdown"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Something else here")])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              color: "secondary",
+                              split: "",
+                              "toggler-text": "Split Dropdown"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [
+                              _vm._v("Something else here...")
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { col: "12", md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Dropdown ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("hidden caret")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            attrs: { color: "link", size: "lg", caret: false },
+                            scopedSlots: _vm._u([
+                              {
+                                key: "toggler-content",
+                                fn: function() {
+                                  return [
+                                    _vm._v("\n                🔍"),
+                                    _c("span", { staticClass: "sr-only" }, [
+                                      _vm._v("Search")
+                                    ])
+                                  ]
+                                },
+                                proxy: true
+                              }
+                            ])
+                          },
+                          [
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [
+                              _vm._v("Something else here...")
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { col: "12", md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Dropdown ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("sizing")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2 d-inline-block",
+                            attrs: {
+                              color: "secondary",
+                              size: "lg",
+                              "toggler-text": "Large"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Something else here")])
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              color: "secondary",
+                              size: "lg",
+                              split: "",
+                              "toggler-text": "Large Split"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [
+                              _vm._v("Something else here...")
+                            ])
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2 d-inline-block",
+                            attrs: {
+                              color: "secondary",
+                              size: "sm",
+                              "toggler-text": "Small"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [
+                              _vm._v("Something else here...")
+                            ])
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              color: "secondary",
+                              size: "sm",
+                              split: "",
+                              "toggler-text": "Small Split"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Another action")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [
+                              _vm._v("Something else here...")
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { col: "12", md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Dropdown ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("headers and accessibility")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "CDropdown",
+                          {
+                            staticClass: "m-2",
+                            attrs: {
+                              "toggler-text": "Dropdown ARIA",
+                              color: "primary"
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              { attrs: { role: "group" } },
+                              [
+                                _c("CDropdownHeader", [_vm._v("Groups")]),
+                                _vm._v(" "),
+                                _c("CDropdownItem", [_vm._v("Add")]),
+                                _vm._v(" "),
+                                _c("CDropdownItem", [_vm._v("Delete")])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { attrs: { role: "group" } },
+                              [
+                                _c("CDropdownHeader", [_vm._v("Users")]),
+                                _vm._v(" "),
+                                _c("CDropdownItem", [_vm._v("Add")]),
+                                _vm._v(" "),
+                                _c("CDropdownItem", [_vm._v("Delete")])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("CDropdownDivider"),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [
+                              _vm._v("\n                Something "),
+                              _c("strong", [_vm._v("not")]),
+                              _vm._v(" associated with user\n              ")
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { col: "12", md: "6" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Dropdown ")]),
+                      _vm._v(" "),
+                      _c("small", [_c("code", [_vm._v("color")])])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Primary",
+                            color: "primary"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Secondary",
+                            color: "secondary"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Success",
+                            color: "success"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Warning",
+                            color: "warning"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Danger",
+                            color: "danger"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Info",
+                            color: "info"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Light",
+                            color: "light"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Dark",
+                            color: "dark"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "m-0 d-inline-block",
+                          attrs: {
+                            size: "sm",
+                            "toggler-text": "Link",
+                            color: "link"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("First Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Second Action")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Third Action")])
+                        ],
+                        1
                       )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("CSelect", {
-                    attrs: {
-                      label: "Paciente",
-                      value: _vm.cita.paciente_id,
-                      plain: true,
-                      options: _vm.opciones_paciente,
-                      id: "paciente_id"
-                    },
-                    on: {
-                      "update:value": function($event) {
-                        return _vm.$set(_vm.cita, "paciente_id", $event)
-                      }
-                    },
-                    model: {
-                      value: _vm.cita.paciente_id,
-                      callback: function($$v) {
-                        _vm.$set(_vm.cita, "paciente_id", $$v)
-                      },
-                      expression: "cita.paciente_id"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CSelect", {
-                    attrs: {
-                      label: "Doctor",
-                      value: _vm.cita.doctor_id,
-                      plain: true,
-                      options: _vm.opciones_doctor,
-                      id: "doctor_id"
-                    },
-                    on: {
-                      "update:value": function($event) {
-                        return _vm.$set(_vm.cita, "doctor_id", $event)
-                      }
-                    },
-                    model: {
-                      value: _vm.cita.doctor_id,
-                      callback: function($$v) {
-                        _vm.$set(_vm.cita, "doctor_id", $$v)
-                      },
-                      expression: "cita.doctor_id"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Fecha de la cita",
-                      type: "datetime-local"
-                    },
-                    model: {
-                      value: _vm.cita.fecha_cita,
-                      callback: function($$v) {
-                        _vm.$set(_vm.cita, "fecha_cita", $$v)
-                      },
-                      expression: "cita.fecha_cita"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Motivo",
-                      type: "text",
-                      placeholder: "Motivo"
-                    },
-                    model: {
-                      value: _vm.cita.motivo,
-                      callback: function($$v) {
-                        _vm.$set(_vm.cita, "motivo", $$v)
-                      },
-                      expression: "cita.motivo"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "CButton",
-                    {
-                      attrs: { color: "primary" },
-                      on: {
-                        click: function($event) {
-                          return _vm.guardar()
-                        }
-                      }
-                    },
-                    [_vm._v("Guardar")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "CButton",
-                    { attrs: { color: "primary" }, on: { click: _vm.irAtras } },
-                    [_vm._v("Atrás")]
+                    ],
+                    1
                   )
                 ],
                 1

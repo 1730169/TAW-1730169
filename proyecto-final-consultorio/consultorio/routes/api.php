@@ -103,3 +103,29 @@ Route::get('citas/{id}', 'CitasController@get');
 Route::post('citas', 'CitasController@create');
 Route::put('citas/{id}', 'CitasController@update');
 Route::delete('citas/{id}', 'CitasController@delete');
+
+Route::get('servicios', 'ServiciosController@list');
+Route::get('servicios/{id}', 'ServiciosController@get');
+Route::post('servicios', 'ServiciosController@create');
+Route::put('servicios/{id}', 'ServiciosController@update');
+Route::delete('servicios/{id}', 'ServiciosController@delete');
+
+Route::get('consultas', 'ConsultasController@list');
+Route::get('consultas/{id}', 'ConsultasController@get');
+Route::post('consultas', 'ConsultasController@create');
+Route::put('consultas/{id}', 'ConsultasController@update');
+Route::delete('consultas/{id}', 'ConsultasController@delete');
+
+Route::get('servicioconsultas', 'ServicioconsultasController@list');
+Route::get('servicioconsultas/{id}', 'ServicioconsultasController@get');
+Route::get('servicioconsultas/lista/{id}', 'ServicioconsultasController@getLista');
+Route::post('servicioconsultas', 'ServicioconsultasController@create');
+Route::put('servicioconsultas/{id}', 'ServicioconsultasController@update');
+Route::delete('servicioconsultas/{id}', 'ServicioconsultasController@delete');
+
+
+Route::get('pagos', 'PagosController@list');
+Route::get('pagos/{id}', 'PagosController@get');
+Route::post('pagos', 'PagosController@create');
+Route::put('pagos/{id}', 'PagosController@update');
+Route::delete('pagos/{id}', 'PagosController@delete');

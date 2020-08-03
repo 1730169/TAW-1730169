@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[47],{
 
-/***/ "../coreui/src/views/email/CreateEmail.vue":
-/*!*************************************************!*\
-  !*** ../coreui/src/views/email/CreateEmail.vue ***!
-  \*************************************************/
+/***/ "../coreui/src/views/citas/EditarCita.vue":
+/*!************************************************!*\
+  !*** ../coreui/src/views/citas/EditarCita.vue ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CreateEmail_vue_vue_type_template_id_6f13e753___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateEmail.vue?vue&type=template&id=6f13e753& */ "../coreui/src/views/email/CreateEmail.vue?vue&type=template&id=6f13e753&");
-/* harmony import */ var _CreateEmail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateEmail.vue?vue&type=script&lang=js& */ "../coreui/src/views/email/CreateEmail.vue?vue&type=script&lang=js&");
+/* harmony import */ var _EditarCita_vue_vue_type_template_id_c4250e72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditarCita.vue?vue&type=template&id=c4250e72& */ "../coreui/src/views/citas/EditarCita.vue?vue&type=template&id=c4250e72&");
+/* harmony import */ var _EditarCita_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditarCita.vue?vue&type=script&lang=js& */ "../coreui/src/views/citas/EditarCita.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CreateEmail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CreateEmail_vue_vue_type_template_id_6f13e753___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CreateEmail_vue_vue_type_template_id_6f13e753___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _EditarCita_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EditarCita_vue_vue_type_template_id_c4250e72___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EditarCita_vue_vue_type_template_id_c4250e72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,47 +32,47 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/email/CreateEmail.vue"
+component.options.__file = "coreui/src/views/citas/EditarCita.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/email/CreateEmail.vue?vue&type=script&lang=js&":
-/*!**************************************************************************!*\
-  !*** ../coreui/src/views/email/CreateEmail.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************/
+/***/ "../coreui/src/views/citas/EditarCita.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ../coreui/src/views/citas/EditarCita.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateEmail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CreateEmail.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/email/CreateEmail.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateEmail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarCita_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditarCita.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/citas/EditarCita.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarCita_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/email/CreateEmail.vue?vue&type=template&id=6f13e753&":
-/*!********************************************************************************!*\
-  !*** ../coreui/src/views/email/CreateEmail.vue?vue&type=template&id=6f13e753& ***!
-  \********************************************************************************/
+/***/ "../coreui/src/views/citas/EditarCita.vue?vue&type=template&id=c4250e72&":
+/*!*******************************************************************************!*\
+  !*** ../coreui/src/views/citas/EditarCita.vue?vue&type=template&id=c4250e72& ***!
+  \*******************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateEmail_vue_vue_type_template_id_6f13e753___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CreateEmail.vue?vue&type=template&id=6f13e753& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/email/CreateEmail.vue?vue&type=template&id=6f13e753&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateEmail_vue_vue_type_template_id_6f13e753___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarCita_vue_vue_type_template_id_c4250e72___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditarCita.vue?vue&type=template&id=c4250e72& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/citas/EditarCita.vue?vue&type=template&id=c4250e72&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarCita_vue_vue_type_template_id_c4250e72___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateEmail_vue_vue_type_template_id_6f13e753___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarCita_vue_vue_type_template_id_c4250e72___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/email/CreateEmail.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/email/CreateEmail.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/citas/EditarCita.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/citas/EditarCita.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -110,38 +110,70 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'CreateEmailTemplate',
+  name: 'EditUser',
+  props: {
+    caption: {
+      type: String,
+      "default": 'User id'
+    }
+  },
   data: function data() {
     return {
-      template: {
-        name: '',
-        subject: '',
-        content: ''
+      cita: {
+        paciente_id: '',
+        cita_id: '',
+        fecha_cita: '',
+        motivo: ''
       },
+      opciones_paciente: [],
+      opciones_doctor: [],
       message: '',
       dismissSecs: 7,
-      dismissCountDown: 0,
-      showDismissibleAlert: false
+      dismissCountDown: 0
     };
   },
   methods: {
-    goBack: function goBack() {
+    irAtras: function irAtras() {
       this.$router.go(-1); // this.$router.replace({path: '/users'})
     },
-    store: function store() {
-      var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/mail?token=' + localStorage.getItem("api_token"), self.template).then(function (response) {
-        self.template = {
-          name: '',
-          subject: '',
-          content: ''
-        };
-        self.message = 'Successfully created Email Template.';
+    actualizar: function actualizar() {
+      var self = this; // TOMAR LAS LLAVES DESDE LOS CAMPOS SELECT
+
+      self.cita.paciente_id = document.getElementById("paciente_id").value;
+      self.cita.doctor_id = document.getElementById("doctor_id").value;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/citas/' + self.$route.params.id, {
+        _method: 'PUT',
+
+        /*
+          ENVIAR LOS CAMPOS DEL DOCTOR A ACTUALIZAR
+        */
+        paciente_id: self.cita.paciente_id,
+        doctor_id: self.cita.doctor_id,
+        fecha_cita: self.cita.fecha_cita,
+        motivo: self.cita.motivo
+      }).then(function (response) {
+        self.message = 'Información de la Cita actualizada con éxito.';
         self.showAlert();
       })["catch"](function (error) {
-        if (error.response.data.message == 'The given data was invalid.') {
+        if (error.response.data.message == 'Datos inválidos.') {
           self.message = '';
 
           for (var key in error.response.data.errors) {
@@ -152,29 +184,99 @@ __webpack_require__.r(__webpack_exports__);
 
           self.showAlert();
         } else {
-          console.log(error);
-          self.$router.push({
-            path: 'login'
-          });
+          console.log(error); //self.$router.push({ path: '/login' }); 
         }
       });
-    },
-    countDownChanged: function countDownChanged(dismissCountDown) {
-      this.dismissCountDown = dismissCountDown;
     },
     showAlert: function showAlert() {
       this.dismissCountDown = this.dismissSecs;
     }
   },
-  mounted: function mounted() {}
+  mounted: function mounted() {
+    /*
+    OBTENER OPCIONES PARA POBLAR SELECT opciones_paciente
+    */
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/pacientes/').then(function (response) {
+      self.opciones_paciente = [];
+      var tempPacientes = [];
+      var paciente;
+      tempPacientes.push({
+        value: 0,
+        label: "Seleccione"
+      }); // Recorrer la lista de pacientes
+
+      for (var i = 0; i < response.data.length; i++) {
+        // tomar paciente
+        paciente = response.data[i]; // agregar opcion en formato
+
+        tempPacientes.push({
+          value: paciente.id,
+          label: paciente.nombre + " " + paciente.apellidos
+        });
+      } // Actualizar lista para el select
+
+
+      self.opciones_paciente = tempPacientes;
+    })["catch"](function (error) {
+      console.log(error); //self.$router.push({ path: 'login' });
+    });
+    /*
+    OBTENER OPCIONES PARA POBLAR SELECT opciones_doctor
+    */
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/doctores/').then(function (response) {
+      self.opciones_doctor = [];
+      var tempDoctores = [];
+      var doctor;
+      tempDoctores.push({
+        value: 0,
+        label: "Seleccione"
+      }); // Recorrer la lista de doctores
+
+      for (var i = 0; i < response.data.length; i++) {
+        // tomar doctor
+        doctor = response.data[i]; // agregar opcion en formato
+
+        tempDoctores.push({
+          value: doctor.id,
+          label: doctor.nombre + " " + doctor.apellidos + " [" + doctor.especialidad + "]"
+        });
+      } // Actualizar lista para el select
+
+
+      self.opciones_doctor = tempDoctores;
+    })["catch"](function (error) {
+      console.log(error); //self.$router.push({ path: 'login' });
+    });
+    /*
+      TRAER LOS DATOS DE LA CITA EDITANDO
+    */
+
+    var self = this;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/citas/' + self.$route.params.id).then(function (response) {
+      self.cita = response.data; // DAR FORMATO A LA FECHA PARA MOSTRARLA
+
+      var DateFechaCita = new Date(self.cita.fecha_cita);
+      self.cita.fecha_cita = DateFechaCita.toISOString().split(":")[0] + ":" + DateFechaCita.toISOString().split(":")[1];
+    })["catch"](function (error) {
+      console.log(error); //self.$router.push({ path: '/login' });
+    });
+  }
 });
+/*
+      items: (id) => {
+        const user = usersData.find( user => user.id.toString() === id)
+        const userDetails = user ? Object.entries(user) : [['id', 'Not found']]
+        return userDetails.map(([key, value]) => {return {key: key, value: value}})
+      },
+*/
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/email/CreateEmail.vue?vue&type=template&id=6f13e753&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/email/CreateEmail.vue?vue&type=template&id=6f13e753& ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/citas/EditarCita.vue?vue&type=template&id=c4250e72&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/citas/EditarCita.vue?vue&type=template&id=c4250e72& ***!
+  \*************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -195,14 +297,11 @@ var render = function() {
         [
           _c(
             "CCard",
-            { attrs: { "no-header": "" } },
             [
               _c(
                 "CCardBody",
                 [
-                  _c("h4", [
-                    _vm._v("\n          Create Email Template\n        ")
-                  ]),
+                  _c("h3", [_vm._v("\n          Editar Cita\n        ")]),
                   _vm._v(" "),
                   _c(
                     "CAlert",
@@ -229,45 +328,76 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _c("CInput", {
-                    attrs: { label: "Name", type: "text", placeholder: "Name" },
+                  _c("CSelect", {
+                    attrs: {
+                      label: "Paciente",
+                      value: _vm.cita.paciente_id,
+                      plain: true,
+                      options: _vm.opciones_paciente,
+                      id: "paciente_id"
+                    },
+                    on: {
+                      "update:value": function($event) {
+                        return _vm.$set(_vm.cita, "paciente_id", $event)
+                      }
+                    },
                     model: {
-                      value: _vm.template.name,
+                      value: _vm.cita.paciente_id,
                       callback: function($$v) {
-                        _vm.$set(_vm.template, "name", $$v)
+                        _vm.$set(_vm.cita, "paciente_id", $$v)
                       },
-                      expression: "template.name"
+                      expression: "cita.paciente_id"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("CSelect", {
+                    attrs: {
+                      label: "Doctor",
+                      value: _vm.cita.doctor_id,
+                      plain: true,
+                      options: _vm.opciones_doctor,
+                      id: "doctor_id"
+                    },
+                    on: {
+                      "update:value": function($event) {
+                        return _vm.$set(_vm.cita, "doctor_id", $event)
+                      }
+                    },
+                    model: {
+                      value: _vm.cita.doctor_id,
+                      callback: function($$v) {
+                        _vm.$set(_vm.cita, "doctor_id", $$v)
+                      },
+                      expression: "cita.doctor_id"
                     }
                   }),
                   _vm._v(" "),
                   _c("CInput", {
                     attrs: {
-                      label: "Subject",
+                      label: "Fecha de la cita",
+                      type: "datetime-local"
+                    },
+                    model: {
+                      value: _vm.cita.fecha_cita,
+                      callback: function($$v) {
+                        _vm.$set(_vm.cita, "fecha_cita", $$v)
+                      },
+                      expression: "cita.fecha_cita"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("CInput", {
+                    attrs: {
+                      label: "Motivo",
                       type: "text",
-                      placeholder: "Subject"
+                      placeholder: "Motivo"
                     },
                     model: {
-                      value: _vm.template.subject,
+                      value: _vm.cita.motivo,
                       callback: function($$v) {
-                        _vm.$set(_vm.template, "subject", $$v)
+                        _vm.$set(_vm.cita, "motivo", $$v)
                       },
-                      expression: "template.subject"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CTextarea", {
-                    attrs: {
-                      textarea: "true",
-                      label: "Content",
-                      rows: 15,
-                      placeholder: "Content.."
-                    },
-                    model: {
-                      value: _vm.template.content,
-                      callback: function($$v) {
-                        _vm.$set(_vm.template, "content", $$v)
-                      },
-                      expression: "template.content"
+                      expression: "cita.motivo"
                     }
                   }),
                   _vm._v(" "),
@@ -277,17 +407,17 @@ var render = function() {
                       attrs: { color: "primary" },
                       on: {
                         click: function($event) {
-                          return _vm.store()
+                          return _vm.actualizar()
                         }
                       }
                     },
-                    [_vm._v("Create")]
+                    [_vm._v("Guardar")]
                   ),
                   _vm._v(" "),
                   _c(
                     "CButton",
-                    { attrs: { color: "primary" }, on: { click: _vm.goBack } },
-                    [_vm._v("Back")]
+                    { attrs: { color: "primary" }, on: { click: _vm.irAtras } },
+                    [_vm._v("Atrás")]
                   )
                 ],
                 1

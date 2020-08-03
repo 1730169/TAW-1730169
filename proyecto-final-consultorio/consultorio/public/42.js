@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[42],{
 
-/***/ "../coreui/src/views/charts/Charts.vue":
-/*!*********************************************!*\
-  !*** ../coreui/src/views/charts/Charts.vue ***!
-  \*********************************************/
+/***/ "../coreui/src/views/buttons/ButtonGroups.vue":
+/*!****************************************************!*\
+  !*** ../coreui/src/views/buttons/ButtonGroups.vue ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Charts.vue?vue&type=template&id=10c5a2d5& */ "../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5&");
-/* harmony import */ var _Charts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Charts.vue?vue&type=script&lang=js& */ "../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ButtonGroups_vue_vue_type_template_id_73dee81e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ButtonGroups.vue?vue&type=template&id=73dee81e& */ "../coreui/src/views/buttons/ButtonGroups.vue?vue&type=template&id=73dee81e&");
+/* harmony import */ var _ButtonGroups_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ButtonGroups.vue?vue&type=script&lang=js& */ "../coreui/src/views/buttons/ButtonGroups.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Charts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _ButtonGroups_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ButtonGroups_vue_vue_type_template_id_73dee81e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ButtonGroups_vue_vue_type_template_id_73dee81e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,59 +32,52 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/charts/Charts.vue"
+component.options.__file = "coreui/src/views/buttons/ButtonGroups.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js&":
-/*!**********************************************************************!*\
-  !*** ../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************/
+/***/ "../coreui/src/views/buttons/ButtonGroups.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ../coreui/src/views/buttons/ButtonGroups.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Charts.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonGroups_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./ButtonGroups.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/buttons/ButtonGroups.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonGroups_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5&":
-/*!****************************************************************************!*\
-  !*** ../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5& ***!
-  \****************************************************************************/
+/***/ "../coreui/src/views/buttons/ButtonGroups.vue?vue&type=template&id=73dee81e&":
+/*!***********************************************************************************!*\
+  !*** ../coreui/src/views/buttons/ButtonGroups.vue?vue&type=template&id=73dee81e& ***!
+  \***********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Charts.vue?vue&type=template&id=10c5a2d5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonGroups_vue_vue_type_template_id_73dee81e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./ButtonGroups.vue?vue&type=template&id=73dee81e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/buttons/ButtonGroups.vue?vue&type=template&id=73dee81e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonGroups_vue_vue_type_template_id_73dee81e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonGroups_vue_vue_type_template_id_73dee81e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/buttons/ButtonGroups.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/buttons/ButtonGroups.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../coreui/src/views/charts/index.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -144,18 +137,150 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Charts',
-  components: _objectSpread({}, _index_js__WEBPACK_IMPORTED_MODULE_0__)
+  name: 'ButtonGroups'
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5&":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5& ***!
-  \**********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/buttons/ButtonGroups.vue?vue&type=template&id=73dee81e&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/buttons/ButtonGroups.vue?vue&type=template&id=73dee81e& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -168,139 +293,607 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "CRow",
     [
       _c(
-        "CCardGroup",
-        { staticClass: "card-columns cols-2", attrs: { columns: "" } },
+        "CCol",
+        { attrs: { col: "12" } },
         [
           _c(
             "CCard",
             [
-              _c("CCardHeader", [
-                _vm._v("\n        Line Chart\n        "),
-                _c("div", { staticClass: "card-header-actions" }, [
+              _c(
+                "CCardHeader",
+                [
+                  _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                  _vm._v(" "),
+                  _c("strong", [_vm._v(" Bootstrap button group")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-header-actions" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "card-header-action",
+                        attrs: {
+                          href:
+                            "https://coreui.io/vue/docs/components/button-components",
+                          rel: "noreferrer noopener",
+                          target: "_blank"
+                        }
+                      },
+                      [
+                        _c("small", { staticClass: "text-muted" }, [
+                          _vm._v("docs")
+                        ])
+                      ]
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("CCardBody", [
+                _c(
+                  "div",
+                  [
+                    _c(
+                      "CButtonGroup",
+                      [
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("One")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Two")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Three")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Four")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "CButton",
+                          {
+                            staticClass: "d-sm-down-none",
+                            attrs: { color: "secondary" }
+                          },
+                          [_vm._v("Five")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("br"),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c(
+                      "CButtonGroup",
+                      [
+                        _c(
+                          "CButton",
+                          {
+                            staticClass: "d-sm-down-none",
+                            attrs: { color: "success" }
+                          },
+                          [_vm._v("Success")]
+                        ),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "info" } }, [
+                          _vm._v("Info")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "warning" } }, [
+                          _vm._v("Warn")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "CButton",
+                          {
+                            staticClass: "d-sm-down-none",
+                            attrs: { color: "primary" }
+                          },
+                          [_vm._v("Primary")]
+                        ),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "danger" } }, [
+                          _vm._v("Danger")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "link" } }, [
+                          _vm._v("Link")
+                        ])
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CCol",
+        { attrs: { col: "12" } },
+        [
+          _c(
+            "CCard",
+            [
+              _c(
+                "CCardHeader",
+                [
+                  _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                  _vm._v(" "),
+                  _c("strong", [_vm._v(" Button group ")]),
+                  _vm._v("sizing\n      ")
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("CCardBody", [
+                _c(
+                  "div",
+                  [
+                    _c(
+                      "CButtonGroup",
+                      [
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Left")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Middle")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Right")
+                        ])
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("br"),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c(
+                      "CButtonGroup",
+                      { attrs: { size: "sm" } },
+                      [
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Left")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Middle")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Right")
+                        ])
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("br"),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c(
+                      "CButtonGroup",
+                      { attrs: { size: "lg" } },
+                      [
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Left")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Middle")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Right")
+                        ])
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CCol",
+        { attrs: { col: "12" } },
+        [
+          _c(
+            "CCard",
+            [
+              _c(
+                "CCardHeader",
+                [
+                  _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                  _c("strong", [_vm._v(" Button group ")]),
+                  _vm._v("dropdown support\n      ")
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("CCardBody", [
+                _c(
+                  "div",
+                  [
+                    _c(
+                      "CButtonGroup",
+                      [
+                        _c(
+                          "CButton",
+                          {
+                            staticClass: "d-sm-down-none",
+                            attrs: { color: "secondary" }
+                          },
+                          [_vm._v("Button 1")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "CButton",
+                          {
+                            staticClass: "d-sm-down-none",
+                            attrs: { color: "secondary" }
+                          },
+                          [_vm._v("Button 2")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "CDropdown",
+                          {
+                            attrs: { right: "", text: "Menu", color: "success" }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Item 1")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Item 2")]),
+                            _vm._v(" "),
+                            _c("CDropdownDivider"),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Item 3")])
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "CButton",
+                          {
+                            staticClass: "d-sm-down-none",
+                            attrs: { color: "secondary" }
+                          },
+                          [_vm._v("Button 3")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "CDropdown",
+                          {
+                            attrs: {
+                              right: "",
+                              split: "",
+                              text: "Split Menu",
+                              color: "info"
+                            }
+                          },
+                          [
+                            _c("CDropdownItem", [_vm._v("Item 1")]),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Item 2")]),
+                            _vm._v(" "),
+                            _c("CDropdownDivider"),
+                            _vm._v(" "),
+                            _c("CDropdownItem", [_vm._v("Item 3")])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CCol",
+        { attrs: { col: "12" } },
+        [
+          _c(
+            "CCard",
+            [
+              _c(
+                "CCardHeader",
+                [
+                  _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                  _vm._v(" "),
+                  _c("strong", [_vm._v(" Button group ")]),
+                  _vm._v("vertical variation\n      ")
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("CCardBody", [
+                _c(
+                  "div",
+                  [
+                    _c(
+                      "CButtonGroup",
+                      { attrs: { vertical: "" } },
+                      [
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Top")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Middle")
+                        ]),
+                        _vm._v(" "),
+                        _c("CButton", { attrs: { color: "secondary" } }, [
+                          _vm._v("Bottom")
+                        ])
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CCol",
+        { attrs: { col: "12" } },
+        [
+          _c(
+            "CCard",
+            [
+              _c(
+                "CCardHeader",
+                [
+                  _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                  _vm._v(" "),
+                  _c("strong", [_vm._v(" Button toolbar ")]),
+                  _vm._v(" "),
+                  _c("small", [_vm._v("with button groups")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "CCardBody",
+                [
                   _c(
-                    "a",
+                    "CButtonToolbar",
+                    { attrs: { "aria-label": "Toolbar with button groups" } },
+                    [
+                      _c(
+                        "CButtonGroup",
+                        { staticClass: "mx-1" },
+                        [
+                          _c(
+                            "CButton",
+                            {
+                              staticClass: "d-sm-down-none",
+                              attrs: { color: "secondary" }
+                            },
+                            [_vm._v("«")]
+                          ),
+                          _vm._v(" "),
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("‹")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CButtonGroup",
+                        { staticClass: "mx-1" },
+                        [
+                          _c(
+                            "CButton",
+                            {
+                              staticClass: "d-sm-down-none",
+                              attrs: { color: "secondary" }
+                            },
+                            [_vm._v("Edit")]
+                          ),
+                          _vm._v(" "),
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Undo")
+                          ]),
+                          _vm._v(" "),
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Redo")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CButtonGroup",
+                        { staticClass: "mx-1" },
+                        [
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("›")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CButton",
+                            {
+                              staticClass: "d-sm-down-none",
+                              attrs: { color: "secondary" }
+                            },
+                            [_vm._v("»")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "d-sm-down-none" }),
+                  _vm._v(" "),
+                  _c(
+                    "CButtonToolbar",
                     {
-                      staticClass: "card-header-action",
+                      staticClass: "d-sm-down-none",
                       attrs: {
-                        href: "https://coreui.io/vue/docs/components/charts",
-                        rel: "noreferrer noopener",
-                        target: "_blank"
+                        "aria-label":
+                          "Toolbar with button groups and input groups"
                       }
                     },
                     [
-                      _c("small", { staticClass: "text-muted" }, [
-                        _vm._v("docs")
-                      ])
-                    ]
+                      _c(
+                        "CButtonGroup",
+                        { staticClass: "mx-1", attrs: { size: "sm" } },
+                        [
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("New")
+                          ]),
+                          _vm._v(" "),
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Edit")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("CInput", {
+                        staticClass: "mb-0 w-25 mx-1",
+                        attrs: {
+                          size: "sm",
+                          append: ".00",
+                          value: "100",
+                          prepend: "$"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("CSelect", {
+                        staticClass: "mb-0 w-25 mx-1",
+                        attrs: {
+                          size: "sm",
+                          value: "Medium",
+                          options: ["Large", "Medium", "Small"],
+                          custom: "",
+                          prepend: "Size"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "CButtonGroup",
+                        { staticClass: "mx-1", attrs: { size: "sm" } },
+                        [
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Save")
+                          ]),
+                          _vm._v(" "),
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Cancel")
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c(
+                    "CButtonToolbar",
+                    {
+                      attrs: {
+                        "aria-label":
+                          "Toolbar with button groups and dropdown menu"
+                      }
+                    },
+                    [
+                      _c(
+                        "CButtonGroup",
+                        { staticClass: "mx-1 d-sm-down-none" },
+                        [
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("New")
+                          ]),
+                          _vm._v(" "),
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Edit")
+                          ]),
+                          _vm._v(" "),
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Undo")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CDropdown",
+                        {
+                          staticClass: "mx-1",
+                          attrs: {
+                            color: "secondary",
+                            placement: "bottom-end",
+                            "button-content": "Menu"
+                          }
+                        },
+                        [
+                          _c("CDropdownItem", [_vm._v("Item 1")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Item 2")]),
+                          _vm._v(" "),
+                          _c("CDropdownItem", [_vm._v("Item 3")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CButtonGroup",
+                        { staticClass: "mx-1" },
+                        [
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Save")
+                          ]),
+                          _vm._v(" "),
+                          _c("CButton", { attrs: { color: "secondary" } }, [
+                            _vm._v("Cancel")
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
                   )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("CCardBody", [_c("CChartLineExample")], 1)
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [_vm._v("Bar Chart")]),
-              _vm._v(" "),
-              _c("CCardBody", [_c("CChartBarExample")], 1)
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [_vm._v("Doughnut Chart")]),
-              _vm._v(" "),
-              _c("CCardBody", [_c("CChartDoughnutExample")], 1)
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [_vm._v("Radar Chart")]),
-              _vm._v(" "),
-              _c("CCardBody", [_c("CChartRadarExample")], 1)
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [_vm._v("Pie Chart")]),
-              _vm._v(" "),
-              _c("CCardBody", [_c("CChartPieExample")], 1)
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [_vm._v("Polar Area Chart")]),
-              _vm._v(" "),
-              _c("CCardBody", [_c("CChartPolarAreaExample")], 1)
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [_vm._v("Simple line chart")]),
-              _vm._v(" "),
-              _c(
-                "CCardBody",
-                [
-                  _c("CChartLineSimple", {
-                    attrs: { "border-color": "success", labels: "months" }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [_vm._v("Simple pointed chart")]),
-              _vm._v(" "),
-              _c(
-                "CCardBody",
-                [
-                  _c("CChartLineSimple", {
-                    attrs: { pointed: "", "border-color": "warning" }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [_vm._v("Simple bar chart")]),
-              _vm._v(" "),
-              _c(
-                "CCardBody",
-                [
-                  _c("CChartBarSimple", {
-                    attrs: { "background-color": "danger" }
-                  })
                 ],
                 1
               )

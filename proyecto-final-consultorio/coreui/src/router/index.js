@@ -126,8 +126,20 @@ const Citas = () => import('@/views/citas/Citas')
 const EditarCita = () => import('@/views/citas/EditarCita')
 const CrearCita = () => import('@/views/citas/CrearCita')
 
+// SERVICIOS
+const Servicios = () => import('@/views/servicios/Servicios')
+//const Paciente = () => import('@/views/servicios/Servicio')
+const EditarServicio = () => import('@/views/servicios/EditarServicio')
+const CrearServicio = () => import('@/views/servicios/CrearServicio')
 
+// CONSULTAS
+const Consultas = () => import('@/views/consultas/Consultas')
+const EditarConsulta = () => import('@/views/consultas/EditarConsulta')
+const CobrarConsulta = () => import('@/views/consultas/CobrarConsulta')
+const CrearConsulta = () => import('@/views/consultas/CrearConsulta')
 
+// CONSULTAS
+const Pagos = () => import('@/views/pagos/Pagos')
 
 
 
@@ -701,6 +713,96 @@ function configRoutes () {
               name: 'Editar Cita',
               component: EditarCita
             }
+          ]
+        },
+
+        {
+          path: '/servicios',
+          meta: { label: 'Servicios'},
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: '',
+              component: Servicios
+            },
+            {
+              path: 'registrar',
+              meta: { label: 'Registrar Servicio' },
+              name: 'Registrar Servicio',
+              component: CrearServicio
+            },
+            {
+              path: ':id/editar',
+              meta: { label: 'Editar Servicio' },
+              name: 'Editar Servicio',
+              component: EditarServicio
+            }
+          ]
+        },
+
+        {
+          path: '/consultas',
+          meta: { label: 'Consultas'},
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: '',
+              component: Consultas
+            },
+            {
+              path: 'registrar',
+              meta: { label: 'Registrar Consulta' },
+              name: 'Registrar Consulta',
+              component: CrearConsulta
+            },
+            {
+              path: ':id/cobrar',
+              meta: { label: 'Cobrar Consulta' },
+              name: 'Cobrar Consulta',
+              component: CobrarConsulta
+            },
+            {
+              path: ':id/editar',
+              meta: { label: 'Editar Consulta' },
+              name: 'Editar Consulta',
+              component: EditarConsulta
+            }
+          ]
+        },
+
+        {
+          path: '/pagos',
+          meta: { label: 'Pagos'},
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: '',
+              component: Pagos
+            }/*,
+            {
+              path: 'registrar',
+              meta: { label: 'Registrar Consulta' },
+              name: 'Registrar Consulta',
+              component: CrearConsulta
+            },
+            {
+              path: ':id/cobrar',
+              meta: { label: 'Cobrar Consulta' },
+              name: 'Cobrar Consulta',
+              component: CobrarConsulta
+            },
+            {
+              path: ':id/editar',
+              meta: { label: 'Editar Consulta' },
+              name: 'Editar Consulta',
+              component: EditarConsulta
+            }*/
           ]
         }
 

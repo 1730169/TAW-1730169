@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[45],{
 
-/***/ "../coreui/src/views/doctores/CrearDoctor.vue":
-/*!****************************************************!*\
-  !*** ../coreui/src/views/doctores/CrearDoctor.vue ***!
-  \****************************************************/
+/***/ "../coreui/src/views/charts/Charts.vue":
+/*!*********************************************!*\
+  !*** ../coreui/src/views/charts/Charts.vue ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CrearDoctor.vue?vue&type=template&id=56ee5024& */ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&");
-/* harmony import */ var _CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CrearDoctor.vue?vue&type=script&lang=js& */ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Charts.vue?vue&type=template&id=10c5a2d5& */ "../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5&");
+/* harmony import */ var _Charts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Charts.vue?vue&type=script&lang=js& */ "../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Charts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,54 +32,80 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/doctores/CrearDoctor.vue"
+component.options.__file = "coreui/src/views/charts/Charts.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************!*\
-  !*** ../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************/
+/***/ "../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CrearDoctor.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Charts.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&":
-/*!***********************************************************************************!*\
-  !*** ../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024& ***!
-  \***********************************************************************************/
+/***/ "../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5&":
+/*!****************************************************************************!*\
+  !*** ../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5& ***!
+  \****************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CrearDoctor.vue?vue&type=template&id=56ee5024& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Charts.vue?vue&type=template&id=10c5a2d5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Charts_vue_vue_type_template_id_10c5a2d5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/charts/Charts.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "../coreui/node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../coreui/src/views/charts/index.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -120,86 +146,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'EditUser',
-  props: {
-    caption: {
-      type: String,
-      "default": 'User id'
-    }
-  },
-  data: function data() {
-    return {
-      doctor: {
-        nombre: '',
-        apellidos: '',
-        direccion: '',
-        telefono: '',
-        fecha_nacimiento: '',
-        titulo: '',
-        especialidad: '',
-        cedula: '',
-        consultorio: ''
-      },
-      message: '',
-      dismissSecs: 7,
-      dismissCountDown: 0,
-      showDismissibleAlert: false
-    };
-  },
-  methods: {
-    irAtras: function irAtras() {
-      this.$router.go(-1); // this.$router.replace({path: '/users'})
-    },
-    guardar: function guardar() {
-      var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/doctores', self.doctor).then(function (response) {
-        self.doctor = {
-          nombre: '',
-          apellidos: '',
-          direccion: '',
-          telefono: '',
-          fecha_nacimiento: '',
-          titulo: '',
-          especialidad: '',
-          cedula: '',
-          consultorio: ''
-        };
-        self.message = 'Doctor registrado con éxito.';
-        self.showAlert();
-      })["catch"](function (error) {
-        if (error.response.data.message == 'Datos inválidos.') {
-          self.message = '';
-
-          for (var key in error.response.data.errors) {
-            if (error.response.data.errors.hasOwnProperty(key)) {
-              self.message += error.response.data.errors[key][0] + '  ';
-            }
-          }
-
-          self.showAlert();
-        } else {
-          console.log(error); //self.$router.push({ path: 'login' }); 
-        }
-      });
-    },
-    countDownChanged: function countDownChanged(dismissCountDown) {
-      this.dismissCountDown = dismissCountDown;
-    },
-    showAlert: function showAlert() {
-      this.dismissCountDown = this.dismissSecs;
-    }
-  },
-  mounted: function mounted() {
-    var self = this;
-  }
+  name: 'Charts',
+  components: _objectSpread({}, _index_js__WEBPACK_IMPORTED_MODULE_0__)
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024& ***!
-  \*****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/charts/Charts.vue?vue&type=template&id=10c5a2d5& ***!
+  \**********************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -212,196 +168,139 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "CRow",
+    "div",
     [
       _c(
-        "CCol",
-        { attrs: { col: "12", lg: "6" } },
+        "CCardGroup",
+        { staticClass: "card-columns cols-2", attrs: { columns: "" } },
         [
           _c(
             "CCard",
-            { attrs: { "no-header": "" } },
             [
-              _c(
-                "CCardBody",
-                [
-                  _c("h3", [_vm._v("\n          Registrar Doctor\n        ")]),
-                  _vm._v(" "),
+              _c("CCardHeader", [
+                _vm._v("\n        Line Chart\n        "),
+                _c("div", { staticClass: "card-header-actions" }, [
                   _c(
-                    "CAlert",
+                    "a",
                     {
+                      staticClass: "card-header-action",
                       attrs: {
-                        show: _vm.dismissCountDown,
-                        color: "primary",
-                        fade: ""
-                      },
-                      on: {
-                        "update:show": function($event) {
-                          _vm.dismissCountDown = $event
-                        }
+                        href: "https://coreui.io/vue/docs/components/charts",
+                        rel: "noreferrer noopener",
+                        target: "_blank"
                       }
                     },
                     [
-                      _vm._v(
-                        "\n          (" +
-                          _vm._s(_vm.dismissCountDown) +
-                          ") " +
-                          _vm._s(_vm.message) +
-                          "\n        "
-                      )
+                      _c("small", { staticClass: "text-muted" }, [
+                        _vm._v("docs")
+                      ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Nombre",
-                      type: "text",
-                      placeholder: "Nombre"
-                    },
-                    model: {
-                      value: _vm.doctor.nombre,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "nombre", $$v)
-                      },
-                      expression: "doctor.nombre"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Apellidos",
-                      type: "text",
-                      placeholder: "Apellidos"
-                    },
-                    model: {
-                      value: _vm.doctor.apellidos,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "apellidos", $$v)
-                      },
-                      expression: "doctor.apellidos"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      textarea: "true",
-                      label: "Dirección",
-                      rows: 9,
-                      placeholder: "Calle, numero, colonia, ciudad"
-                    },
-                    model: {
-                      value: _vm.doctor.direccion,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "direccion", $$v)
-                      },
-                      expression: "doctor.direccion"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Teléfono",
-                      type: "text",
-                      placeholder: "Teléfono"
-                    },
-                    model: {
-                      value: _vm.doctor.telefono,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "telefono", $$v)
-                      },
-                      expression: "doctor.telefono"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: { label: "Fecha de nacimiento", type: "date" },
-                    model: {
-                      value: _vm.doctor.fecha_nacimiento,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "fecha_nacimiento", $$v)
-                      },
-                      expression: "doctor.fecha_nacimiento"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Título",
-                      type: "text",
-                      placeholder: "Título"
-                    },
-                    model: {
-                      value: _vm.doctor.titulo,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "titulo", $$v)
-                      },
-                      expression: "doctor.titulo"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Especialidad",
-                      type: "text",
-                      placeholder: "Especialidad"
-                    },
-                    model: {
-                      value: _vm.doctor.especialidad,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "especialidad", $$v)
-                      },
-                      expression: "doctor.especialidad"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Cédula Profesional",
-                      type: "text",
-                      placeholder: "Cédula Profesional"
-                    },
-                    model: {
-                      value: _vm.doctor.cedula,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "cedula", $$v)
-                      },
-                      expression: "doctor.cedula"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Consultorio",
-                      type: "text",
-                      placeholder: "Consultorio"
-                    },
-                    model: {
-                      value: _vm.doctor.consultorio,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "consultorio", $$v)
-                      },
-                      expression: "doctor.consultorio"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "CButton",
-                    {
-                      attrs: { color: "primary" },
-                      on: {
-                        click: function($event) {
-                          return _vm.guardar()
-                        }
-                      }
-                    },
-                    [_vm._v("Guardar")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "CButton",
-                    { attrs: { color: "primary" }, on: { click: _vm.irAtras } },
-                    [_vm._v("Atrás")]
                   )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("CCardBody", [_c("CChartLineExample")], 1)
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCard",
+            [
+              _c("CCardHeader", [_vm._v("Bar Chart")]),
+              _vm._v(" "),
+              _c("CCardBody", [_c("CChartBarExample")], 1)
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCard",
+            [
+              _c("CCardHeader", [_vm._v("Doughnut Chart")]),
+              _vm._v(" "),
+              _c("CCardBody", [_c("CChartDoughnutExample")], 1)
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCard",
+            [
+              _c("CCardHeader", [_vm._v("Radar Chart")]),
+              _vm._v(" "),
+              _c("CCardBody", [_c("CChartRadarExample")], 1)
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCard",
+            [
+              _c("CCardHeader", [_vm._v("Pie Chart")]),
+              _vm._v(" "),
+              _c("CCardBody", [_c("CChartPieExample")], 1)
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCard",
+            [
+              _c("CCardHeader", [_vm._v("Polar Area Chart")]),
+              _vm._v(" "),
+              _c("CCardBody", [_c("CChartPolarAreaExample")], 1)
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCard",
+            [
+              _c("CCardHeader", [_vm._v("Simple line chart")]),
+              _vm._v(" "),
+              _c(
+                "CCardBody",
+                [
+                  _c("CChartLineSimple", {
+                    attrs: { "border-color": "success", labels: "months" }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCard",
+            [
+              _c("CCardHeader", [_vm._v("Simple pointed chart")]),
+              _vm._v(" "),
+              _c(
+                "CCardBody",
+                [
+                  _c("CChartLineSimple", {
+                    attrs: { pointed: "", "border-color": "warning" }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCard",
+            [
+              _c("CCardHeader", [_vm._v("Simple bar chart")]),
+              _vm._v(" "),
+              _c(
+                "CCardBody",
+                [
+                  _c("CChartBarSimple", {
+                    attrs: { "background-color": "danger" }
+                  })
                 ],
                 1
               )

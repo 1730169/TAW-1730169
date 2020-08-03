@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[71],{
 
-/***/ "../coreui/src/views/pacientes/EditarPaciente.vue":
-/*!********************************************************!*\
-  !*** ../coreui/src/views/pacientes/EditarPaciente.vue ***!
-  \********************************************************/
+/***/ "../coreui/src/views/notes/EditNote.vue":
+/*!**********************************************!*\
+  !*** ../coreui/src/views/notes/EditNote.vue ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _EditarPaciente_vue_vue_type_template_id_13afc7fa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditarPaciente.vue?vue&type=template&id=13afc7fa& */ "../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=template&id=13afc7fa&");
-/* harmony import */ var _EditarPaciente_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditarPaciente.vue?vue&type=script&lang=js& */ "../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=script&lang=js&");
+/* harmony import */ var _EditNote_vue_vue_type_template_id_5f2a9058___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditNote.vue?vue&type=template&id=5f2a9058& */ "../coreui/src/views/notes/EditNote.vue?vue&type=template&id=5f2a9058&");
+/* harmony import */ var _EditNote_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditNote.vue?vue&type=script&lang=js& */ "../coreui/src/views/notes/EditNote.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _EditarPaciente_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _EditarPaciente_vue_vue_type_template_id_13afc7fa___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _EditarPaciente_vue_vue_type_template_id_13afc7fa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _EditNote_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EditNote_vue_vue_type_template_id_5f2a9058___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EditNote_vue_vue_type_template_id_5f2a9058___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,47 +32,47 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/pacientes/EditarPaciente.vue"
+component.options.__file = "coreui/src/views/notes/EditNote.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************!*\
-  !*** ../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************/
+/***/ "../coreui/src/views/notes/EditNote.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ../coreui/src/views/notes/EditNote.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarPaciente_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditarPaciente.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarPaciente_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNote_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditNote.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/notes/EditNote.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNote_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=template&id=13afc7fa&":
-/*!***************************************************************************************!*\
-  !*** ../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=template&id=13afc7fa& ***!
-  \***************************************************************************************/
+/***/ "../coreui/src/views/notes/EditNote.vue?vue&type=template&id=5f2a9058&":
+/*!*****************************************************************************!*\
+  !*** ../coreui/src/views/notes/EditNote.vue?vue&type=template&id=5f2a9058& ***!
+  \*****************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarPaciente_vue_vue_type_template_id_13afc7fa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditarPaciente.vue?vue&type=template&id=13afc7fa& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=template&id=13afc7fa&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarPaciente_vue_vue_type_template_id_13afc7fa___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNote_vue_vue_type_template_id_5f2a9058___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditNote.vue?vue&type=template&id=5f2a9058& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/notes/EditNote.vue?vue&type=template&id=5f2a9058&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNote_vue_vue_type_template_id_5f2a9058___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarPaciente_vue_vue_type_template_id_13afc7fa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNote_vue_vue_type_template_id_5f2a9058___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/notes/EditNote.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/notes/EditNote.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80,10 +80,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "../coreui/node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
 //
 //
 //
@@ -134,56 +130,37 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      paciente: {
-        nombre: '',
-        apellidos: '',
-        direccion: '',
-        telefono: '',
-        sexo: '',
-        fecha_nacimiento: '',
-        alergias: '',
-        enfermedades_cronicas: ''
+      note: {
+        title: '',
+        content: '',
+        applies_to_date: '',
+        status_id: null,
+        note_type: ''
       },
-      opciones_sexo: [{
-        value: 0,
-        label: 'Seleccione'
-      }, {
-        value: 'F',
-        label: 'Femenino'
-      }, {
-        value: 'M',
-        label: 'Masculino'
-      }],
+      statuses: [],
       message: '',
       dismissSecs: 7,
       dismissCountDown: 0
     };
   },
   methods: {
-    irAtras: function irAtras() {
+    goBack: function goBack() {
       this.$router.go(-1); // this.$router.replace({path: '/users'})
     },
-    actualizar: function actualizar() {
+    update: function update() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/pacientes/' + self.$route.params.id, {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/notes/' + self.$route.params.id + '?token=' + localStorage.getItem("api_token"), {
         _method: 'PUT',
-
-        /*
-          ENVIAR LOS CAMPOS DEL PACIENTE A ACTUALIZAR
-        */
-        nombre: self.paciente.nombre,
-        apellidos: self.paciente.apellidos,
-        telefono: self.paciente.telefono,
-        direccion: self.paciente.direccion,
-        sexo: self.paciente.sexo,
-        fecha_nacimiento: self.paciente.fecha_nacimiento,
-        alergias: self.paciente.alergias,
-        enfermedades_cronicas: self.paciente.enfermedades_cronicas
+        title: self.note.title,
+        content: self.note.content,
+        applies_to_date: self.note.applies_to_date,
+        status_id: self.note.status_id,
+        note_type: self.note.note_type
       }).then(function (response) {
-        self.message = 'Información del Paciente actualizada con éxito.';
+        self.message = 'Successfully updated note.';
         self.showAlert();
       })["catch"](function (error) {
-        if (error.response.data.message == 'Datos inválidos.') {
+        if (error.response.data.message == 'The given data was invalid.') {
           self.message = '';
 
           for (var key in error.response.data.errors) {
@@ -194,7 +171,10 @@ __webpack_require__.r(__webpack_exports__);
 
           self.showAlert();
         } else {
-          console.log(error); //self.$router.push({ path: '/login' }); 
+          console.log(error);
+          self.$router.push({
+            path: '/login'
+          });
         }
       });
     },
@@ -203,14 +183,15 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    /*
-      TRAER LOS DATOS DEL PACIENTE EDITANDO
-    */
     var self = this;
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/pacientes/' + self.$route.params.id).then(function (response) {
-      self.paciente = response.data;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/notes/' + self.$route.params.id + '/edit?token=' + localStorage.getItem("api_token")).then(function (response) {
+      self.note = response.data.note;
+      self.statuses = response.data.statuses;
     })["catch"](function (error) {
-      console.log(error); //self.$router.push({ path: '/login' });
+      console.log(error);
+      self.$router.push({
+        path: '/login'
+      });
     });
   }
 });
@@ -224,10 +205,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=template&id=13afc7fa&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/pacientes/EditarPaciente.vue?vue&type=template&id=13afc7fa& ***!
-  \*********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/notes/EditNote.vue?vue&type=template&id=5f2a9058&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/notes/EditNote.vue?vue&type=template&id=5f2a9058& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -252,7 +233,13 @@ var render = function() {
               _c(
                 "CCardBody",
                 [
-                  _c("h3", [_vm._v("\n          Editar Paciente\n        ")]),
+                  _c("h3", [
+                    _vm._v(
+                      "\n          Edit Note id:  " +
+                        _vm._s(_vm.$route.params.id) +
+                        "\n        "
+                    )
+                  ]),
                   _vm._v(" "),
                   _c(
                     "CAlert",
@@ -281,119 +268,67 @@ var render = function() {
                   _vm._v(" "),
                   _c("CInput", {
                     attrs: {
-                      label: "Nombre",
+                      label: "Title",
                       type: "text",
-                      placeholder: "Nombre"
+                      placeholder: "Title"
                     },
                     model: {
-                      value: _vm.paciente.nombre,
+                      value: _vm.note.title,
                       callback: function($$v) {
-                        _vm.$set(_vm.paciente, "nombre", $$v)
+                        _vm.$set(_vm.note, "title", $$v)
                       },
-                      expression: "paciente.nombre"
+                      expression: "note.title"
                     }
                   }),
                   _vm._v(" "),
                   _c("CInput", {
                     attrs: {
-                      label: "Apellidos",
-                      type: "text",
-                      placeholder: "Apellidos"
-                    },
-                    model: {
-                      value: _vm.paciente.apellidos,
-                      callback: function($$v) {
-                        _vm.$set(_vm.paciente, "apellidos", $$v)
-                      },
-                      expression: "paciente.apellidos"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
+                      label: "Content",
+                      placeholder: "Content..",
                       textarea: "true",
-                      label: "Dirección",
-                      rows: 9,
-                      placeholder: "Calle, numero, colonia, ciudad"
+                      rows: "9"
                     },
                     model: {
-                      value: _vm.paciente.direccion,
+                      value: _vm.note.content,
                       callback: function($$v) {
-                        _vm.$set(_vm.paciente, "direccion", $$v)
+                        _vm.$set(_vm.note, "content", $$v)
                       },
-                      expression: "paciente.direccion"
+                      expression: "note.content"
                     }
                   }),
                   _vm._v(" "),
                   _c("CInput", {
-                    attrs: {
-                      label: "Teléfono",
-                      type: "text",
-                      placeholder: "Teléfono"
-                    },
+                    attrs: { label: "Applies to date", type: "date" },
                     model: {
-                      value: _vm.paciente.telefono,
+                      value: _vm.note.applies_to_date,
                       callback: function($$v) {
-                        _vm.$set(_vm.paciente, "telefono", $$v)
+                        _vm.$set(_vm.note, "applies_to_date", $$v)
                       },
-                      expression: "paciente.telefono"
+                      expression: "note.applies_to_date"
                     }
                   }),
                   _vm._v(" "),
                   _c("CSelect", {
                     attrs: {
-                      label: "Sexo",
-                      value: _vm.paciente.sexo,
-                      plain: true,
-                      options: _vm.opciones_sexo
+                      value: _vm.note.status_id,
+                      options: _vm.statuses,
+                      label: "Status"
                     },
                     on: {
                       "update:value": function($event) {
-                        return _vm.$set(_vm.paciente, "sexo", $event)
+                        return _vm.$set(_vm.note, "status_id", $event)
                       }
                     }
                   }),
                   _vm._v(" "),
                   _c("CInput", {
-                    attrs: { label: "Fecha de nacimiento", type: "date" },
+                    attrs: { label: "Note type", type: "text" },
                     model: {
-                      value: _vm.paciente.fecha_nacimiento,
+                      value: _vm.note.note_type,
                       callback: function($$v) {
-                        _vm.$set(_vm.paciente, "fecha_nacimiento", $$v)
+                        _vm.$set(_vm.note, "note_type", $$v)
                       },
-                      expression: "paciente.fecha_nacimiento"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      textarea: "true",
-                      label: "Alergias",
-                      rows: 9,
-                      placeholder: "Enlistar alergias del paciente"
-                    },
-                    model: {
-                      value: _vm.paciente.alergias,
-                      callback: function($$v) {
-                        _vm.$set(_vm.paciente, "alergias", $$v)
-                      },
-                      expression: "paciente.alergias"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      textarea: "true",
-                      label: "Enfermedades crónicas",
-                      rows: 9,
-                      placeholder: "Enlistar enfermedades crónicas del paciente"
-                    },
-                    model: {
-                      value: _vm.paciente.enfermedades_cronicas,
-                      callback: function($$v) {
-                        _vm.$set(_vm.paciente, "enfermedades_cronicas", $$v)
-                      },
-                      expression: "paciente.enfermedades_cronicas"
+                      expression: "note.note_type"
                     }
                   }),
                   _vm._v(" "),
@@ -403,17 +338,17 @@ var render = function() {
                       attrs: { color: "primary" },
                       on: {
                         click: function($event) {
-                          return _vm.actualizar()
+                          return _vm.update()
                         }
                       }
                     },
-                    [_vm._v("Guardar")]
+                    [_vm._v("Save")]
                   ),
                   _vm._v(" "),
                   _c(
                     "CButton",
-                    { attrs: { color: "primary" }, on: { click: _vm.irAtras } },
-                    [_vm._v("Atrás")]
+                    { attrs: { color: "primary" }, on: { click: _vm.goBack } },
+                    [_vm._v("Back")]
                   )
                 ],
                 1

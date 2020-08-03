@@ -847,11 +847,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: {
-              color: "primary",
-              header: "9.823",
-              text: "Members online"
-            },
+            attrs: { color: "primary", header: "9.823", text: "Citas" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -924,7 +920,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: { color: "info", header: "9.823", text: "Members online" },
+            attrs: { color: "info", header: "9.823", text: "Pacientes" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -1004,7 +1000,7 @@ var render = function() {
             attrs: {
               color: "warning",
               header: "9.823",
-              text: "Members online"
+              text: "Médicos registrados"
             },
             scopedSlots: _vm._u([
               {
@@ -1079,7 +1075,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: { color: "danger", header: "9.823", text: "Members online" },
+            attrs: { color: "danger", header: "9.823", text: "Caja" },
             scopedSlots: _vm._u([
               {
                 key: "default",
