@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 16-07-2020 a las 07:21:32
+-- Tiempo de generación: 03-08-2020 a las 07:19:24
 -- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.4.6
+-- Versión de PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -76,6 +76,14 @@ CREATE TABLE `consultas` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `consultas`
+--
+
+INSERT INTO `consultas` (`id`, `paciente_id`, `doctor_id`, `resumen`, `diagnostico`, `prescripcion`, `pagada`, `terminada`, `created_at`, `updated_at`) VALUES
+(1, 3, 2, 'fbgff', 'lesión', 'fdgfdgfdg', 0, 0, '2020-08-03 04:55:41', '2020-08-03 04:55:41'),
+(2, 2, 1, 'wdwqdwq', 'Ceguera', 'Cada 8 horas', 1, 1, '2020-08-03 07:19:58', '2020-08-03 11:09:01');
 
 -- --------------------------------------------------------
 
@@ -404,7 +412,15 @@ INSERT INTO `menus` (`id`, `name`, `href`, `icon`, `slug`, `parent_id`, `menu_id
 (79, 'Citas', NULL, NULL, 'dropdown', 0, 1, 53),
 (80, 'Registrar', '/citas/registrar', NULL, 'link', 79, 1, 54),
 (81, 'Consultar', '/citas', NULL, 'link', 79, 1, 55),
-(82, 'Consultar', '/users', NULL, 'link', 6, 1, 56);
+(82, 'Consultar', '/users', NULL, 'link', 6, 1, 56),
+(83, 'Servicios', NULL, NULL, 'dropdown', 0, 1, 57),
+(84, 'Registrar', '/servicios/registrar', NULL, 'link', 83, 1, 58),
+(85, 'Consultar', '/servicios', NULL, 'link', 83, 1, 59),
+(86, 'Consultas', NULL, NULL, 'dropdown', 0, 1, 60),
+(87, 'Registrar', '/consultas/registrar', NULL, 'link', 86, 1, 61),
+(88, 'Historial', '/consultas', NULL, 'link', 86, 1, 62),
+(89, 'Caja', NULL, NULL, 'dropdown', 0, 1, 63),
+(90, 'Pagos', '/pagos', NULL, 'link', 89, 1, 64);
 
 -- --------------------------------------------------------
 
@@ -521,7 +537,26 @@ INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
 (164, 'user', 3),
 (165, 'guest', 3),
 (166, 'admin', 82),
-(167, 'user', 82);
+(167, 'user', 82),
+(168, 'admin', 83),
+(169, 'user', 83),
+(170, 'user', 84),
+(171, 'admin', 84),
+(172, 'user', 85),
+(173, 'admin', 85),
+(174, 'doctor', 86),
+(175, 'admin', 86),
+(176, 'user', 86),
+(177, 'admin', 87),
+(178, 'doctor', 87),
+(179, 'user', 87),
+(180, 'admin', 88),
+(181, 'doctor', 88),
+(182, 'user', 88),
+(183, 'admin', 89),
+(184, 'user', 89),
+(185, 'user', 90),
+(186, 'admin', 90);
 
 -- --------------------------------------------------------
 
@@ -774,6 +809,13 @@ CREATE TABLE `pagos` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `pagos`
+--
+
+INSERT INTO `pagos` (`id`, `consulta_id`, `monto`, `created_at`, `updated_at`) VALUES
+(1, 2, '3480.00', '2020-08-03 11:09:01', '2020-08-03 11:09:01');
+
 -- --------------------------------------------------------
 
 --
@@ -832,7 +874,8 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'api', '2020-07-12 21:13:03', '2020-07-12 21:13:03'),
 (2, 'user', 'api', '2020-07-12 21:13:04', '2020-07-12 21:13:04'),
-(3, 'guest', 'api', '2020-07-12 21:13:04', '2020-07-12 21:13:04');
+(3, 'guest', 'api', '2020-07-12 21:13:04', '2020-07-12 21:13:04'),
+(4, 'doctor', 'api', '2020-08-02 10:31:31', '2020-08-02 10:32:05');
 
 -- --------------------------------------------------------
 
@@ -875,7 +918,31 @@ CREATE TABLE `role_hierarchy` (
 INSERT INTO `role_hierarchy` (`id`, `role_id`, `hierarchy`) VALUES
 (1, 1, 1),
 (2, 2, 2),
-(3, 3, 3);
+(3, 3, 3),
+(4, 4, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `servicioconsultas`
+--
+
+CREATE TABLE `servicioconsultas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `consulta_id` bigint(20) UNSIGNED NOT NULL,
+  `servicio_id` bigint(20) UNSIGNED NOT NULL,
+  `cantidad` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `servicioconsultas`
+--
+
+INSERT INTO `servicioconsultas` (`id`, `consulta_id`, `servicio_id`, `cantidad`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 3, '2020-08-03 04:55:41', '2020-08-03 04:55:41'),
+(2, 2, 1, 4, '2020-08-03 07:19:58', '2020-08-03 07:19:58');
 
 -- --------------------------------------------------------
 
@@ -893,20 +960,12 @@ CREATE TABLE `servicios` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `servicio_consultas`
+-- Volcado de datos para la tabla `servicios`
 --
 
-CREATE TABLE `servicio_consultas` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `consulta_id` bigint(20) UNSIGNED NOT NULL,
-  `servicio_id` bigint(20) UNSIGNED NOT NULL,
-  `cantidad` int(10) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+INSERT INTO `servicios` (`id`, `doctor_id`, `nombre`, `descripcion`, `costo`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Consulta General', 'Consulta', '750.00', '2020-08-01 23:48:39', '2020-08-02 00:09:50');
 
 -- --------------------------------------------------------
 
@@ -1133,15 +1192,15 @@ ALTER TABLE `role_hierarchy`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `servicios`
+-- Indices de la tabla `servicioconsultas`
 --
-ALTER TABLE `servicios`
+ALTER TABLE `servicioconsultas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `servicio_consultas`
+-- Indices de la tabla `servicios`
 --
-ALTER TABLE `servicio_consultas`
+ALTER TABLE `servicios`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1178,7 +1237,7 @@ ALTER TABLE `compartirs`
 -- AUTO_INCREMENT de la tabla `consultas`
 --
 ALTER TABLE `consultas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `cortecajas`
@@ -1244,13 +1303,13 @@ ALTER TABLE `menulist`
 -- AUTO_INCREMENT de la tabla `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT de la tabla `menu_role`
 --
 ALTER TABLE `menu_role`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=187;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1274,7 +1333,7 @@ ALTER TABLE `pacientes`
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
@@ -1286,25 +1345,25 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `role_hierarchy`
 --
 ALTER TABLE `role_hierarchy`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `servicioconsultas`
+--
+ALTER TABLE `servicioconsultas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `servicio_consultas`
---
-ALTER TABLE `servicio_consultas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `status`
