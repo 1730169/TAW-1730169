@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-08-2020 a las 07:19:24
+-- Tiempo de generación: 03-08-2020 a las 07:24:27
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -82,7 +82,7 @@ CREATE TABLE `consultas` (
 --
 
 INSERT INTO `consultas` (`id`, `paciente_id`, `doctor_id`, `resumen`, `diagnostico`, `prescripcion`, `pagada`, `terminada`, `created_at`, `updated_at`) VALUES
-(1, 3, 2, 'fbgff', 'lesión', 'fdgfdgfdg', 0, 0, '2020-08-03 04:55:41', '2020-08-03 04:55:41'),
+(1, 3, 2, 'fbgff', 'lesión', 'fdgfdgfdg', 1, 1, '2020-08-03 04:55:41', '2020-08-03 12:21:33'),
 (2, 2, 1, 'wdwqdwq', 'Ceguera', 'Cada 8 horas', 1, 1, '2020-08-03 07:19:58', '2020-08-03 11:09:01');
 
 -- --------------------------------------------------------
@@ -814,7 +814,8 @@ CREATE TABLE `pagos` (
 --
 
 INSERT INTO `pagos` (`id`, `consulta_id`, `monto`, `created_at`, `updated_at`) VALUES
-(1, 2, '3480.00', '2020-08-03 11:09:01', '2020-08-03 11:09:01');
+(1, 2, '3480.00', '2020-08-03 11:09:01', '2020-08-03 11:09:01'),
+(2, 1, '2610.00', '2020-08-03 12:21:33', '2020-08-03 12:21:33');
 
 -- --------------------------------------------------------
 
@@ -965,7 +966,8 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id`, `doctor_id`, `nombre`, `descripcion`, `costo`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Consulta General', 'Consulta', '750.00', '2020-08-01 23:48:39', '2020-08-02 00:09:50');
+(1, 1, 'Consulta General', 'Consulta', '750.00', '2020-08-01 23:48:39', '2020-08-02 00:09:50'),
+(2, 1, 'Valoración de estudios', 'Valorar estudios realizados', '850.00', '2020-08-03 12:23:04', '2020-08-03 12:23:04');
 
 -- --------------------------------------------------------
 
@@ -1333,7 +1335,7 @@ ALTER TABLE `pacientes`
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
@@ -1363,7 +1365,7 @@ ALTER TABLE `servicioconsultas`
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `status`
