@@ -34,6 +34,8 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::resource('bread',  'BreadController');   //create BREAD (resource)
 
         Route::resource('users', 'UsersController')->except( ['create', 'store'] );
+        
+
 
         Route::prefix('menu/menu')->group(function () { 
             Route::get('/',         'MenuEditController@index')->name('menu.menu.index');
@@ -93,10 +95,12 @@ Route::delete('pacientes/{id}', 'PacientesController@delete');
  * RUTAS PARA EL MODULO DE DOCTORES
  */
 Route::get('doctores', 'DoctoresController@list');
+Route::get('doctores/usuarios/', 'DoctoresController@getUsuariosDoctor');
 Route::get('doctores/{id}', 'DoctoresController@get');
 Route::post('doctores', 'DoctoresController@create');
 Route::put('doctores/{id}', 'DoctoresController@update');
 Route::delete('doctores/{id}', 'DoctoresController@delete');
+
 
 Route::get('citas', 'CitasController@list');
 Route::get('citas/{id}', 'CitasController@get');
@@ -129,3 +133,5 @@ Route::get('pagos/{id}', 'PagosController@get');
 Route::post('pagos', 'PagosController@create');
 Route::put('pagos/{id}', 'PagosController@update');
 Route::delete('pagos/{id}', 'PagosController@delete');
+
+

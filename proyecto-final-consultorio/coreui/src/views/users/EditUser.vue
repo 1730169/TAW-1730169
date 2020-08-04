@@ -5,7 +5,7 @@
         <CCardBody>
           <CForm>
             <template slot="header">
-              Edit User id:  {{ $route.params.id }}
+              Editar Usuario
             </template>
             <CAlert
               :show.sync="dismissCountDown"
@@ -14,10 +14,12 @@
             >
               ({{dismissCountDown}}) {{ message }}
             </CAlert>
-            <CInput type="text" label="Name" placeholder="Name" v-model="name"></CInput>
+            <CInput type="text" label="Nombre" placeholder="Nombre" v-model="name"></CInput>
             <CInput type="text" label="Email" placeholder="Email" v-model="email"></CInput>
-            <CButton color="primary" @click="update()">Save</CButton>
-            <CButton color="primary" @click="goBack">Back</CButton>
+            <CInput type="text" label="Rol" placeholder="Rol,rol,rol ..." v-model="role"></CInput>
+
+            <CButton color="primary" @click="update()">Guardar</CButton>
+            <CButton color="primary" @click="goBack">Atrás</CButton>
           </CForm>
         </CCardBody>
       </CCard>
@@ -39,6 +41,7 @@ export default {
     return {
         name: '',
         email: '',
+        role: '',
         showMessage: false,
         message: '',
         dismissSecs: 7,
@@ -58,9 +61,10 @@ export default {
             _method: 'PUT',
             name: self.name,
             email: self.email,
+            role: self.role,
         })
         .then(function (response) {
-            self.message = 'Successfully updated user.';
+            self.message = 'Usuario actualizado con éxito.';
             self.showAlert();
         }).catch(function (error) {
             console.log(error);
@@ -80,6 +84,8 @@ export default {
     .then(function (response) {
         self.name = response.data.name;
         self.email = response.data.email;
+        self.role = response.data.roles;
+
     }).catch(function (error) {
         console.log(error);
         self.$router.push({ path: '/login' });

@@ -24,9 +24,16 @@
             <CInput label="Especialidad" type="text" placeholder="Especialidad" v-model="doctor.especialidad"></CInput>
             <CInput label="Cédula Profesional" type="text" placeholder="Cédula Profesional" v-model="doctor.cedula"></CInput>
             <CInput label="Consultorio" type="text" placeholder="Consultorio" v-model="doctor.consultorio"></CInput>
-            
+
+            <CSelect
+              label="Usuario" 
+              :value.sync="doctor.user_id"
+              v-model="doctor.user_id"
+              :plain="true"
+              :options="opciones_usuario" id="user_id" >
+            </CSelect>
           <!-- TERMINAN CAMPOS DE FORMULARIO-->
-            
+
 
           <CButton color="primary" @click="guardar()">Guardar</CButton>
           <CButton color="primary" @click="irAtras">Atrás</CButton>
@@ -58,8 +65,10 @@ export default {
           especialidad: '',
           cedula: '',
           consultorio: '',
-          
+          user_id: ''
+
         },
+        opciones_usuario: [],
         message: '',
         dismissSecs: 7,
         dismissCountDown: 0,
@@ -73,6 +82,9 @@ export default {
     },
     guardar() {
         let self = this;
+        // TOMAR LAS LLAVES DESDE LOS CAMPOS SELECT
+        self.doctor.user_id = document.getElementById("user_id").value;
+
         axios.post(  '/api/doctores',
           self.doctor
         )
@@ -87,6 +99,7 @@ export default {
               especialidad: '',
               cedula: '',
               consultorio: '',
+              user_id: '',
 
             };
             self.message = 'Doctor registrado con éxito.';
@@ -102,7 +115,7 @@ export default {
               self.showAlert();
             }else{
               console.log(error);
-              //self.$router.push({ path: 'login' }); 
+              //self.$router.push({ path: 'login' });
             }
         });
     },
@@ -115,6 +128,36 @@ export default {
   },
   mounted: function(){
     let self = this;
+
+    /*
+    OBTENER OPCIONES PARA POBLAR SELECT opciones_usuario
+    */
+    axios.get('/api/doctores/usuarios/')
+    .then(function (response) {
+
+      self.opciones_usuario = [];
+      var tempUsuarios = [];
+      var usuario;
+
+      tempUsuarios.push({value: 0, label: "Seleccione"});
+
+      console.dir(response.data);
+
+      // Recorrer la lista de usuarios
+      for(var i=0; i<response.data.length; i++){
+        // tomar usuario
+        usuario = response.data[i];
+        // agregar opcion en formato
+        tempUsuarios.push({value: usuario.id, label: usuario.name +" ("+ usuario.email+")"});
+      }
+
+      // Actualizar lista para el select
+      self.opciones_usuario = tempUsuarios;
+
+    }).catch(function (error) {
+        console.log(error);
+        //self.$router.push({ path: 'login' });
+    });
   }
 }
 

@@ -19,6 +19,7 @@ class UsersController extends Controller
         $this->middleware('auth:api');
     }
 
+    
     /**
      * Display a listing of the resource.
      *
@@ -75,11 +76,14 @@ class UsersController extends Controller
     {
         $validatedData = $request->validate([
             'name'       => 'required|min:1|max:256',
-            'email'      => 'required|email|max:256'
+            'email'      => 'required|email|max:256',
+            'role'       => 'required|min:1|max:256'
         ]);
         $user = User::find($id);
         $user->name       = $request->input('name');
         $user->email      = $request->input('email');
+        $user->menuroles  = $request->input('role');
+
         $user->save();
         //$request->session()->flash('message', 'Successfully updated user');
         return response()->json( ['status' => 'success'] );

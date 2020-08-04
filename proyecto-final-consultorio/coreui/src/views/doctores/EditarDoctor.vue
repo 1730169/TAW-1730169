@@ -25,6 +25,14 @@
             <CInput label="Cédula Profesional" type="text" placeholder="Cédula Profesional" v-model="doctor.cedula"></CInput>
             <CInput label="Consultorio" type="text" placeholder="Consultorio" v-model="doctor.consultorio"></CInput>
             
+            <CSelect
+              label="Usuario" 
+              :value.sync="doctor.user_id"
+              v-model="doctor.user_id"
+              :plain="true"
+              :options="opciones_usuario" id="user_id" >
+            </CSelect>
+
             <!-- TERMINAN CAMPOS DE FORMULARIO-->
 
           <CButton color="primary" @click="actualizar()">Guardar</CButton>
@@ -57,9 +65,10 @@ export default {
           especialidad: '',
           cedula: '',
           consultorio: '',
+          user_id: ''
           
         },
-        
+        opciones_usuario: [],
         message: '',
         dismissSecs: 7,
         dismissCountDown: 0,
@@ -72,6 +81,10 @@ export default {
     },
     actualizar() {
         let self = this;
+
+        // TOMAR LAS LLAVES DESDE LOS CAMPOS SELECT
+        self.doctor.user_id = document.getElementById("user_id").value;
+
         axios.post(  '/api/doctores/' + self.$route.params.id,
         {
             _method: 'PUT',
@@ -87,10 +100,11 @@ export default {
             titulo: self.doctor.titulo,
             especialidad: self.doctor.especialidad,
             cedula: self.doctor.cedula,
-            consultorio: self.doctor.consultorio
+            consultorio: self.doctor.consultorio,
+            user_id: self.doctor.user_id
         })
         .then(function (response) {
-            self.message = 'Información del Doctor actualizada con éxito.';
+            self.message = 'Datos del Doctor actualizada con éxito.';
             self.showAlert();
             
         }).catch(function (error) {
@@ -114,6 +128,36 @@ export default {
   },
   mounted: function(){
     /*
+    OBTENER OPCIONES PARA POBLAR SELECT opciones_usuario
+    */
+    axios.get('/api/doctores/usuarios/')
+    .then(function (response) {
+
+      self.opciones_usuario = [];
+      var tempUsuarios = [];
+      var usuario;
+
+      tempUsuarios.push({value: 0, label: "Seleccione"});
+
+      console.dir(response.data);
+
+      // Recorrer la lista de usuarios
+      for(var i=0; i<response.data.length; i++){
+        // tomar usuario
+        usuario = response.data[i];
+        // agregar opcion en formato
+        tempUsuarios.push({value: usuario.id, label: usuario.name +" ("+ usuario.email+")"});
+      }
+
+      // Actualizar lista para el select
+      self.opciones_usuario = tempUsuarios;
+
+    }).catch(function (error) {
+        console.log(error);
+        //self.$router.push({ path: 'login' });
+    });
+
+    /*
       TRAER LOS DATOS DEL PACIENTE EDITANDO
     */
     let self = this;
@@ -125,6 +169,8 @@ export default {
         console.log(error);
         //self.$router.push({ path: '/login' });
     });
+
+
   }
 }
 

@@ -299,7 +299,7 @@ export default {
       }
 
       // Actualizar lista para el select
-      self.opciones_paciente = tempPacientes;      
+      self.opciones_paciente = tempPacientes;    
     }).catch(function (error) {
         console.log(error);
         //self.$router.push({ path: 'login' });

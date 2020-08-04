@@ -40,12 +40,26 @@ class GetSidebarMenu implements MenuInterface{
         $this->getMenuFromDB($menuName, 'admin');
     }
 
+    private function getSecretariaMenu($menuName){
+        $this->getMenuFromDB($menuName, 'secretaria');
+    }
+
+    private function getDoctorMenu($menuName){
+        $this->getMenuFromDB($menuName, 'doctor');
+    }
+
     public function get($roles, $menuName = 'sidebar menu'){
         $roles = explode(',', $roles);
         if(empty($roles)){
             $this->getGuestMenu($menuName);
         }elseif(in_array('admin', $roles)){
             $this->getAdminMenu($menuName);
+        }elseif(in_array('secretaria', $roles)){
+            $this->getSecretariaMenu($menuName);
+
+        }elseif(in_array('doctor', $roles)){
+            $this->getDoctorMenu($menuName);
+            
         }elseif(in_array('user', $roles)){
             $this->getUserMenu($menuName);
         }else{

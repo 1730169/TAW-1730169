@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-08-2020 a las 07:24:27
+-- Tiempo de generación: 04-08-2020 a las 07:53:44
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -42,7 +42,8 @@ CREATE TABLE `citas` (
 --
 
 INSERT INTO `citas` (`id`, `paciente_id`, `doctor_id`, `fecha_cita`, `motivo`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, '2020-07-18 19:00:00', 'REVISIÓN DE ESTUDIOS', '2020-07-16 10:59:36', '2020-07-16 11:43:36');
+(1, 3, 1, '2020-07-18 19:00:00', 'REVISIÓN DE ESTUDIOS', '2020-07-16 10:59:36', '2020-07-16 11:43:36'),
+(2, 3, 2, '2020-08-10 04:55:00', 'EXAMEN DE VISTA', '2020-08-04 12:51:23', '2020-08-04 12:51:23');
 
 -- --------------------------------------------------------
 
@@ -117,6 +118,7 @@ CREATE TABLE `doctores` (
   `especialidad` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cedula` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `consultorio` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -125,9 +127,9 @@ CREATE TABLE `doctores` (
 -- Volcado de datos para la tabla `doctores`
 --
 
-INSERT INTO `doctores` (`id`, `nombre`, `apellidos`, `direccion`, `telefono`, `fecha_nacimiento`, `titulo`, `especialidad`, `cedula`, `consultorio`, `created_at`, `updated_at`) VALUES
-(1, 'Dr. Asin', 'Cardiel', 'desconocida', '897987', '2020-07-15', 'CARDIOLOGÍA', 'CARDIOLOGÍA', '00000000000000', 'A-1', '2020-07-16 08:31:13', '2020-07-16 09:31:39'),
-(2, 'Dr. Rául', 'Villacorta', 'desconocida', '8312343', '1971-09-11', 'CIRUGÍA GENERAL', 'CIRUGÍA GENERAL', '0000000000000', 'A2', '2020-07-16 09:35:08', '2020-07-16 09:35:08');
+INSERT INTO `doctores` (`id`, `nombre`, `apellidos`, `direccion`, `telefono`, `fecha_nacimiento`, `titulo`, `especialidad`, `cedula`, `consultorio`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 'Dr. Asin', 'Cardiel', 'desconocida', '897987', '2020-07-15', 'CARDIOLOGÍA', 'CARDIOLOGÍA', '00000000000000', 'A-1', 12, '2020-07-16 08:31:13', '2020-08-04 05:27:46'),
+(2, 'Dr. Rául', 'Villacorta', 'desconocida', '8312343', '1971-09-11', 'CIRUGÍA GENERAL', 'CIRUGÍA GENERAL', '0000000000000', 'A2', 13, '2020-07-16 09:35:08', '2020-08-04 05:29:36');
 
 -- --------------------------------------------------------
 
@@ -389,11 +391,11 @@ INSERT INTO `menus` (`id`, `name`, `href`, `icon`, `slug`, `parent_id`, `menu_id
 (41, 'Alerts', '/notifications/alerts', NULL, 'link', 40, 1, 41),
 (42, 'Badge', '/notifications/badge', NULL, 'link', 40, 1, 42),
 (43, 'Modals', '/notifications/modals', NULL, 'link', 40, 1, 43),
-(53, 'Pages', '', '', 'dropdown', NULL, 2, 53),
+(53, 'Pages', NULL, NULL, 'dropdown', NULL, 2, 53),
 (54, 'Dashboard', '/', NULL, 'link', 53, 2, 54),
 (55, 'Notes', '/notes', NULL, 'link', 53, 2, 55),
 (56, 'Users', '/users', NULL, 'link', 53, 2, 56),
-(57, 'Settings', '', '', 'dropdown', NULL, 2, 57),
+(57, 'Settings', NULL, NULL, 'dropdown', NULL, 2, 57),
 (58, 'Edit menu', '/menu', NULL, 'link', 57, 2, 58),
 (59, 'Edit roles', '/roles', NULL, 'link', 57, 2, 59),
 (60, 'Media', '/media', NULL, 'link', 57, 2, 60),
@@ -439,70 +441,32 @@ CREATE TABLE `menu_role` (
 --
 
 INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
-(1, 'guest', 1),
-(2, 'user', 1),
-(3, 'admin', 1),
 (4, 'guest', 2),
-(22, 'user', 15),
 (23, 'admin', 15),
-(24, 'user', 16),
 (25, 'admin', 16),
-(26, 'user', 17),
 (27, 'admin', 17),
-(28, 'user', 18),
 (29, 'admin', 18),
-(30, 'user', 19),
 (31, 'admin', 19),
-(32, 'user', 20),
 (33, 'admin', 20),
-(34, 'user', 21),
 (35, 'admin', 21),
-(36, 'user', 22),
 (37, 'admin', 22),
-(38, 'user', 23),
 (39, 'admin', 23),
-(40, 'user', 24),
 (41, 'admin', 24),
-(42, 'user', 25),
 (43, 'admin', 25),
-(44, 'user', 26),
 (45, 'admin', 26),
-(46, 'user', 27),
 (47, 'admin', 27),
-(48, 'user', 28),
 (49, 'admin', 28),
-(50, 'user', 29),
 (51, 'admin', 29),
-(54, 'user', 31),
 (55, 'admin', 31),
-(56, 'user', 32),
 (57, 'admin', 32),
-(58, 'user', 33),
 (59, 'admin', 33),
-(60, 'user', 34),
 (61, 'admin', 34),
-(66, 'user', 37),
 (67, 'admin', 37),
-(68, 'user', 38),
 (69, 'admin', 38),
-(70, 'user', 39),
 (71, 'admin', 39),
-(74, 'user', 41),
 (75, 'admin', 41),
-(76, 'user', 42),
 (77, 'admin', 42),
-(78, 'user', 43),
 (79, 'admin', 43),
-(100, 'guest', 53),
-(101, 'user', 53),
-(102, 'admin', 53),
-(103, 'guest', 54),
-(104, 'user', 54),
-(105, 'admin', 54),
-(106, 'user', 55),
-(107, 'admin', 55),
-(108, 'admin', 56),
-(109, 'admin', 57),
 (110, 'admin', 58),
 (111, 'admin', 59),
 (112, 'admin', 60),
@@ -512,51 +476,53 @@ INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
 (116, 'admin', 64),
 (117, 'admin', 65),
 (118, 'admin', 66),
-(119, 'user', 66),
-(134, 'admin', 74),
-(135, 'user', 74),
-(138, 'user', 76),
-(139, 'admin', 76),
-(140, 'user', 77),
-(141, 'admin', 77),
-(142, 'user', 78),
-(143, 'admin', 78),
-(144, 'admin', 75),
-(145, 'user', 75),
-(146, 'admin', 67),
-(147, 'user', 67),
-(148, 'admin', 79),
-(149, 'user', 79),
-(150, 'admin', 80),
-(151, 'user', 80),
-(152, 'admin', 81),
-(153, 'user', 81),
-(157, 'admin', 6),
-(158, 'user', 6),
-(163, 'admin', 3),
-(164, 'user', 3),
-(165, 'guest', 3),
-(166, 'admin', 82),
-(167, 'user', 82),
-(168, 'admin', 83),
-(169, 'user', 83),
-(170, 'user', 84),
-(171, 'admin', 84),
-(172, 'user', 85),
-(173, 'admin', 85),
-(174, 'doctor', 86),
-(175, 'admin', 86),
-(176, 'user', 86),
-(177, 'admin', 87),
-(178, 'doctor', 87),
-(179, 'user', 87),
-(180, 'admin', 88),
-(181, 'doctor', 88),
-(182, 'user', 88),
-(183, 'admin', 89),
-(184, 'user', 89),
-(185, 'user', 90),
-(186, 'admin', 90);
+(195, 'admin', 6),
+(196, 'admin', 76),
+(197, 'admin', 89),
+(198, 'secretaria', 89),
+(199, 'admin', 86),
+(200, 'doctor', 86),
+(204, 'admin', 67),
+(205, 'doctor', 67),
+(206, 'secretaria', 67),
+(207, 'admin', 75),
+(208, 'doctor', 75),
+(209, 'secretaria', 75),
+(210, 'admin', 74),
+(211, 'doctor', 74),
+(212, 'secretaria', 74),
+(214, 'admin', 3),
+(215, 'admin', 82),
+(222, 'admin', 77),
+(223, 'admin', 78),
+(227, 'admin', 79),
+(228, 'doctor', 79),
+(229, 'secretaria', 79),
+(230, 'admin', 81),
+(231, 'doctor', 81),
+(232, 'secretaria', 81),
+(233, 'admin', 83),
+(234, 'doctor', 83),
+(235, 'admin', 84),
+(236, 'doctor', 84),
+(237, 'admin', 85),
+(238, 'doctor', 85),
+(239, 'admin', 87),
+(240, 'doctor', 87),
+(241, 'admin', 88),
+(242, 'doctor', 88),
+(243, 'admin', 90),
+(244, 'secretaria', 90),
+(245, 'admin', 53),
+(246, 'admin', 54),
+(247, 'admin', 55),
+(248, 'admin', 56),
+(249, 'admin', 57),
+(250, 'admin', 1),
+(251, 'guest', 1),
+(252, 'secretaria', 1),
+(253, 'admin', 80),
+(254, 'secretaria', 80);
 
 -- --------------------------------------------------------
 
@@ -876,7 +842,8 @@ INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VAL
 (1, 'admin', 'api', '2020-07-12 21:13:03', '2020-07-12 21:13:03'),
 (2, 'user', 'api', '2020-07-12 21:13:04', '2020-07-12 21:13:04'),
 (3, 'guest', 'api', '2020-07-12 21:13:04', '2020-07-12 21:13:04'),
-(4, 'doctor', 'api', '2020-08-02 10:31:31', '2020-08-02 10:32:05');
+(4, 'doctor', 'api', '2020-08-02 10:31:31', '2020-08-02 10:32:05'),
+(5, 'secretaria', 'api', '2020-08-04 05:31:04', '2020-08-04 05:31:04');
 
 -- --------------------------------------------------------
 
@@ -919,8 +886,9 @@ CREATE TABLE `role_hierarchy` (
 INSERT INTO `role_hierarchy` (`id`, `role_id`, `hierarchy`) VALUES
 (1, 1, 1),
 (2, 2, 2),
-(3, 3, 3),
-(4, 4, 4);
+(3, 3, 5),
+(4, 4, 3),
+(5, 5, 4);
 
 -- --------------------------------------------------------
 
@@ -1017,17 +985,20 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `api_token`, `menuroles`, `status`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'admin', 'admin@admin.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user,admin', 'Active', 'VajmfgZr8U', '2020-07-12 21:13:04', '2020-07-12 21:13:04', NULL),
-(2, 'Melyssa Howell', 'felicia31@example.org', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'gvGnY0NbLn', '2020-07-12 21:13:04', '2020-07-12 21:13:04', NULL),
-(3, 'Miss Bethel Davis Jr.', 'yschoen@example.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'fG0c6f2QgW', '2020-07-12 21:13:04', '2020-07-12 21:13:04', NULL),
-(4, 'Talia Muller PhD', 'hilbert54@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', '6SPpLXHPUJ', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
-(5, 'Nigel Frami Sr.', 'filomena45@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Active', '7Mo8v0P7gX', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
-(6, 'Niko Vandervort', 'klocko.ima@example.net', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'UozRCiVJLB', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
-(7, 'Kara Bode II', 'sheila.howe@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'fWo04wtae4', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
-(8, 'Jerry Koelpin', 'steuber.isabel@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Active', '0ZDFn4EDee', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
-(9, 'Maybell Legros', 'cielo11@example.org', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'bFU30rUV4y', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
-(10, 'Arlene Nienow', 'pstark@example.net', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', 'GGrInGkLNF', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL),
-(11, 'Prof. Adrien Parisian I', 'zoie61@example.org', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', 'S3lI2zX7p1', '2020-07-12 21:13:05', '2020-07-12 21:13:05', NULL);
+(1, 'admin', 'admin@admin.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user,admin,doctor', 'Active', 'VajmfgZr8U', '2020-07-12 21:13:04', '2020-07-12 21:13:04', NULL),
+(2, 'Melyssa Howell', 'felicia31@example.org', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'gvGnY0NbLn', '2020-07-12 21:13:04', '2020-08-04 02:27:37', '2020-08-04 02:27:37'),
+(3, 'Miss Bethel Davis Jr.', 'yschoen@example.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'fG0c6f2QgW', '2020-07-12 21:13:04', '2020-08-04 02:27:36', '2020-08-04 02:27:36'),
+(4, 'Talia Muller PhD', 'hilbert54@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', '6SPpLXHPUJ', '2020-07-12 21:13:05', '2020-08-04 02:27:29', '2020-08-04 02:27:29'),
+(5, 'Nigel Frami Sr.', 'filomena45@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Active', '7Mo8v0P7gX', '2020-07-12 21:13:05', '2020-08-04 02:27:23', '2020-08-04 02:27:23'),
+(6, 'Niko Vandervort', 'klocko.ima@example.net', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'UozRCiVJLB', '2020-07-12 21:13:05', '2020-08-04 02:27:27', '2020-08-04 02:27:27'),
+(7, 'Kara Bode II', 'sheila.howe@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', 'fWo04wtae4', '2020-07-12 21:13:05', '2020-08-04 02:27:30', '2020-08-04 02:27:30'),
+(8, 'Jerry Koelpin', 'steuber.isabel@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Active', '0ZDFn4EDee', '2020-07-12 21:13:05', '2020-08-04 02:27:31', '2020-08-04 02:27:31'),
+(9, 'Maybell Legros', 'cielo11@example.org', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'bFU30rUV4y', '2020-07-12 21:13:05', '2020-08-04 02:27:32', '2020-08-04 02:27:32'),
+(10, 'Arlene Nienow', 'pstark@example.net', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', 'GGrInGkLNF', '2020-07-12 21:13:05', '2020-08-04 02:27:34', '2020-08-04 02:27:34'),
+(11, 'Prof. Adrien Parisian I', 'zoie61@example.org', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Banned', 'S3lI2zX7p1', '2020-07-12 21:13:05', '2020-08-04 02:27:35', '2020-08-04 02:27:35'),
+(12, 'doctor1', 'doctor1@doctor.com', NULL, '$2y$10$Y8ornJurM912hdwq4Rpe9.t0CKJ2XA6e6Az53srS7HdJdLsR4zfYm', NULL, 'doctor', 'Active', NULL, '2020-08-04 02:26:21', '2020-08-04 02:38:21', NULL),
+(13, 'doctor2', 'doctor2@doctor.com', NULL, '$2y$10$1Q6YxkSX6HEQXWMGeT5fweniX4wHcgeARqZT5hPizDH9mALhCefHO', NULL, 'doctor', 'Active', NULL, '2020-08-04 05:21:01', '2020-08-04 05:45:53', NULL),
+(14, 'secretaria1', 'secretaria@secre.com', NULL, '$2y$10$SUb.CL1JNxE37C9n0zvYXObMuxIrpMceOe3tlkUtYvZF41Ng/29fa', NULL, 'secretaria', 'Active', NULL, '2020-08-04 05:32:04', '2020-08-04 05:43:55', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -1227,7 +1198,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `compartirs`
@@ -1311,7 +1282,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT de la tabla `menu_role`
 --
 ALTER TABLE `menu_role`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=187;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=255;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1347,13 +1318,13 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `role_hierarchy`
 --
 ALTER TABLE `role_hierarchy`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `servicioconsultas`
@@ -1377,7 +1348,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas

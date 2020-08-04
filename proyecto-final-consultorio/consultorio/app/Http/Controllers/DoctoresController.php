@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Doctores;
+//use App\User;
+use DB;
 
 class DoctoresController extends Controller
 {
@@ -12,6 +14,17 @@ class DoctoresController extends Controller
     
     public function list(Request $request){
       return Doctores::get();
+    }
+
+    public function getUsuariosDoctor(Request $request){
+      // OBTENER LOS USUARIOS CON ROL DOCTOR ASIGNADO
+      $query = DB::table('users')
+          ->select('id','name','email')
+          ->where('menuroles', 'LIKE','%doctor%')->get();
+      
+      return $query;
+      //return User::get();
+      //return "Hola";
     }
     
     public function create(Request $request){

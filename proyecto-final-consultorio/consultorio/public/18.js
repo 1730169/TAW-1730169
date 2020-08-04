@@ -1,17 +1,17 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[18],{
 
-/***/ "../coreui/src/views/doctores/Doctores.vue":
-/*!*************************************************!*\
-  !*** ../coreui/src/views/doctores/Doctores.vue ***!
-  \*************************************************/
+/***/ "../coreui/src/views/consultas/Consultas.vue":
+/*!***************************************************!*\
+  !*** ../coreui/src/views/consultas/Consultas.vue ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Doctores_vue_vue_type_template_id_de39c756_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Doctores.vue?vue&type=template&id=de39c756&scoped=true& */ "../coreui/src/views/doctores/Doctores.vue?vue&type=template&id=de39c756&scoped=true&");
-/* harmony import */ var _Doctores_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Doctores.vue?vue&type=script&lang=js& */ "../coreui/src/views/doctores/Doctores.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _Doctores_vue_vue_type_style_index_0_id_de39c756_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css& */ "../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css&");
+/* harmony import */ var _Consultas_vue_vue_type_template_id_79d96f33_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Consultas.vue?vue&type=template&id=79d96f33&scoped=true& */ "../coreui/src/views/consultas/Consultas.vue?vue&type=template&id=79d96f33&scoped=true&");
+/* harmony import */ var _Consultas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Consultas.vue?vue&type=script&lang=js& */ "../coreui/src/views/consultas/Consultas.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Consultas_vue_vue_type_style_index_0_id_79d96f33_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css& */ "../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css&");
 /* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -22,75 +22,75 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _Doctores_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Doctores_vue_vue_type_template_id_de39c756_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Doctores_vue_vue_type_template_id_de39c756_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Consultas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Consultas_vue_vue_type_template_id_79d96f33_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Consultas_vue_vue_type_template_id_79d96f33_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "de39c756",
+  "79d96f33",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/doctores/Doctores.vue"
+component.options.__file = "coreui/src/views/consultas/Consultas.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/Doctores.vue?vue&type=script&lang=js&":
-/*!**************************************************************************!*\
-  !*** ../coreui/src/views/doctores/Doctores.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************/
+/***/ "../coreui/src/views/consultas/Consultas.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ../coreui/src/views/consultas/Consultas.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Doctores.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/Doctores.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Consultas.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/Consultas.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css&":
-/*!**********************************************************************************************************!*\
-  !*** ../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css& ***!
-  \**********************************************************************************************************/
+/***/ "../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css&":
+/*!************************************************************************************************************!*\
+  !*** ../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css& ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_style_index_0_id_de39c756_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/style-loader!../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css&");
-/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_style_index_0_id_de39c756_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_style_index_0_id_de39c756_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_style_index_0_id_de39c756_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_style_index_0_id_de39c756_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_style_index_0_id_de39c756_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_style_index_0_id_79d96f33_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/style-loader!../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css&");
+/* harmony import */ var _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_style_index_0_id_79d96f33_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_style_index_0_id_79d96f33_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_style_index_0_id_79d96f33_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_style_index_0_id_79d96f33_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_style_loader_index_js_consultorio_node_modules_css_loader_index_js_ref_6_1_consultorio_node_modules_vue_loader_lib_loaders_stylePostLoader_js_consultorio_node_modules_postcss_loader_src_index_js_ref_6_2_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_style_index_0_id_79d96f33_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/Doctores.vue?vue&type=template&id=de39c756&scoped=true&":
-/*!********************************************************************************************!*\
-  !*** ../coreui/src/views/doctores/Doctores.vue?vue&type=template&id=de39c756&scoped=true& ***!
-  \********************************************************************************************/
+/***/ "../coreui/src/views/consultas/Consultas.vue?vue&type=template&id=79d96f33&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ../coreui/src/views/consultas/Consultas.vue?vue&type=template&id=79d96f33&scoped=true& ***!
+  \**********************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_template_id_de39c756_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Doctores.vue?vue&type=template&id=de39c756&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/Doctores.vue?vue&type=template&id=de39c756&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_template_id_de39c756_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_template_id_79d96f33_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Consultas.vue?vue&type=template&id=79d96f33&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/Consultas.vue?vue&type=template&id=79d96f33&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_template_id_79d96f33_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Doctores_vue_vue_type_template_id_de39c756_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_Consultas_vue_vue_type_template_id_79d96f33_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/Doctores.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/Doctores.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/Consultas.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/consultas/Consultas.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -159,12 +159,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Doctores',
+  name: 'Consultas',
   data: function data() {
     return {
       items: [],
@@ -182,7 +179,7 @@ __webpack_require__.r(__webpack_exports__);
         {key: 'delete'}
       ],
       */
-      fields: ['nombre', 'apellidos', 'telefono', 'titulo', 'especialidad', 'editar', 'eliminar'],
+      fields: ['fecha', 'doctor', 'paciente', 'diagnostico', 'cobrar', 'eliminar'],
       currentPage: 1,
       perPage: 5,
       totalRows: 0,
@@ -200,39 +197,39 @@ __webpack_require__.r(__webpack_exports__);
       return items.length;
     },
     pacienteLink: function pacienteLink(id) {
-      return "doctores/".concat(id.toString());
+      return "consultas/".concat(id.toString());
     },
-    editLink: function editLink(id) {
-      return "doctores/".concat(id.toString(), "/editar");
+    cobrarLink: function cobrarLink(id) {
+      return "consultas/".concat(id.toString(), "/cobrar");
     },
-    verDoctor: function verDoctor(id) {
+    verConsulta: function verConsulta(id) {
       var pacienteLink = this.pacienteLink(id);
       this.$router.push({
         path: pacienteLink
       });
     },
-    editarDoctor: function editarDoctor(id) {
-      var editLink = this.editLink(id);
+    cobrarConsulta: function cobrarConsulta(id) {
+      var cobrarLink = this.cobrarLink(id);
       this.$router.push({
-        path: editLink
+        path: cobrarLink
       });
     },
-    eliminarDoctor: function eliminarDoctor(id) {
+    eliminarConsulta: function eliminarConsulta(id) {
       var self = this;
       var pacienteId = id;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/doctores/' + id, {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/consultas/' + id, {
         _method: 'DELETE'
       }).then(function (response) {
-        self.message = 'Doctor eliminado con éxito.';
+        self.message = 'Consulta eliminada con éxito.';
         self.verAlert();
-        self.getDoctores();
+        self.getConsultas();
       })["catch"](function (error) {
         console.log(error); //self.$router.push({ path: '/login' });
       });
     },
-    registrarDoctor: function registrarDoctor() {
+    registrarConsulta: function registrarConsulta() {
       this.$router.push({
-        path: '/doctores/registrar'
+        path: '/consultas/registrar'
       });
     },
     countDownChanged: function countDownChanged(dismissCountDown) {
@@ -241,9 +238,9 @@ __webpack_require__.r(__webpack_exports__);
     verAlert: function verAlert() {
       this.dismissCountDown = this.dismissSecs;
     },
-    getDoctores: function getDoctores() {
+    getConsultas: function getConsultas() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/doctores').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/consultas').then(function (response) {
         self.items = response.data;
       })["catch"](function (error) {
         console.log(error); //self.$router.push({ path: '/login' });
@@ -251,16 +248,16 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    this.getDoctores();
+    this.getConsultas();
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css&":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -269,22 +266,22 @@ exports = module.exports = __webpack_require__(/*! ../../../../consultorio/node_
 
 
 // module
-exports.push([module.i, "\n.card-body[data-v-de39c756] table > tbody > tr > td {\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.card-body[data-v-79d96f33] table > tbody > tr > td {\n  cursor: pointer;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/Doctores.vue?vue&type=style&index=0&id=de39c756&scoped=true&lang=css&");
+var content = __webpack_require__(/*! !../../../../consultorio/node_modules/css-loader??ref--6-1!../../../../consultorio/node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../consultorio/node_modules/postcss-loader/src??ref--6-2!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/Consultas.vue?vue&type=style&index=0&id=79d96f33&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -306,10 +303,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/Doctores.vue?vue&type=template&id=de39c756&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/Doctores.vue?vue&type=template&id=de39c756&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/Consultas.vue?vue&type=template&id=79d96f33&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/consultas/Consultas.vue?vue&type=template&id=79d96f33&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -344,11 +341,11 @@ var render = function() {
                           attrs: { color: "primary" },
                           on: {
                             click: function($event) {
-                              return _vm.registrarDoctor()
+                              return _vm.registrarConsulta()
                             }
                           }
                         },
-                        [_vm._v("Registrar Doctor")]
+                        [_vm._v("Registrar Consulta")]
                       ),
                       _vm._v(" "),
                       _c("br"),
@@ -365,36 +362,36 @@ var render = function() {
                         },
                         scopedSlots: _vm._u([
                           {
-                            key: "nombre",
+                            key: "fecha",
                             fn: function(ref) {
                               var item = ref.item
                               return [
                                 _c("td", [
-                                  _c("strong", [_vm._v(_vm._s(item.nombre))])
+                                  _c("strong", [_vm._v(_vm._s(item.fecha))])
                                 ])
                               ]
                             }
                           },
                           {
-                            key: "apellidos",
+                            key: "doctor",
                             fn: function(ref) {
                               var item = ref.item
                               return [
                                 _c("td", [
-                                  _c("strong", [_vm._v(_vm._s(item.apellidos))])
+                                  _c("strong", [_vm._v(_vm._s(item.doctor))])
                                 ])
                               ]
                             }
                           },
                           {
-                            key: "telefono",
+                            key: "paciente",
                             fn: function(ref) {
                               var item = ref.item
                               return [
                                 _c("td", [
                                   _vm._v(
                                     "\n                " +
-                                      _vm._s(item.telefono) +
+                                      _vm._s(item.paciente) +
                                       "\n              "
                                   )
                                 ])
@@ -402,14 +399,14 @@ var render = function() {
                             }
                           },
                           {
-                            key: "titulo",
+                            key: "diagnostico",
                             fn: function(ref) {
                               var item = ref.item
                               return [
                                 _c("td", [
                                   _vm._v(
                                     "\n                " +
-                                      _vm._s(item.titulo) +
+                                      _vm._s(item.diagnostico) +
                                       "\n              "
                                   )
                                 ])
@@ -417,22 +414,7 @@ var render = function() {
                             }
                           },
                           {
-                            key: "especialidad",
-                            fn: function(ref) {
-                              var item = ref.item
-                              return [
-                                _c("td", [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(item.especialidad) +
-                                      "\n              "
-                                  )
-                                ])
-                              ]
-                            }
-                          },
-                          {
-                            key: "editar",
+                            key: "cobrar",
                             fn: function(ref) {
                               var item = ref.item
                               return [
@@ -442,14 +424,14 @@ var render = function() {
                                     _c(
                                       "CButton",
                                       {
-                                        attrs: { color: "primary" },
+                                        attrs: { color: "success" },
                                         on: {
                                           click: function($event) {
-                                            return _vm.editarDoctor(item.id)
+                                            return _vm.cobrarConsulta(item.id)
                                           }
                                         }
                                       },
-                                      [_vm._v("Editar")]
+                                      [_vm._v("Cobrar")]
                                     )
                                   ],
                                   1
@@ -471,7 +453,7 @@ var render = function() {
                                         attrs: { color: "danger" },
                                         on: {
                                           click: function($event) {
-                                            return _vm.eliminarDoctor(item.id)
+                                            return _vm.eliminarConsulta(item.id)
                                           }
                                         }
                                       },

@@ -25,6 +25,9 @@ class CreateDoctorTable extends Migration
             $table->string('cedula');
             $table->string('consultorio');
 
+            $table->foreignId('user_id');
+
+
             $table->timestamps();
         });
     }

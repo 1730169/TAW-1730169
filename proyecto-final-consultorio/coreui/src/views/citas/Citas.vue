@@ -50,18 +50,39 @@
                 </td>
               </template>
             </CDataTable>
+
+            <br><br><br>
+            <FullCalendar :options="calendarOptions"  :plugins="calendarPlugins" :events="events" />      
+            
         </CCardBody>  
       </CCard>
+
+      
+
       </transition>
     </CCol>
+
   </CRow>
+
+  
 </template>
 
 <script>
+var eventos;
+eventos = [];
+
 import axios from 'axios'
 
+import FullCalendar from '@fullcalendar/vue'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
+import timeGridPlugin from '@fullcalendar/timegrid'
+
 export default {
-  name: 'Citaes',
+  name: 'Citas',
+  components: {
+    FullCalendar // make the <FullCalendar> tag available
+  },
   data: () => {
     return {
       items: [],
@@ -78,6 +99,17 @@ export default {
         {key: 'delete'}
       ],
       */
+      calendarPlugins: [dayGridPlugin, interactionPlugin, timeGridPlugin],
+      calendarOptions: {
+        plugins: [ dayGridPlugin, interactionPlugin, timeGridPlugin],
+        //initialView: 'dayGridMonth'
+        //dateClick: this.handleDateClick,
+        events: [
+          { title: 'event 1', start: '2019-04-01' },
+          { title: 'event 2', start: '2019-04-02' }
+        ] 
+      },
+      events: [],
       fields: ['fecha_cita', 'doctor', 'paciente', 'motivo', 'editar', 'eliminar'],
       currentPage: 1,
       perPage: 5,
@@ -89,6 +121,9 @@ export default {
       dismissCountDown: 0,
       verDismissibleAlert: false
     }
+  },
+  created(){
+    this.getCitas();
   },
   computed: {
   },
@@ -136,14 +171,63 @@ export default {
     },
     getCitas (){
       let self = this;
+      
       axios.get(  '/api/citas' )
       .then(function (response) {
         self.items = response.data;
+
+        var eventos = [];
+
+        // Recorrer la lista de pacientes
+      for(var i=0; i<response.data.length; i++){
+        // tomar paciente
+        var cita = response.data[i];
+        // agregar opcion en formato
+        var fecha = cita.fecha_cita;
+        var fecha_split = fecha.split(" ")[0];
+        eventos.push({
+          title: "-CITA- Paciente: "+cita.paciente +" Doctor: "+ cita.doctor,
+          start: fecha_split,
+          url: ""
+        });
+        
+        /*
+        var opciones = {
+          plugins: [ dayGridPlugin, interactionPlugin, timeGridPlugin],
+          initialView: 'dayGridMonth',
+          //dateClick: this.handleDateClick,
+          events: eventos
+        };
+        let self = this;
+
+        
+        self.calendarOptions.events = eventos;
+        */
+       
+        //return opciones;
+      }
+
+      console.log("EVENTOS ............................");
+      console.dir(eventos);
+      self.events = eventos;
+      self.calendarOptions.events = eventos;
+        
+        
+
+
       }).catch(function (error) {
         console.log(error);
         //self.$router.push({ path: '/login' });
       });
-    }
+      
+    },
+
+    /*
+    handleDateClick: function(arg) {
+      alert('date click! ' + arg.dateStr)
+    }*/
+
+
   },
   mounted: function(){
     this.getCitas();
@@ -156,3 +240,26 @@ export default {
   cursor: pointer;
 }
 </style>
+
+
+<!--
+<script>
+  $(document).ready(function() {
+      // page is now ready, initialize the calendar...
+      $('#calendar').fullCalendar({
+          // put your options and callbacks here
+          events : [
+              @foreach($tasks as $task)
+              {
+                  title : '{{ $task->name }}',
+                  start : '{{ $task->task_date }}',
+                  url : '{{ route('tasks.edit', $task->id) }}'
+              },
+              @endforeach
+          ]
+      })
+  });
+</script>
+-->
+
+
