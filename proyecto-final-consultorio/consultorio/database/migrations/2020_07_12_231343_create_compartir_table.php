@@ -15,7 +15,7 @@ class CreateCompartirTable extends Migration
     {
         Schema::create('compartirs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('paciente_id');
+            $table->foreignId('consulta_id');
             $table->foreignId('doctor_afiliado_id');
             
             

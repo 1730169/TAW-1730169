@@ -5,19 +5,78 @@ use Illuminate\Http\Request;
 use App\Consultas;
 use App\Servicioconsultas;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 class ConsultasController extends Controller
 {
+  
     public function get(Request $request, $id){
       return Consultas::findOrFail($id);
     }
     
     public function list(Request $request){
-      $query = DB::table('consultas')
+      // OBTENER EL ID DEL DOCTOR QUE TIENE SESION ACTIVA
+      $usuario = auth()->user();
+      $user_id = $usuario->id;
+
+      // EVALUAR EL ROL QUE POSEE
+      $roles = $usuario->menuroles;
+
+      $query ="";
+
+      // SI EL USUARIO ES UN DOCTOR
+      if (strpos($roles, 'doctor') !== false) {
+        error_log("ENTRA 1...............");
+        
+        $doctor_id = DB::table('doctores')->select('id')->where('user_id','=',"".$user_id)->first();
+
+        $query = DB::table('consultas')
+            ->join('doctores', 'doctores.id', '=', 'consultas.doctor_id')
+            ->join('pacientes', 'pacientes.id', '=', 'consultas.paciente_id')
+            ->select('consultas.*', 'consultas.created_at AS fecha',DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor"), DB::raw("CONCAT(pacientes.nombre,' ',pacientes.apellidos) AS paciente"))
+            ->where('consultas.doctor_id','=',$doctor_id->id)
+            ->orderBy('created_at', 'desc')->get();
+        /*
+        SELECT consultas.* FROM `consultas`
+          INNER JOIN compartirs ON compartirs.consulta_id = consultas.id
+        WHERE compartirs.doctor_afiliado_id = 1
+        */
+        $queryCompartidos = DB::table('consultas')
+        ->join('doctores', 'doctores.id', '=', 'consultas.doctor_id')
+        ->join('pacientes', 'pacientes.id', '=', 'consultas.paciente_id')
+        ->join('compartirs', 'compartirs.consulta_id', '=', 'consultas.id')
+        ->select('consultas.*', 'consultas.created_at AS fecha',DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor"), DB::raw("CONCAT(pacientes.nombre,' ',pacientes.apellidos) AS paciente"))
+        ->where('compartirs.doctor_afiliado_id','=',$doctor_id->id)
+        ->orderBy('consultas.created_at', 'desc')->get();
+
+
+        foreach($queryCompartidos as $comp) {
+          $query->add($comp);
+        }
+
+
+        return $query;
+
+      }else if (strpos($roles, 'admin') !== false){
+        error_log("ENTRA 2 ...............");
+        $query = DB::table('consultas')
             ->join('doctores', 'doctores.id', '=', 'consultas.doctor_id')
             ->join('pacientes', 'pacientes.id', '=', 'consultas.paciente_id')
             ->select('consultas.*', 'consultas.created_at AS fecha',DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor"), DB::raw("CONCAT(pacientes.nombre,' ',pacientes.apellidos) AS paciente"))
             ->orderBy('created_at', 'desc')->get();
+        
+        return $query;
+      }else{
+        error_log("ENTRA 3 ...............");
+        $query = DB::table('consultas')
+            ->join('doctores', 'doctores.id', '=', 'consultas.doctor_id')
+            ->join('pacientes', 'pacientes.id', '=', 'consultas.paciente_id')
+            ->select('consultas.*', 'consultas.created_at AS fecha',DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor"), DB::raw("CONCAT(pacientes.nombre,' ',pacientes.apellidos) AS paciente"))
+            ->orderBy('created_at', 'desc')->get();
+        
+        return $query;
+      }
+      
       //return Consultas::get();
       return $query;
     }
@@ -131,5 +190,7 @@ class ConsultasController extends Controller
         $consultas = Consultas::findOrFail($id);
         $consultas->delete();
     }
+
+
 }
  ?>

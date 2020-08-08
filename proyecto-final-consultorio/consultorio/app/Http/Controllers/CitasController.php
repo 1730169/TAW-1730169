@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Citas;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 class CitasController extends Controller
 {
@@ -13,14 +14,49 @@ class CitasController extends Controller
     }
     
     public function list(Request $request){
-      $query = DB::table('citas')
+      // OBTENER EL ID DEL DOCTOR QUE TIENE SESION ACTIVA
+      $usuario = auth()->user();
+      $user_id = $usuario->id;
+
+      // EVALUAR EL ROL QUE POSEE
+      $roles = $usuario->menuroles;
+
+      $query ="";
+
+      // SI EL USUARIO ES UN DOCTOR
+      if (strpos($roles, 'doctor') !== false) {
+        
+        $doctor_id = DB::table('doctores')->select('id')->where('user_id','=',"".$user_id)->first();
+
+        $query = DB::table('citas')
+          ->join('doctores', 'doctores.id', '=', 'citas.doctor_id')
+          ->join('pacientes', 'pacientes.id', '=', 'citas.paciente_id')
+          ->select('citas.*', DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor"), DB::raw("CONCAT(pacientes.nombre,' ',pacientes.apellidos) AS paciente"))
+          ->where('citas.doctor_id','=',$doctor_id->id)
+          ->orderBy('fecha_cita', 'desc')->get();
+
+        return $query;
+
+      }else if (strpos($roles, 'admin') !== false){
+        
+        $query = DB::table('citas')
+          ->join('doctores', 'doctores.id', '=', 'citas.doctor_id')
+          ->join('pacientes', 'pacientes.id', '=', 'citas.paciente_id')
+          ->select('citas.*', DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor"), DB::raw("CONCAT(pacientes.nombre,' ',pacientes.apellidos) AS paciente"))
+          ->orderBy('fecha_cita', 'desc')->get();
+        
+        return $query;
+      }else{
+        $query = DB::table('citas')
             ->join('doctores', 'doctores.id', '=', 'citas.doctor_id')
             ->join('pacientes', 'pacientes.id', '=', 'citas.paciente_id')
             ->select('citas.*', DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor"), DB::raw("CONCAT(pacientes.nombre,' ',pacientes.apellidos) AS paciente"))
             ->orderBy('fecha_cita', 'desc')->get();
+        
+        return $query;
+      }
 
-      //return Citas::make($query);
-      //return Citas::get();
+
       return $query;
     }
     

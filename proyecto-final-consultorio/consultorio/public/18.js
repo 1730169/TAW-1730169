@@ -159,6 +159,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Consultas',
@@ -179,7 +185,7 @@ __webpack_require__.r(__webpack_exports__);
         {key: 'delete'}
       ],
       */
-      fields: ['fecha', 'doctor', 'paciente', 'diagnostico', 'cobrar', 'eliminar'],
+      fields: ['fecha', 'doctor', 'paciente', 'diagnostico', 'cobrar', 'compartir', 'eliminar'],
       currentPage: 1,
       perPage: 5,
       totalRows: 0,
@@ -202,6 +208,9 @@ __webpack_require__.r(__webpack_exports__);
     cobrarLink: function cobrarLink(id) {
       return "consultas/".concat(id.toString(), "/cobrar");
     },
+    compartirLink: function compartirLink(id) {
+      return "compartirs/".concat(id.toString(), "/registrar");
+    },
     verConsulta: function verConsulta(id) {
       var pacienteLink = this.pacienteLink(id);
       this.$router.push({
@@ -212,6 +221,12 @@ __webpack_require__.r(__webpack_exports__);
       var cobrarLink = this.cobrarLink(id);
       this.$router.push({
         path: cobrarLink
+      });
+    },
+    compartirConsulta: function compartirConsulta(id) {
+      var compartirLink = this.compartirLink(id);
+      this.$router.push({
+        path: compartirLink
       });
     },
     eliminarConsulta: function eliminarConsulta(id) {
@@ -240,7 +255,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     getConsultas: function getConsultas() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/consultas').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/consultas?token=' + localStorage.getItem("api_token")).then(function (response) {
         self.items = response.data;
       })["catch"](function (error) {
         console.log(error); //self.$router.push({ path: '/login' });
@@ -432,6 +447,34 @@ var render = function() {
                                         }
                                       },
                                       [_vm._v("Cobrar")]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]
+                            }
+                          },
+                          {
+                            key: "compartir",
+                            fn: function(ref) {
+                              var item = ref.item
+                              return [
+                                _c(
+                                  "td",
+                                  [
+                                    _c(
+                                      "CButton",
+                                      {
+                                        attrs: { color: "warning" },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.compartirConsulta(
+                                              item.id
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Compartir")]
                                     )
                                   ],
                                   1

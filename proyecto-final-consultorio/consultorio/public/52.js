@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[52],{
 
-/***/ "../coreui/src/views/doctores/CrearDoctor.vue":
-/*!****************************************************!*\
-  !*** ../coreui/src/views/doctores/CrearDoctor.vue ***!
-  \****************************************************/
+/***/ "../coreui/src/views/consultas/EditarConsulta.vue":
+/*!********************************************************!*\
+  !*** ../coreui/src/views/consultas/EditarConsulta.vue ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CrearDoctor.vue?vue&type=template&id=56ee5024& */ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&");
-/* harmony import */ var _CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CrearDoctor.vue?vue&type=script&lang=js& */ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&");
+/* harmony import */ var _EditarConsulta_vue_vue_type_template_id_33e3ad0b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditarConsulta.vue?vue&type=template&id=33e3ad0b& */ "../coreui/src/views/consultas/EditarConsulta.vue?vue&type=template&id=33e3ad0b&");
+/* harmony import */ var _EditarConsulta_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditarConsulta.vue?vue&type=script&lang=js& */ "../coreui/src/views/consultas/EditarConsulta.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _EditarConsulta_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EditarConsulta_vue_vue_type_template_id_33e3ad0b___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EditarConsulta_vue_vue_type_template_id_33e3ad0b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,47 +32,47 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/doctores/CrearDoctor.vue"
+component.options.__file = "coreui/src/views/consultas/EditarConsulta.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************!*\
-  !*** ../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************/
+/***/ "../coreui/src/views/consultas/EditarConsulta.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ../coreui/src/views/consultas/EditarConsulta.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CrearDoctor.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarConsulta_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditarConsulta.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/EditarConsulta.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarConsulta_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&":
-/*!***********************************************************************************!*\
-  !*** ../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024& ***!
-  \***********************************************************************************/
+/***/ "../coreui/src/views/consultas/EditarConsulta.vue?vue&type=template&id=33e3ad0b&":
+/*!***************************************************************************************!*\
+  !*** ../coreui/src/views/consultas/EditarConsulta.vue?vue&type=template&id=33e3ad0b& ***!
+  \***************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CrearDoctor.vue?vue&type=template&id=56ee5024& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarConsulta_vue_vue_type_template_id_33e3ad0b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditarConsulta.vue?vue&type=template&id=33e3ad0b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/EditarConsulta.vue?vue&type=template&id=33e3ad0b&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarConsulta_vue_vue_type_template_id_33e3ad0b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarConsulta_vue_vue_type_template_id_33e3ad0b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/EditarConsulta.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/consultas/EditarConsulta.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80,6 +80,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "../coreui/node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
 //
 //
 //
@@ -136,47 +137,40 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      doctor: {
-        nombre: '',
-        apellidos: '',
-        direccion: '',
-        telefono: '',
-        fecha_nacimiento: '',
-        titulo: '',
-        especialidad: '',
-        cedula: '',
-        consultorio: '',
-        user_id: ''
+      cita: {
+        paciente_id: '',
+        cita_id: '',
+        fecha_cita: '',
+        motivo: ''
       },
-      opciones_usuario: [],
+      opciones_paciente: [],
+      opciones_doctor: [],
       message: '',
       dismissSecs: 7,
-      dismissCountDown: 0,
-      showDismissibleAlert: false
+      dismissCountDown: 0
     };
   },
   methods: {
     irAtras: function irAtras() {
       this.$router.go(-1); // this.$router.replace({path: '/users'})
     },
-    guardar: function guardar() {
+    actualizar: function actualizar() {
       var self = this; // TOMAR LAS LLAVES DESDE LOS CAMPOS SELECT
 
-      self.doctor.user_id = document.getElementById("user_id").value;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/doctores', self.doctor).then(function (response) {
-        self.doctor = {
-          nombre: '',
-          apellidos: '',
-          direccion: '',
-          telefono: '',
-          fecha_nacimiento: '',
-          titulo: '',
-          especialidad: '',
-          cedula: '',
-          consultorio: '',
-          user_id: ''
-        };
-        self.message = 'Doctor registrado con éxito.';
+      self.cita.paciente_id = document.getElementById("paciente_id").value;
+      self.cita.doctor_id = document.getElementById("doctor_id").value;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/citas/' + self.$route.params.id, {
+        _method: 'PUT',
+
+        /*
+          ENVIAR LOS CAMPOS DEL DOCTOR A ACTUALIZAR
+        */
+        paciente_id: self.cita.paciente_id,
+        doctor_id: self.cita.doctor_id,
+        fecha_cita: self.cita.fecha_cita,
+        motivo: self.cita.motivo
+      }).then(function (response) {
+        self.message = 'Información de la Cita actualizada con éxito.';
         self.showAlert();
       })["catch"](function (error) {
         if (error.response.data.message == 'Datos inválidos.') {
@@ -190,57 +184,99 @@ __webpack_require__.r(__webpack_exports__);
 
           self.showAlert();
         } else {
-          console.log(error); //self.$router.push({ path: 'login' });
+          console.log(error); //self.$router.push({ path: '/login' }); 
         }
       });
-    },
-    countDownChanged: function countDownChanged(dismissCountDown) {
-      this.dismissCountDown = dismissCountDown;
     },
     showAlert: function showAlert() {
       this.dismissCountDown = this.dismissSecs;
     }
   },
   mounted: function mounted() {
-    var self = this;
     /*
-    OBTENER OPCIONES PARA POBLAR SELECT opciones_usuario
+    OBTENER OPCIONES PARA POBLAR SELECT opciones_paciente
     */
-
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/doctores/usuarios/').then(function (response) {
-      self.opciones_usuario = [];
-      var tempUsuarios = [];
-      var usuario;
-      tempUsuarios.push({
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/pacientes/').then(function (response) {
+      self.opciones_paciente = [];
+      var tempPacientes = [];
+      var paciente;
+      tempPacientes.push({
         value: 0,
         label: "Seleccione"
-      });
-      console.dir(response.data); // Recorrer la lista de usuarios
+      }); // Recorrer la lista de pacientes
 
       for (var i = 0; i < response.data.length; i++) {
-        // tomar usuario
-        usuario = response.data[i]; // agregar opcion en formato
+        // tomar paciente
+        paciente = response.data[i]; // agregar opcion en formato
 
-        tempUsuarios.push({
-          value: usuario.id,
-          label: usuario.name + " (" + usuario.email + ")"
+        tempPacientes.push({
+          value: paciente.id,
+          label: paciente.nombre + " " + paciente.apellidos
         });
       } // Actualizar lista para el select
 
 
-      self.opciones_usuario = tempUsuarios;
+      self.opciones_paciente = tempPacientes;
     })["catch"](function (error) {
       console.log(error); //self.$router.push({ path: 'login' });
     });
+    /*
+    OBTENER OPCIONES PARA POBLAR SELECT opciones_doctor
+    */
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/doctores/').then(function (response) {
+      self.opciones_doctor = [];
+      var tempDoctores = [];
+      var doctor;
+      tempDoctores.push({
+        value: 0,
+        label: "Seleccione"
+      }); // Recorrer la lista de doctores
+
+      for (var i = 0; i < response.data.length; i++) {
+        // tomar doctor
+        doctor = response.data[i]; // agregar opcion en formato
+
+        tempDoctores.push({
+          value: doctor.id,
+          label: doctor.nombre + " " + doctor.apellidos + " [" + doctor.especialidad + "]"
+        });
+      } // Actualizar lista para el select
+
+
+      self.opciones_doctor = tempDoctores;
+    })["catch"](function (error) {
+      console.log(error); //self.$router.push({ path: 'login' });
+    });
+    /*
+      TRAER LOS DATOS DE LA CITA EDITANDO
+    */
+
+    var self = this;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/citas/' + self.$route.params.id).then(function (response) {
+      self.cita = response.data; // DAR FORMATO A LA FECHA PARA MOSTRARLA
+
+      var DateFechaCita = new Date(self.cita.fecha_cita);
+      self.cita.fecha_cita = DateFechaCita.toISOString().split(":")[0] + ":" + DateFechaCita.toISOString().split(":")[1];
+    })["catch"](function (error) {
+      console.log(error); //self.$router.push({ path: '/login' });
+    });
   }
 });
+/*
+      items: (id) => {
+        const user = usersData.find( user => user.id.toString() === id)
+        const userDetails = user ? Object.entries(user) : [['id', 'Not found']]
+        return userDetails.map(([key, value]) => {return {key: key, value: value}})
+      },
+*/
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024& ***!
-  \*****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/consultas/EditarConsulta.vue?vue&type=template&id=33e3ad0b&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/consultas/EditarConsulta.vue?vue&type=template&id=33e3ad0b& ***!
+  \*********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -261,12 +297,11 @@ var render = function() {
         [
           _c(
             "CCard",
-            { attrs: { "no-header": "" } },
             [
               _c(
                 "CCardBody",
                 [
-                  _c("h3", [_vm._v("\n          Registrar Doctor\n        ")]),
+                  _c("h3", [_vm._v("\n          Editar Cita\n        ")]),
                   _vm._v(" "),
                   _c(
                     "CAlert",
@@ -293,157 +328,76 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _c("CInput", {
+                  _c("CSelect", {
                     attrs: {
-                      label: "Nombre",
-                      type: "text",
-                      placeholder: "Nombre"
+                      label: "Paciente",
+                      value: _vm.cita.paciente_id,
+                      plain: true,
+                      options: _vm.opciones_paciente,
+                      id: "paciente_id"
+                    },
+                    on: {
+                      "update:value": function($event) {
+                        return _vm.$set(_vm.cita, "paciente_id", $event)
+                      }
                     },
                     model: {
-                      value: _vm.doctor.nombre,
+                      value: _vm.cita.paciente_id,
                       callback: function($$v) {
-                        _vm.$set(_vm.doctor, "nombre", $$v)
+                        _vm.$set(_vm.cita, "paciente_id", $$v)
                       },
-                      expression: "doctor.nombre"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Apellidos",
-                      type: "text",
-                      placeholder: "Apellidos"
-                    },
-                    model: {
-                      value: _vm.doctor.apellidos,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "apellidos", $$v)
-                      },
-                      expression: "doctor.apellidos"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      textarea: "true",
-                      label: "Dirección",
-                      rows: 9,
-                      placeholder: "Calle, numero, colonia, ciudad"
-                    },
-                    model: {
-                      value: _vm.doctor.direccion,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "direccion", $$v)
-                      },
-                      expression: "doctor.direccion"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Teléfono",
-                      type: "text",
-                      placeholder: "Teléfono"
-                    },
-                    model: {
-                      value: _vm.doctor.telefono,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "telefono", $$v)
-                      },
-                      expression: "doctor.telefono"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: { label: "Fecha de nacimiento", type: "date" },
-                    model: {
-                      value: _vm.doctor.fecha_nacimiento,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "fecha_nacimiento", $$v)
-                      },
-                      expression: "doctor.fecha_nacimiento"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Título",
-                      type: "text",
-                      placeholder: "Título"
-                    },
-                    model: {
-                      value: _vm.doctor.titulo,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "titulo", $$v)
-                      },
-                      expression: "doctor.titulo"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Especialidad",
-                      type: "text",
-                      placeholder: "Especialidad"
-                    },
-                    model: {
-                      value: _vm.doctor.especialidad,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "especialidad", $$v)
-                      },
-                      expression: "doctor.especialidad"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Cédula Profesional",
-                      type: "text",
-                      placeholder: "Cédula Profesional"
-                    },
-                    model: {
-                      value: _vm.doctor.cedula,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "cedula", $$v)
-                      },
-                      expression: "doctor.cedula"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Consultorio",
-                      type: "text",
-                      placeholder: "Consultorio"
-                    },
-                    model: {
-                      value: _vm.doctor.consultorio,
-                      callback: function($$v) {
-                        _vm.$set(_vm.doctor, "consultorio", $$v)
-                      },
-                      expression: "doctor.consultorio"
+                      expression: "cita.paciente_id"
                     }
                   }),
                   _vm._v(" "),
                   _c("CSelect", {
                     attrs: {
-                      label: "Usuario",
-                      value: _vm.doctor.user_id,
+                      label: "Doctor",
+                      value: _vm.cita.doctor_id,
                       plain: true,
-                      options: _vm.opciones_usuario,
-                      id: "user_id"
+                      options: _vm.opciones_doctor,
+                      id: "doctor_id"
                     },
                     on: {
                       "update:value": function($event) {
-                        return _vm.$set(_vm.doctor, "user_id", $event)
+                        return _vm.$set(_vm.cita, "doctor_id", $event)
                       }
                     },
                     model: {
-                      value: _vm.doctor.user_id,
+                      value: _vm.cita.doctor_id,
                       callback: function($$v) {
-                        _vm.$set(_vm.doctor, "user_id", $$v)
+                        _vm.$set(_vm.cita, "doctor_id", $$v)
                       },
-                      expression: "doctor.user_id"
+                      expression: "cita.doctor_id"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("CInput", {
+                    attrs: {
+                      label: "Fecha de la cita",
+                      type: "datetime-local"
+                    },
+                    model: {
+                      value: _vm.cita.fecha_cita,
+                      callback: function($$v) {
+                        _vm.$set(_vm.cita, "fecha_cita", $$v)
+                      },
+                      expression: "cita.fecha_cita"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("CInput", {
+                    attrs: {
+                      label: "Motivo",
+                      type: "text",
+                      placeholder: "Motivo"
+                    },
+                    model: {
+                      value: _vm.cita.motivo,
+                      callback: function($$v) {
+                        _vm.$set(_vm.cita, "motivo", $$v)
+                      },
+                      expression: "cita.motivo"
                     }
                   }),
                   _vm._v(" "),
@@ -453,7 +407,7 @@ var render = function() {
                       attrs: { color: "primary" },
                       on: {
                         click: function($event) {
-                          return _vm.guardar()
+                          return _vm.actualizar()
                         }
                       }
                     },

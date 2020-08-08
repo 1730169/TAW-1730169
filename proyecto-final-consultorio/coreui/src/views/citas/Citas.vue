@@ -172,7 +172,7 @@ export default {
     getCitas (){
       let self = this;
       
-      axios.get(  '/api/citas' )
+      axios.get(  '/api/citas?token=' + localStorage.getItem("api_token"))
       .then(function (response) {
         self.items = response.data;
 

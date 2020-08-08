@@ -43,6 +43,12 @@
                   <CButton color="success" @click="cobrarConsulta( item.id )">Cobrar</CButton>
                 </td>
               </template>
+              <template #compartir="{item}">
+                <td>
+                  <CButton  color="warning" @click="compartirConsulta( item.id )">Compartir</CButton>
+                  <!-- v-if="you!=item.id" -->
+                </td>
+              </template>
               <template #eliminar="{item}">
                 <td>
                   <CButton  color="danger" @click="eliminarConsulta( item.id )">Eliminar</CButton>
@@ -80,7 +86,7 @@ export default {
         {key: 'delete'}
       ],
       */
-      fields: ['fecha', 'doctor', 'paciente', 'diagnostico', 'cobrar', 'eliminar'],
+      fields: ['fecha', 'doctor', 'paciente', 'diagnostico', 'cobrar','compartir', 'eliminar'],
       currentPage: 1,
       perPage: 5,
       totalRows: 0,
@@ -104,6 +110,9 @@ export default {
     cobrarLink (id) {
       return `consultas/${id.toString()}/cobrar`
     },
+    compartirLink (id) {
+      return `compartirs/${id.toString()}/registrar`
+    },
     verConsulta ( id ) {
       const pacienteLink = this.pacienteLink( id );
       this.$router.push({path: pacienteLink});
@@ -111,6 +120,10 @@ export default {
     cobrarConsulta ( id ) {
       const cobrarLink = this.cobrarLink( id );
       this.$router.push({path: cobrarLink});
+    },
+    compartirConsulta ( id ) {
+      const compartirLink = this.compartirLink( id );
+      this.$router.push({path: compartirLink});
     },
     eliminarConsulta ( id ) {
       let self = this;
@@ -138,7 +151,7 @@ export default {
     },
     getConsultas (){
       let self = this;
-      axios.get(  '/api/consultas' )
+      axios.get(  '/api/consultas?token=' + localStorage.getItem("api_token"))
       .then(function (response) {
         self.items = response.data;
       }).catch(function (error) {

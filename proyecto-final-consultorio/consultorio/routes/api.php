@@ -34,7 +34,6 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::resource('bread',  'BreadController');   //create BREAD (resource)
 
         Route::resource('users', 'UsersController')->except( ['create', 'store'] );
-        
 
 
         Route::prefix('menu/menu')->group(function () { 
@@ -135,3 +134,11 @@ Route::put('pagos/{id}', 'PagosController@update');
 Route::delete('pagos/{id}', 'PagosController@delete');
 
 
+Route::post('compartirs', 'CompartirsController@create');
+/*
+Route::get('compartirs', 'CompartirsController@list');
+Route::get('compartirs/{id}', 'CompartirsController@get');
+
+Route::put('compartirs/{id}', 'CompartirsController@update');
+Route::delete('compartirs/{id}', 'CompartirsController@delete');
+*/

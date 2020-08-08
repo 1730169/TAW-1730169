@@ -279,7 +279,7 @@ eventos = [];
     },
     getCitas: function getCitas() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/citas').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/citas?token=' + localStorage.getItem("api_token")).then(function (response) {
         self.items = response.data;
         var eventos = []; // Recorrer la lista de pacientes
 

@@ -141,6 +141,8 @@ const CrearConsulta = () => import('@/views/consultas/CrearConsulta')
 // CONSULTAS
 const Pagos = () => import('@/views/pagos/Pagos')
 
+// COMPARTIR
+const CrearCompartir = () => import('@/views/consultas/CrearCompartir')
 
 
 Vue.use(Router)
@@ -791,6 +793,41 @@ function configRoutes () {
               name: 'Registrar Consulta',
               component: CrearConsulta
             },
+            {
+              path: ':id/cobrar',
+              meta: { label: 'Cobrar Consulta' },
+              name: 'Cobrar Consulta',
+              component: CobrarConsulta
+            },
+            {
+              path: ':id/editar',
+              meta: { label: 'Editar Consulta' },
+              name: 'Editar Consulta',
+              component: EditarConsulta
+            }*/
+          ]
+        },
+
+        {
+          path: '/compartirs',
+          meta: { label: 'Compartir'},
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            /*
+            {
+              path: '',
+              component: Pagos
+            }*/,
+            
+            {
+              path: ':id/registrar',
+              meta: { label: 'Registrar Compartir' },
+              name: 'Registrar Compartir',
+              component: CrearCompartir
+            }
+            /*
             {
               path: ':id/cobrar',
               meta: { label: 'Cobrar Consulta' },
