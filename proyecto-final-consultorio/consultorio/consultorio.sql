@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 04-08-2020 a las 08:18:21
+-- Tiempo de generación: 10-08-2020 a las 13:00:01
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -53,11 +53,18 @@ INSERT INTO `citas` (`id`, `paciente_id`, `doctor_id`, `fecha_cita`, `motivo`, `
 
 CREATE TABLE `compartirs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `paciente_id` bigint(20) UNSIGNED NOT NULL,
+  `consulta_id` bigint(20) UNSIGNED NOT NULL,
   `doctor_afiliado_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `compartirs`
+--
+
+INSERT INTO `compartirs` (`id`, `consulta_id`, `doctor_afiliado_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, '2020-08-08 05:17:53', '2020-08-08 05:17:53');
 
 -- --------------------------------------------------------
 
@@ -83,8 +90,8 @@ CREATE TABLE `consultas` (
 --
 
 INSERT INTO `consultas` (`id`, `paciente_id`, `doctor_id`, `resumen`, `diagnostico`, `prescripcion`, `pagada`, `terminada`, `created_at`, `updated_at`) VALUES
-(1, 3, 2, 'fbgff', 'lesión', 'fdgfdgfdg', 1, 1, '2020-08-03 04:55:41', '2020-08-03 12:21:33'),
-(2, 2, 1, 'wdwqdwq', 'Ceguera', 'Cada 8 horas', 1, 1, '2020-08-03 07:19:58', '2020-08-03 11:09:01');
+(1, 3, 2, 'El paciente presenta una lesión en el hombro izquierdo', 'lesión', 'Diclofenaco', 1, 1, '2020-08-03 04:55:41', '2020-08-03 12:21:33'),
+(2, 2, 1, 'El paciente presenta cegera parcial', 'Ceguera parcial', 'Cada 8 horas', 1, 1, '2020-08-03 07:19:58', '2020-08-03 11:09:01');
 
 -- --------------------------------------------------------
 
@@ -985,7 +992,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `api_token`, `menuroles`, `status`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'admin', 'admin@admin.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user,admin,doctor', 'Active', 'VajmfgZr8U', '2020-07-12 21:13:04', '2020-07-12 21:13:04', NULL),
+(1, 'admin', 'admin@admin.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'admin', 'Active', 'VajmfgZr8U', '2020-07-12 21:13:04', '2020-08-08 04:17:23', NULL),
 (2, 'Melyssa Howell', 'felicia31@example.org', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'gvGnY0NbLn', '2020-07-12 21:13:04', '2020-08-04 02:27:37', '2020-08-04 02:27:37'),
 (3, 'Miss Bethel Davis Jr.', 'yschoen@example.com', '2020-07-12 21:13:04', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Pending', 'fG0c6f2QgW', '2020-07-12 21:13:04', '2020-08-04 02:27:36', '2020-08-04 02:27:36'),
 (4, 'Talia Muller PhD', 'hilbert54@example.com', '2020-07-12 21:13:05', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, 'user', 'Inactive', '6SPpLXHPUJ', '2020-07-12 21:13:05', '2020-08-04 02:27:29', '2020-08-04 02:27:29'),
@@ -1204,7 +1211,7 @@ ALTER TABLE `citas`
 -- AUTO_INCREMENT de la tabla `compartirs`
 --
 ALTER TABLE `compartirs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas`
