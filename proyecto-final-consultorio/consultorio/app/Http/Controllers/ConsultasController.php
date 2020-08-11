@@ -67,13 +67,8 @@ class ConsultasController extends Controller
         
         return $query;
       }else{
-        error_log("ENTRA 3 ...............");
-        $query = DB::table('consultas')
-            ->join('doctores', 'doctores.id', '=', 'consultas.doctor_id')
-            ->join('pacientes', 'pacientes.id', '=', 'consultas.paciente_id')
-            ->select('consultas.*', 'consultas.created_at AS fecha',DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor"), DB::raw("CONCAT(pacientes.nombre,' ',pacientes.apellidos) AS paciente"))
-            ->orderBy('created_at', 'desc')->get();
         
+        $query = "";
         return $query;
       }
       

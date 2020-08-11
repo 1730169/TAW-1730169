@@ -12,6 +12,44 @@ class ServiciosController extends Controller
     }
     
     public function list(Request $request){
+      // OBTENER EL ID DEL DOCTOR QUE TIENE SESION ACTIVA
+      $usuario = auth()->user();
+      $user_id = $usuario->id;
+
+      // EVALUAR EL ROL QUE POSEE
+      $roles = $usuario->menuroles;
+
+      $query ="";
+
+      // SI EL USUARIO ES UN DOCTOR
+      if (strpos($roles, 'doctor') !== false) {        
+        $doctor_id = DB::table('doctores')->select('id')->where('user_id','=',"".$user_id)->first();
+
+        $query = DB::table('servicios')
+        ->join('doctores', 'doctores.id', '=', 'servicios.doctor_id')
+        ->select('servicios.*', DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor") )
+        ->where('servicios.doctor_id','=', $doctor_id->id)
+        ->get();
+        
+
+        return $query;
+
+      }else if (strpos($roles, 'admin') !== false){
+        $query = DB::table('servicios')
+        ->join('doctores', 'doctores.id', '=', 'servicios.doctor_id')
+        ->select('servicios.*', DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor") )
+        ->get();
+        
+        return $query;
+      }else{
+        $query = "";
+        
+        return $query;
+      }
+
+
+
+
       $query = DB::table('servicios')
             ->join('doctores', 'doctores.id', '=', 'servicios.doctor_id')
             ->select('servicios.*', DB::raw("CONCAT(doctores.nombre,' ',doctores.apellidos,' [' ,doctores.especialidad,']') AS doctor") )

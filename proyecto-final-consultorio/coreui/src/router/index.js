@@ -144,6 +144,9 @@ const Pagos = () => import('@/views/pagos/Pagos')
 // COMPARTIR
 const CrearCompartir = () => import('@/views/consultas/CrearCompartir')
 
+// CORTE DE CAJA
+const Cortes = () => import('@/views/cortes/Cortes')
+
 
 Vue.use(Router)
 
@@ -828,6 +831,42 @@ function configRoutes () {
               component: CrearCompartir
             }
             /*
+            {
+              path: ':id/cobrar',
+              meta: { label: 'Cobrar Consulta' },
+              name: 'Cobrar Consulta',
+              component: CobrarConsulta
+            },
+            {
+              path: ':id/editar',
+              meta: { label: 'Editar Consulta' },
+              name: 'Editar Consulta',
+              component: EditarConsulta
+            }*/
+          ]
+        },
+
+        {
+          path: '/cortecajas',
+          meta: { label: 'Corte de Caja'},
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            
+            {
+              path: '',
+              component: Cortes
+            },
+            
+            /*
+            {
+              path: ':id/registrar',
+              meta: { label: 'Registrar Corte' },
+              name: 'Registrar Corte',
+              component: CrearCorte
+            }
+            
             {
               path: ':id/cobrar',
               meta: { label: 'Cobrar Consulta' },

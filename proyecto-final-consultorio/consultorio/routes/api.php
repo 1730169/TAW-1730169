@@ -99,26 +99,38 @@ Route::get('doctores/{id}', 'DoctoresController@get');
 Route::post('doctores', 'DoctoresController@create');
 Route::put('doctores/{id}', 'DoctoresController@update');
 Route::delete('doctores/{id}', 'DoctoresController@delete');
+Route::get('doctor_select/', 'DoctoresController@doctor_select');
 
-
+/**
+ * RUTAS PARA EL MODULO DE CITAS
+ */
 Route::get('citas', 'CitasController@list');
 Route::get('citas/{id}', 'CitasController@get');
 Route::post('citas', 'CitasController@create');
 Route::put('citas/{id}', 'CitasController@update');
 Route::delete('citas/{id}', 'CitasController@delete');
 
+/**
+ * RUTAS PARA EL MODULO DE SERVICIOS
+ */
 Route::get('servicios', 'ServiciosController@list');
 Route::get('servicios/{id}', 'ServiciosController@get');
 Route::post('servicios', 'ServiciosController@create');
 Route::put('servicios/{id}', 'ServiciosController@update');
 Route::delete('servicios/{id}', 'ServiciosController@delete');
 
+/**
+ * RUTAS PARA EL MODULO DE CONSULTAS
+ */
 Route::get('consultas', 'ConsultasController@list');
 Route::get('consultas/{id}', 'ConsultasController@get');
 Route::post('consultas', 'ConsultasController@create');
 Route::put('consultas/{id}', 'ConsultasController@update');
 Route::delete('consultas/{id}', 'ConsultasController@delete');
 
+/**
+ * RUTAS PARA EL MODULO DE SERVICIOS CONSULTA
+ */
 Route::get('servicioconsultas', 'ServicioconsultasController@list');
 Route::get('servicioconsultas/{id}', 'ServicioconsultasController@get');
 Route::get('servicioconsultas/lista/{id}', 'ServicioconsultasController@getLista');
@@ -126,14 +138,18 @@ Route::post('servicioconsultas', 'ServicioconsultasController@create');
 Route::put('servicioconsultas/{id}', 'ServicioconsultasController@update');
 Route::delete('servicioconsultas/{id}', 'ServicioconsultasController@delete');
 
-
+/**
+ * RUTAS PARA EL MODULO DE PAGOS
+ */
 Route::get('pagos', 'PagosController@list');
 Route::get('pagos/{id}', 'PagosController@get');
 Route::post('pagos', 'PagosController@create');
 Route::put('pagos/{id}', 'PagosController@update');
 Route::delete('pagos/{id}', 'PagosController@delete');
 
-
+/**
+ * RUTAS PARA EL MODULO DE COMPARTIR EXPEDIENTE
+ */
 Route::post('compartirs', 'CompartirsController@create');
 /*
 Route::get('compartirs', 'CompartirsController@list');
@@ -142,3 +158,13 @@ Route::get('compartirs/{id}', 'CompartirsController@get');
 Route::put('compartirs/{id}', 'CompartirsController@update');
 Route::delete('compartirs/{id}', 'CompartirsController@delete');
 */
+
+/**
+ * RUTAS PARA EL MODULO DE CORTE DE CAJA
+ */
+Route::get('cortecajas', 'CortecajasController@list');
+Route::get('cortecajas/{id}', 'CortecajasController@get');
+Route::get('montocaja/', 'CortecajasController@getCajaActual');
+Route::post('cortecajas', 'CortecajasController@create');
+Route::put('cortecajas/{id}', 'CortecajasController@update');
+Route::delete('cortecajas/{id}', 'CortecajasController@delete');

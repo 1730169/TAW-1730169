@@ -16,6 +16,39 @@ class DoctoresController extends Controller
       return Doctores::get();
     }
 
+    public function doctor_select(Request $request){
+      // OBTENER EL ID DEL DOCTOR QUE TIENE SESION ACTIVA
+      $usuario = auth()->user();
+      $user_id = $usuario->id;
+
+      // EVALUAR EL ROL QUE POSEE
+      $roles = $usuario->menuroles;
+
+      $query ="";
+
+      // SI EL USUARIO ES UN DOCTOR
+      if (strpos($roles, 'doctor') !== false) {
+        // Buscar el id
+        $doctor_id = DB::table('doctores')->select('id')->where('user_id','=',"".$user_id)->first();
+
+        // Retornar solo el objeto de ese doctor
+        $query = DB::table('doctores')
+            ->select('doctores.*')
+            ->where('id','=',$doctor_id->id)->get();
+        
+        return $query;
+
+      }else if (strpos($roles, 'admin') !== false){
+        return Doctores::get();
+      }else{
+
+        return "";
+      }
+      
+      //return Consultas::get();
+      return $query;
+    }
+
     public function getUsuariosDoctor(Request $request){
       // OBTENER LOS USUARIOS CON ROL DOCTOR ASIGNADO
       $query = DB::table('users')

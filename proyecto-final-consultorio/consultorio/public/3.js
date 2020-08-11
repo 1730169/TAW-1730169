@@ -346,6 +346,56 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _charts_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../charts/index.js */ "../coreui/src/views/charts/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "../coreui/node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -477,13 +527,79 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'WidgetsDropdown',
   components: {
     CChartLineSimple: _charts_index_js__WEBPACK_IMPORTED_MODULE_0__["CChartLineSimple"],
     CChartBarSimple: _charts_index_js__WEBPACK_IMPORTED_MODULE_0__["CChartBarSimple"]
+  },
+  data: function data() {
+    return {
+      widgets: {
+        caja_num: '',
+        citas_num: '',
+        doctores_num: '',
+        pacientes_num: ''
+      }
+    };
+  },
+  computed: {},
+  methods: {
+    // FUNCION PARA OBETENER EL DINERO ACTUAL EN LA CAJA
+    getCaja: function getCaja() {
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/montocaja').then(function (response) {
+        //console.dir(response);
+        document.getElementById("lbl_caja").innerText = "$" + formatMoney(response.data);
+      })["catch"](function (error) {
+        console.log(error); //self.$router.push({ path: '/login' });
+      });
+    },
+    getCitas: function getCitas() {
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/citas?token=' + localStorage.getItem("api_token")).then(function (response) {
+        document.getElementById("lbl_citas").innerText = response.data.length;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    getConsultas: function getConsultas() {
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/consultas?token=' + localStorage.getItem("api_token")).then(function (response) {
+        document.getElementById("lbl_consultas").innerText = response.data.length;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    getDoctores: function getDoctores() {
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/doctores').then(function (response) {
+        document.getElementById("lbl_doctores").innerText = response.data.length;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getCaja();
+    this.getCitas();
+    this.getDoctores();
+    this.getConsultas();
   }
 });
+
+function formatMoney(number) {
+  var decPlaces = 2;
+  var decSep = ".";
+  var thouSep = ",";
+  decPlaces = isNaN(decPlaces = Math.abs(decPlaces)) ? 2 : decPlaces, decSep = typeof decSep === "undefined" ? "." : decSep;
+  thouSep = typeof thouSep === "undefined" ? "," : thouSep;
+  var sign = number < 0 ? "-" : "";
+  var i = String(parseInt(number = Math.abs(Number(number) || 0).toFixed(decPlaces)));
+  var j = (j = i.length) > 3 ? j % 3 : 0;
+  return sign + (j ? i.substr(0, j) + thouSep : "") + i.substr(j).replace(/(\decSep{3})(?=\decSep)/g, "$1" + thouSep) + (decPlaces ? decSep + Math.abs(number - i).toFixed(decPlaces).slice(2) : "");
+}
 
 /***/ }),
 
@@ -842,304 +958,91 @@ var render = function() {
   return _c(
     "CRow",
     [
-      _c(
-        "CCol",
-        { attrs: { sm: "6", lg: "3" } },
-        [
-          _c("CWidgetDropdown", {
-            attrs: { color: "primary", header: "9.823", text: "Citas" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function() {
-                  return [
-                    _c(
-                      "CDropdown",
-                      {
-                        attrs: {
-                          color: "transparent p-0",
-                          placement: "bottom-end"
-                        },
-                        scopedSlots: _vm._u([
-                          {
-                            key: "toggler-content",
-                            fn: function() {
-                              return [
-                                _c("CIcon", { attrs: { name: "cil-settings" } })
-                              ]
-                            },
-                            proxy: true
-                          }
-                        ])
-                      },
-                      [
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Action")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Another action")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Something else here...")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", { attrs: { disabled: "" } }, [
-                          _vm._v("Disabled action")
-                        ])
-                      ],
-                      1
-                    )
-                  ]
-                },
-                proxy: true
-              },
-              {
-                key: "footer",
-                fn: function() {
-                  return [
-                    _c("CChartLineSimple", {
-                      staticClass: "mt-3 mx-3",
-                      staticStyle: { height: "70px" },
-                      attrs: {
-                        pointed: "",
-                        "data-points": [65, 59, 84, 84, 51, 55, 40],
-                        "point-hover-background-color": "primary",
-                        label: "Members",
-                        labels: "months"
-                      }
-                    })
-                  ]
-                },
-                proxy: true
-              }
-            ])
-          })
-        ],
-        1
-      ),
+      _c("CCol", { attrs: { sm: "6", lg: "3" } }, [
+        _c("div", { staticClass: "card bg-danger text-white" }, [
+          _c(
+            "div",
+            { staticClass: "card-body pb-5 d-flex justify-content-between" },
+            [
+              _c("div", [
+                _c(
+                  "div",
+                  { staticClass: "text-value-lg", attrs: { id: "lbl_caja" } },
+                  [_vm._v("0.0")]
+                ),
+                _vm._v(" "),
+                _c("div", [_vm._v("Caja actual")])
+              ])
+            ]
+          )
+        ])
+      ]),
       _vm._v(" "),
-      _c(
-        "CCol",
-        { attrs: { sm: "6", lg: "3" } },
-        [
-          _c("CWidgetDropdown", {
-            attrs: { color: "info", header: "9.823", text: "Pacientes" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function() {
-                  return [
-                    _c(
-                      "CDropdown",
-                      {
-                        attrs: {
-                          color: "transparent p-0",
-                          placement: "bottom-end",
-                          caret: false
-                        },
-                        scopedSlots: _vm._u([
-                          {
-                            key: "toggler-content",
-                            fn: function() {
-                              return [
-                                _c("CIcon", {
-                                  attrs: { name: "cil-location-pin" }
-                                })
-                              ]
-                            },
-                            proxy: true
-                          }
-                        ])
-                      },
-                      [
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Action")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Another action")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Something else here...")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", { attrs: { disabled: "" } }, [
-                          _vm._v("Disabled action")
-                        ])
-                      ],
-                      1
-                    )
-                  ]
-                },
-                proxy: true
-              },
-              {
-                key: "footer",
-                fn: function() {
-                  return [
-                    _c("CChartLineSimple", {
-                      staticClass: "mt-3 mx-3",
-                      staticStyle: { height: "70px" },
-                      attrs: {
-                        pointed: "",
-                        "data-points": [1, 18, 9, 17, 34, 22, 11],
-                        "point-hover-background-color": "info",
-                        options: { elements: { line: { tension: 0.00001 } } },
-                        label: "Members",
-                        labels: "months"
-                      }
-                    })
-                  ]
-                },
-                proxy: true
-              }
-            ])
-          })
-        ],
-        1
-      ),
+      _c("CCol", { attrs: { sm: "6", lg: "3" } }, [
+        _c("div", { staticClass: "card bg-primary text-white" }, [
+          _c(
+            "div",
+            { staticClass: "card-body pb-5 d-flex justify-content-between" },
+            [
+              _c("div", [
+                _c(
+                  "div",
+                  { staticClass: "text-value-lg", attrs: { id: "lbl_citas" } },
+                  [_vm._v("0")]
+                ),
+                _vm._v(" "),
+                _c("div", [_vm._v("Citas registradas")])
+              ])
+            ]
+          )
+        ])
+      ]),
       _vm._v(" "),
-      _c(
-        "CCol",
-        { attrs: { sm: "6", lg: "3" } },
-        [
-          _c("CWidgetDropdown", {
-            attrs: {
-              color: "warning",
-              header: "9.823",
-              text: "Médicos registrados"
-            },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function() {
-                  return [
-                    _c(
-                      "CDropdown",
-                      {
-                        attrs: {
-                          color: "transparent p-0",
-                          placement: "bottom-end"
-                        },
-                        scopedSlots: _vm._u([
-                          {
-                            key: "toggler-content",
-                            fn: function() {
-                              return [
-                                _c("CIcon", { attrs: { name: "cil-settings" } })
-                              ]
-                            },
-                            proxy: true
-                          }
-                        ])
-                      },
-                      [
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Action")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Another action")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Something else here...")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", { attrs: { disabled: "" } }, [
-                          _vm._v("Disabled action")
-                        ])
-                      ],
-                      1
-                    )
-                  ]
-                },
-                proxy: true
-              },
-              {
-                key: "footer",
-                fn: function() {
-                  return [
-                    _c("CChartLineSimple", {
-                      staticClass: "mt-3",
-                      staticStyle: { height: "70px" },
-                      attrs: {
-                        "background-color": "rgba(255,255,255,.2)",
-                        "data-points": [78, 81, 80, 45, 34, 12, 40],
-                        options: { elements: { line: { borderWidth: 2.5 } } },
-                        "point-hover-background-color": "warning",
-                        label: "Members",
-                        labels: "months"
-                      }
-                    })
-                  ]
-                },
-                proxy: true
-              }
-            ])
-          })
-        ],
-        1
-      ),
+      _c("CCol", { attrs: { sm: "6", lg: "3" } }, [
+        _c("div", { staticClass: "card bg-success text-white" }, [
+          _c(
+            "div",
+            { staticClass: "card-body pb-5 d-flex justify-content-between" },
+            [
+              _c("div", [
+                _c(
+                  "div",
+                  {
+                    staticClass: "text-value-lg",
+                    attrs: { id: "lbl_consultas" }
+                  },
+                  [_vm._v("0")]
+                ),
+                _vm._v(" "),
+                _c("div", [_vm._v("Consultas registradas")])
+              ])
+            ]
+          )
+        ])
+      ]),
       _vm._v(" "),
-      _c(
-        "CCol",
-        { attrs: { sm: "6", lg: "3" } },
-        [
-          _c("CWidgetDropdown", {
-            attrs: { color: "danger", header: "9.823", text: "Caja" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function() {
-                  return [
-                    _c(
-                      "CDropdown",
-                      {
-                        attrs: {
-                          color: "transparent p-0",
-                          placement: "bottom-end"
-                        },
-                        scopedSlots: _vm._u([
-                          {
-                            key: "toggler-content",
-                            fn: function() {
-                              return [
-                                _c("CIcon", { attrs: { name: "cil-settings" } })
-                              ]
-                            },
-                            proxy: true
-                          }
-                        ])
-                      },
-                      [
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Action")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Another action")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", [_vm._v("Something else here...")]),
-                        _vm._v(" "),
-                        _c("CDropdownItem", { attrs: { disabled: "" } }, [
-                          _vm._v("Disabled action")
-                        ])
-                      ],
-                      1
-                    )
-                  ]
-                },
-                proxy: true
-              },
-              {
-                key: "footer",
-                fn: function() {
-                  return [
-                    _c("CChartBarSimple", {
-                      staticClass: "mt-3 mx-3",
-                      staticStyle: { height: "70px" },
-                      attrs: {
-                        "background-color": "rgb(250, 152, 152)",
-                        label: "Members",
-                        labels: "months"
-                      }
-                    })
-                  ]
-                },
-                proxy: true
-              }
-            ])
-          })
-        ],
-        1
-      )
+      _c("CCol", { attrs: { sm: "6", lg: "3" } }, [
+        _c("div", { staticClass: "card bg-warning text-white" }, [
+          _c(
+            "div",
+            { staticClass: "card-body pb-5 d-flex justify-content-between" },
+            [
+              _c("div", [
+                _c(
+                  "div",
+                  {
+                    staticClass: "text-value-lg",
+                    attrs: { id: "lbl_doctores" }
+                  },
+                  [_vm._v("0")]
+                ),
+                _vm._v(" "),
+                _c("div", [_vm._v("Doctores registrados")])
+              ])
+            ]
+          )
+        ])
+      ])
     ],
     1
   )

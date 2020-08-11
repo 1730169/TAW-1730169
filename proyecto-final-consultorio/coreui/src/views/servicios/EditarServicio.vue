@@ -120,7 +120,7 @@ export default {
     /*
     OBTENER OPCIONES PARA POBLAR SELECT opciones_doctor
     */
-    axios.get('/api/doctores/')
+    axios.get('/api/doctor_select?token=' + localStorage.getItem("api_token"))
     .then(function (response) {
 
       self.opciones_doctor = [];

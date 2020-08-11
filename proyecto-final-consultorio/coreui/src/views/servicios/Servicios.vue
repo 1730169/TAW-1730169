@@ -133,7 +133,7 @@ export default {
     },
     getServicios (){
       let self = this;
-      axios.get(  '/api/servicios' )
+      axios.get(  '/api/servicios?token=' + localStorage.getItem("api_token") )
       .then(function (response) {
         self.items = response.data;
       }).catch(function (error) {

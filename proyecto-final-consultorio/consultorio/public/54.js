@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[54],{
 
-/***/ "../coreui/src/views/doctores/EditarDoctor.vue":
-/*!*****************************************************!*\
-  !*** ../coreui/src/views/doctores/EditarDoctor.vue ***!
-  \*****************************************************/
+/***/ "../coreui/src/views/doctores/CrearDoctor.vue":
+/*!****************************************************!*\
+  !*** ../coreui/src/views/doctores/CrearDoctor.vue ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _EditarDoctor_vue_vue_type_template_id_1b1c3882___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditarDoctor.vue?vue&type=template&id=1b1c3882& */ "../coreui/src/views/doctores/EditarDoctor.vue?vue&type=template&id=1b1c3882&");
-/* harmony import */ var _EditarDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditarDoctor.vue?vue&type=script&lang=js& */ "../coreui/src/views/doctores/EditarDoctor.vue?vue&type=script&lang=js&");
+/* harmony import */ var _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CrearDoctor.vue?vue&type=template&id=56ee5024& */ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&");
+/* harmony import */ var _CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CrearDoctor.vue?vue&type=script&lang=js& */ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../consultorio/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _EditarDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _EditarDoctor_vue_vue_type_template_id_1b1c3882___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _EditarDoctor_vue_vue_type_template_id_1b1c3882___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,47 +32,47 @@ var component = Object(_consultorio_node_modules_vue_loader_lib_runtime_componen
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/doctores/EditarDoctor.vue"
+component.options.__file = "coreui/src/views/doctores/CrearDoctor.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/EditarDoctor.vue?vue&type=script&lang=js&":
-/*!******************************************************************************!*\
-  !*** ../coreui/src/views/doctores/EditarDoctor.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************/
+/***/ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditarDoctor.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/EditarDoctor.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/babel-loader/lib??ref--4-0!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CrearDoctor.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_consultorio_node_modules_babel_loader_lib_index_js_ref_4_0_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/doctores/EditarDoctor.vue?vue&type=template&id=1b1c3882&":
-/*!************************************************************************************!*\
-  !*** ../coreui/src/views/doctores/EditarDoctor.vue?vue&type=template&id=1b1c3882& ***!
-  \************************************************************************************/
+/***/ "../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&":
+/*!***********************************************************************************!*\
+  !*** ../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024& ***!
+  \***********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarDoctor_vue_vue_type_template_id_1b1c3882___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./EditarDoctor.vue?vue&type=template&id=1b1c3882& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/EditarDoctor.vue?vue&type=template&id=1b1c3882&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarDoctor_vue_vue_type_template_id_1b1c3882___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../consultorio/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../consultorio/node_modules/vue-loader/lib??vue-loader-options!./CrearDoctor.vue?vue&type=template&id=56ee5024& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_EditarDoctor_vue_vue_type_template_id_1b1c3882___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _consultorio_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_consultorio_node_modules_vue_loader_lib_index_js_vue_loader_options_CrearDoctor_vue_vue_type_template_id_56ee5024___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/EditarDoctor.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/EditarDoctor.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -151,35 +151,32 @@ __webpack_require__.r(__webpack_exports__);
       opciones_usuario: [],
       message: '',
       dismissSecs: 7,
-      dismissCountDown: 0
+      dismissCountDown: 0,
+      showDismissibleAlert: false
     };
   },
   methods: {
     irAtras: function irAtras() {
       this.$router.go(-1); // this.$router.replace({path: '/users'})
     },
-    actualizar: function actualizar() {
+    guardar: function guardar() {
       var self = this; // TOMAR LAS LLAVES DESDE LOS CAMPOS SELECT
 
       self.doctor.user_id = document.getElementById("user_id").value;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/doctores/' + self.$route.params.id, {
-        _method: 'PUT',
-
-        /*
-          ENVIAR LOS CAMPOS DEL DOCTOR A ACTUALIZAR
-        */
-        nombre: self.doctor.nombre,
-        apellidos: self.doctor.apellidos,
-        telefono: self.doctor.telefono,
-        direccion: self.doctor.direccion,
-        fecha_nacimiento: self.doctor.fecha_nacimiento,
-        titulo: self.doctor.titulo,
-        especialidad: self.doctor.especialidad,
-        cedula: self.doctor.cedula,
-        consultorio: self.doctor.consultorio,
-        user_id: self.doctor.user_id
-      }).then(function (response) {
-        self.message = 'Datos del Doctor actualizada con éxito.';
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/doctores', self.doctor).then(function (response) {
+        self.doctor = {
+          nombre: '',
+          apellidos: '',
+          direccion: '',
+          telefono: '',
+          fecha_nacimiento: '',
+          titulo: '',
+          especialidad: '',
+          cedula: '',
+          consultorio: '',
+          user_id: ''
+        };
+        self.message = 'Doctor registrado con éxito.';
         self.showAlert();
       })["catch"](function (error) {
         if (error.response.data.message == 'Datos inválidos.') {
@@ -193,18 +190,23 @@ __webpack_require__.r(__webpack_exports__);
 
           self.showAlert();
         } else {
-          console.log(error); //self.$router.push({ path: '/login' }); 
+          console.log(error); //self.$router.push({ path: 'login' });
         }
       });
+    },
+    countDownChanged: function countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown;
     },
     showAlert: function showAlert() {
       this.dismissCountDown = this.dismissSecs;
     }
   },
   mounted: function mounted() {
+    var self = this;
     /*
     OBTENER OPCIONES PARA POBLAR SELECT opciones_usuario
     */
+
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/doctores/usuarios/').then(function (response) {
       self.opciones_usuario = [];
       var tempUsuarios = [];
@@ -230,32 +232,15 @@ __webpack_require__.r(__webpack_exports__);
     })["catch"](function (error) {
       console.log(error); //self.$router.push({ path: 'login' });
     });
-    /*
-      TRAER LOS DATOS DEL PACIENTE EDITANDO
-    */
-
-    var self = this;
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/doctores/' + self.$route.params.id).then(function (response) {
-      self.doctor = response.data;
-    })["catch"](function (error) {
-      console.log(error); //self.$router.push({ path: '/login' });
-    });
   }
 });
-/*
-      items: (id) => {
-        const user = usersData.find( user => user.id.toString() === id)
-        const userDetails = user ? Object.entries(user) : [['id', 'Not found']]
-        return userDetails.map(([key, value]) => {return {key: key, value: value}})
-      },
-*/
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/EditarDoctor.vue?vue&type=template&id=1b1c3882&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/EditarDoctor.vue?vue&type=template&id=1b1c3882& ***!
-  \******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/doctores/CrearDoctor.vue?vue&type=template&id=56ee5024& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -276,11 +261,12 @@ var render = function() {
         [
           _c(
             "CCard",
+            { attrs: { "no-header": "" } },
             [
               _c(
                 "CCardBody",
                 [
-                  _c("h3", [_vm._v("\n          Editar Doctor\n        ")]),
+                  _c("h3", [_vm._v("\n          Registrar Doctor\n        ")]),
                   _vm._v(" "),
                   _c(
                     "CAlert",
@@ -467,7 +453,7 @@ var render = function() {
                       attrs: { color: "primary" },
                       on: {
                         click: function($event) {
-                          return _vm.actualizar()
+                          return _vm.guardar()
                         }
                       }
                     },
