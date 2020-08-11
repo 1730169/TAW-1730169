@@ -713,6 +713,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -736,6 +739,12 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "../coreui/node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1309,7 +1318,11 @@ var render = function() {
       _c(
         "CHeaderBrand",
         { staticClass: "mx-auto d-lg-none", attrs: { to: "/" } },
-        [_c("CIcon", { attrs: { name: "logo", height: "48", alt: "Logo" } })],
+        [
+          _c("CIcon", {
+            attrs: { name: "cis-hospital", height: "48", alt: "Logo" }
+          })
+        ],
         1
       ),
       _vm._v(" "),
@@ -1318,48 +1331,7 @@ var render = function() {
       _c(
         "CHeaderNav",
         { staticClass: "mr-4" },
-        [
-          _c(
-            "CHeaderNavItem",
-            { staticClass: "d-md-down-none mx-2" },
-            [
-              _c(
-                "CHeaderNavLink",
-                [_c("CIcon", { attrs: { name: "cil-bell" } })],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CHeaderNavItem",
-            { staticClass: "d-md-down-none mx-2" },
-            [
-              _c(
-                "CHeaderNavLink",
-                [_c("CIcon", { attrs: { name: "cil-list" } })],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CHeaderNavItem",
-            { staticClass: "d-md-down-none mx-2" },
-            [
-              _c(
-                "CHeaderNavLink",
-                [_c("CIcon", { attrs: { name: "cil-envelope-open" } })],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("TheHeaderDropdownAccnt")
-        ],
+        [_c("TheHeaderDropdownAccnt")],
         1
       ),
       _vm._v(" "),
@@ -1409,7 +1381,7 @@ var render = function() {
                 _c("div", { staticClass: "c-avatar" }, [
                   _c("img", {
                     staticClass: "c-avatar-img ",
-                    attrs: { src: "img/avatars/6.jpg" }
+                    attrs: { src: "img/avatars/usuario.png" }
                   })
                 ])
               ])
@@ -1421,123 +1393,7 @@ var render = function() {
     },
     [
       _vm._v(" "),
-      _c(
-        "CDropdownHeader",
-        { staticClass: "text-center", attrs: { tag: "div", color: "light" } },
-        [_c("strong", [_vm._v("Account")])]
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [
-          _c("CIcon", { attrs: { name: "cil-bell" } }),
-          _vm._v(" Updates\n    "),
-          _c("CBadge", { staticClass: "ml-auto", attrs: { color: "info" } }, [
-            _vm._v(_vm._s(_vm.itemsCount))
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [
-          _c("CIcon", { attrs: { name: "cil-envelope-open" } }),
-          _vm._v(" Messages\n    "),
-          _c(
-            "CBadge",
-            { staticClass: "ml-auto", attrs: { color: "success" } },
-            [_vm._v(_vm._s(_vm.itemsCount))]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [
-          _c("CIcon", { attrs: { name: "cil-task" } }),
-          _vm._v(" Tasks\n    "),
-          _c("CBadge", { staticClass: "ml-auto", attrs: { color: "danger" } }, [
-            _vm._v(_vm._s(_vm.itemsCount))
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [
-          _c("CIcon", { attrs: { name: "cil-comment-square" } }),
-          _vm._v(" Comments\n    "),
-          _c(
-            "CBadge",
-            { staticClass: "ml-auto", attrs: { color: "warning" } },
-            [_vm._v(_vm._s(_vm.itemsCount))]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownHeader",
-        { staticClass: "text-center", attrs: { tag: "div", color: "light" } },
-        [_c("strong", [_vm._v("Settings")])]
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [_c("CIcon", { attrs: { name: "cil-user" } }), _vm._v(" Profile\n  ")],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [
-          _c("CIcon", { attrs: { name: "cil-settings" } }),
-          _vm._v(" Settings\n  ")
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [
-          _c("CIcon", { attrs: { name: "cil-dollar" } }),
-          _vm._v(" Payments\n    "),
-          _c(
-            "CBadge",
-            { staticClass: "ml-auto", attrs: { color: "secondary" } },
-            [_vm._v(_vm._s(_vm.itemsCount))]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [
-          _c("CIcon", { attrs: { name: "cil-file" } }),
-          _vm._v(" Projects\n    "),
-          _c(
-            "CBadge",
-            { staticClass: "ml-auto", attrs: { color: "primary" } },
-            [_vm._v(_vm._s(_vm.itemsCount))]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
       _c("CDropdownDivider"),
-      _vm._v(" "),
-      _c(
-        "CDropdownItem",
-        [
-          _c("CIcon", { attrs: { name: "cil-shield-alt" } }),
-          _vm._v(" Lock Account\n  ")
-        ],
-        1
-      ),
       _vm._v(" "),
       _c(
         "CDropdownItem",
@@ -1550,7 +1406,7 @@ var render = function() {
         },
         [
           _c("CIcon", { attrs: { name: "cil-lock-locked" } }),
-          _vm._v(" Logout\n  ")
+          _vm._v(" Cerrar Sesión\n  ")
         ],
         1
       )

@@ -9,12 +9,14 @@
       <CHeaderNavLink>
         <div class="c-avatar">
           <img
-            src="img/avatars/6.jpg"
+            src="img/avatars/usuario.png"
             class="c-avatar-img "
           />
         </div>
       </CHeaderNavLink>
     </template>
+    
+    <!--
     <CDropdownHeader tag="div" class="text-center" color="light">
       <strong>Account</strong>
     </CDropdownHeader>
@@ -55,12 +57,16 @@
       <CIcon name="cil-file" /> Projects
       <CBadge color="primary" class="ml-auto">{{ itemsCount }}</CBadge>
     </CDropdownItem>
-    <CDropdownDivider/>
+  
+    
+
     <CDropdownItem>
-      <CIcon name="cil-shield-alt" /> Lock Account
+      <CIcon name="cil-shield-alt" /> Bloquear cuenta
     </CDropdownItem>
+  -->
+    <CDropdownDivider/>
     <CDropdownItem @click="logout()">
-      <CIcon name="cil-lock-locked" /> Logout
+      <CIcon name="cil-lock-locked" /> Cerrar Sesión
     </CDropdownItem>
   </CDropdown>
 </template>

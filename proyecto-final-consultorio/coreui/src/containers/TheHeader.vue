@@ -11,13 +11,13 @@
       @click="$store.commit('toggleSidebarDesktop')"
     />
     <CHeaderBrand class="mx-auto d-lg-none" to="/">
-      <CIcon name="logo" height="48" alt="Logo"/>
+      <CIcon name="cis-hospital" height="48" alt="Logo"/>
     </CHeaderBrand>
 
     <CMenu/>
 
     <CHeaderNav class="mr-4">
-      <CHeaderNavItem class="d-md-down-none mx-2">
+      <!--<CHeaderNavItem class="d-md-down-none mx-2">
         <CHeaderNavLink>
           <CIcon name="cil-bell"/>
         </CHeaderNavLink>
@@ -32,8 +32,11 @@
           <CIcon name="cil-envelope-open"/>
         </CHeaderNavLink>
       </CHeaderNavItem>
+      -->
       <TheHeaderDropdownAccnt/>
+    
     </CHeaderNav>
+
     <CSubheader class="px-3">
       <CBreadcrumbRouter class="border-0 mb-0"/>
     </CSubheader>

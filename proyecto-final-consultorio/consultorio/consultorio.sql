@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-08-2020 a las 13:00:01
+-- Tiempo de generación: 11-08-2020 a las 03:16:02
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -91,7 +91,8 @@ CREATE TABLE `consultas` (
 
 INSERT INTO `consultas` (`id`, `paciente_id`, `doctor_id`, `resumen`, `diagnostico`, `prescripcion`, `pagada`, `terminada`, `created_at`, `updated_at`) VALUES
 (1, 3, 2, 'El paciente presenta una lesión en el hombro izquierdo', 'lesión', 'Diclofenaco', 1, 1, '2020-08-03 04:55:41', '2020-08-03 12:21:33'),
-(2, 2, 1, 'El paciente presenta cegera parcial', 'Ceguera parcial', 'Cada 8 horas', 1, 1, '2020-08-03 07:19:58', '2020-08-03 11:09:01');
+(2, 2, 1, 'El paciente presenta cegera parcial', 'Ceguera parcial', 'Cada 8 horas', 1, 1, '2020-08-03 07:19:58', '2020-08-03 11:09:01'),
+(3, 3, 2, 'VALORACIÓN', 'GRADUACIÓN DE MICAS', 'LENTES', 1, 1, '2020-08-11 03:13:25', '2020-08-11 03:13:46');
 
 -- --------------------------------------------------------
 
@@ -107,6 +108,13 @@ CREATE TABLE `cortecajas` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `cortecajas`
+--
+
+INSERT INTO `cortecajas` (`id`, `monto_corte`, `fecha_corte`, `usuario_id`, `created_at`, `updated_at`) VALUES
+(2, '6090.00', '2020-08-10 21:48:22', 1, '2020-08-11 02:48:22', '2020-08-11 02:48:22');
 
 -- --------------------------------------------------------
 
@@ -429,7 +437,8 @@ INSERT INTO `menus` (`id`, `name`, `href`, `icon`, `slug`, `parent_id`, `menu_id
 (87, 'Registrar', '/consultas/registrar', NULL, 'link', 86, 1, 61),
 (88, 'Historial', '/consultas', NULL, 'link', 86, 1, 62),
 (89, 'Caja', NULL, NULL, 'dropdown', 0, 1, 63),
-(90, 'Pagos', '/pagos', NULL, 'link', 89, 1, 64);
+(90, 'Pagos', '/pagos', NULL, 'link', 89, 1, 64),
+(91, 'Cortes', '/cortecajas', NULL, 'link', 89, 1, 65);
 
 -- --------------------------------------------------------
 
@@ -489,9 +498,6 @@ INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
 (198, 'secretaria', 89),
 (199, 'admin', 86),
 (200, 'doctor', 86),
-(204, 'admin', 67),
-(205, 'doctor', 67),
-(206, 'secretaria', 67),
 (207, 'admin', 75),
 (208, 'doctor', 75),
 (209, 'secretaria', 75),
@@ -529,7 +535,11 @@ INSERT INTO `menu_role` (`id`, `role_name`, `menus_id`) VALUES
 (251, 'guest', 1),
 (252, 'secretaria', 1),
 (253, 'admin', 80),
-(254, 'secretaria', 80);
+(254, 'secretaria', 80),
+(255, 'admin', 91),
+(256, 'secretaria', 91),
+(257, 'admin', 67),
+(258, 'secretaria', 67);
 
 -- --------------------------------------------------------
 
@@ -788,7 +798,8 @@ CREATE TABLE `pagos` (
 
 INSERT INTO `pagos` (`id`, `consulta_id`, `monto`, `created_at`, `updated_at`) VALUES
 (1, 2, '3480.00', '2020-08-03 11:09:01', '2020-08-03 11:09:01'),
-(2, 1, '2610.00', '2020-08-03 12:21:33', '2020-08-03 12:21:33');
+(2, 1, '2610.00', '2020-08-03 12:21:33', '2020-08-03 12:21:33'),
+(3, 3, '870.00', '2020-08-11 03:13:46', '2020-08-11 03:13:46');
 
 -- --------------------------------------------------------
 
@@ -918,7 +929,8 @@ CREATE TABLE `servicioconsultas` (
 
 INSERT INTO `servicioconsultas` (`id`, `consulta_id`, `servicio_id`, `cantidad`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 3, '2020-08-03 04:55:41', '2020-08-03 04:55:41'),
-(2, 2, 1, 4, '2020-08-03 07:19:58', '2020-08-03 07:19:58');
+(2, 2, 1, 4, '2020-08-03 07:19:58', '2020-08-03 07:19:58'),
+(3, 3, 1, 1, '2020-08-11 03:13:25', '2020-08-11 03:13:25');
 
 -- --------------------------------------------------------
 
@@ -942,7 +954,8 @@ CREATE TABLE `servicios` (
 
 INSERT INTO `servicios` (`id`, `doctor_id`, `nombre`, `descripcion`, `costo`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Consulta General', 'Consulta', '750.00', '2020-08-01 23:48:39', '2020-08-02 00:09:50'),
-(2, 1, 'Valoración de estudios', 'Valorar estudios realizados', '850.00', '2020-08-03 12:23:04', '2020-08-03 12:23:04');
+(2, 1, 'Valoración de estudios', 'Valorar estudios realizados', '850.00', '2020-08-03 12:23:04', '2020-08-03 12:23:04'),
+(3, 2, 'Cirugía a Ocular', 'Cirugía microscópica', '21500.00', '2020-08-11 07:10:44', '2020-08-11 07:10:44');
 
 -- --------------------------------------------------------
 
@@ -1217,13 +1230,13 @@ ALTER TABLE `compartirs`
 -- AUTO_INCREMENT de la tabla `consultas`
 --
 ALTER TABLE `consultas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `cortecajas`
 --
 ALTER TABLE `cortecajas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `doctores`
@@ -1283,13 +1296,13 @@ ALTER TABLE `menulist`
 -- AUTO_INCREMENT de la tabla `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT de la tabla `menu_role`
 --
 ALTER TABLE `menu_role`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=255;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1313,7 +1326,7 @@ ALTER TABLE `pacientes`
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
@@ -1337,13 +1350,13 @@ ALTER TABLE `role_hierarchy`
 -- AUTO_INCREMENT de la tabla `servicioconsultas`
 --
 ALTER TABLE `servicioconsultas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `status`
